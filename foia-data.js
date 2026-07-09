@@ -88,6 +88,9 @@ const FOIA = {
     { id: "orem", name: "Orem Police Department (City of Orem)", email: "records@orem.gov",
       portal: "https://orem.gov/police-records-request/",
       submitNote: "Orem PD takes records requests via its JotForm (linked from orem.gov/police-records-request — heads-up: the form may require a Google-account sign-in) or by email/walk-in at the records counter: records@orem.gov, verified on the city's police-records page (Mon–Fri 8:30–5:30). Don't use policerecords@orem.org from older pages — that domain is retired. No published fee schedule; the city quotes fees and waits for your agreement before processing." },
+    { id: "gov", name: "Office of the Governor of Utah", email: null,
+      portal: "https://openrecords.utah.gov",
+      submitNote: "State agency — file through Utah's Open Records Portal (openrecords.utah.gov, UtahID account required) addressed to the Office of the Governor. Direct records-officer contact unverified; the portal is the reliable route." },
     { id: "ome", name: "Utah Office of the Medical Examiner (DHHS)", email: null,
       portal: "https://ome.utah.gov/",
       submitNote: "ME case records (autopsy, toxicology, investigative reports) are NOT ordinary GRAMA records — Utah Code § 26B-8-217 restricts them to next of kin, legal representatives, treating physicians, and law enforcement, and § 26B-8-217(8) bars other disclosure absent a court order. The request here deliberately targets administrative transmittal/chain-of-custody paperwork instead, and routes as a GRAMA request to DHHS; expect the office to test the 217 boundary in its response. OME: 4451 South 2700 West, Taylorsville; (801) 816-3850.",
@@ -119,8 +122,8 @@ const FOIA = {
         { label: "Ep. 141 — Days Two and Three", url: "https://www.youtube.com/watch?v=FT8kJN3n_cA" }
       ],
       status: "confirmed",
-      finding: "The Washington County Sheriff's Office video of Robinson's turn-in — the moment the official timeline starts — was reportedly deleted, per day-three testimony (\"we're told it was deleted and we're told you didn't ask for it\").",
-      implication: "Government video of the most consequential arrest in Utah's history was not preserved. Retention schedules, the deletion authorization, and any spoliation paper trail are administrative records — not investigation records — and are squarely requestable.",
+      finding: "The Washington County Sheriff's Office video of Robinson's turn-in — the moment the official timeline starts — was reportedly deleted, per day-three testimony. A news organization's records request for it was refused, then answered with a 30-day-retention deletion claim — while court pleadings reportedly suggest the footage exists in law-enforcement hands.",
+      implication: "Government video of the most consequential arrest in Utah's history was not preserved — or was it? The retention schedule, the deletion authorization, the county's handling of the earlier request, and any litigation-hold notice are all administrative records, and the contradiction between \"deleted\" and the pleadings is exactly what they'd resolve.",
       sources: [
         { label: "Day 3 testimony, Agent Brian Davis (State v. Robinson prelim)", url: "" }
       ],
@@ -129,7 +132,7 @@ const FOIA = {
           agencyId: "wcso",
           summary: "WCSO — the intake video, its retention schedule, and the deletion paper trail",
           subject: "GRAMA Request: lobby/intake video of September 11, 2025 and its retention/deletion records",
-          records: "I request: (1) all video recorded by lobby, intake, sally-port, or booking-area cameras at the Washington County Sheriff's Office facility in Hurricane, Utah between 8:00 p.m. September 11, 2025 and 5:00 a.m. September 12, 2025; (2) the records retention schedule applicable to facility video during that period; and (3) any record documenting the deletion, overwriting, or non-retention of video from that period — including the date of deletion, the system or person that performed it, and any authorization, litigation-hold notice, or preservation request in effect at the time. If the video no longer exists, items (2) and (3) are the request.",
+          records: "I request: (1) all video recorded by lobby, intake, sally-port, or booking-area cameras at the Washington County Sheriff's Office facility in Hurricane, Utah between 8:00 p.m. September 11, 2025 and 5:00 a.m. September 12, 2025; (2) the records retention schedule applicable to facility video during that period; and (3) any record documenting the deletion, overwriting, or non-retention of video from that period — including the date of deletion, the system or person that performed it, and any authorization, litigation-hold notice, or preservation request in effect at the time; and (4) all correspondence concerning any prior records request for this video — the request, the response, and any internal discussion of it. If the video no longer exists, items (2) through (4) are the request.",
           ask_no_records: true
         }
       ]
@@ -175,10 +178,10 @@ const FOIA = {
         { label: "Coleman Ep. 141", url: "https://www.youtube.com/watch?v=FT8kJN3n_cA" }
       ],
       status: "confirmed",
-      finding: "The first officer to reach the shooter's rooftop (Officer Bagley) testified his body camera's battery died as he reached the roof and stayed off the rest of the day — and that he was accompanied up by an armed man in civilian clothes with a badge whose name and agency he never got.",
-      implication: "Body-camera systems log battery events, docking, and uploads independently of the footage. And someone armed was on the key rooftop before it was processed — multi-agency deployment rosters and scene access logs would say who.",
+      finding: "The first officer to reach the shooter's rooftop (Officer Bagley) testified his body camera's battery died as he reached the roof — 27 minutes 35 seconds of footage, his only recording that day — that he was accompanied up by an armed man in civilian clothes with a badge whose name and agency he never got, and that he searched the prone position and roof edge and found no spent shell casing.",
+      implication: "Body-camera systems log battery events, docking, and uploads independently of the footage — the metadata says whether the unit died or was powered off. Someone armed was on the key rooftop before it was processed. And the state's own first responder found no brass at the sniper position.",
       sources: [
-        { label: "Day 1 testimony (cross by Kathryn Nester)", url: "" }
+        { label: "Day 1 testimony (cross by Kathryn Nester; courtroom audio aired Jul 8)", url: "" }
       ],
       requests: [
         {
@@ -269,10 +272,11 @@ const FOIA = {
         { label: "Carroll on day two", url: "https://www.youtube.com/watch?v=r8JjODn8-dY" }
       ],
       status: "confirmed",
-      finding: "The courtyard ground under the medical tent was paved over within days of the shooting — and the case's lead investigator testified he didn't authorize it, doesn't know who did, and learned it happened from the news.",
-      implication: "Somebody at UVU issued a work order to alter a homicide scene while the investigation was open, without the lead investigator's knowledge. Work orders, contractor invoices, and the authorizing communications are routine administrative records.",
+      finding: "The courtyard ground under the medical tent was paved over within days of the shooting — the case's lead investigator testified he didn't authorize it, doesn't know who did, and learned it happened from the news. The excavation contractor (Dan Merrill) has separately said on camera the work was ordered by \"the FBI and the Governor of Utah.\"",
+      implication: "Somebody ordered a homicide scene altered while the investigation was open, without the lead investigator's knowledge — and a named contractor points at the Governor's office. Work orders, contractor invoices, and the authorizing communications are routine administrative records on both ends.",
       sources: [
-        { label: "Day 2 testimony (cross)", url: "" }
+        { label: "Day 2 testimony (cross)", url: "" },
+        { label: "Dan Merrill on-camera statement (aired via Coleman / Liberty Lockdown)", url: "" }
       ],
       requests: [
         {
@@ -280,6 +284,13 @@ const FOIA = {
           summary: "UVU — the work orders and authorizations for the tent removal and paving",
           subject: "GRAMA Request: facilities records for courtyard work following September 10, 2025",
           records: "I request, for the period September 10 – October 15, 2025: (1) all work orders, purchase orders, and contractor invoices concerning removal of the medical tent and any resurfacing, paving, concreting, or landscaping of the courtyard area adjacent to the Sorensen Center / Hall of Flags at Utah Valley University; and (2) the written authorization or approval for that work, including the requesting office and any record of coordination with, or clearance from, any law-enforcement agency before the work proceeded.",
+          ask_no_records: true
+        },
+        {
+          agencyId: "gov",
+          summary: "Governor's office — any direction or coordination on the scene restoration",
+          subject: "GRAMA Request: records concerning courtyard restoration work at Utah Valley University, September 2025",
+          records: "I request, for the period September 10 – October 15, 2025, any record held by the Office of the Governor — including correspondence, directives, meeting notes, or coordination records with Utah Valley University, the FBI, or the Utah Department of Public Safety — concerning the removal of the medical tent and the excavation, resurfacing, or concreting of the courtyard area at Utah Valley University where the September 10, 2025 shooting occurred. The excavation contractor has stated publicly that this work was ordered by the FBI and the Governor of Utah; this request seeks the records of any such direction or coordination. If no such records exist, I request written confirmation of that fact.",
           ask_no_records: true
         }
       ]
@@ -336,6 +347,38 @@ const FOIA = {
           summary: "UVU — parking garage access-control log for the morning of Sept 10",
           subject: "GRAMA Request: parking structure access-control records, morning of September 10, 2025",
           records: "I request the access-control log (key-card, key-pass, gate, or license-plate-recognition entries) for the Utah Valley University parking structure adjacent to the Losee Center for September 10, 2025, 8:00 a.m. – 10:00 a.m. Entries of uninvolved third parties may be redacted; the request is for the log covering the vehicle entry shown at 8:29 a.m. in exhibits at the State v. Robinson preliminary hearing.",
+          ask_no_records: true
+        }
+      ]
+    },
+    {
+      id: "tpusa-contact",
+      categories: ["Witness statements", "Video evidence"],
+      entities: ["robinson", "tpusa", "uvu-ent"],
+      investigator: "Baron Coleman · Buckley Carlson · Ian Carroll",
+      investigatorLinks: [
+        { label: "Bombshells crossover (Liberty Lockdown)", url: "https://www.youtube.com/watch?v=Fk4RFSn6gqs" },
+        { label: "Carroll on day two", url: "https://www.youtube.com/watch?v=r8JjODn8-dY" }
+      ],
+      status: "confirmed",
+      finding: "Testimony on both day two and day three placed Robinson making contact with TPUSA representatives at the quad the morning of the shooting, while the event was being set up — a fact never previously disclosed. The state did not name the representatives, and no footage of the contact has been shown.",
+      implication: "The accused spoke with people from the victim's own organization hours before the shooting, and eleven months of official narrative never mentioned it. UVU hosted the event — its event-services coordination records, credentialing lists, and vendor rosters would name the people the testimony didn't.",
+      sources: [
+        { label: "Day 2 timeline testimony; day 3 testimony (per Coleman/Carroll coverage)", url: "" }
+      ],
+      requests: [
+        {
+          agencyId: "uvu",
+          summary: "UVU — event coordination and credentialing records naming the TPUSA advance staff",
+          subject: "GRAMA Request: event coordination records for the September 10, 2025 TPUSA event",
+          records: "I request, concerning the September 10, 2025 Turning Point USA event at Utah Valley University: (1) the event agreement, facility-use contract, and coordination correspondence between UVU event services (or student engagement) and TPUSA advance or event staff; (2) any credentialing, access, or staff roster provided to UVU identifying TPUSA personnel present on campus for event setup that morning; and (3) the vendor or contractor list for the event, including audio/visual contractors. I am not requesting attendee lists or any student records.",
+          ask_no_records: true
+        },
+        {
+          agencyId: "uvupd",
+          summary: "UVU PD — quad-area camera footage covering the morning contact window",
+          subject: "GRAMA Request: quad/amphitheater camera footage, morning of September 10, 2025",
+          records: "I request unedited exports of Utah Valley University camera footage covering the quad/amphitheater area where the September 10, 2025 event was being set up, for 8:15 a.m. – 10:30 a.m. that morning — the window in which preliminary-hearing testimony placed the defendant making contact with event representatives. If this footage has been provided to or seized by an investigating agency, I request the transfer record identifying that agency.",
           ask_no_records: true
         }
       ]

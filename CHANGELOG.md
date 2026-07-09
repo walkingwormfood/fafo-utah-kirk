@@ -2,6 +2,17 @@
 
 What's new in FAFO Utah — Charlie Kirk Edition. Newest first.
 
+## 2026-07-09 (later) — Day-3.5 hooks from the Bombshells crossover
+
+Mined the Coleman/Buckley Carlson Liberty Lockdown crossover (Jul 8) and the Candace-photos recap while waiting on day four:
+
+- **New card — the TPUSA contact**: testimony on days two and three placed Robinson making contact with unnamed TPUSA representatives at the quad the morning of the shooting. Requests: UVU event-coordination/credentialing records that would name them, and the quad camera footage for the contact window.
+- **Bagley card sharpened**: courtroom audio confirms the 27:35 total bodycam runtime and adds that the officer searched the sniper position and found **no spent casing**.
+- **Deleted-video card sharpened**: a news organization's request for the turn-in video was refused, then met with a 30-day-retention deletion claim — while pleadings reportedly suggest the footage exists. The request now also asks for the county's correspondence on that prior request.
+- **Paved-scene card upgraded**: the excavation contractor (Dan Merrill) says on camera the work was ordered by "the FBI and the Governor of Utah" — added the **Office of the Governor** as an entity with a request for any direction or coordination records.
+
+## 2026-07-09 — v0: 14 findings, 21 requests, from prelim days 1–3
+
 ## 2026-07-09 — v0: 14 findings, 21 requests, from prelim days 1–3
 
 Launched from the preliminary-hearing record (days one through three of State v. Robinson), as surfaced by Baron Coleman (Ep. 141) and Ian Carroll's day-two stream:
