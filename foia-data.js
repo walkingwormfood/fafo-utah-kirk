@@ -47,6 +47,16 @@ const FOIA = {
     no_records:
       "If no responsive records exist, I request written confirmation of that fact, including a description of the " +
       "search conducted.",
+    reason_public:
+      "These records document official government activity in a matter of intense and legitimate public interest — " +
+      "the investigation and prosecution arising from the September 10, 2025 events at Utah Valley University. " +
+      "I am requesting them as a member of the public, and the records will be made available to the general public. " +
+      "This request is not made for commercial purposes.",
+    entitlement_public:
+      "The requested items are public records under Utah Code § 63G-2-201 — records of official government activity " +
+      "that are not private, controlled, or protected. No special relationship to the record is required for access " +
+      "to public records. If any portion is claimed non-public, I request release of the segregable public portions " +
+      "(§ 63G-2-308) and a written denial citing the specific exempting provision and my appeal rights (§ 63G-2-205(2)).",
     format:
       "Please provide responsive records in electronic format (searchable PDF or native file — for video, the " +
       "native export with original metadata) by email where possible.",
@@ -77,7 +87,13 @@ const FOIA = {
       submitNote: "Utah County's GRAMA process is centralized in the County Attorney's Office — email ucao@utahcounty.gov or the NextRequest portal; the county web form requires a photo-ID upload. Mail: 100 East Center Street, Suite 2100, Provo. Expect § 63G-2-305(10) claims on anything touching the open prosecution — the written denial is still the point." },
     { id: "wcso", name: "Washington County Sheriff's Office", email: null,
       portal: "https://news.washeriff.net/public-services/grama-request/",
-      submitNote: "WCSO takes GRAMA through its own web form (no login) — no records email is published, don't trust addresses from aggregator sites. Quirks: the form asks your reason for the request and basis for access; reports minimum $5; DO NOT PREPAY — payment instructions come by email after processing; 10 working days. Office: 620 South 5300 West, Hurricane (435-656-6500)." },
+      submitNote: "WCSO takes GRAMA through its own web form (no login) — no records email is published, don't trust addresses from aggregator sites. Quirks: ALL fields are required, including date of birth and daytime phone; reports minimum $5; DO NOT PREPAY — payment instructions come by email after processing; 10 working days. Office: 620 South 5300 West, Hurricane (435-656-6500).",
+      portalNote: "The form requires your full name, date of birth, mailing address, daytime phone, and email in its own fields. Select \"I request a copy of the following record.\" Under \"I believe I am entitled to access the record because,\" select OTHER — the entitlement box below is written for that field.",
+      formMap: [
+        { label: "\"Please describe the record\" box", parts: ["records", "no_records", "format"] },
+        { label: "\"Please detail the reason for your request\" box", parts: ["reason"] },
+        { label: "\"If OTHER please provide details\" box (after selecting OTHER above it)", parts: ["entitlement"] }
+      ] },
     { id: "washco", name: "Washington County (Clerk/Auditor — personnel records)", email: "grama@washco.utah.gov",
       portal: "https://www.washco.utah.gov/departments/clerk/grama-records-request/",
       submitNote: "The county Clerk/Auditor is the records officer — email grama@washco.utah.gov (verified on the county GRAMA page), the county's request form, or Utah's Open Records Portal (the county explicitly endorses it). Mail: Clerk/Auditor, c/o Records Officer, 111 East Tabernacle Street, St. George, UT 84770. Severance and settlement agreements of public employees are generally public once finalized." },

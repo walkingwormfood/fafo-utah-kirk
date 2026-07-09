@@ -148,6 +148,7 @@
         <div class="charline" id="charline" style="display:none"></div></div>
       <div class="field" id="feeWrap" style="display:none"><label for="feeOut">Fee waiver — if the form has its own fee section, paste this where it asks for a waiver justification</label><textarea id="feeOut" class="snip" spellcheck="false"></textarea></div>
       <div class="field" id="expWrap" style="display:none"><label for="expOut">Expedited response — if the form has an expedite box, paste this there</label><textarea id="expOut" class="snip" spellcheck="false"></textarea></div>
+      <div id="formBoxes"></div>
       <div class="actions" id="actions"></div>
       <div class="submit-hint" id="submitHint"></div>
     </div>
@@ -392,7 +393,38 @@
       $("charline").style.display = "none";
       $("feeWrap").style.display = "none";
       $("expWrap").style.display = "none";
+      $("formBoxes").innerHTML = "";
       $("portalRouting").style.display = "none";
+    } else if(a && a.formMap && !current.bare){
+      // Entities whose form has its OWN named fields (e.g. WCSO's reason/entitlement
+      // boxes): one paste box per form field, mapped in the agency's formMap.
+      const partText = key => ({
+        records: current.records,
+        no_records: current.askNoRecords ? b.no_records : "",
+        format: b.format,
+        reason: [b.reason_public, $("fee").checked ? b.fee_waiver : "", $("exp").checked ? b.expedited : ""].filter(Boolean).join("\n\n"),
+        entitlement: b.entitlement_public,
+        burden: b.burden_carveout
+      }[key] || "");
+      const boxes = a.formMap.map(m => ({ label: m.label, text: m.parts.map(partText).filter(Boolean).join("\n\n") }));
+      $("out").value = boxes[0].text;
+      $("outLabel").textContent = boxes[0].label + " — paste this there";
+      updateCharline();
+      $("charline").style.display = "block";
+      $("feeWrap").style.display = "none";
+      $("expWrap").style.display = "none";
+      const fb = $("formBoxes"); fb.innerHTML = "";
+      boxes.slice(1).forEach(bx => {
+        const d = document.createElement("div"); d.className = "field";
+        const l = document.createElement("label"); l.textContent = bx.label;
+        const t = document.createElement("textarea"); t.className = "snip"; t.value = bx.text; t.spellcheck = false;
+        d.appendChild(l); d.appendChild(t); fb.appendChild(d);
+      });
+      const routing = [];
+      if(current.component) routing.push("<b>Where to route it:</b> " + esc(current.component) + ".");
+      if(a.portalNote) routing.push("<b>This form's fields:</b> " + esc(a.portalNote));
+      $("portalRouting").innerHTML = routing.join(" ");
+      $("portalRouting").style.display = "block";
     } else {
       // Form/portal entities: webforms collect your name, address, and fee preference in
       // their own fields — pasting the whole letter duplicates all of that. Show a
@@ -412,6 +444,7 @@
       }
       $("out").value = P.join("\n");
       $("outLabel").textContent = "Form version — paste into the request-description box (the form collects your name, address, and fees separately)";
+      $("formBoxes").innerHTML = "";
       updateCharline();
       $("charline").style.display = "block";
       $("feeOut").value = b.fee_waiver;
