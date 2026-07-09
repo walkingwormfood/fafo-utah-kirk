@@ -10,7 +10,7 @@
  */
 const FOIA = {
   meta: {
-    product: "FAFO Utah — Charlie Kirk Edition",
+    product: "FOIA Around, Find Out: Charlie Kirk Edition [Utah State GRAMA]",
     tagline: "The Tyler Robinson preliminary hearing put specific documents, videos, and logs on the record — and exposed gaps between sworn testimony and the paperwork. Utah's GRAMA law lets anyone request the underlying records. Pick a finding — we'll draft the request.",
     statute: "Government Records Access and Management Act (GRAMA), Utah Code § 63G-2-101 et seq",
     portal: "https://openrecords.utah.gov",

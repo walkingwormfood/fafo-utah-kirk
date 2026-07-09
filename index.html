@@ -3,23 +3,29 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>FAFO Utah — Charlie Kirk Edition</title>
+<title>FOIA Around, Find Out: Charlie Kirk Edition [Utah GRAMA]</title>
 <meta name="description" content="The Tyler Robinson preliminary hearing put documents, videos, and logs on the record. Utah's GRAMA law lets anyone request them. Pick a finding — we draft the request. Client-side only, no tracking.">
 <style>
   :root{
-    --bg:#0a0a0b; --panel:#0d1013; --panel2:#121820; --line:#1f2c38;
-    --ink:#dce8f2; --ink2:#8fa8bc; --faint:#51697c;
-    --accent:#4fb8ff; --ok:#5ec9a8; --warn:#ffc070;
+    --bg:#070708; --panel:#101013; --panel2:#17171c; --line:#28282f;
+    --ink:#f2f3f6; --ink2:#a8aebb; --faint:#63677a;
+    --accent:#ff3b3b; --accent2:#4f6dff; --ok:#4f6dff; --warn:#f4f4f4;
     --mono:"SFMono-Regular",ui-monospace,"Cascadia Mono",Menlo,Consolas,monospace;
     --sans:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    --headline:Haettenschweiler,"Arial Narrow Bold",Impact,"Franklin Gothic Medium",sans-serif;
   }
   *{box-sizing:border-box}
   body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);line-height:1.55;-webkit-font-smoothing:antialiased;background-image:linear-gradient(rgba(0,0,0,.16) 50%,transparent 50%);background-size:100% 3px}
   a{color:var(--accent)}
   .wrap{max-width:880px;margin:0 auto;padding:0 18px}
-  header{border-bottom:1px solid var(--line);padding:30px 0 20px}
-  .kicker{font-family:var(--mono);font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--faint)}
-  h1{margin:.25em 0 .15em;font-size:30px;letter-spacing:-.01em;color:var(--accent);text-shadow:0 0 14px rgba(79,184,255,.35)}
+  header{border-bottom:none;padding:30px 0 0}
+  header::after{content:"";display:block;height:5px;margin-top:20px;background:linear-gradient(90deg,var(--accent) 0 34%,#fff 34% 66%,var(--accent2) 66% 100%)}
+  .kicker{font-family:var(--mono);font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--accent2)}
+  .kicker .star{color:#fff}
+  h1{margin:.18em 0 .1em;font-size:44px;line-height:.95;letter-spacing:.015em;font-family:var(--headline);font-weight:400;text-transform:uppercase;font-style:italic}
+  h1 .h1a{color:#fff}
+  h1 .h1b{color:var(--accent);text-shadow:0 0 18px rgba(255,59,59,.4)}
+  h1 .h1tag{display:block;font-size:20px;color:var(--accent2);letter-spacing:.08em;text-shadow:0 0 14px rgba(79,109,255,.4)}
   .tagline{color:var(--ink2);font-size:15px;max-width:66ch}
   .note{background:var(--panel);border:1px solid var(--line);border-left:3px solid var(--accent);border-radius:8px;padding:11px 14px;margin:14px 0;font-size:13px;color:var(--ink2)}
   .note b{color:var(--ink)}
@@ -32,8 +38,8 @@
   .by{font-size:12px;color:var(--ink2);margin-bottom:8px}
   .by .who{color:var(--accent);font-weight:600}
   .badge{display:inline-block;font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;border:1px solid var(--line);border-radius:20px;padding:2px 9px;color:var(--ink2);margin-left:6px}
-  .badge.confirmed{color:var(--ok);border-color:#2f5043}
-  .badge.contested{color:var(--warn);border-color:#5a4326}
+  .badge.confirmed{color:var(--ok);border-color:#2b3a7a}
+  .badge.contested{color:var(--warn);border-color:#55555e}
   .finding{font-size:17px;font-weight:600;margin:2px 0 6px}
   .implication{color:var(--ink2);font-size:14px;margin:0 0 10px}
   .meta-row{font-size:12px;color:var(--faint);margin:8px 0}
@@ -49,13 +55,13 @@
   .btn:hover{border-color:var(--accent)}
   .btn.primary{background:var(--accent);color:var(--bg);border-color:var(--accent);font-weight:600}
   .btn.email{background:var(--ok);color:var(--bg);border-color:var(--ok);font-weight:600}
-  .btn.link{background:transparent;border-color:#2f5043;color:var(--ok)}
+  .btn.link{background:transparent;border-color:#2b3a7a;color:var(--ok)}
   .btn.gen{flex:0 0 auto;background:transparent;border-color:var(--accent);color:var(--accent)}
   .btn.gen:hover{background:var(--accent);color:var(--bg);border-color:var(--accent)}
   .filters{display:flex;gap:8px;flex-wrap:wrap;margin:4px 0 2px}
   .chip{font-family:var(--mono);font-size:11px;letter-spacing:.04em;border:1px solid var(--line);border-radius:20px;padding:5px 12px;cursor:pointer;background:var(--panel);color:var(--ink2)}
   .chip:hover{border-color:#39414e}
-  .chip.active{background:rgba(79,184,255,.12);color:var(--accent);border-color:var(--accent);text-shadow:0 0 6px rgba(79,184,255,.4)}
+  .chip.active{background:rgba(255,59,59,.12);color:var(--accent);border-color:var(--accent);text-shadow:0 0 6px rgba(255,59,59,.4)}
   .cats{margin:8px 0 2px}
   .cat{display:inline-block;font-family:var(--mono);font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:var(--faint);border:1px solid var(--line);border-radius:5px;padding:1px 7px;margin-right:6px}
   .card.hide{display:none}
@@ -88,12 +94,12 @@
   footer code{font-family:var(--mono);background:var(--panel);border:1px solid var(--line);border-radius:5px;padding:1px 6px;color:var(--ink2)}
   .facet{margin:10px 0 2px}
   .facet-lbl{display:block;font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--faint);margin:0 0 6px}
-  .chip.ent.active{background:rgba(79,184,255,.12);border-color:var(--accent);color:var(--accent);text-shadow:0 0 6px rgba(79,184,255,.4)}
+  .chip.ent.active{background:rgba(255,59,59,.12);border-color:var(--accent);color:var(--accent);text-shadow:0 0 6px rgba(255,59,59,.4)}
   .ents{margin-top:12px;border-top:1px dashed var(--line);padding-top:10px}
   .ents .lbl{font-family:var(--mono);font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:var(--faint);margin-right:6px}
   .epill{font-family:var(--mono);font-size:11px;border:1px solid var(--line);border-radius:20px;padding:2px 9px;margin:0 4px 4px 0;cursor:pointer;background:var(--panel2);color:var(--ink2)}
   .epill:hover{border-color:#39414e}
-  .epill.active{background:rgba(79,184,255,.12);border-color:var(--accent);color:var(--accent);text-shadow:0 0 6px rgba(79,184,255,.4)}
+  .epill.active{background:rgba(255,59,59,.12);border-color:var(--accent);color:var(--accent);text-shadow:0 0 6px rgba(255,59,59,.4)}
   .ecallout{font-size:13px;border-left-color:var(--ok)}
   .ecallout b{color:var(--ink)}
   .catfacet summary{cursor:pointer;list-style:none;outline:none}
@@ -107,8 +113,8 @@
 <body>
 <header>
   <div class="wrap">
-    <div class="kicker">FAFO · Utah — Charlie Kirk edition · client-side · no tracking</div>
-    <h1>GRAMA Around, Find Out</h1>
+    <div class="kicker">FAFO <span class="star">★</span> public records <span class="star">★</span> client-side <span class="star">★</span> no tracking</div>
+    <h1><span class="h1a">FOIA Around, Find Out:</span> <span class="h1b">Charlie Kirk Edition</span><span class="h1tag">[Utah State GRAMA]</span></h1>
     <p class="tagline" id="tagline"></p>
   </div>
 </header>

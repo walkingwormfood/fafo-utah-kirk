@@ -1,6 +1,6 @@
-# FAFO Utah — Charlie Kirk Edition
+# FOIA Around, Find Out: Charlie Kirk Edition [Utah State GRAMA]
 
-**GRAMA Around, Find Out.** The Tyler Robinson preliminary hearing (State v. Robinson, Utah Fourth District) put specific documents, videos, and logs on the record — and exposed gaps between sworn testimony and the paperwork. Utah's public-records law, GRAMA (Government Records Access and Management Act, Utah Code § 63G-2), lets anyone request the underlying records. Pick a finding; the site drafts the request.
+The Tyler Robinson preliminary hearing (State v. Robinson, Utah Fourth District) put specific documents, videos, and logs on the record — and exposed gaps between sworn testimony and the paperwork. Utah's public-records law, GRAMA (Government Records Access and Management Act, Utah Code § 63G-2), lets anyone request the underlying records. Pick a finding; the site drafts the request.
 
 Sister site to [FOIA Around, Find Out](https://github.com/walkingwormfood/foia-around-find-out) (federal). Same architecture: one `index.html` renderer + one `foia-data.js` data file, client-side only, no tracking, CC0.
 
