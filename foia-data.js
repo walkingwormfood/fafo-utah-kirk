@@ -11,7 +11,7 @@
 const FOIA = {
   meta: {
     product: "FOIA Around, Find Out: Charlie Kirk Edition [Utah State GRAMA]",
-    tagline: "Sworn testimony isn't matching the paperwork. Pick a finding — we'll draft the GRAMA request that pries the record loose.",
+    tagline: "The Tyler Robinson preliminary hearing: sworn testimony isn't matching the paperwork. Pick a finding — we'll draft the GRAMA request.",
     statute: "Government Records Access and Management Act (GRAMA), Utah Code § 63G-2-101 et seq",
     portal: "https://openrecords.utah.gov",
     submit_note: "GRAMA requests go to each entity's records officer — there is no single statewide intake, and every entity below has its own quirks (audited July 2026, shown while you draft). Where a records email is verified you get one-click email (✉); everywhere else it's copy + the entity's own form or portal (↗) — mostly NextRequest and GovQA instances that auto-create an account from your email. Deadline: 10 business days, or 5 where expedited response benefits the public (Utah Code § 63G-2-204(4)). Denied? You have 30 days to appeal to the entity's chief administrative officer (§ 63G-2-401); silence for 10 business days counts as a denial too (§ 63G-2-204(9)). After that: the Government Records Office director or district court (§ 63G-2-402/403 — the old State Records Committee was abolished in 2025; some counties have their own local appeals board that must be used first). FEDERAL records on this case (FBI, DOJ) are over at the original FAFO — this site is Utah state and local only.",
