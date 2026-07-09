@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FAFO Utah — Charlie Kirk Edition</title>
+<meta name="description" content="The Tyler Robinson preliminary hearing put documents, videos, and logs on the record. Utah's GRAMA law lets anyone request them. Pick a finding — we draft the request. Client-side only, no tracking.">
+<style>
+  :root{
+    --bg:#0a0a0b; --panel:#0d1013; --panel2:#121820; --line:#1f2c38;
+    --ink:#dce8f2; --ink2:#8fa8bc; --faint:#51697c;
+    --accent:#4fb8ff; --ok:#5ec9a8; --warn:#ffc070;
+    --mono:"SFMono-Regular",ui-monospace,"Cascadia Mono",Menlo,Consolas,monospace;
+    --sans:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);line-height:1.55;-webkit-font-smoothing:antialiased;background-image:linear-gradient(rgba(0,0,0,.16) 50%,transparent 50%);background-size:100% 3px}
+  a{color:var(--accent)}
+  .wrap{max-width:880px;margin:0 auto;padding:0 18px}
+  header{border-bottom:1px solid var(--line);padding:30px 0 20px}
+  .kicker{font-family:var(--mono);font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--faint)}
+  h1{margin:.25em 0 .15em;font-size:30px;letter-spacing:-.01em;color:var(--accent);text-shadow:0 0 14px rgba(79,184,255,.35)}
+  .tagline{color:var(--ink2);font-size:15px;max-width:66ch}
+  .note{background:var(--panel);border:1px solid var(--line);border-left:3px solid var(--accent);border-radius:8px;padding:11px 14px;margin:14px 0;font-size:13px;color:var(--ink2)}
+  .note b{color:var(--ink)}
+  .note.submit{border-left-color:var(--ok)}
+
+  main{padding:14px 0 60px}
+  h2.section{font-size:13px;font-family:var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--faint);margin:26px 0 12px;border-bottom:1px solid var(--line);padding-bottom:8px}
+
+  .card{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:16px 18px;margin:14px 0}
+  .by{font-size:12px;color:var(--ink2);margin-bottom:8px}
+  .by .who{color:var(--accent);font-weight:600}
+  .badge{display:inline-block;font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;border:1px solid var(--line);border-radius:20px;padding:2px 9px;color:var(--ink2);margin-left:6px}
+  .badge.confirmed{color:var(--ok);border-color:#2f5043}
+  .badge.contested{color:var(--warn);border-color:#5a4326}
+  .finding{font-size:17px;font-weight:600;margin:2px 0 6px}
+  .implication{color:var(--ink2);font-size:14px;margin:0 0 10px}
+  .meta-row{font-size:12px;color:var(--faint);margin:8px 0}
+  .meta-row .lbl{font-family:var(--mono);text-transform:uppercase;letter-spacing:.08em;margin-right:6px}
+  .pry{margin-top:12px;border-top:1px dashed var(--line);padding-top:12px}
+  .pry .lbl{font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--faint);display:block;margin-bottom:8px}
+  .req{display:flex;gap:12px;align-items:flex-start;justify-content:space-between;padding:8px 0;border-top:1px solid var(--panel2)}
+  .req:first-of-type{border-top:none}
+  .req .desc{font-size:13.5px;color:var(--ink)}
+  .req .agency{display:block;font-size:11px;color:var(--faint);font-family:var(--mono);margin-top:2px}
+  .req .resp{display:block;font-size:12px;color:var(--ink);background:var(--panel2);border-left:3px solid var(--ok);border-radius:4px;padding:6px 8px;margin-top:6px}
+  .btn{font-family:var(--mono);font-size:12.5px;border-radius:7px;padding:8px 13px;cursor:pointer;border:1px solid var(--line);background:var(--panel2);color:var(--ink);white-space:nowrap;text-decoration:none;display:inline-block}
+  .btn:hover{border-color:var(--accent)}
+  .btn.primary{background:var(--accent);color:var(--bg);border-color:var(--accent);font-weight:600}
+  .btn.email{background:var(--ok);color:var(--bg);border-color:var(--ok);font-weight:600}
+  .btn.link{background:transparent;border-color:#2f5043;color:var(--ok)}
+  .btn.gen{flex:0 0 auto;background:transparent;border-color:var(--accent);color:var(--accent)}
+  .btn.gen:hover{background:var(--accent);color:var(--bg);border-color:var(--accent)}
+  .filters{display:flex;gap:8px;flex-wrap:wrap;margin:4px 0 2px}
+  .chip{font-family:var(--mono);font-size:11px;letter-spacing:.04em;border:1px solid var(--line);border-radius:20px;padding:5px 12px;cursor:pointer;background:var(--panel);color:var(--ink2)}
+  .chip:hover{border-color:#39414e}
+  .chip.active{background:rgba(79,184,255,.12);color:var(--accent);border-color:var(--accent);text-shadow:0 0 6px rgba(79,184,255,.4)}
+  .cats{margin:8px 0 2px}
+  .cat{display:inline-block;font-family:var(--mono);font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:var(--faint);border:1px solid var(--line);border-radius:5px;padding:1px 7px;margin-right:6px}
+  .card.hide{display:none}
+
+  #gen{display:none;background:var(--panel2);border:1px solid var(--accent);border-radius:10px;padding:16px 18px;margin:18px 0;scroll-margin-top:14px}
+  #gen.open{display:block;animation:genExpand .22s ease}
+  @keyframes genExpand{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:none}}
+  #gen .for{font-size:13px;color:var(--ink2);margin-bottom:4px}
+  #gen .for b{color:var(--ink)}
+  .field{margin:12px 0}
+  label{display:block;font-family:var(--mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--faint);margin-bottom:6px}
+  select,input[type=text],input[type=email],textarea{width:100%;background:var(--panel);border:1px solid var(--line);border-radius:8px;color:var(--ink);padding:10px 12px;font-size:14px;font-family:var(--sans)}
+  textarea{font-family:var(--mono);font-size:12.5px;line-height:1.55;min-height:300px;white-space:pre-wrap}
+  textarea.snip{min-height:88px;font-size:12px}
+  .charline{font-family:var(--mono);font-size:11px;color:var(--faint);margin-top:5px;text-align:right}
+  #portalRouting{margin:0 0 12px}
+  .row{display:flex;gap:14px;flex-wrap:wrap}
+  .row .field{flex:1;min-width:200px}
+  .checks{display:flex;gap:18px;flex-wrap:wrap;margin:12px 0}
+  .checks label{display:flex;align-items:center;gap:8px;text-transform:none;letter-spacing:0;font-family:var(--sans);font-size:13px;color:var(--ink2);cursor:pointer}
+  .checks input{width:auto}
+  .actions{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin:12px 0 2px}
+  .copied{color:var(--ok);font-size:12px;font-family:var(--mono)}
+  .submit-hint{font-size:12px;color:var(--faint);margin-top:8px}
+  .out-wrap{display:none;margin-top:10px}
+  details.adv{margin-top:24px;border:1px solid var(--line);border-radius:8px;padding:0 14px;background:var(--panel)}
+  details.adv summary{cursor:pointer;padding:12px 0;font-family:var(--mono);font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--ink2)}
+  details.adv[open]{padding-bottom:14px}
+  footer{border-top:1px solid var(--line);margin-top:30px;padding:18px 0 50px;color:var(--faint);font-size:12px}
+  footer code{font-family:var(--mono);background:var(--panel);border:1px solid var(--line);border-radius:5px;padding:1px 6px;color:var(--ink2)}
+  .facet{margin:10px 0 2px}
+  .facet-lbl{display:block;font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--faint);margin:0 0 6px}
+  .chip.ent.active{background:rgba(79,184,255,.12);border-color:var(--accent);color:var(--accent);text-shadow:0 0 6px rgba(79,184,255,.4)}
+  .ents{margin-top:12px;border-top:1px dashed var(--line);padding-top:10px}
+  .ents .lbl{font-family:var(--mono);font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:var(--faint);margin-right:6px}
+  .epill{font-family:var(--mono);font-size:11px;border:1px solid var(--line);border-radius:20px;padding:2px 9px;margin:0 4px 4px 0;cursor:pointer;background:var(--panel2);color:var(--ink2)}
+  .epill:hover{border-color:#39414e}
+  .epill.active{background:rgba(79,184,255,.12);border-color:var(--accent);color:var(--accent);text-shadow:0 0 6px rgba(79,184,255,.4)}
+  .ecallout{font-size:13px;border-left-color:var(--ok)}
+  .ecallout b{color:var(--ink)}
+  .catfacet summary{cursor:pointer;list-style:none;outline:none}
+  .catfacet summary::-webkit-details-marker{display:none}
+  .catfacet summary .facet-lbl{display:inline}
+  .catfacet summary::before{content:"▸ ";color:var(--faint);font-family:var(--mono)}
+  .catfacet[open] summary::before{content:"▾ "}
+  .catfacet[open] .filters{margin-top:8px}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <div class="kicker">FAFO · Utah — Charlie Kirk edition · client-side · no tracking</div>
+    <h1>GRAMA Around, Find Out</h1>
+    <p class="tagline" id="tagline"></p>
+  </div>
+</header>
+
+<main class="wrap">
+  <div class="note submit" id="submitNote"></div>
+  <div class="note" id="narrowing"></div>
+
+  <h2 class="section">Pick a finding</h2>
+  <details class="facet catfacet"><summary><span class="facet-lbl">Filter by category</span></summary><div class="filters" id="filters"></div></details>
+  <details class="facet catfacet"><summary><span class="facet-lbl">Filter by who surfaced it — from the courtroom record via these streams</span></summary><div class="filters" id="voiceFilters"></div></details>
+  <div class="facet"><span class="facet-lbl">Biggest threads — who &amp; what the findings touch · click any to connect the dots</span><div class="filters" id="entityFilters"></div></div>
+  <div class="note" id="entityCallout" style="display:none"></div>
+  <div id="findings"></div>
+
+  <div id="gen">
+    <div class="for" id="genFor"></div>
+    <div class="row">
+      <div class="field"><label for="name">Your name</label><input type="text" id="name" placeholder="Jane Q. Public"></div>
+      <div class="field"><label for="email">Your email</label><input type="email" id="email" placeholder="you@example.com"></div>
+    </div>
+    <div class="field"><label for="addr">Mailing address (optional — some Utah entities want one on the form)</label><input type="text" id="addr" placeholder="123 Main St, City, ST 00000"></div>
+    <div class="checks">
+      <label><input type="checkbox" id="fee" checked> Request fee waiver</label>
+      <label><input type="checkbox" id="exp" checked> Request expedited response</label>
+    </div>
+    <div class="actions"><button class="btn primary" id="genBtn">Draft the request</button></div>
+    <div class="out-wrap" id="outWrap">
+      <div class="note" id="portalRouting" style="display:none"></div>
+      <div class="field"><label for="out" id="outLabel">Your request — review and edit before sending</label><textarea id="out" spellcheck="false"></textarea>
+        <div class="charline" id="charline" style="display:none"></div></div>
+      <div class="field" id="feeWrap" style="display:none"><label for="feeOut">Fee waiver — if the form has its own fee section, paste this where it asks for a waiver justification</label><textarea id="feeOut" class="snip" spellcheck="false"></textarea></div>
+      <div class="field" id="expWrap" style="display:none"><label for="expOut">Expedited response — if the form has an expedite box, paste this there</label><textarea id="expOut" class="snip" spellcheck="false"></textarea></div>
+      <div class="actions" id="actions"></div>
+      <div class="submit-hint" id="submitHint"></div>
+    </div>
+  </div>
+
+  <details class="adv">
+    <summary>Follow up · nudge an entity about a request you already filed</summary>
+    <div class="row">
+      <div class="field"><label for="fuAgency">Entity</label><select id="fuAgency"></select></div>
+      <div class="field"><label for="fuTrack">Reference number (if assigned)</label><input type="text" id="fuTrack" placeholder="e.g. GRAMA-2026-0123"></div>
+    </div>
+    <div class="row">
+      <div class="field"><label for="fuDate">Date you filed</label><input type="text" id="fuDate" placeholder="e.g. July 9, 2026"></div>
+      <div class="field"><label for="fuWhat">What you asked for (one line)</label><input type="text" id="fuWhat" placeholder="e.g. K9 deployment logs for September 10, 2025"></div>
+    </div>
+    <div class="actions"><button class="btn" id="fuUse">Draft the follow-up ↑</button></div>
+  </details>
+
+  <details class="adv">
+    <summary>Advanced · write a custom request</summary>
+    <div class="field"><label for="advAgency">Entity</label><select id="advAgency"></select></div>
+    <div class="field"><label for="advRecords">What records (be narrow — named logs/reports/agreements, dates)</label>
+      <textarea id="advRecords" style="min-height:120px" placeholder="I request the following records: the [named log/report/work order] concerning [specific subject], from [date] to [date]."></textarea></div>
+    <div class="actions"><button class="btn" id="advUse">Use this in the drafter ↑</button></div>
+  </details>
+</main>
+
+<footer><div class="wrap" id="footer"></div></footer>
+
+<script src="foia-data.js"></script>
+<script>
+  const $ = id => document.getElementById(id);
+  const esc = s => (s||"").replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;");
+  const agencyById = id => FOIA.agencies.find(a => a.id === id);
+  const entName = id => { const e = (FOIA.entities||[]).find(x => x.id === id); return e ? e.name : id; };
+
+  $("tagline").textContent = FOIA.meta.tagline;
+  $("submitNote").innerHTML = "<b>How to file:</b> " + esc(FOIA.meta.submit_note) +
+    " Federal FAFO: <a href=\"https://walkingwormfood.github.io/foia-around-find-out/\" target=\"_blank\" rel=\"noopener\">FOIA Around, Find Out</a>.";
+  $("narrowing").innerHTML = "<b>Why these are narrow (and why a denial still counts):</b> " + esc(FOIA.meta.narrowing_note);
+  $("footer").innerHTML = "Client-side only — nothing you type leaves your browser, no analytics, no network calls. The buttons open your email app or the entity's records page; you file it yourself. " + esc(FOIA.meta.do_not) + " · CC0 — fork it, mirror it.";
+
+  let current = null; // {subject, records, agencyId, askNoRecords, label}
+
+  // canonical voices: [display name, match substrings] — matched against the
+  // investigator credit AND the source labels/urls.
+  const VOICES = [
+    ["Baron Coleman", ["baron coleman", "ep. 141"]],
+    ["Ian Carroll", ["ian carroll", "carroll"]],
+    ["Candace Owens", ["candace owens"]],
+    ["Courtroom record", ["testimony", "cross-examination", "courtroom", "warrant", "booking sheet"]],
+    ["Community researchers", ["paramount tactical", "gray hughes", "jesse on fire", "sam parker", "diligent dennis"]],
+    ["Public reporting", ["public reporting", "utah reporting"]]
+  ];
+  function voicesFor(inv){
+    const hay = [
+      inv.investigator || "",
+      ...(inv.investigatorLinks||[]).map(l => l.label + " " + l.url),
+      ...(inv.sources||[]).map(s => s.label + " " + (s.url||""))
+    ].join(" · ").toLowerCase();
+    return VOICES.filter(([,pats]) => pats.some(p => hay.includes(p))).map(([name]) => name);
+  }
+
+  const wrap = $("findings");
+  FOIA.investigations.forEach(inv => {
+    const card = document.createElement("div");
+    card.className = "card";
+    card.dataset.cats = (inv.categories||[]).join("|");
+    card.dataset.ents = (inv.entities||[]).join("|");
+    card.dataset.voices = voicesFor(inv).join("|");
+    const links = (inv.investigatorLinks||[]).map(l => `<a href="${esc(l.url)}" target="_blank" rel="noopener">${esc(l.label)} ↗</a>`).join(" · ");
+    const sources = (inv.sources||[]).map(s => s.url ? `<a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.label)}</a>` : esc(s.label)).join(" · ");
+    const reqs = inv.requests.map((r,i) => {
+      const a = agencyById(r.agencyId);
+      const email = !!(a && a.email);
+      const icon = email ? "✉" : "↗";
+      const tag = email ? "email" : "portal";
+      const title = email ? ("Opens a pre-addressed email to " + a.name)
+                          : ("Copies the letter and opens " + (a?a.name:"the entity") + "'s records page");
+      return `<div class="req"><div class="desc">${esc(r.summary)}<span class="agency">${esc(a?a.name:r.agencyId)} · ${tag}</span>`+
+             (r.response ? `<span class="resp">📬 ${esc(r.response)}</span>` : "")+
+             `</div>`+
+             `<button class="btn gen" title="${esc(title)}" data-inv="${esc(inv.id)}" data-req="${i}">${icon} Generate this request</button></div>`;
+    }).join("");
+    card.innerHTML =
+      `<div class="by">Surfaced by <span class="who">${esc(inv.investigator)}</span> · ${links}`+
+      `<span class="badge ${esc(inv.status)}">${esc(inv.status)}</span></div>`+
+      `<div class="finding">${esc(inv.finding)}</div>`+
+      `<div class="implication">${esc(inv.implication)}</div>`+
+      ((inv.categories||[]).length ? `<div class="cats">${inv.categories.map(c=>`<span class="cat">${esc(c)}</span>`).join("")}</div>` : "")+
+      (sources ? `<div class="meta-row"><span class="lbl">Sources</span>${sources}</div>` : "")+
+      ((inv.entities||[]).length ? `<div class="ents"><span class="lbl">Touches</span>${inv.entities.map(id=>`<button class="epill" data-ent="${esc(id)}">${esc(entName(id))}</button>`).join("")}</div>` : "")+
+      `<div class="pry"><span class="lbl">What you can pry loose</span>${reqs}</div>`;
+    wrap.appendChild(card);
+  });
+
+  // category filter chips
+  const allCats = [...new Set(FOIA.investigations.flatMap(i => i.categories || []))];
+  let activeCat = "All";
+  function renderChips(){
+    const box = $("filters"); box.innerHTML = "";
+    ["All", ...allCats].forEach(c => {
+      const chip = document.createElement("button");
+      chip.className = "chip" + (c === activeCat ? " active" : "");
+      chip.textContent = c;
+      chip.addEventListener("click", () => { activeCat = c; applyFilter(); renderChips(); });
+      box.appendChild(chip);
+    });
+  }
+  // investigator / outlet chips
+  let activeVoice = null;
+  const voiceCount = {};
+  FOIA.investigations.forEach(i => voicesFor(i).forEach(v => voiceCount[v] = (voiceCount[v]||0)+1));
+  const voiceNames = Object.keys(voiceCount).sort((a,b) => voiceCount[b]-voiceCount[a] || a.localeCompare(b));
+  function renderVoiceChips(){
+    const box = $("voiceFilters"); box.innerHTML = "";
+    const mk = (label, on, fn) => { const b=document.createElement("button"); b.className="chip"+(on?" active":""); b.innerHTML=label; b.addEventListener("click",fn); return b; };
+    box.appendChild(mk("All", activeVoice===null, () => { activeVoice=null; applyFilter(); renderVoiceChips(); }));
+    voiceNames.forEach(v => {
+      box.appendChild(mk(esc(v)+" <span style='opacity:.55'>"+voiceCount[v]+"</span>", activeVoice===v,
+        () => { activeVoice = (activeVoice===v ? null : v); applyFilter(); renderVoiceChips(); }));
+    });
+  }
+
+  let activeEnt = null;
+  const entCount = {};
+  FOIA.investigations.forEach(i => (i.entities||[]).forEach(e => entCount[e] = (entCount[e]||0)+1));
+  const connectors = Object.keys(entCount).filter(e => entCount[e] >= 2)
+    .sort((a,b) => entCount[b]-entCount[a] || entName(a).localeCompare(entName(b)));
+
+  function applyFilter(){
+    document.querySelectorAll("#findings .card").forEach(card => {
+      const cats = (card.dataset.cats || "").split("|");
+      const ents = (card.dataset.ents || "").split("|");
+      const voices = (card.dataset.voices || "").split("|");
+      const catOk = activeCat === "All" || cats.includes(activeCat);
+      const entOk = !activeEnt || ents.includes(activeEnt);
+      const voiceOk = !activeVoice || voices.includes(activeVoice);
+      card.classList.toggle("hide", !(catOk && entOk && voiceOk));
+    });
+    document.querySelectorAll(".epill").forEach(p => p.classList.toggle("active", !!activeEnt && p.dataset.ent === activeEnt));
+    updateCallout();
+  }
+
+  function renderEntityChips(){
+    const box = $("entityFilters"); box.innerHTML = "";
+    const mk = (label, on, fn) => { const b=document.createElement("button"); b.className="chip ent"+(on?" active":""); b.innerHTML=label; b.addEventListener("click",fn); return b; };
+    box.appendChild(mk("All entities", activeEnt===null, () => { activeEnt=null; applyFilter(); renderEntityChips(); }));
+    connectors.forEach(id => {
+      const b = mk(esc(entName(id))+" <span style='opacity:.55'>"+entCount[id]+"</span>", activeEnt===id,
+        () => { activeEnt = (activeEnt===id ? null : id); applyFilter(); renderEntityChips(); });
+      b.style.fontSize = (11 + Math.min(entCount[id], 8)) + "px";  // bigger thread = bigger chip = the shape
+      box.appendChild(b);
+    });
+  }
+
+  function updateCallout(){
+    const co = $("entityCallout");
+    if(!activeEnt){ co.style.display="none"; co.className="note"; return; }
+    const shown = FOIA.investigations.filter(i => (i.entities||[]).includes(activeEnt));
+    const cats = new Set(); shown.forEach(i => (i.categories||[]).forEach(c => cats.add(c)));
+    co.style.display = "block";
+    co.className = "note ecallout";
+    co.innerHTML = "<b>"+esc(entName(activeEnt))+"</b> — "+shown.length+" finding"+(shown.length>1?"s":"")+
+      " across <b>"+cats.size+" categor"+(cats.size>1?"ies":"y")+"</b>. "+
+      (cats.size>1 ? "The category filter alone would scatter these into "+cats.size+" separate buckets." : "");
+  }
+
+  document.addEventListener("click", e => {
+    const pill = e.target.closest && e.target.closest(".epill");
+    if(!pill) return;
+    const id = pill.dataset.ent;
+    activeEnt = (activeEnt===id ? null : id);
+    applyFilter(); renderEntityChips();
+    $("entityFilters").scrollIntoView({behavior:"smooth", block:"nearest"});
+  });
+
+  renderChips();
+  renderVoiceChips();
+  renderEntityChips();
+  applyFilter();
+
+  FOIA.agencies.forEach(a => { const o=document.createElement("option"); o.value=a.id; o.textContent=a.name; $("advAgency").appendChild(o); });
+
+  document.querySelectorAll("button.gen").forEach(b => b.addEventListener("click", () => {
+    const inv = FOIA.investigations.find(x => x.id === b.dataset.inv);
+    const r = inv.requests[+b.dataset.req];
+    const card = b.closest(".card");
+    if(card) card.insertAdjacentElement("afterend", $("gen"));  // expand the drafter inline, right below this finding
+    loadRequest({ subject:r.subject, records:r.records, agencyId:r.agencyId, askNoRecords:!!r.ask_no_records, label:r.summary, component:r.component||null });
+  }));
+
+  function loadRequest(req){
+    current = req;
+    const a = agencyById(req.agencyId);
+    $("genFor").innerHTML = "Drafting: <b>" + esc(req.label) + "</b> — to " + esc(a?a.name:req.agencyId);
+    $("outWrap").style.display = "none";
+    $("gen").classList.add("open");
+    $("gen").scrollIntoView({behavior:"smooth", block:"nearest"});
+  }
+
+  function fill(str, map){ return Object.keys(map).reduce((s,k)=> s.split("{{"+k+"}}").join(map[k]), str); }
+
+  let fullLetter = "";  // always the complete letter, even when the textarea shows the portal version
+
+  function generate(){
+    if(!current) return;
+    const a = agencyById(current.agencyId);
+    const isEmail = !!(a && a.email);
+    const name = $("name").value.trim() || "[your name]";
+    const email = $("email").value.trim() || "[your email]";
+    const addr = $("addr").value.trim();
+    const today = new Date().toLocaleDateString("en-US", {year:"numeric", month:"long", day:"numeric"});
+    const map = { NAME:name, EMAIL:email, ADDRESS:addr, DATE:today };
+    const b = FOIA.boilerplate;
+    const L = [];
+    L.push(name); if(addr) L.push(addr); L.push(email); L.push(today); L.push("");
+    L.push("Records Officer"); L.push(a ? a.name : current.agencyId); L.push("");
+    L.push(current.subject); L.push("");
+    L.push("Dear Records Officer,"); L.push("");
+    if(current.bare){
+      // Follow-ups carry no boilerplate stack — the original request already did.
+      L.push(current.records); L.push("");
+    } else {
+      L.push("This is a request for records under the " + FOIA.meta.statute + "."); L.push("");
+      L.push(current.records); L.push("");
+      if(current.askNoRecords){ L.push(b.no_records); L.push(""); }
+      L.push(b.burden_carveout); L.push("");
+      if($("fee").checked){ L.push(b.fee_waiver); L.push(""); }
+      if($("exp").checked){ L.push(b.expedited); L.push(""); }
+      L.push(b.segregability); L.push("");
+      L.push(b.format); L.push("");
+      if(b.deadline){ L.push(b.deadline); L.push(""); }
+    }
+    L.push(fill(b.closing, map));
+    fullLetter = L.join("\n");
+
+    if(isEmail){
+      // Email entities: the letter goes out whole — show it as before.
+      $("out").value = fullLetter;
+      $("outLabel").textContent = "Your request — review and edit before sending";
+      $("charline").style.display = "none";
+      $("feeWrap").style.display = "none";
+      $("expWrap").style.display = "none";
+      $("portalRouting").style.display = "none";
+    } else {
+      // Form/portal entities: webforms collect your name, address, and fee preference in
+      // their own fields — pasting the whole letter duplicates all of that. Show a
+      // description-box version instead; fee/expedited text gets its own paste boxes.
+      const P = [];
+      if(current.bare){
+        P.push(current.records);
+      } else {
+        P.push("This is a request for records under the " + FOIA.meta.statute + ".");
+        P.push("");
+        P.push(current.records); P.push("");
+        if(current.askNoRecords){ P.push(b.no_records); P.push(""); }
+        P.push(b.burden_carveout); P.push("");
+        P.push(b.segregability); P.push("");
+        P.push(b.format);
+        if(b.deadline){ P.push(""); P.push(b.deadline); }
+      }
+      $("out").value = P.join("\n");
+      $("outLabel").textContent = "Form version — paste into the request-description box (the form collects your name, address, and fees separately)";
+      updateCharline();
+      $("charline").style.display = "block";
+      $("feeOut").value = b.fee_waiver;
+      $("feeWrap").style.display = (!current.bare && $("fee").checked) ? "block" : "none";
+      $("expOut").value = b.expedited;
+      $("expWrap").style.display = (!current.bare && $("exp").checked) ? "block" : "none";
+      const routing = [];
+      if(current.component) routing.push("<b>Where to route it:</b> " + esc(current.component) + ".");
+      if(a && a.portalNote) routing.push(esc(a.portalNote));
+      routing.push("<b>Utah records forms usually also ask:</b> requester status → member of the public (or media, if you publish what you receive) · copies vs. inspection → copies, electronic delivery · date-range fields → the window stated in the request text · fees → the fee-waiver paste box below covers it; if the form makes you acknowledge fees, cap at $25 · expedite box → the paste box below.");
+      $("portalRouting").innerHTML = routing.join(" ");
+      $("portalRouting").style.display = "block";
+    }
+    $("outWrap").style.display = "block";
+    renderActions();
+    ($("portalRouting").style.display === "block" ? $("portalRouting") : $("out")).scrollIntoView({behavior:"smooth", block:"nearest"});
+  }
+  $("genBtn").addEventListener("click", generate);
+
+  function updateCharline(){
+    const n = $("out").value.length;
+    $("charline").textContent = n.toLocaleString() + " characters — if the form rejects it for length, keep the records paragraph and the no-records line, drop the rest";
+  }
+  $("out").addEventListener("input", () => { if($("charline").style.display !== "none") updateCharline(); });
+
+  function flashCopied(){ const s=$("copied"); if(s){ s.hidden=false; setTimeout(()=>s.hidden=true,2000); } }
+  function doCopy(){ const t=$("out"); (navigator.clipboard ? navigator.clipboard.writeText(t.value).then(flashCopied).catch(fallbackCopy) : fallbackCopy()); }
+  function fallbackCopy(){ $("out").select(); try{document.execCommand("copy");}catch(e){} flashCopied(); }
+
+  function renderActions(){
+    const a = agencyById(current.agencyId);
+    const box = $("actions");
+    box.innerHTML = "";
+    const subj = (a && a.emailSubject) ? a.emailSubject : (current.subject || "GRAMA Request");
+    // Email — one click — only where the entity actually accepts email
+    if(a && a.email){
+      const body = $("out").value;
+      const m = document.createElement("a");
+      m.className = "btn email";
+      m.textContent = "✉ Email this request";
+      m.href = "mailto:" + a.email + "?subject=" + encodeURIComponent(subj) + "&body=" + encodeURIComponent(body);
+      box.appendChild(m);
+      // Gmail web compose — works for Gmail-in-browser users regardless of the OS mailto handler.
+      // Reuse the requester's own email (entered above) as authuser so Gmail opens in THAT account.
+      const g = document.createElement("a");
+      g.className = "btn"; g.target = "_blank"; g.rel = "noopener";
+      g.textContent = "Open in Gmail";
+      const senderEmail = ($("email").value || "").trim();
+      const au = (senderEmail.includes("@")) ? ("authuser=" + encodeURIComponent(senderEmail) + "&") : "";
+      g.href = "https://mail.google.com/mail/?" + au + "view=cm&fs=1&to=" + encodeURIComponent(a.email) + "&su=" + encodeURIComponent(subj) + "&body=" + encodeURIComponent(body);
+      box.appendChild(g);
+    }
+    const isEmail = !!(a && a.email);
+    const c = document.createElement("button"); c.className="btn"; c.textContent = isEmail ? "Copy" : "Copy form version"; c.addEventListener("click", doCopy); box.appendChild(c);
+    const d = document.createElement("button"); d.className="btn"; d.textContent = isEmail ? "Download .txt" : "Download full letter .txt";
+    d.addEventListener("click", ()=>{ const blob=new Blob([fullLetter],{type:"text/plain"}); const u=document.createElement("a"); u.href=URL.createObjectURL(blob); u.download="grama-request.txt"; u.click(); URL.revokeObjectURL(u.href); });
+    box.appendChild(d);
+    const p = document.createElement("a"); p.className="btn link"; p.target="_blank"; p.rel="noopener";
+    p.href = (a && a.portal) ? a.portal : FOIA.meta.portal;
+    p.textContent = isEmail ? "Or file via the records page →" : ("Copy, then open " + (a?a.name:"the records page") + " →");
+    box.appendChild(p);
+    const sp = document.createElement("span"); sp.className="copied"; sp.id="copied"; sp.hidden=true; sp.textContent="copied"; box.appendChild(sp);
+    let hint = a && a.submitNote ? a.submitNote : "";
+    if(isEmail) hint += " \"Open in Gmail\" opens the Google account matching the email you entered above (fill that field first); glance at the avatar top-right to confirm before sending. \"✉ Email\" uses your computer's default mail app. If either opens cut off, click Copy and paste the letter in.";
+    else hint += " This entity has no verified one-click email yet — copy the form version above and paste it into the records form's description box. \"Download full letter\" saves the complete letter for your records (useful if the form fails and you fall back to mail).";
+    $("submitHint").textContent = hint;
+  }
+
+  $("advUse").addEventListener("click", ()=>{
+    const id = $("advAgency").value;
+    const recs = $("advRecords").value.trim();
+    if(!recs){ $("advRecords").focus(); return; }
+    loadRequest({ subject:"GRAMA Request", records:recs, agencyId:id, askNoRecords:false, label:"custom request" });
+  });
+
+  // Follow-up drafter — neutral status-check tone; cites GRAMA's response window
+  // without accusing anyone of missing it.
+  FOIA.agencies.forEach(a => { const o=document.createElement("option"); o.value=a.id; o.textContent=a.name; $("fuAgency").appendChild(o); });
+  $("fuUse").addEventListener("click", ()=>{
+    const id = $("fuAgency").value;
+    const tn = $("fuTrack").value.trim();
+    const dt = $("fuDate").value.trim() || "[date filed]";
+    const what = $("fuWhat").value.trim() || "[one-line description of the records requested]";
+    const body =
+      "I am following up on my GRAMA records request" +
+      (tn ? " (reference number " + tn + ")" : "") +
+      ", originally submitted on " + dt + ", concerning " + what + ". " +
+      "I remain interested in these records. Please let me know the status of the request, the estimated " +
+      "completion date, and the reference number assigned to it" + (tn ? " if it has changed" : " if one has been assigned") + ". " +
+      "For reference, GRAMA provides for a response as soon as reasonably possible and no later than 10 business days after receipt (Utah Code § 63G-2-204). " +
+      "I am happy to clarify or reasonably narrow the request if that would speed processing.";
+    loadRequest({ subject: "Follow-up: GRAMA request" + (tn ? " #" + tn : "") + " — " + what.slice(0,80),
+                  records: body, agencyId: id, askNoRecords: false, label: "follow-up on a filed request", bare: true });
+  });
+</script>
+</body>
+</html>
