@@ -2,6 +2,11 @@
 
 What's new in FAFO Utah — Charlie Kirk Edition. Newest first.
 
+## 2026-07-09 (evening) — First two GRAMA requests filed; UCSO route corrected from the field
+
+- **WCSO deleted-video request filed** (1:11 p.m., confirmation in hand): the intake video, its retention schedule, the deletion paper trail, and the county's handling of the news organization's earlier request. 10-working-day clock running.
+- **Utah County booking-records request filed** (#26-2775 via NextRequest). Field lesson learned the honest way: SheriffRecords@utahcounty.gov **auto-replies that it's unmonitored** and routes to NextRequest — the UCSO entry is now portal-only, with the warning baked in.
+
 ## 2026-07-09 (later) — Day-3.5 hooks from the Bombshells crossover
 
 Mined the Coleman/Buckley Carlson Liberty Lockdown crossover (Jul 8) and the Candace-photos recap while waiting on day four:

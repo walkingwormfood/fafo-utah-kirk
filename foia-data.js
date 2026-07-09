@@ -79,9 +79,10 @@ const FOIA = {
       portal: "https://publicsafetyutah.govqa.us/WEBAPP/_rs/SupportHome.aspx",
       submitNote: "DPS runs a department-wide GovQA Records Center — submission starts with a division picker; no records email is published, the portal is the route. Fees and payment run through the portal.",
       portalNote: "Pick the division that holds the record: State Bureau of Investigation for investigative/deployment records, or the video/GRAMA request category. The Aero Bureau isn't its own picker entry — if absent, file under the department-level GRAMA option and name the Aero Bureau in the text." },
-    { id: "ucso", name: "Utah County Sheriff's Office", email: "SheriffRecords@utahcounty.gov",
+    { id: "ucso", name: "Utah County Sheriff's Office", email: null,
       portal: "https://utah-county-ut.nextrequest.com/",
-      submitNote: "UCSO Records takes requests by email (SheriffRecords@utahcounty.gov, verified on the sheriff's records page) or Utah County's NextRequest portal. Quirks: photo ID before release; reports start at $15; body/dash cam $20 per case plus staff time; 10 business days. Records office: 3075 North Main, Spanish Fork (801-851-4500)." },
+      submitNote: "UCSO GRAMA goes through Utah County's NextRequest portal — field-tested Jul 9, 2026: the SheriffRecords@utahcounty.gov address on the sheriff's records page auto-replies that it's UNMONITORED and routes you to NextRequest. Quirks: photo ID before release; reports start at $15; body/dash cam $20 per case plus staff time; 10 business days. Records office: 3075 North Main, Spanish Fork (801-851-4500).",
+      portalNote: "NextRequest auto-creates an account from the email you enter on submission. If you're not the subject of the record, the confirmation email lists ID-upload options — for public records (logs, retention schedules) none is needed." },
     { id: "ucao", name: "Utah County Attorney's Office", email: "ucao@utahcounty.gov",
       portal: "https://utah-county-ut.nextrequest.com/",
       submitNote: "Utah County's GRAMA process is centralized in the County Attorney's Office — email ucao@utahcounty.gov or the NextRequest portal; the county web form requires a photo-ID upload. Mail: 100 East Center Street, Suite 2100, Provo. Expect § 63G-2-305(10) claims on anything touching the open prosecution — the written denial is still the point." },
@@ -150,7 +151,7 @@ const FOIA = {
           subject: "GRAMA Request: lobby/intake video of September 11, 2025 and its retention/deletion records",
           records: "I request: (1) all video recorded by lobby, intake, sally-port, or booking-area cameras at the Washington County Sheriff's Office facility in Hurricane, Utah between 8:00 p.m. September 11, 2025 and 5:00 a.m. September 12, 2025; (2) the records retention schedule applicable to facility video during that period; and (3) any record documenting the deletion, overwriting, or non-retention of video from that period — including the date of deletion, the system or person that performed it, and any authorization, litigation-hold notice, or preservation request in effect at the time; and (4) all correspondence concerning any prior records request for this video — the request, the response, and any internal discussion of it. If the video no longer exists, items (2) through (4) are the request.",
           ask_no_records: true,
-          filed: "PENDING — filed Jul 9, 2026 via WCSO's web form (record description, reason, and OTHER-entitlement boxes; copy requested; fee waiver and expedited response asserted). Statutory response window: 10 working days. Reference number pending WCSO's reply email."
+          filed: "PENDING — filed Jul 9, 2026, 1:11 p.m. via WCSO's web form (copy requested; fee waiver and expedited response asserted; OTHER entitlement). WCSO confirmation email received same hour. Response due within 10 working days (~Jul 23). DO NOT PREPAY — payment instructions come by email."
         }
       ]
     },
@@ -174,7 +175,8 @@ const FOIA = {
           summary: "Utah County — the complete booking record behind the contradictory times",
           subject: "GRAMA Request: booking and intake records for inmate booked September 12, 2025",
           records: "I request the complete booking and intake record for Tyler James Robinson, booked into the Utah County Jail on or about September 12, 2025 — including the booking sheet, any amendments or corrections to it, the intake log entry, and any record reconciling the arrest date/time fields it contains. I am not requesting medical or classification records.",
-          ask_no_records: true
+          ask_no_records: true,
+          filed: "PENDING — filed Jul 9, 2026 via Utah County's NextRequest portal, request #26-2775. (Heads-up from filing it: SheriffRecords@utahcounty.gov auto-replies that it's unmonitored and routes you to NextRequest — the portal is the real intake.)"
         },
         {
           agencyId: "wcso",
