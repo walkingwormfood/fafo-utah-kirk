@@ -58,10 +58,13 @@ const FOIA = {
   /* Utah entities. email: null => portal/form-only (copy + deep-link).
    * Submission routes verified July 2026 (per-entity audit; quirks in submitNote). */
   agencies: [
-    { id: "uvu", name: "Utah Valley University (incl. UVU Police)", email: null,
+    { id: "uvu", name: "Utah Valley University (records office)", email: null,
       portal: "https://uvu.nextrequest.com/",
-      submitNote: "UVU takes GRAMA requests through its NextRequest portal (uvu.nextrequest.com) — that's the stated submission route; grama@uvu.edu and 801-863-6848 are for questions. Fees may apply ($20 minimum cited); ~10 business days. Whether UVU PD records route through the same office wasn't explicitly confirmable — ask via grama@uvu.edu if the portal balks.",
+      submitNote: "UVU takes GRAMA requests through its NextRequest portal (uvu.nextrequest.com); UVU Policy 133 also accepts written requests to the GRAMA officer (grama@uvu.edu). Fees per Policy 133: $25/hr compiling and redaction, copy charges, prepayment possible over $50; ~10 business days; denials appeal to the VP of Finance and Administration within 30 days.",
       portalNote: "NextRequest auto-creates an account from the email you enter on submission." },
+    { id: "uvupd", name: "UVU Police Department", email: "uvpdrecords@uvu.edu",
+      portal: "https://www.uvu.edu/police/",
+      submitNote: "UVU PD takes records requests directly by email (uvpdrecords@uvu.edu, verified on the department's records page) or in person (GT 331, Gunther Trades Building, Orem campus). Minimum fee $20 for police records." },
     { id: "dps", name: "Utah Department of Public Safety (SBI, Aero Bureau)", email: null,
       portal: "https://publicsafetyutah.govqa.us/WEBAPP/_rs/SupportHome.aspx",
       submitNote: "DPS runs a department-wide GovQA Records Center — submission starts with a division picker; no records email is published, the portal is the route. Fees and payment run through the portal.",
@@ -82,9 +85,9 @@ const FOIA = {
       portal: "https://cityofstgeorgepoliceut.nextrequest.com/",
       submitNote: "St. George routes GRAMA through one NextRequest portal covering the City Recorder, Police, and Fire (sgcity.org/grama redirects there). No email route is published — records@sgcity.org circulates on aggregator sites but appears on no official page. Fees: first 15 minutes free, then hourly ($21–$50/hr depending on record type); PD Records 435-627-4301.",
       portalNote: "NextRequest auto-creates an account from the email you enter on submission." },
-    { id: "orem", name: "Orem Police Department (City of Orem)", email: "policerecords@orem.org",
+    { id: "orem", name: "Orem Police Department (City of Orem)", email: "records@orem.gov",
       portal: "https://orem.gov/police-records-request/",
-      submitNote: "Orem PD takes records requests by email (policerecords@orem.org, shown on orem.gov's police-records page) or its JotForm — heads-up: the online form requires a Google-account sign-in, so email is the friction-free route. Fees: $20 per police report, $45 for recordings/video; 5–10 business days; 801-229-7209." },
+      submitNote: "Orem PD takes records requests via its JotForm (linked from orem.gov/police-records-request — heads-up: the form may require a Google-account sign-in) or by email/walk-in at the records counter: records@orem.gov, verified on the city's police-records page (Mon–Fri 8:30–5:30). Don't use policerecords@orem.org from older pages — that domain is retired. No published fee schedule; the city quotes fees and waits for your agreement before processing." },
     { id: "ome", name: "Utah Office of the Medical Examiner (DHHS)", email: null,
       portal: "https://ome.utah.gov/",
       submitNote: "ME case records (autopsy, toxicology, investigative reports) are NOT ordinary GRAMA records — Utah Code § 26B-8-217 restricts them to next of kin, legal representatives, treating physicians, and law enforcement, and § 26B-8-217(8) bars other disclosure absent a court order. The request here deliberately targets administrative transmittal/chain-of-custody paperwork instead, and routes as a GRAMA request to DHHS; expect the office to test the 217 boundary in its response. OME: 4451 South 2700 West, Taylorsville; (801) 816-3850.",
@@ -179,15 +182,15 @@ const FOIA = {
       ],
       requests: [
         {
-          agencyId: "uvu",
-          summary: "UVU — Bagley's bodycam footage plus the device's audit/battery logs",
+          agencyId: "uvupd",
+          summary: "UVU PD — Bagley's bodycam footage plus the device's audit/battery logs",
           subject: "GRAMA Request: body-worn camera footage and device audit logs, September 10, 2025",
           records: "I request: (1) all body-worn camera footage recorded on September 10, 2025 by the UVU police officer who first accessed the Losee Center rooftop; (2) the device audit log for that officer's body-worn camera for September 10, 2025 — including power-on/power-off events, battery-depletion events, docking and upload timestamps; and (3) the department's body-worn camera policy in effect on that date, including battery-management and activation requirements.",
           ask_no_records: true
         },
         {
-          agencyId: "uvu",
-          summary: "UVU — scene access log and multi-agency deployment roster for Sept 10",
+          agencyId: "uvupd",
+          summary: "UVU PD — scene access log and multi-agency deployment roster for Sept 10",
           subject: "GRAMA Request: crime scene access log and assisting-agency roster, September 10, 2025",
           records: "I request: (1) the crime scene access/entry log maintained for the Losee Center rooftop and the courtyard scene at Utah Valley University on September 10–11, 2025; and (2) any roster, mutual-aid record, or deployment list identifying the law-enforcement agencies and personnel (including plainclothes personnel) present on the UVU campus on September 10, 2025 in connection with the incident response.",
           ask_no_records: true
@@ -322,8 +325,8 @@ const FOIA = {
       ],
       requests: [
         {
-          agencyId: "uvu",
-          summary: "UVU — unedited native exports of the specific clipped segments",
+          agencyId: "uvupd",
+          summary: "UVU PD — unedited native exports of the specific clipped segments (campus security video)",
           subject: "GRAMA Request: unedited surveillance video exports, specified cameras and times, September 10, 2025",
           records: "I request unedited, native-format exports (with original metadata intact) of Utah Valley University surveillance video for September 10, 2025 from: (1) the camera covering the campus approach shown in court with timestamps 11:53:00 a.m. – 11:56:00 a.m.; (2) the parking-structure stairwell camera shown with timestamps 11:55:00 a.m. – 11:58:00 a.m.; and (3) the parking-structure camera covering the vehicle that arrived at 8:29 a.m., for 8:29 a.m. – 9:35 a.m. These segments were exhibited publicly at the preliminary hearing in State v. Robinson; I request the unedited sources of the same segments.",
           ask_no_records: true
