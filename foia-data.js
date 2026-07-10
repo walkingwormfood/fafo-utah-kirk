@@ -139,7 +139,7 @@ const FOIA = {
         { label: "Ep. 141 — Days Two and Three", url: "https://www.youtube.com/watch?v=FT8kJN3n_cA" }
       ],
       status: "confirmed",
-      finding: "The Washington County Sheriff's Office video of Robinson's turn-in — the moment the official timeline starts — was reportedly deleted, per day-three testimony. A news organization's records request for it was refused, then answered with a 30-day-retention deletion claim — while court pleadings reportedly suggest the footage exists in law-enforcement hands.",
+      finding: "The Washington County Sheriff's Office video of Robinson's turn-in — the moment the official timeline starts — was reportedly deleted, per day-three testimony. A news organization's request was refused, then answered with a 30-day-retention deletion claim — yet on day four the state exhibited surrender footage cropped so tightly the timestamps were cut out, with Robinson facing away from the camera.",
       implication: "Government video of the most consequential arrest in Utah's history was not preserved — or was it? The retention schedule, the deletion authorization, the county's handling of the earlier request, and any litigation-hold notice are all administrative records, and the contradiction between \"deleted\" and the pleadings is exactly what they'd resolve.",
       sources: [
         { label: "Day 3 testimony, Agent Brian Davis (State v. Robinson prelim)", url: "" }
@@ -513,6 +513,30 @@ const FOIA = {
       ]
     },
     {
+      id: "ballistics-inconclusive",
+      categories: ["Physical evidence"],
+      entities: ["robinson", "sbi"],
+      investigator: "Baron Coleman",
+      investigatorLinks: [
+        { label: "Ep. 142 — Day Four", url: "https://www.youtube.com/watch?v=6ZZ_e53ZDnY" }
+      ],
+      status: "confirmed",
+      finding: "Day-four testimony: the comparison of the recovered bullet-jacket fragment to the charged rifle was \"inconclusive\" — it \"could not be identified or excluded\" — and the examiner measured the fragment at .286–.301 inches, below the .308-inch bullet diameter of a .30-06. A GSR analysis was performed on the car and never introduced.",
+      implication: "The state's physical case never connects the fragment to the rifle. The lab reports behind the measurement, the inconclusive comparison, and the unintroduced GSR analysis are discrete, numbered lab records (Exhibit 6/6A, lab item 25 W41). Expect a § 63G-2-305(10) denial while the prosecution is pending — the written denial documents what the lab holds.",
+      sources: [
+        { label: "Day 4 firearms-examiner testimony, State v. Robinson (per Coleman Ep. 142; courtroom audio verification in progress)", url: "" }
+      ],
+      requests: [
+        {
+          agencyId: "dps",
+          summary: "DPS/crime lab — the firearms report and the never-introduced GSR analysis",
+          subject: "GRAMA Request: firearms comparison report and gunshot-residue analysis, State v. Robinson evidence",
+          records: "I request, concerning laboratory analyses in the Utah Valley University homicide investigation of September 10, 2025: (1) the firearms examination report documenting the measurement of the recovered bullet-jacket fragment (lab item referenced in preliminary-hearing testimony as 25 W41 / Exhibit 6) and the comparison of that fragment to the recovered rifle, including the reported result; and (2) the gunshot-residue (GSR) analysis performed on the Dodge Challenger associated with the case, including the result. Both analyses were referenced in public preliminary-hearing testimony on July 9, 2026.",
+          ask_no_records: true
+        }
+      ]
+    },
+    {
       id: "state-plane",
       categories: ["Timeline contradictions"],
       entities: ["davis", "sbi"],
@@ -545,10 +569,10 @@ const FOIA = {
         { label: "Carroll on day two", url: "https://www.youtube.com/watch?v=r8JjODn8-dY" }
       ],
       status: "confirmed",
-      finding: "The lead investigator testified the medical examiner report's front page recites investigative information that didn't come from his team; the autopsy evidence — fingerprints, photos, bullet fragments — reached him on a CD via chain of custody.",
-      implication: "The autopsy report itself is statutorily restricted — but the chain-of-custody and transmittal paperwork around it (who transferred what to whom, when) is administrative record-keeping, and it's exactly where the \"whose information is on the front page\" question lives.",
+      finding: "The lead investigator testified the ME report's front page recites investigative information that didn't come from his team — and on day four, the firearms examiner testified the medical examiner documented potentially SEVEN bullet fragments while she received FOUR, a discrepancy she learned of only \"a few months ago.\"",
+      implication: "Three fragments of the bullet that killed Charlie Kirk are unaccounted for between the autopsy table and the firearms lab. The transmittal and chain-of-custody paperwork — who transferred what to whom, when — is administrative record-keeping, and it's exactly where both the missing-fragments and whose-information-is-on-the-front-page questions live.",
       sources: [
-        { label: "Day 2 testimony", url: "" }
+        { label: "Day 2 testimony; Day 4 firearms-examiner cross (per Coleman Ep. 142)", url: "" }
       ],
       requests: [
         {

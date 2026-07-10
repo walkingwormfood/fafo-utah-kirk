@@ -2,6 +2,15 @@
 
 What's new in FAFO Utah — Charlie Kirk Edition. Newest first.
 
+## 2026-07-10 — Day four: the state rested, and the physical evidence cracked
+
+From Coleman's Ep. 142 coverage of day four (courtroom-audio verification in progress via the full stream transcript):
+
+- **New card — inconclusive ballistics**: the fragment-to-rifle comparison "could not be identified or excluded"; the examiner measured the jacket fragment at .286–.301" (a .30-06 bullet is .308"); a GSR analysis of the car was performed and never introduced. Request: the lab reports, by exhibit and item number.
+- **ME chain-of-custody card upgraded**: the medical examiner documented potentially SEVEN fragments; the firearms examiner received FOUR. Three fragments of the fatal bullet are unaccounted for — the transmittal paperwork request now carries that finding.
+- **Deleted-video card sharpened again**: day four's surrender-footage exhibit was cropped so tightly the timestamps were cut out.
+- Also on the record from day four: the state rested without calling the parents (after ten months of "he confessed to his parents"), Mike Mitchell's testimony was sealed without objection, and the Twiggs Rule 1102 recording contradicted the state's own 4:33 p.m. text exhibit.
+
 ## 2026-07-09 (evening) — First two GRAMA requests filed; UCSO route corrected from the field
 
 - **WCSO deleted-video request filed** (1:11 p.m., confirmation in hand): the intake video, its retention schedule, the deletion paper trail, and the county's handling of the news organization's earlier request. 10-working-day clock running.
