@@ -2,6 +2,16 @@
 
 What's new in FAFO Utah — Charlie Kirk Edition. Newest first.
 
+## 2026-07-10 (later) — The primary source: nine hours of day-four courtroom audio, transcribed and cross-checked
+
+No YouTube captions existed for the court stream, so the full 9h23m of day-four audio was whisper-transcribed and checked line-by-line against the commentary coverage. Results:
+
+- **Verified on the record**: the "cannot be identified or excluded... inconclusive" ballistics conclusion (ATF examiner Samantha Carner, Exhibit 32), the .286–.301" fragment measurement, the seven-fragments-documented-vs-four-received exchange, Twiggs's non-ID of the FBI photos, the note photographed-not-burned testimony, the practice targets, and the state resting without calling the parents. Those cards now carry courtroom-record sourcing.
+- **New card — the fingerprint exclusion**: by stipulation, SBI examiner Elisa Farmer excluded Robinson as the source of ALL THREE comparable latent prints on the glass at the roof descent point (FBI re-exams inconclusive; the state says the suspect never touched the glass). Request: the latent report and any effort to identify whose prints they actually are.
+- **New request — the unseen bodycam**: the crime-scene sergeant testified an officer's body camera was rolling during the rifle recovery — footage nobody has seen. Requested from Utah County SO.
+- Corrections the cross-check caught: the "missing text pages" claim overstates (the full 18-page exhibit was admitted; pages 1–9, 15, and 17 were read aloud), and the famous 4:33 p.m. text isn't in the courtroom audio — while Agent Davis testified the phone extraction showed the FIRST text was 11 p.m., a tension worth watching.
+- On the calendar, from the record: state bindover brief July 28, defense response Aug 11, reply Aug 18, oral argument Sept 1 — a seven-week window where these records requests can land before the ruling.
+
 ## 2026-07-10 — Day four: the state rested, and the physical evidence cracked
 
 From Coleman's Ep. 142 coverage of day four (courtroom-audio verification in progress via the full stream transcript):

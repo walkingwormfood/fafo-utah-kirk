@@ -211,6 +211,13 @@ const FOIA = {
           ask_no_records: true
         },
         {
+          agencyId: "ucso",
+          summary: "Utah County SO — the bodycam that was rolling during the rifle recovery (confirmed on day 4 to exist)",
+          subject: "GRAMA Request: body-worn camera footage of evidence recovery, wooded area near UVU, September 10, 2025",
+          records: "I request the body-worn camera footage recorded by the Utah County Sheriff's Office officer(s) present at the recovery of a rifle from the wooded area northeast of the Utah Valley University campus on September 10, 2025, at approximately 6:00 p.m. On July 9, 2026, the state's crime-scene sergeant testified at the public preliminary hearing in State v. Robinson that an officer's body camera was recording during that recovery. I also request the associated evidence/property record for the recovered items.",
+          ask_no_records: true
+        },
+        {
           agencyId: "uvupd",
           summary: "UVU PD — scene access log and multi-agency deployment roster for Sept 10",
           subject: "GRAMA Request: crime scene access log and assisting-agency roster, September 10, 2025",
@@ -524,7 +531,7 @@ const FOIA = {
       finding: "Day-four testimony: the comparison of the recovered bullet-jacket fragment to the charged rifle was \"inconclusive\" — it \"could not be identified or excluded\" — and the examiner measured the fragment at .286–.301 inches, below the .308-inch bullet diameter of a .30-06. A GSR analysis was performed on the car and never introduced.",
       implication: "The state's physical case never connects the fragment to the rifle. The lab reports behind the measurement, the inconclusive comparison, and the unintroduced GSR analysis are discrete, numbered lab records (Exhibit 6/6A, lab item 25 W41). Expect a § 63G-2-305(10) denial while the prosecution is pending — the written denial documents what the lab holds.",
       sources: [
-        { label: "Day 4 firearms-examiner testimony, State v. Robinson (per Coleman Ep. 142; courtroom audio verification in progress)", url: "" }
+        { label: "VERIFIED against day-4 courtroom audio: ATF examiner Samantha Carner (defense witness); Exhibit 32 read into the record — \"cannot be identified or excluded... inconclusive\"; her measured range .286–.301\"", url: "" }
       ],
       requests: [
         {
@@ -532,6 +539,30 @@ const FOIA = {
           summary: "DPS/crime lab — the firearms report and the never-introduced GSR analysis",
           subject: "GRAMA Request: firearms comparison report and gunshot-residue analysis, State v. Robinson evidence",
           records: "I request, concerning laboratory analyses in the Utah Valley University homicide investigation of September 10, 2025: (1) the firearms examination report documenting the measurement of the recovered bullet-jacket fragment (lab item referenced in preliminary-hearing testimony as 25 W41 / Exhibit 6) and the comparison of that fragment to the recovered rifle, including the reported result; and (2) the gunshot-residue (GSR) analysis performed on the Dodge Challenger associated with the case, including the result. Both analyses were referenced in public preliminary-hearing testimony on July 9, 2026.",
+          ask_no_records: true
+        }
+      ]
+    },
+    {
+      id: "prints-excluded",
+      categories: ["Physical evidence"],
+      entities: ["robinson", "sbi", "fbi-ent"],
+      investigator: "Day 4 courtroom record",
+      investigatorLinks: [
+        { label: "Day 4 court stream (TriggerSmart)", url: "https://www.youtube.com/watch?v=t1Dl8_AkFU8" }
+      ],
+      status: "confirmed",
+      finding: "A stipulation read into the day-four record: SBI latent-print examiner Elisa Farmer found three latent prints of comparable value on the window glass below the roof descent point — and EXCLUDED Tyler Robinson as the source of all three. Subsequent FBI re-examinations were inconclusive. The state's counter, via its crime-scene sergeant: the enhanced video shows the suspect never touched the glass.",
+      implication: "Someone else's prints are on the glass at the descent point, by the state's own stipulation. The latent-print report, the FBI re-examination records, and any effort to identify whose prints they are — all discrete, named records. If nobody ever ran the prints against anyone but Robinson, that absence is itself the finding.",
+      sources: [
+        { label: "Day 4 courtroom audio: stipulation read into the record (prints 11B, 11C, 11D); sergeant's \"did not touch\" testimony", url: "" }
+      ],
+      requests: [
+        {
+          agencyId: "dps",
+          summary: "DPS/SBI — the latent-print report and any identification efforts on the excluded prints",
+          subject: "GRAMA Request: latent print examination report, State v. Robinson evidence",
+          records: "I request, concerning the Utah Valley University homicide investigation: (1) the SBI latent-print examination report (examiner Elisa Farmer) covering the latent prints designated 11B, 11C, and 11D recovered from the window glass below the roof descent point, whose conclusions — including the exclusion of the defendant as the source — were stipulated on the public record at the July 9, 2026 preliminary hearing; and (2) any record of database searches (AFIS/NGI) or comparisons run to identify the actual source of those three prints, including the result or a record that no such search was run.",
           ask_no_records: true
         }
       ]
@@ -572,7 +603,7 @@ const FOIA = {
       finding: "The lead investigator testified the ME report's front page recites investigative information that didn't come from his team — and on day four, the firearms examiner testified the medical examiner documented potentially SEVEN bullet fragments while she received FOUR, a discrepancy she learned of only \"a few months ago.\"",
       implication: "Three fragments of the bullet that killed Charlie Kirk are unaccounted for between the autopsy table and the firearms lab. The transmittal and chain-of-custody paperwork — who transferred what to whom, when — is administrative record-keeping, and it's exactly where both the missing-fragments and whose-information-is-on-the-front-page questions live.",
       sources: [
-        { label: "Day 2 testimony; Day 4 firearms-examiner cross (per Coleman Ep. 142)", url: "" }
+        { label: "Day 2 testimony; Day 4 cross VERIFIED against courtroom audio (\"potentially seven fragments from the medical examiner in a photo\"; Exhibit 6 as received: one jacket fragment + four lead fragments)", url: "" }
       ],
       requests: [
         {
