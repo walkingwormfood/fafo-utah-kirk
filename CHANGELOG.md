@@ -2,6 +2,15 @@
 
 What's new in FAFO Utah — Charlie Kirk Edition. Newest first.
 
+## 2026-07-11 — Day five transcribed: the record is complete
+
+All five hearing days are now in the library — days 1–3 via commentator coverage, days 4–5 as whisper-transcribed courtroom audio. Day five (6h51m) findings:
+
+- **The defense's lone witness was ATF DNA section chief Katelyn Oliver, not a ballistics witness** — wire reports conflating day five with day four's ballistics testimony are wrong. Her cross-record: nine samples entirely consumed with nothing preserved for defense retesting; the "1 trillion times more likely" figures are a reporting cap; "support for inclusion" of the defendant's FATHER on the rifle bolt and of Lance Twiggs on the Dremel; no next-generation sequencing performed. (The federal FOIA request for those ATF records lives on the federal FAFO's new card.)
+- **The enhanced video (12.1) was played audio-only and not broadcast**; a courtroom attendee's account describes it as distant, blurry, no gun visible, no shot audible — contradicting social-media claims of "clear video." Secondhand, flagged as such.
+- **The note's text has been public since ~March** — it's on page 7 of a search warrant released after ~6 months under seal, a fact recited by the court while sanctioning the media for a 3.5-second broadcast of the exhibit (all exhibit broadcast banned for the rest of the day).
+- Both sides rested; no rebuttal; Robinson declined to testify through counsel; bindover argument September 1, 10 a.m., four hours total.
+
 ## 2026-07-10 (later) — The primary source: nine hours of day-four courtroom audio, transcribed and cross-checked
 
 No YouTube captions existed for the court stream, so the full 9h23m of day-four audio was whisper-transcribed and checked line-by-line against the commentary coverage. Results:
