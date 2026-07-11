@@ -6,10 +6,10 @@ What's new in FAFO Utah — Charlie Kirk Edition. Newest first.
 
 New second view, toggleable next to the cards — the same shape as the claim-verification tables the courtroom transcripts were checked against, because that shape is the case:
 
-- **One row per evidence thread (17)**: what the sworn record shows · the verdict (confirmed/contested) · **the hole it leaves** in the official account · the paper in play to fill it.
+- **One row per evidence thread (17)**, a static grid that stacks on phones — no sideways-scrolling window: what the sworn record shows · verdict · **the hole it leaves** in the official account · results.
+- **Grouped by where the records fight stands**: <span style="color:red">unclaimed inquiries in red at the top</span> — 25 drafted requests nobody has filed yet, which is the ask — then results pending (glowing, in flight), results posted at the bottom. Rows sink as answers land; an "act first / results first" chip flips the order for the day the chart is mostly answers.
 - **The eleven holes ride their rows as dashed pills** — where's the turn-in video, whose prints are 11B/C/D, where are three of the fragments, who's the badge-man, who ordered the paving, what did the GSR say, and the rest. Hover a pill for the question it asks.
-- **The paper-in-play column is live status**: ✎ draft ready, ⏳ in flight (glowing — hover for the docket detail), 📬 answered. The header keeps score (27 drafted · 2 in flight), and results land in the chart as entities respond.
-- Click any row to open its card and draft the request. Same single data file, zero dependencies, no tracking.
+- The view toggle is sticky (always visible, always in the same place) and switching views always lands at the top of the section instead of a random scroll depth. Click any row to open its card and draft the request. Same single data file, zero dependencies, no tracking.
 - Housekeeping: long filed-status strings and portal buttons no longer overflow on phones.
 - (Two earlier cuts died in review this morning: a force-directed graph — Obsidian visual noise — and a tile board. The chart is the one that reads.)
 

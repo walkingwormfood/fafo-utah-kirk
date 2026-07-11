@@ -110,8 +110,9 @@
   .catfacet[open] summary::before{content:"▾ "}
   .catfacet[open] .filters{margin-top:8px}
 
-  /* ——— the shape of the case (tile board) ——— */
-  .viewtoggle{display:flex;margin:0 0 12px;border:1px solid var(--line);border-radius:8px;overflow:hidden;width:max-content}
+  /* ——— the evidence chart ——— */
+  .viewbar{position:sticky;top:0;z-index:60;background:var(--bg);padding:10px 0 8px;margin:0 0 6px}
+  .viewtoggle{display:flex;border:1px solid var(--line);border-radius:8px;overflow:hidden;width:max-content}
   .vbtn{font-family:var(--mono);font-size:12px;letter-spacing:.06em;text-transform:uppercase;padding:8px 16px;background:var(--panel);color:var(--ink2);border:none;cursor:pointer}
   .vbtn+.vbtn{border-left:1px solid var(--line)}
   .vbtn:hover{color:var(--ink)}
@@ -120,29 +121,37 @@
   #graphWrap.open{display:block}
   .gsec{font-size:12px;font-family:var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--faint);margin:22px 0 2px;border-bottom:1px solid var(--line);padding-bottom:7px}
   .gsec b{color:#a9c7ff;text-shadow:0 0 8px rgba(138,180,255,.4)}
-  .chartbox{border:1px solid var(--line);border-radius:10px;background:var(--panel);overflow-x:auto;margin:12px 0 4px}
-  #evChart{border-collapse:collapse;width:100%;min-width:860px;font-size:12.5px}
-  #evChart th{font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--faint);text-align:left;padding:11px 10px 9px;border-bottom:1px solid var(--line);white-space:nowrap}
-  #evChart td{padding:11px 10px;border-top:1px solid var(--panel2);vertical-align:top;line-height:1.5}
-  #evChart tbody tr{cursor:pointer}
-  #evChart tbody tr:hover{background:rgba(255,59,59,.05)}
-  #evChart .num{color:var(--faint);font-family:var(--mono);font-size:11px}
-  #evChart .ev{min-width:130px}
-  #evChart .ev b{font-size:13px;line-height:1.3;display:block}
-  #evChart .ev .cat{display:block;width:max-content;margin:5px 0 0}
-  #evChart .shows{color:var(--ink2);min-width:280px}
-  #evChart .badge{margin-left:0;white-space:nowrap}
-  #evChart .hole{min-width:140px;max-width:190px}
+  #evGrid{margin:10px 0 4px}
+  .ehead{display:grid;grid-template-columns:180px 1fr 160px 168px;gap:0 14px;padding:6px 13px 0;font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--faint)}
+  .egroup{font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;padding:18px 2px 7px;border-bottom:1px solid var(--line)}
+  .egroup.unclaimed{color:var(--accent);text-shadow:0 0 8px rgba(255,59,59,.4)}
+  .egroup.pending{color:#a9c7ff;text-shadow:0 0 8px rgba(138,180,255,.4)}
+  .egroup.posted{color:var(--ok)}
+  .erow{display:grid;grid-template-columns:180px 1fr 160px 168px;gap:0 14px;padding:12px;border:1px solid var(--panel2);border-left-width:3px;border-radius:8px;margin:8px 0;background:var(--panel);cursor:pointer;font-size:12.5px;line-height:1.5}
+  .erow:hover{border-color:var(--accent);border-left-width:3px}
+  .erow.unclaimed{border-left-color:rgba(255,59,59,.55)}
+  .erow.pending{border-left-color:#a9c7ff}
+  .erow.posted{border-left-color:var(--ok)}
+  .erow .ev b{font-size:13px;line-height:1.3;display:block;margin-bottom:6px}
+  .erow .badge{margin:0 0 6px;display:inline-block}
+  .erow .cat{display:block;width:max-content;margin:0 0 4px}
+  .erow .shows{color:var(--ink2)}
   .hpill{display:inline-block;border:1px dashed var(--faint);border-radius:20px;padding:2px 9px;margin:0 4px 4px 0;font-family:var(--mono);font-size:10.5px;color:var(--ink2);background:#0a0a0d;cursor:help}
   .hpill:hover{border-color:#a9c7ff;color:#a9c7ff}
   .nohole{color:var(--faint)}
-  #evChart .paper{font-family:var(--mono);font-size:11px;white-space:nowrap}
-  .paper .pl{display:block;margin:0 0 5px}
-  .paper .flight{color:#a9c7ff;animation:ppulse 2.4s ease-in-out infinite}
+  .res .pl{display:block;font-family:var(--mono);font-size:11px;margin:0 0 6px}
+  .res .unclaimed{color:var(--accent)}
+  .res .flight{color:#a9c7ff;animation:ppulse 2.4s ease-in-out infinite}
   @keyframes ppulse{0%,100%{text-shadow:0 0 4px rgba(138,180,255,.3)}50%{text-shadow:0 0 12px rgba(138,180,255,.9)}}
-  @media (prefers-reduced-motion: reduce){.paper .flight{animation:none;text-shadow:0 0 8px rgba(138,180,255,.5)}}
-  .paper .got{color:var(--ok)}
-  .paper .draft{color:var(--faint)}
+  @media (prefers-reduced-motion: reduce){.res .flight{animation:none;text-shadow:0 0 8px rgba(138,180,255,.5)}}
+  .res .got{color:var(--ok)}
+  .modechip{margin-left:8px;letter-spacing:.04em;text-transform:none}
+  .ecl{display:none}
+  @media (max-width:640px){
+    .ehead{display:none}
+    .erow{grid-template-columns:1fr;gap:10px 0}
+    .ecl{display:block;font-family:var(--mono);font-size:9.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--faint);margin-bottom:4px}
+  }
   .card.flash{outline:2px solid var(--accent);box-shadow:0 0 24px rgba(255,59,59,.35)}
 </style>
 </head>
@@ -160,9 +169,11 @@
   <div class="note" id="narrowing"></div>
 
   <h2 class="section" id="sectionHead">Pick a finding</h2>
-  <div class="viewtoggle">
-    <button class="vbtn active" id="viewCards">Findings</button>
-    <button class="vbtn" id="viewGraph">Evidence chart</button>
+  <div class="viewbar">
+    <div class="viewtoggle">
+      <button class="vbtn active" id="viewCards">Findings</button>
+      <button class="vbtn" id="viewGraph">Evidence chart</button>
+    </div>
   </div>
   <div id="cardsView">
     <details class="facet catfacet"><summary><span class="facet-lbl">Filter by category</span></summary><div class="filters" id="filters"></div></details>
@@ -173,14 +184,9 @@
   </div>
 
   <div id="graphWrap">
-    <div class="note"><b>The evidence chart.</b> Every thread from the five hearing days, one row each: what the sworn record shows, the verdict, <b>the hole it leaves</b> in the official account (hover a dashed pill for the question it asks), and the paper in play to fill it — a glowing ⏳ is a GRAMA request in flight, 📬 is an answer on the record. Results land here as entities respond. Click any row to open its card and draft the request.</div>
+    <div class="note"><b>The evidence chart.</b> Every thread from the five hearing days: what the sworn record shows, <b>the hole it leaves</b> in the official account (hover a dashed pill for the question it asks), and where the records fight stands. <b style="color:var(--accent)">Red inquiries are unclaimed</b> — drafted, waiting for someone to file them; that someone can be you. Glowing ⏳ = filed, results pending. 📬 = results posted. Rows sink toward the bottom as answers land. Click any row to open its card and draft the request.</div>
     <div class="gsec" id="chartHead"></div>
-    <div class="chartbox">
-      <table id="evChart">
-        <thead><tr><th>#</th><th>The evidence</th><th>What the sworn record shows</th><th>Verdict</th><th>The hole it leaves</th><th>Paper in play</th></tr></thead>
-        <tbody id="evBody"></tbody>
-      </table>
-    </div>
+    <div id="evGrid"></div>
   </div>
 
   <div id="gen">
@@ -595,41 +601,66 @@
   });
 
   /* ——— The evidence chart: one row per thread of evidence ———
-   * What the sworn record shows | verdict | the hole it leaves | the paper in
-   * play. The same shape as the claim-verification tables the transcripts were
-   * checked against — results populate the chart as GRAMA answers land.
-   * Same single data file, zero dependencies. */
-  let chartBuilt = false;
+   * A static grid (no scrolling window — stacks on phones): what the sworn record
+   * shows | the hole it leaves | results. Rows are grouped by where the records
+   * fight stands: UNCLAIMED inquiries first in red (file one — that's the point),
+   * then results pending, results posted at the bottom. The mode chip flips the
+   * order for a results-first read. Same single data file, zero dependencies. */
+  let chartBuilt = false, chartMode = "action";
   const AG_SHORT = { uvu: "UVU", uvupd: "UVU PD", dps: "DPS/SBI", ucso: "Utah County SO", ucao: "Utah County Atty",
                      wcso: "WCSO", washco: "Washington Co.", sgpd: "St. George PD", orem: "Orem PD",
                      gov: "Governor's Ofc", ome: "Medical Examiner" };
+  const rowStatus = inv => inv.requests.every(r => r.response) ? "posted" :
+                           inv.requests.some(r => r.filed && !r.response) ? "pending" : "unclaimed";
+
+  function chartRow(inv, gaps){
+    const holes = gaps.filter(g => (g.findings || []).includes(inv.id));
+    const res = inv.requests.map(r => {
+      const ag = AG_SHORT[r.agencyId] || r.agencyId;
+      if(r.response) return `<span class="pl got" title="${esc(r.response)}">&#128236; ${esc(ag)} — posted</span>`;
+      if(r.filed)    return `<span class="pl flight" title="${esc(r.filed)}">&#9203; ${esc(ag)} — pending</span>`;
+      return `<span class="pl unclaimed">&#9998; ${esc(ag)} — unclaimed</span>`;
+    }).join("");
+    return `<div class="erow ${rowStatus(inv)}" data-card="${esc(inv.id)}">` +
+      `<div class="ev"><b>${esc(inv.short || inv.id)}</b><span class="badge ${esc(inv.status)}">${esc(inv.status)}</span>` +
+        (inv.categories || []).map(c => `<span class="cat">${esc(c)}</span>`).join("") + `</div>` +
+      `<div><span class="ecl">what the sworn record shows</span><span class="shows">${esc(inv.finding)}</span></div>` +
+      `<div><span class="ecl">the hole it leaves</span>` +
+        (holes.length ? holes.map(h => `<span class="hpill" title="${esc(h.question)}">${esc(h.label)}</span>`).join("") : `<span class="nohole">—</span>`) + `</div>` +
+      `<div class="res"><span class="ecl">results</span>${res}</div></div>`;
+  }
 
   function buildChart(){
     chartBuilt = true;
     const gaps = FOIA.gaps || [];
     const allReqs = FOIA.investigations.flatMap(i => i.requests);
-    const inFlight = allReqs.filter(r => r.filed && !r.response).length;
-    const answered = allReqs.filter(r => r.response).length;
-    $("chartHead").innerHTML = FOIA.investigations.length + " evidence threads · " + gaps.length +
-      " holes in the record · " + allReqs.length + " requests drafted · <b>" + inFlight +
-      " in flight</b> · " + answered + " answered";
-    $("evBody").innerHTML = FOIA.investigations.map((inv, ix) => {
-      const holes = gaps.filter(g => (g.findings || []).includes(inv.id));
-      const paper = inv.requests.map(r => {
-        const ag = AG_SHORT[r.agencyId] || r.agencyId;
-        if(r.response) return `<span class="pl got" title="${esc(r.response)}">&#128236; ${esc(ag)} — answered</span>`;
-        if(r.filed)    return `<span class="pl flight" title="${esc(r.filed)}">&#9203; ${esc(ag)} — in flight</span>`;
-        return `<span class="pl draft">&#9998; ${esc(ag)} — draft ready</span>`;
-      }).join("");
-      return `<tr data-card="${esc(inv.id)}">` +
-        `<td class="num">${ix + 1}</td>` +
-        `<td class="ev"><b>${esc(inv.short || inv.id)}</b>${(inv.categories || []).map(c => `<span class="cat">${esc(c)}</span>`).join("")}</td>` +
-        `<td class="shows">${esc(inv.finding)}</td>` +
-        `<td><span class="badge ${esc(inv.status)}">${esc(inv.status)}</span></td>` +
-        `<td class="hole">${holes.length ? holes.map(h => `<span class="hpill" title="${esc(h.question)}">${esc(h.label)}</span>`).join("") : `<span class="nohole">—</span>`}</td>` +
-        `<td class="paper">${paper}</td></tr>`;
-    }).join("");
+    const pendingN = allReqs.filter(r => r.filed && !r.response).length;
+    const postedN = allReqs.filter(r => r.response).length;
+    const unclaimedN = allReqs.length - pendingN - postedN;
+    $("chartHead").innerHTML = FOIA.investigations.length + " threads · " + gaps.length + " holes · " +
+      allReqs.length + " inquiries: <b style=\"color:var(--accent)\">" + unclaimedN + " unclaimed</b> · <b>" +
+      pendingN + " pending</b> · <b style=\"color:var(--ok);text-shadow:none\">" + postedN + " posted</b>" +
+      `<button class="chip modechip${chartMode === "action" ? " active" : ""}" data-mode="action">act first</button>` +
+      `<button class="chip modechip${chartMode === "results" ? " active" : ""}" data-mode="results">results first</button>`;
+    const groups = { unclaimed: [], pending: [], posted: [] };
+    FOIA.investigations.forEach(inv => groups[rowStatus(inv)].push(inv));
+    const order = chartMode === "action" ? ["unclaimed", "pending", "posted"] : ["posted", "pending", "unclaimed"];
+    const LABELS = { unclaimed: "Unclaimed inquiries — nobody has filed these yet; pick one",
+                     pending: "Results pending — requests in flight",
+                     posted: "Results posted — answers on the record" };
+    let html = `<div class="ehead"><span>The evidence</span><span>What the sworn record shows</span><span>The hole it leaves</span><span>Results</span></div>`;
+    order.forEach(k => {
+      if(!groups[k].length) return;
+      html += `<div class="egroup ${k}">${LABELS[k]} · ${groups[k].length}</div>`;
+      html += groups[k].map(inv => chartRow(inv, gaps)).join("");
+    });
+    $("evGrid").innerHTML = html;
   }
+
+  $("chartHead").addEventListener("click", e => {
+    const b = e.target.closest("[data-mode]"); if(!b) return;
+    chartMode = b.dataset.mode; buildChart();
+  });
 
   $("graphWrap").addEventListener("click", e => {
     const el = e.target.closest("[data-card]");
@@ -654,6 +685,9 @@
     $("viewGraph").classList.toggle("active", !cards);
     $("sectionHead").textContent = cards ? "Pick a finding" : "The evidence chart";
     if(!cards && !chartBuilt) buildChart();
+    // deterministic landing: every switch opens at the top of the section (a card-jump
+    // scrolls to its card right after this, which is the one intended exception)
+    $("sectionHead").scrollIntoView({ block: "start" });
   }
   $("viewCards").addEventListener("click", () => setView("cards"));
   $("viewGraph").addEventListener("click", () => setView("graph"));
