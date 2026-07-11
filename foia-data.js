@@ -132,6 +132,7 @@ const FOIA = {
   investigations: [
     {
       id: "wcso-intake-video",
+      short: "Deleted turn-in video",
       categories: ["Missing & deleted footage"],
       entities: ["robinson", "davis", "brooksby", "wcso-ent"],
       investigator: "Baron Coleman",
@@ -157,6 +158,7 @@ const FOIA = {
     },
     {
       id: "custody-timeline",
+      short: "Four custody times",
       categories: ["Timeline contradictions"],
       entities: ["robinson", "davis", "brooksby", "wcso-ent", "fbi-ent"],
       investigator: "Baron Coleman",
@@ -189,6 +191,7 @@ const FOIA = {
     },
     {
       id: "bagley-bodycam",
+      short: "Bodycam died on the roof",
       categories: ["Missing & deleted footage", "Crime scene handling"],
       entities: ["bagley", "uvu-ent"],
       investigator: "Baron Coleman · Ian Carroll",
@@ -228,6 +231,7 @@ const FOIA = {
     },
     {
       id: "second-roof-round",
+      short: "The .223 on the other roof",
       categories: ["Physical evidence"],
       entities: ["schneider", "davis", "sbi", "uvu-ent"],
       investigator: "Baron Coleman · Ian Carroll",
@@ -260,6 +264,7 @@ const FOIA = {
     },
     {
       id: "k9-no-results",
+      short: "K9s: no results",
       categories: ["Crime scene handling"],
       entities: ["uvu-ent", "sbi"],
       investigator: "Ian Carroll · Candace Owens",
@@ -291,6 +296,7 @@ const FOIA = {
     },
     {
       id: "paved-scene",
+      short: "Scene paved over",
       categories: ["Crime scene handling"],
       entities: ["uvu-ent", "davis"],
       investigator: "Ian Carroll · Baron Coleman",
@@ -323,6 +329,7 @@ const FOIA = {
     },
     {
       id: "noble-report",
+      short: "Omitted doorbell report",
       categories: ["Witness statements", "Video evidence"],
       entities: ["robinson", "sbi"],
       investigator: "Baron Coleman · Ian Carroll",
@@ -348,6 +355,7 @@ const FOIA = {
     },
     {
       id: "cut-footage",
+      short: "Edited courtroom video",
       categories: ["Video evidence"],
       entities: ["robinson", "uvu-ent"],
       investigator: "Baron Coleman",
@@ -379,6 +387,7 @@ const FOIA = {
     },
     {
       id: "tpusa-contact",
+      short: "TPUSA contact that morning",
       categories: ["Witness statements", "Video evidence"],
       entities: ["robinson", "tpusa", "uvu-ent"],
       investigator: "Baron Coleman · Buckley Carlson · Ian Carroll",
@@ -411,6 +420,7 @@ const FOIA = {
     },
     {
       id: "twiggs-location",
+      short: "Twiggs: which building?",
       categories: ["Timeline contradictions", "Witness statements"],
       entities: ["twiggs", "davis", "fbi-ent", "wcso-ent"],
       investigator: "Baron Coleman",
@@ -442,6 +452,7 @@ const FOIA = {
     },
     {
       id: "mitchell-statements",
+      short: "Mitchell re-papered",
       categories: ["Witness statements", "Timeline contradictions"],
       entities: ["mitchell", "brooksby", "wcso-ent"],
       investigator: "Baron Coleman",
@@ -466,6 +477,7 @@ const FOIA = {
     },
     {
       id: "brooksby-severance",
+      short: "Brooksby's severance",
       categories: ["Personnel & credibility"],
       entities: ["brooksby", "wcso-ent"],
       investigator: "Baron Coleman · public reporting",
@@ -497,6 +509,7 @@ const FOIA = {
     },
     {
       id: "fifth-letter",
+      short: "The Fifth-Amendment letter",
       categories: ["Personnel & credibility"],
       entities: ["robinson", "wcso-ent"],
       investigator: "Baron Coleman",
@@ -521,6 +534,7 @@ const FOIA = {
     },
     {
       id: "ballistics-inconclusive",
+      short: "Ballistics inconclusive",
       categories: ["Physical evidence"],
       entities: ["robinson", "sbi"],
       investigator: "Baron Coleman",
@@ -545,6 +559,7 @@ const FOIA = {
     },
     {
       id: "prints-excluded",
+      short: "Prints exclude Robinson",
       categories: ["Physical evidence"],
       entities: ["robinson", "sbi", "fbi-ent"],
       investigator: "Day 4 courtroom record",
@@ -569,6 +584,7 @@ const FOIA = {
     },
     {
       id: "state-plane",
+      short: "The night flight south",
       categories: ["Timeline contradictions"],
       entities: ["davis", "sbi"],
       investigator: "Baron Coleman",
@@ -593,6 +609,7 @@ const FOIA = {
     },
     {
       id: "me-chain",
+      short: "Seven fragments vs. four",
       categories: ["Physical evidence"],
       entities: ["davis", "sbi"],
       investigator: "Ian Carroll",
@@ -615,5 +632,56 @@ const FOIA = {
         }
       ]
     }
+  ],
+
+  /* The holes in the case — records everyone can see are missing from the public
+   * account. Each gap links to the findings that imply it and to the specific
+   * requests aimed at it. The graph view renders gaps as dashed nodes and lights
+   * them up as requests go out (glow) and come back (solid). */
+  gaps: [
+    { id: "gap-wcso-video", label: "Where's the turn-in video?",
+      question: "\"Deleted\" under a 30-day retention claim, per testimony — yet the state exhibited cropped surrender footage on day four. The retention schedule, deletion authorization, and litigation-hold paper trail say which story is true.",
+      findings: ["wcso-intake-video"],
+      requests: [{ inv: "wcso-intake-video", idx: 0 }] },
+    { id: "gap-custody-time", label: "Which custody time is real?",
+      question: "9:00 p.m., 10:00 p.m., 10:26 p.m., and a 4:00 a.m. formal arrest — all sworn, all different. The booking record and CAD logs are the primary sources that reconcile them.",
+      findings: ["custody-timeline", "state-plane", "twiggs-location"],
+      requests: [{ inv: "custody-timeline", idx: 0 }, { inv: "custody-timeline", idx: 1 }] },
+    { id: "gap-badge-man", label: "Who's the badge-man?",
+      question: "An armed man in civilian clothes with a badge went up to the sniper rooftop with Officer Bagley — name and agency never obtained, per Bagley's own testimony. The scene access log and deployment rosters would name him.",
+      findings: ["bagley-bodycam"],
+      requests: [{ inv: "bagley-bodycam", idx: 2 }, { inv: "second-roof-round", idx: 1 }] },
+    { id: "gap-recovery-bodycam", label: "Where's the recovery bodycam?",
+      question: "The state's crime-scene sergeant confirmed on day four that an officer's body camera was rolling during the rifle recovery. Nobody outside the case has seen a frame of it.",
+      findings: ["bagley-bodycam"],
+      requests: [{ inv: "bagley-bodycam", idx: 1 }] },
+    { id: "gap-fragments", label: "Where are 3 fragments?",
+      question: "The medical examiner documented potentially seven bullet fragments; the firearms lab received four. Three fragments of the bullet that killed Charlie Kirk are unaccounted for between the autopsy table and the lab.",
+      findings: ["me-chain", "ballistics-inconclusive"],
+      requests: [{ inv: "me-chain", idx: 0 }] },
+    { id: "gap-prints", label: "Whose prints are 11B/C/D?",
+      question: "Three latent prints on the window glass below the descent point exclude Robinson, by stipulation. Were they ever run against anyone else — or only against him?",
+      findings: ["prints-excluded"],
+      requests: [{ inv: "prints-excluded", idx: 0 }] },
+    { id: "gap-gsr", label: "What did the GSR say?",
+      question: "A gunshot-residue analysis was performed on the Dodge Challenger and never introduced. A result helpful to the state usually gets introduced.",
+      findings: ["ballistics-inconclusive"],
+      requests: [{ inv: "ballistics-inconclusive", idx: 0 }] },
+    { id: "gap-tpusa-names", label: "Who were the TPUSA reps?",
+      question: "Testimony placed Robinson in contact with TPUSA representatives at the quad the morning of the shooting. The state didn't name them; no footage has been shown. UVU's event credentialing records would.",
+      findings: ["tpusa-contact"],
+      requests: [{ inv: "tpusa-contact", idx: 0 }, { inv: "tpusa-contact", idx: 1 }] },
+    { id: "gap-paving-order", label: "Who ordered the paving?",
+      question: "The lead investigator didn't authorize the courtyard work and learned of it from the news; the contractor says \"the FBI and the Governor of Utah.\" Somebody's signature is on the work order.",
+      findings: ["paved-scene"],
+      requests: [{ inv: "paved-scene", idx: 0 }, { inv: "paved-scene", idx: 1 }] },
+    { id: "gap-noble-occupants", label: "Who was in the car?",
+      question: "The homeowners' report describes the driver of Robinson's car as bald, with three other people in the car — omitted on direct while the clip was presented as Robinson returning alone. Who were the four?",
+      findings: ["noble-report"],
+      requests: [{ inv: "noble-report", idx: 0 }] },
+    { id: "gap-cut-minutes", label: "What's in the cut minutes?",
+      question: "1:16 missing from the 11:53 clip, stairwell cuts out of order, a 55-minute garage gap presented as continuous. The unedited native exports answer whether it's sloppy or deceptive.",
+      findings: ["cut-footage"],
+      requests: [{ inv: "cut-footage", idx: 0 }] }
   ]
 };
