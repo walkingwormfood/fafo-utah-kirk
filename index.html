@@ -91,7 +91,7 @@
   details.adv{margin-top:24px;border:1px solid var(--line);border-radius:8px;padding:0 14px;background:var(--panel)}
   details.adv summary{cursor:pointer;padding:12px 0;font-family:var(--mono);font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--ink2)}
   details.adv[open]{padding-bottom:14px}
-  footer{border-top:1px solid var(--line);margin-top:30px;padding:18px 0 50px;color:var(--faint);font-size:12px}
+  footer{border-top:1px solid var(--line);margin-top:30px;padding:18px 0 90px;color:var(--faint);font-size:12px}
   footer code{font-family:var(--mono);background:var(--panel);border:1px solid var(--line);border-radius:5px;padding:1px 6px;color:var(--ink2)}
   .facet{margin:10px 0 2px}
   .facet-lbl{display:block;font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--faint);margin:0 0 6px}
@@ -111,8 +111,8 @@
   .catfacet[open] .filters{margin-top:8px}
 
   /* ——— the evidence chart ——— */
-  .viewbar{position:sticky;top:0;z-index:60;background:var(--bg);padding:10px 0 8px;margin:0 0 6px}
-  .viewtoggle{display:flex;border:1px solid var(--line);border-radius:8px;overflow:hidden;width:max-content}
+  .viewbar{position:fixed;bottom:16px;left:50%;transform:translateX(-50%);z-index:100}
+  .viewtoggle{display:flex;border:1px solid #34343d;border-radius:999px;overflow:hidden;background:rgba(16,16,19,.94);backdrop-filter:blur(8px);box-shadow:0 6px 24px rgba(0,0,0,.65)}
   .vbtn{font-family:var(--mono);font-size:12px;letter-spacing:.06em;text-transform:uppercase;padding:8px 16px;background:var(--panel);color:var(--ink2);border:none;cursor:pointer}
   .vbtn+.vbtn{border-left:1px solid var(--line)}
   .vbtn:hover{color:var(--ink)}
