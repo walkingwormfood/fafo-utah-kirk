@@ -2,14 +2,16 @@
 
 What's new in FAFO Utah — Charlie Kirk Edition. Newest first.
 
-## 2026-07-11 — The shape of the case: the holes in the record, as a status board
+## 2026-07-11 — The evidence chart: the whole case, one row per thread
 
-New second view, toggleable next to the cards. This site is one investigation, so the second view isn't navigation — it's the actual shape of the case. (First cut was a force-directed graph; it looked like Obsidian noise and told you nothing, so it became a board.)
+New second view, toggleable next to the cards — the same shape as the claim-verification tables the courtroom transcripts were checked against, because that shape is the case:
 
-- **The eleven holes in the public record as first-class tiles** — where's the turn-in video, whose prints are 11B/C/D, where are three of the fragments, who's the badge-man, who ordered the paving, what did the GSR say, and the rest — dashed, each stating its question and linking to the findings that imply it.
-- **Sorted by what's happening**: requests in flight first (glowing light blue), unrequested next, answered last (solid blue). The header keeps score. You can literally watch the holes get plugged (or refused, which is its own data) as responses land.
-- All 17 findings as compact tiles below, with status and categories. Click any tile to open its card and draft the request. Same single data file, zero dependencies, no tracking.
+- **One row per evidence thread (17)**: what the sworn record shows · the verdict (confirmed/contested) · **the hole it leaves** in the official account · the paper in play to fill it.
+- **The eleven holes ride their rows as dashed pills** — where's the turn-in video, whose prints are 11B/C/D, where are three of the fragments, who's the badge-man, who ordered the paving, what did the GSR say, and the rest. Hover a pill for the question it asks.
+- **The paper-in-play column is live status**: ✎ draft ready, ⏳ in flight (glowing — hover for the docket detail), 📬 answered. The header keeps score (27 drafted · 2 in flight), and results land in the chart as entities respond.
+- Click any row to open its card and draft the request. Same single data file, zero dependencies, no tracking.
 - Housekeeping: long filed-status strings and portal buttons no longer overflow on phones.
+- (Two earlier cuts died in review this morning: a force-directed graph — Obsidian visual noise — and a tile board. The chart is the one that reads.)
 
 ## 2026-07-11 — Day five transcribed: the record is complete
 

@@ -120,23 +120,29 @@
   #graphWrap.open{display:block}
   .gsec{font-size:12px;font-family:var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--faint);margin:22px 0 2px;border-bottom:1px solid var(--line);padding-bottom:7px}
   .gsec b{color:#a9c7ff;text-shadow:0 0 8px rgba(138,180,255,.4)}
-  .tilegrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:10px;margin:12px 0 4px}
-  .tile{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:12px 14px;cursor:pointer;display:flex;flex-direction:column;gap:7px;text-align:left}
-  .tile:hover{border-color:var(--accent)}
-  .tile.gap{border-style:dashed;background:#0a0a0d}
-  .tile.pending{border-color:#a9c7ff;animation:tpulse 2.4s ease-in-out infinite}
-  @keyframes tpulse{0%,100%{box-shadow:0 0 8px rgba(138,180,255,.18)}50%{box-shadow:0 0 20px rgba(138,180,255,.45)}}
-  @media (prefers-reduced-motion: reduce){.tile.pending{animation:none;box-shadow:0 0 14px rgba(138,180,255,.3)}}
-  .tile.answered{border-color:var(--ok);border-style:solid;background:rgba(79,109,255,.08)}
-  .tstatus{font-family:var(--mono);font-size:10px;letter-spacing:.09em;text-transform:uppercase;color:var(--faint)}
-  .tile.pending .tstatus{color:#a9c7ff;text-shadow:0 0 8px rgba(138,180,255,.5)}
-  .tile.answered .tstatus{color:var(--ok)}
-  .tlabel{font-weight:600;font-size:14.5px;line-height:1.3}
-  .tq{font-size:12px;color:var(--ink2);line-height:1.45;display:-webkit-box;-webkit-line-clamp:4;-webkit-box-orient:vertical;overflow:hidden}
-  .tile.find .tq{-webkit-line-clamp:3}
-  .tlinks{margin-top:auto;display:flex;flex-wrap:wrap;gap:4px;padding-top:2px}
-  .tlink{font-family:var(--mono);font-size:10.5px;border:1px solid var(--line);border-radius:20px;padding:2px 9px;cursor:pointer;background:var(--panel2);color:var(--ink2)}
-  .tlink:hover{border-color:var(--accent);color:var(--accent)}
+  .chartbox{border:1px solid var(--line);border-radius:10px;background:var(--panel);overflow-x:auto;margin:12px 0 4px}
+  #evChart{border-collapse:collapse;width:100%;min-width:860px;font-size:12.5px}
+  #evChart th{font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--faint);text-align:left;padding:11px 10px 9px;border-bottom:1px solid var(--line);white-space:nowrap}
+  #evChart td{padding:11px 10px;border-top:1px solid var(--panel2);vertical-align:top;line-height:1.5}
+  #evChart tbody tr{cursor:pointer}
+  #evChart tbody tr:hover{background:rgba(255,59,59,.05)}
+  #evChart .num{color:var(--faint);font-family:var(--mono);font-size:11px}
+  #evChart .ev{min-width:130px}
+  #evChart .ev b{font-size:13px;line-height:1.3;display:block}
+  #evChart .ev .cat{display:block;width:max-content;margin:5px 0 0}
+  #evChart .shows{color:var(--ink2);min-width:280px}
+  #evChart .badge{margin-left:0;white-space:nowrap}
+  #evChart .hole{min-width:140px;max-width:190px}
+  .hpill{display:inline-block;border:1px dashed var(--faint);border-radius:20px;padding:2px 9px;margin:0 4px 4px 0;font-family:var(--mono);font-size:10.5px;color:var(--ink2);background:#0a0a0d;cursor:help}
+  .hpill:hover{border-color:#a9c7ff;color:#a9c7ff}
+  .nohole{color:var(--faint)}
+  #evChart .paper{font-family:var(--mono);font-size:11px;white-space:nowrap}
+  .paper .pl{display:block;margin:0 0 5px}
+  .paper .flight{color:#a9c7ff;animation:ppulse 2.4s ease-in-out infinite}
+  @keyframes ppulse{0%,100%{text-shadow:0 0 4px rgba(138,180,255,.3)}50%{text-shadow:0 0 12px rgba(138,180,255,.9)}}
+  @media (prefers-reduced-motion: reduce){.paper .flight{animation:none;text-shadow:0 0 8px rgba(138,180,255,.5)}}
+  .paper .got{color:var(--ok)}
+  .paper .draft{color:var(--faint)}
   .card.flash{outline:2px solid var(--accent);box-shadow:0 0 24px rgba(255,59,59,.35)}
 </style>
 </head>
@@ -156,7 +162,7 @@
   <h2 class="section" id="sectionHead">Pick a finding</h2>
   <div class="viewtoggle">
     <button class="vbtn active" id="viewCards">Findings</button>
-    <button class="vbtn" id="viewGraph">The shape of the case</button>
+    <button class="vbtn" id="viewGraph">Evidence chart</button>
   </div>
   <div id="cardsView">
     <details class="facet catfacet"><summary><span class="facet-lbl">Filter by category</span></summary><div class="filters" id="filters"></div></details>
@@ -167,11 +173,14 @@
   </div>
 
   <div id="graphWrap">
-    <div class="note"><b>The shape of the case.</b> The dashed tiles are <b>the holes</b> — records the official account implies but nobody has produced, sorted so what's being pried at right now comes first. A glowing tile has a GRAMA request in flight; blue means it came back answered. Below them, every finding from the courtroom record. Click anything to open its card and draft the request.</div>
-    <div class="gsec" id="holesHead"></div>
-    <div class="tilegrid" id="holesGrid"></div>
-    <div class="gsec" id="findingsHead"></div>
-    <div class="tilegrid" id="findingsGrid"></div>
+    <div class="note"><b>The evidence chart.</b> Every thread from the five hearing days, one row each: what the sworn record shows, the verdict, <b>the hole it leaves</b> in the official account (hover a dashed pill for the question it asks), and the paper in play to fill it — a glowing ⏳ is a GRAMA request in flight, 📬 is an answer on the record. Results land here as entities respond. Click any row to open its card and draft the request.</div>
+    <div class="gsec" id="chartHead"></div>
+    <div class="chartbox">
+      <table id="evChart">
+        <thead><tr><th>#</th><th>The evidence</th><th>What the sworn record shows</th><th>Verdict</th><th>The hole it leaves</th><th>Paper in play</th></tr></thead>
+        <tbody id="evBody"></tbody>
+      </table>
+    </div>
   </div>
 
   <div id="gen">
@@ -585,50 +594,40 @@
                   records: body, agencyId: id, askNoRecords: false, label: "follow-up on a filed request", bare: true });
   });
 
-  /* ——— The shape of the case: the case as a status board ———
-   * Dashed tiles are the HOLES — records the official account implies but nobody
-   * has produced — sorted so what's being pried at right now comes first, then
-   * every finding from the courtroom record. Everything clicks through to its
-   * card. Same single data file, zero dependencies. */
-  const reqStatusOf = reqs => reqs.some(r => r.response) ? "answered" : reqs.some(r => r.filed) ? "pending" : "open";
-  let tilesBuilt = false;
+  /* ——— The evidence chart: one row per thread of evidence ———
+   * What the sworn record shows | verdict | the hole it leaves | the paper in
+   * play. The same shape as the claim-verification tables the transcripts were
+   * checked against — results populate the chart as GRAMA answers land.
+   * Same single data file, zero dependencies. */
+  let chartBuilt = false;
+  const AG_SHORT = { uvu: "UVU", uvupd: "UVU PD", dps: "DPS/SBI", ucso: "Utah County SO", ucao: "Utah County Atty",
+                     wcso: "WCSO", washco: "Washington Co.", sgpd: "St. George PD", orem: "Orem PD",
+                     gov: "Governor's Ofc", ome: "Medical Examiner" };
 
-  function buildTiles(){
-    tilesBuilt = true;
-    const gaps = (FOIA.gaps || []).map(g => {
-      const reqs = (g.requests || []).map(ref => {
-        const inv = FOIA.investigations.find(i => i.id === ref.inv);
-        return inv && inv.requests[ref.idx];
-      }).filter(Boolean);
-      return { g, reqs, status: reqStatusOf(reqs) };
-    });
-    const order = { pending: 0, open: 1, answered: 2 };
-    gaps.sort((a, b) => order[a.status] - order[b.status]);
-    const inFlight = gaps.filter(x => x.status === "pending").length;
-    const answered = gaps.filter(x => x.status === "answered").length;
-    $("holesHead").innerHTML = "The holes — " + gaps.length + " records the account implies but nobody has produced · <b>" +
-      inFlight + " being pried at</b> · " + answered + " answered";
-    $("holesGrid").innerHTML = gaps.map(({ g, status }) => {
-      const chips = (g.findings || []).map(f => {
-        const inv = FOIA.investigations.find(i => i.id === f);
-        return `<button class="tlink" data-card="${esc(f)}">${esc(inv ? (inv.short || f) : f)} →</button>`;
+  function buildChart(){
+    chartBuilt = true;
+    const gaps = FOIA.gaps || [];
+    const allReqs = FOIA.investigations.flatMap(i => i.requests);
+    const inFlight = allReqs.filter(r => r.filed && !r.response).length;
+    const answered = allReqs.filter(r => r.response).length;
+    $("chartHead").innerHTML = FOIA.investigations.length + " evidence threads · " + gaps.length +
+      " holes in the record · " + allReqs.length + " requests drafted · <b>" + inFlight +
+      " in flight</b> · " + answered + " answered";
+    $("evBody").innerHTML = FOIA.investigations.map((inv, ix) => {
+      const holes = gaps.filter(g => (g.findings || []).includes(inv.id));
+      const paper = inv.requests.map(r => {
+        const ag = AG_SHORT[r.agencyId] || r.agencyId;
+        if(r.response) return `<span class="pl got" title="${esc(r.response)}">&#128236; ${esc(ag)} — answered</span>`;
+        if(r.filed)    return `<span class="pl flight" title="${esc(r.filed)}">&#9203; ${esc(ag)} — in flight</span>`;
+        return `<span class="pl draft">&#9998; ${esc(ag)} — draft ready</span>`;
       }).join("");
-      const stLabel = status === "pending" ? "⏳ request in flight" : status === "answered" ? "📬 answered" : "not yet requested";
-      return `<div class="tile gap ${status}" data-card="${esc((g.findings || [])[0] || "")}">` +
-        `<span class="tstatus">${stLabel}</span>` +
-        `<span class="tlabel">${esc(g.label)}</span>` +
-        `<span class="tq">${esc(g.question)}</span>` +
-        `<span class="tlinks">${chips}</span></div>`;
-    }).join("");
-    $("findingsHead").textContent = "The findings — " + FOIA.investigations.length + " from the courtroom record";
-    $("findingsGrid").innerHTML = FOIA.investigations.map(inv => {
-      const st = reqStatusOf(inv.requests);
-      const stTag = st === "pending" ? " · ⏳ request in flight" : st === "answered" ? " · 📬 answered" : "";
-      return `<div class="tile find ${st}" data-card="${esc(inv.id)}">` +
-        `<span class="tstatus">${esc(inv.status)}${stTag}</span>` +
-        `<span class="tlabel">${esc(inv.short || inv.id)}</span>` +
-        `<span class="tq">${esc(inv.finding)}</span>` +
-        `<span class="tlinks">${(inv.categories || []).map(c => `<span class="cat">${esc(c)}</span>`).join("")}</span></div>`;
+      return `<tr data-card="${esc(inv.id)}">` +
+        `<td class="num">${ix + 1}</td>` +
+        `<td class="ev"><b>${esc(inv.short || inv.id)}</b>${(inv.categories || []).map(c => `<span class="cat">${esc(c)}</span>`).join("")}</td>` +
+        `<td class="shows">${esc(inv.finding)}</td>` +
+        `<td><span class="badge ${esc(inv.status)}">${esc(inv.status)}</span></td>` +
+        `<td class="hole">${holes.length ? holes.map(h => `<span class="hpill" title="${esc(h.question)}">${esc(h.label)}</span>`).join("") : `<span class="nohole">—</span>`}</td>` +
+        `<td class="paper">${paper}</td></tr>`;
     }).join("");
   }
 
@@ -653,8 +652,8 @@
     $("graphWrap").classList.toggle("open", !cards);
     $("viewCards").classList.toggle("active", cards);
     $("viewGraph").classList.toggle("active", !cards);
-    $("sectionHead").textContent = cards ? "Pick a finding" : "The shape of the case";
-    if(!cards && !tilesBuilt) buildTiles();
+    $("sectionHead").textContent = cards ? "Pick a finding" : "The evidence chart";
+    if(!cards && !chartBuilt) buildChart();
   }
   $("viewCards").addEventListener("click", () => setView("cards"));
   $("viewGraph").addEventListener("click", () => setView("graph"));
