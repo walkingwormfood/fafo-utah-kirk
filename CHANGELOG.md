@@ -2,13 +2,13 @@
 
 What's new in FAFO Utah — Charlie Kirk Edition. Newest first.
 
-## 2026-07-11 — The shape of the case: the investigation as a graph, holes included
+## 2026-07-11 — The shape of the case: the holes in the record, as a status board
 
-New second view, toggleable next to the cards. This site is one investigation, so the graph isn't navigation — it's the actual shape of the case:
+New second view, toggleable next to the cards. This site is one investigation, so the second view isn't navigation — it's the actual shape of the case. (First cut was a force-directed graph; it looked like Obsidian noise and told you nothing, so it became a board.)
 
-- **Findings, entities, and the GAPS as first-class nodes.** The eleven holes in the public record — where's the turn-in video, whose prints are 11B/C/D, where are three of the fragments, who's the badge-man, who ordered the paving, what did the GSR say, and the rest — render as dashed ?-nodes wired to the findings that imply them.
-- **The status system carries over**: a glowing light-blue ring means a GRAMA request is in flight at that spot; solid blue means answered. You can literally watch the holes get plugged (or refused, which is its own data) as responses land.
-- Click any node for detail and a one-click jump to its card; entity nodes jump to the filtered card view. Small hand-rolled force layout — same single data file, still zero dependencies, still no tracking.
+- **The eleven holes in the public record as first-class tiles** — where's the turn-in video, whose prints are 11B/C/D, where are three of the fragments, who's the badge-man, who ordered the paving, what did the GSR say, and the rest — dashed, each stating its question and linking to the findings that imply it.
+- **Sorted by what's happening**: requests in flight first (glowing light blue), unrequested next, answered last (solid blue). The header keeps score. You can literally watch the holes get plugged (or refused, which is its own data) as responses land.
+- All 17 findings as compact tiles below, with status and categories. Click any tile to open its card and draft the request. Same single data file, zero dependencies, no tracking.
 - Housekeeping: long filed-status strings and portal buttons no longer overflow on phones.
 
 ## 2026-07-11 — Day five transcribed: the record is complete
