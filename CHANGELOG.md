@@ -2,6 +2,10 @@
 
 What's new in FAFO Utah — Charlie Kirk Edition. Newest first.
 
+## 2026-07-11 (evening) — The drop box: report the request you filed, anonymously
+
+Every request on every card now carries "⚑ filed this one? report your request #" — a tiny form (reference number, date, optional response text) that goes to an anonymous drop box. No name, no email, no cookies; the site itself still collects nothing. Reports land in a human review queue and get verified against the entity's own portal before anything appears on a card — this is an evidence docket, not a wiki. Also under the hood: a control panel replaced the floating toggle (view switch, status selectors, and the how-to-file / why-so-narrow drawers all live in it now).
+
 ## 2026-07-11 (later) — Less wall, more chart
 
 - The "How to file" and "why so narrow" intros are now one-line collapsibles at the top (tap to expand) — the findings and the chart are what you see first.

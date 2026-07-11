@@ -172,6 +172,12 @@
   }
   .card.flash{outline:2px solid var(--accent);box-shadow:0 0 24px rgba(255,59,59,.35)}
   .card,#sectionHead{scroll-margin-top:116px}
+  .rep{display:block;background:none;border:none;color:var(--faint);font-family:var(--mono);font-size:10.5px;cursor:pointer;padding:5px 0 0;text-align:left}
+  .rep:hover{color:var(--accent)}
+  .fr{background:var(--panel2);border:1px dashed var(--line);border-radius:8px;padding:10px 14px;margin:8px 0}
+  .fr .fr-title{font-family:var(--mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--ink2);margin-bottom:2px}
+  .fr .fr-sub{font-size:12px;color:var(--faint);margin-bottom:8px}
+  .fr-status{font-family:var(--mono);font-size:11px;color:var(--faint);margin-left:8px}
 </style>
 </head>
 <body>
@@ -276,7 +282,7 @@
   $("submitNote").innerHTML = "<b>How to file:</b> " + esc(FOIA.meta.submit_note) +
     " Federal FAFO: <a href=\"https://foia-around-find-out.pages.dev/\" target=\"_blank\" rel=\"noopener\">FOIA Around, Find Out</a>.";
   $("narrowing").innerHTML = "<b>Why these are narrow (and why a denial still counts):</b> " + esc(FOIA.meta.narrowing_note);
-  $("footer").innerHTML = "Client-side only — nothing you type leaves your browser, no analytics, no network calls. The buttons open your email app or the entity's records page; you file it yourself. " + esc(FOIA.meta.do_not) + " · CC0 — fork it, mirror it.";
+  $("footer").innerHTML = "Client-side only — nothing you type leaves your browser, no analytics. One exception, opt-in: the field-report box sends exactly the request number and note you see in it (anonymously, to a human review queue — nothing appears on the site unverified). The buttons open your email app or the entity's records page; you file it yourself. " + esc(FOIA.meta.do_not) + " · CC0 — fork it, mirror it.";
 
   let current = null; // {subject, records, agencyId, askNoRecords, label}
 
@@ -318,6 +324,7 @@
                           : ("Copies the letter and opens " + (a?a.name:"the entity") + "'s records page");
       return `<div class="req"><div class="desc">${esc(r.summary)}<span class="agency">${esc(a?a.name:r.agencyId)} · ${tag}</span>`+
              (r.response ? `<span class="resp">📬 ${esc(r.response)}</span>` : r.filed ? `<span class="resp pending">⏳ ${esc(r.filed)}</span>` : "")+
+             `<button class="rep" data-inv="${esc(inv.id)}" data-req="${i}">⚑ filed this one? report your request #</button>`+
              `</div>`+
              `<button class="btn gen" title="${esc(title)}" data-inv="${esc(inv.id)}" data-req="${i}">${icon} Generate this request</button></div>`;
     }).join("");
@@ -736,6 +743,57 @@
   $("pbHow").addEventListener("click", () => setPanel(openPanel === "howto" ? null : "howto"));
   $("pbWhy").addEventListener("click", () => setPanel(openPanel === "narrow" ? null : "narrow"));
   document.addEventListener("click", e => { if(openPanel && !e.target.closest(".viewbar")) setPanel(null); });
+
+  /* ——— anonymous field reports ———
+   * "I filed this" → tiny form → POST to the drop box (a Pages Function) → lands
+   * as a GitHub issue for human review. Nothing shows on the site unverified. */
+  const REPORT_URL = "https://fafo-utah-kirk.pages.dev/report";
+  let frCtx = null;
+  const fr = document.createElement("div");
+  fr.id = "fieldReport"; fr.className = "fr"; fr.style.display = "none";
+
+  function frOpen(btn){
+    const inv = FOIA.investigations.find(x => x.id === btn.dataset.inv);
+    const r = inv.requests[+btn.dataset.req];
+    const a = agencyById(r.agencyId);
+    frCtx = { inv: inv.short || inv.id, req: r.summary, agency: a ? a.name : r.agencyId };
+    fr.innerHTML =
+      `<div class="fr-title">⚑ Report a filed request — ${esc(frCtx.agency)}</div>` +
+      `<div class="fr-sub">Anonymous: no name, no email, no cookies. A human verifies every report before it appears on the card.</div>` +
+      `<div class="row"><div class="field"><label>Reference number (required)</label><input type="text" id="frRef" placeholder="e.g. 26-2775 or GRAMA-2026-0123"></div>` +
+      `<div class="field"><label>Date filed</label><input type="text" id="frDate" placeholder="e.g. July 11, 2026"></div></div>` +
+      `<div class="field"><label>Update or response text (optional — paste the entity's answer when it lands)</label><textarea id="frNote" class="snip"></textarea></div>` +
+      `<input type="text" id="frHp" name="website" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px" aria-hidden="true">` +
+      `<div class="actions"><button class="btn primary" id="frSend">Send report</button><button class="btn" id="frCancel">Cancel</button><span class="fr-status" id="frStatus"></span></div>`;
+    btn.closest(".req").insertAdjacentElement("afterend", fr);
+    fr.style.display = "block";
+    $("frCancel").addEventListener("click", () => { fr.style.display = "none"; });
+    $("frSend").addEventListener("click", frSend);
+    $("frRef").focus();
+  }
+
+  async function frSend(){
+    const ref = $("frRef").value.trim();
+    if(!ref){ $("frRef").focus(); return; }
+    $("frStatus").textContent = "sending…";
+    $("frSend").disabled = true;
+    try{
+      const res = await fetch(REPORT_URL, { method: "POST", headers: { "content-type": "application/json" },
+        body: JSON.stringify({ inv: frCtx.inv, req: frCtx.req, agency: frCtx.agency,
+                               ref, dated: $("frDate").value.trim(), note: $("frNote").value.trim(),
+                               website: $("frHp").value }) });
+      if(!res.ok) throw 0;
+      fr.innerHTML = `<div class="fr-title">⚑ Logged for review</div><div class="fr-sub">It'll appear on this card once verified against the entity's records. Nothing you sent identifies you. Thank you, records warrior.</div>`;
+    }catch{
+      $("frStatus").textContent = "couldn't reach the drop box — try again in a bit";
+      $("frSend").disabled = false;
+    }
+  }
+
+  document.addEventListener("click", e => {
+    const b = e.target.closest("button.rep");
+    if(b) frOpen(b);
+  });
 </script>
 </body>
 </html>
