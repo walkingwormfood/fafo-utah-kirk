@@ -1,0 +1,25 @@
+name: Deploy to Cloudflare Pages
+
+# Cloudflare Pages is the canonical site (fafo-utah-kirk.pages.dev — it's what the
+# federal FAFO links to). The CF project is direct-upload, not Git-connected, so this
+# workflow does the upload on every push: push = deployed, no manual step.
+# Requires one repo secret: CLOUDFLARE_API_TOKEN (Cloudflare Pages:Edit permission).
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Stage tracked files only
+        run: mkdir -p /tmp/site && git archive HEAD | tar -x -C /tmp/site
+      - name: Deploy to Cloudflare Pages
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: 4ff969ce831c43ea0c37553883217353
+          command: pages deploy /tmp/site --project-name=fafo-utah-kirk --branch=main --commit-dirty=true
