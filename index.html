@@ -146,6 +146,11 @@
   @media (prefers-reduced-motion: reduce){.res .flight{animation:none;text-shadow:0 0 8px rgba(138,180,255,.5)}}
   .res .got{color:var(--ok)}
   .modechip{margin-left:8px;letter-spacing:.04em;text-transform:none}
+  .modechip.on-unclaimed{background:rgba(255,59,59,.12);color:var(--accent);border-color:var(--accent)}
+  .modechip.on-pending{background:rgba(138,180,255,.12);color:#a9c7ff;border-color:#a9c7ff}
+  .modechip.on-posted{background:rgba(79,109,255,.12);color:var(--ok);border-color:var(--ok)}
+  details.adv.slim{margin-top:10px}
+  .adv.slim .note{border:none;background:transparent;padding:2px 0 12px;margin:0}
   .ecl{display:none}
   @media (max-width:640px){
     .ehead{display:none}
@@ -166,8 +171,8 @@
 </header>
 
 <main class="wrap">
-  <div class="note submit" id="submitNote"></div>
-  <div class="note" id="narrowing"></div>
+  <details class="adv slim"><summary>How to file — routes, deadlines, appeals</summary><div class="note submit" id="submitNote"></div></details>
+  <details class="adv slim"><summary>Why these requests are so narrow — and why a denial still counts</summary><div class="note" id="narrowing"></div></details>
 
   <h2 class="section" id="sectionHead">Pick a finding</h2>
   <div class="viewbar">
@@ -607,7 +612,8 @@
    * fight stands: UNCLAIMED inquiries first in red (file one — that's the point),
    * then results pending, results posted at the bottom. The mode chip flips the
    * order for a results-first read. Same single data file, zero dependencies. */
-  let chartBuilt = false, chartMode = "action";
+  let chartBuilt = false;
+  const chartShow = { unclaimed: true, pending: true, posted: true };
   const AG_SHORT = { uvu: "UVU", uvupd: "UVU PD", dps: "DPS/SBI", ucso: "Utah County SO", ucao: "Utah County Atty",
                      wcso: "WCSO", washco: "Washington Co.", sgpd: "St. George PD", orem: "Orem PD",
                      gov: "Governor's Ofc", ome: "Medical Examiner" };
@@ -638,20 +644,21 @@
     const pendingN = allReqs.filter(r => r.filed && !r.response).length;
     const postedN = allReqs.filter(r => r.response).length;
     const unclaimedN = allReqs.length - pendingN - postedN;
+    const groups = { unclaimed: [], pending: [], posted: [] };
+    FOIA.investigations.forEach(inv => groups[rowStatus(inv)].push(inv));
+    const chipFor = (k, label) =>
+      `<button class="chip modechip${chartShow[k] ? " on-" + k : ""}" data-show="${k}" title="show or hide these rows">${label} · ${groups[k].length}</button>`;
     $("chartHead").innerHTML = FOIA.investigations.length + " threads · " + gaps.length + " holes · " +
       allReqs.length + " inquiries: <b style=\"color:var(--accent)\">" + unclaimedN + " unclaimed</b> · <b>" +
       pendingN + " pending</b> · <b style=\"color:var(--ok);text-shadow:none\">" + postedN + " posted</b>" +
-      `<button class="chip modechip${chartMode === "action" ? " active" : ""}" data-mode="action">act first</button>` +
-      `<button class="chip modechip${chartMode === "results" ? " active" : ""}" data-mode="results">results first</button>`;
-    const groups = { unclaimed: [], pending: [], posted: [] };
-    FOIA.investigations.forEach(inv => groups[rowStatus(inv)].push(inv));
-    const order = chartMode === "action" ? ["unclaimed", "pending", "posted"] : ["posted", "pending", "unclaimed"];
+      chipFor("unclaimed", "unclaimed") + chipFor("pending", "pending") + chipFor("posted", "complete");
+    const order = ["unclaimed", "pending", "posted"];
     const LABELS = { unclaimed: "Unclaimed inquiries — nobody has filed these yet; pick one",
                      pending: "Results pending — requests in flight",
                      posted: "Results posted — answers on the record" };
     let html = `<div class="ehead"><span>The evidence</span><span>What the sworn record shows</span><span>The hole it leaves</span><span>Results</span></div>`;
     order.forEach(k => {
-      if(!groups[k].length) return;
+      if(!groups[k].length || !chartShow[k]) return;
       html += `<div class="egroup ${k}">${LABELS[k]} · ${groups[k].length}</div>`;
       html += groups[k].map(inv => chartRow(inv, gaps)).join("");
     });
@@ -659,8 +666,8 @@
   }
 
   $("chartHead").addEventListener("click", e => {
-    const b = e.target.closest("[data-mode]"); if(!b) return;
-    chartMode = b.dataset.mode; buildChart();
+    const b = e.target.closest("[data-show]"); if(!b) return;
+    chartShow[b.dataset.show] = !chartShow[b.dataset.show]; buildChart();
   });
 
   $("graphWrap").addEventListener("click", e => {

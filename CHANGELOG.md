@@ -2,6 +2,12 @@
 
 What's new in FAFO Utah — Charlie Kirk Edition. Newest first.
 
+## 2026-07-11 (later) — Less wall, more chart
+
+- The "How to file" and "why so narrow" intros are now one-line collapsibles at the top (tap to expand) — the findings and the chart are what you see first.
+- The evidence chart header grew **Unclaimed / Pending / Complete toggles** — click to show or hide each group of rows. They replace the act-first/results-first flip: hiding is more useful than reordering.
+- Publishing changed under the hood: Cloudflare Pages (the canonical pages.dev URL) now auto-deploys on every push via GitHub Actions, with GitHub Pages as an always-in-sync mirror. The stale-site era is over.
+
 ## 2026-07-11 — The evidence chart: the whole case, one row per thread
 
 New second view, toggleable next to the cards — the same shape as the claim-verification tables the courtroom transcripts were checked against, because that shape is the case:
