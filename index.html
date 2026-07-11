@@ -172,8 +172,9 @@
   }
   .card.flash{outline:2px solid var(--accent);box-shadow:0 0 24px rgba(255,59,59,.35)}
   .card,#sectionHead{scroll-margin-top:116px}
-  .rep{display:block;background:none;border:none;color:var(--faint);font-family:var(--mono);font-size:10.5px;cursor:pointer;padding:5px 0 0;text-align:left}
-  .rep:hover{color:var(--accent)}
+  .reqbtns{flex:0 0 auto;display:flex;flex-direction:column;gap:6px;align-items:stretch}
+  .rep{font-family:var(--mono);font-size:10px;letter-spacing:.02em;border:1px solid var(--line);border-radius:7px;background:transparent;color:var(--faint);cursor:pointer;padding:4px 8px;width:100%}
+  .rep:hover{border-color:var(--accent);color:var(--accent)}
   .fr{background:var(--panel2);border:1px dashed var(--line);border-radius:8px;padding:10px 14px;margin:8px 0}
   .fr .fr-title{font-family:var(--mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--ink2);margin-bottom:2px}
   .fr .fr-sub{font-size:12px;color:var(--faint);margin-bottom:8px}
@@ -324,9 +325,9 @@
                           : ("Copies the letter and opens " + (a?a.name:"the entity") + "'s records page");
       return `<div class="req"><div class="desc">${esc(r.summary)}<span class="agency">${esc(a?a.name:r.agencyId)} · ${tag}</span>`+
              (r.response ? `<span class="resp">📬 ${esc(r.response)}</span>` : r.filed ? `<span class="resp pending">⏳ ${esc(r.filed)}</span>` : "")+
-             `<button class="rep" data-inv="${esc(inv.id)}" data-req="${i}">⚑ filed this one? report your request #</button>`+
              `</div>`+
-             `<button class="btn gen" title="${esc(title)}" data-inv="${esc(inv.id)}" data-req="${i}">${icon} Generate this request</button></div>`;
+             `<div class="reqbtns"><button class="btn gen" title="${esc(title)}" data-inv="${esc(inv.id)}" data-req="${i}">${icon} Generate this request</button>`+
+             `<button class="rep" data-inv="${esc(inv.id)}" data-req="${i}">⚑ filed? report your request #</button></div></div>`;
     }).join("");
     card.innerHTML =
       `<div class="by">Surfaced by <span class="who">${esc(inv.investigator)}</span> · ${links}`+
