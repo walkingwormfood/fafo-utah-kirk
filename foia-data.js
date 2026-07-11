@@ -176,7 +176,7 @@ const FOIA = {
           subject: "GRAMA Request: booking and intake records for inmate booked September 12, 2025",
           records: "I request the complete booking and intake record for Tyler James Robinson, booked into the Utah County Jail on or about September 12, 2025 — including the booking sheet, any amendments or corrections to it, the intake log entry, and any record reconciling the arrest date/time fields it contains. I am not requesting medical or classification records.",
           ask_no_records: true,
-          filed: "PENDING — filed Jul 9, 2026 via Utah County's NextRequest portal, request #26-2775. (Heads-up from filing it: SheriffRecords@utahcounty.gov auto-replies that it's unmonitored and routes you to NextRequest — the portal is the real intake.)"
+          filed: "ACTION NEEDED — filed Jul 9, 2026 via NextRequest, request #26-2775. Utah County answered the same night citing § 63G-2-204: the requester account must list name, mailing address, email, AND daytime phone, or the request closes at end of business JULY 23. Fix: sign in at utah-county-ut.nextrequest.com and complete the account profile. (Filing lesson: SheriffRecords@utahcounty.gov auto-replies that it's unmonitored — the portal is the real intake.)"
         },
         {
           agencyId: "wcso",
