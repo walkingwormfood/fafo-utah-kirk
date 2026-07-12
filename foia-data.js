@@ -122,6 +122,7 @@ const FOIA = {
     { id: "brooksby", name: "Ex-Sheriff Nate Brooksby", type: "person" },
     { id: "twiggs", name: "Lance Twiggs", type: "person" },
     { id: "mitchell", name: "Mike Mitchell", type: "person" },
+    { id: "neff", name: "Blake Neff (Charlie Kirk Show)", type: "person" },
     { id: "uvu-ent", name: "UVU", type: "org" },
     { id: "sbi", name: "Utah SBI / DPS", type: "org" },
     { id: "wcso-ent", name: "Washington County SO", type: "org" },
@@ -240,10 +241,10 @@ const FOIA = {
         { label: "Coleman Ep. 141", url: "https://www.youtube.com/watch?v=FT8kJN3n_cA" }
       ],
       status: "contested",
-      finding: "A .223 round was found September 10 on the computer science building roof — a different caliber than the charged rifle — documented by SBI Agent Ben Schneider, written off as an officer cycling his rifle, with testimony that there was \"no line of sight\" to the tent. A drone-photogrammetry rendering (Paramount Tactical) shows a direct line of sight at ~320–350 yards.",
+      finding: "A .223 round was found September 10 on the computer science building roof — a different caliber than the charged rifle — documented by SBI Agent Ben Schneider, written off as an officer cycling his rifle, with testimony that there was \"no line of sight\" to the tent. A drone-photogrammetry rendering (Paramount Tactical) shows a direct line of sight at ~320–350 yards. Friday's testimony pinned the location — \"the far east side\" of the computer science building roof — and left the underlying question standing: why an officer with a loaded rifle was on that roof at all, after George Zinn was already in custody and the campus response had moved on.",
       implication: "Either an officer left a live round on a rooftop and the scene wasn't preserved, or the round mattered and wasn't treated as evidence. Schneider's report, the evidence log, and any overwatch deployment records are all discrete named documents. (Status contested: the round and its official accounting are testimony; the line-of-sight dispute is outside analysis.)",
       sources: [
-        { label: "Day 2 + Day 3 testimony; Paramount Tactical 3D rendering", url: "" }
+        { label: "Day 2 + Day 3 testimony; Friday testimony (roof location); Paramount Tactical 3D rendering", url: "" }
       ],
       requests: [
         {
@@ -386,17 +387,51 @@ const FOIA = {
       ]
     },
     {
+      id: "exhibit-121",
+      short: "The “4K” exhibit",
+      categories: ["Video evidence"],
+      entities: ["robinson", "uvu-ent", "tpusa"],
+      investigator: "Ian Carroll · Brandy & Billy (in the courtroom)",
+      investigatorLinks: [
+        { label: "Final recap — the exhibit history, walked through the transcript", url: "https://www.youtube.com/watch?v=R7mdXcBfQTw" }
+      ],
+      status: "confirmed",
+      finding: "Day one, the judge REJECTED the state's video montage of the roof descent — exhibit 12.1 — because it was edited (zoom-ins, added circling), and ordered an unedited version remade overnight (exhibit 12.4). On the final day, after the cameras were off, the judge granted the victim representative's (Erika Kirk's) attorney's request to play “the totality of, I believe it is, state exhibit 12.1 — 8 give or take 2 minutes” to the ~14 in-person seats only, confirming on the record it would not be televised. Per the transcript, the “enhanced” video is the same surveillance footage at the same resolution, zoomed in a video editor. Two journalists in the room posted immediately: no high-quality zoomed footage, no sound, the crouching figure “could be anyone” — while accounts with ~10M collective followers claimed it showed the shot.",
+      implication: "A video the public was told is conclusive was shown once, off camera, and “isn't going to be released publicly.” The native source exports and the paper trail of the exhibit work — who performed the zoom and editing, with what software, from which camera files — are discrete records on both ends: UVU owns the cameras, and the state made the exhibits.",
+      sources: [
+        { label: "Hearing transcript: 12.1 rejected as edited day one; final-day playback colloquy (not televised)", url: "" },
+        { label: "Brandy & Billy, posted from the courtroom (relayed with wristbands shown)", url: "https://www.youtube.com/watch?v=R7mdXcBfQTw" }
+      ],
+      requests: [
+        {
+          agencyId: "uvupd",
+          summary: "UVU PD — native export of the camera segments behind exhibits 12.1/12.4",
+          subject: "GRAMA Request: unedited surveillance exports, Losee Center roof and courtyard cameras, midday September 10, 2025",
+          records: "I request unedited, native-format exports (original resolution and metadata intact) of Utah Valley University surveillance video for September 10, 2025, 12:10 p.m. – 12:35 p.m., from the camera or cameras whose footage was used to create the video exhibits designated 12.1 and 12.4 at the public preliminary hearing in State v. Robinson — the footage covering the Losee Center roofline and descent point. If the original recordings have been provided to or seized by an investigating agency, I request the transfer or evidence-receipt record identifying that agency and the date of transfer.",
+          ask_no_records: true
+        },
+        {
+          agencyId: "dps",
+          summary: "DPS/SBI — the paper trail of the exhibit work: who made 12.1 and 12.4, from what, with what",
+          records: "I request, concerning the video exhibits designated 12.1 and 12.4 at the July 2026 preliminary hearing in State v. Robinson: (1) the work request, lab request, or tasking record for the creation, enhancement, magnification, or editing of those exhibits, identifying the person, unit, or vendor that performed the work and the software used; (2) the record identifying the source video files used (camera, export date, and file hash or comparable integrity record, if maintained); and (3) any record documenting the revision of the exhibit after July 7, 2026 — the overnight remake ordered when the original version was ruled edited. I am not requesting the video content itself in this item — the records documenting how the exhibits were made.",
+          subject: "GRAMA Request: records documenting the creation of video exhibits 12.1 and 12.4, State v. Robinson",
+          ask_no_records: true
+        }
+      ]
+    },
+    {
       id: "tpusa-contact",
       short: "TPUSA contact that morning",
       categories: ["Witness statements", "Video evidence"],
-      entities: ["robinson", "tpusa", "uvu-ent"],
+      entities: ["robinson", "tpusa", "uvu-ent", "neff"],
       investigator: "Baron Coleman · Buckley Carlson · Ian Carroll",
       investigatorLinks: [
         { label: "Bombshells crossover (Liberty Lockdown)", url: "https://www.youtube.com/watch?v=Fk4RFSn6gqs" },
-        { label: "Carroll on day two", url: "https://www.youtube.com/watch?v=r8JjODn8-dY" }
+        { label: "Carroll on day two", url: "https://www.youtube.com/watch?v=r8JjODn8-dY" },
+        { label: "Final recap — the Neff Twitter Space clip", url: "https://www.youtube.com/watch?v=R7mdXcBfQTw" }
       ],
       status: "confirmed",
-      finding: "Testimony on both day two and day three placed Robinson making contact with TPUSA representatives at the quad the morning of the shooting, while the event was being set up — a fact never previously disclosed. The state did not name the representatives, and no footage of the contact has been shown.",
+      finding: "Testimony on both day two and day three placed Robinson making contact with TPUSA representatives at the quad the morning of the shooting, while the event was being set up — the SBI lead officer's timeline words were “met with TPUSA representatives.” The state did not name the representatives, and no footage of the contact has been shown. Then Charlie Kirk Show representative Blake Neff, on a recorded Twitter Space during hearing week, first said he didn't know who it was — “and even if I did, I wouldn't tell you, because you guys would just harass that person” — and then added: “and I know that that person didn't do anything.”",
       implication: "The accused spoke with people from the victim's own organization hours before the shooting, and eleven months of official narrative never mentioned it. UVU hosted the event — its event-services coordination records, credentialing lists, and vendor rosters would name the people the testimony didn't.",
       sources: [
         { label: "Day 2 timeline testimony; day 3 testimony (per Coleman/Carroll coverage)", url: "" }
@@ -446,6 +481,56 @@ const FOIA = {
           summary: "WCSO — the same facility records for the same window",
           subject: "GRAMA Request: interview room and visitor logs, night of September 11–12, 2025",
           records: "I request the interview-room usage log, visitor log, and any facility-use record for the Washington County Sheriff's Office for September 11, 2025, 10:00 p.m. through September 12, 2025, 8:00 a.m., including any record of facility use by another agency (FBI or Utah DPS/SBI) during that window. Names of uninvolved members of the public may be redacted.",
+          ask_no_records: true
+        }
+      ]
+    },
+    {
+      id: "motive-testimony",
+      short: "Motive without a witness",
+      categories: ["Witness statements"],
+      entities: ["twiggs", "robinson"],
+      investigator: "Ian Carroll",
+      investigatorLinks: [
+        { label: "Final recap — the Twiggs testimony, played", url: "https://www.youtube.com/watch?v=R7mdXcBfQTw" }
+      ],
+      status: "confirmed",
+      finding: "The official motive — Robinson radicalized by Kirk's rhetoric about trans people, with his transitioning partner at the center of it — was seeded in official statements within days of the arrest. At the hearing, its centerpiece witness appeared only in a pre-filmed, partially redacted video (the defense's attempt to put Twiggs on the stand live was blocked), and in it Twiggs testified he had personally never heard Robinson talk about Charlie Kirk, and that the two didn't really discuss gender identity or LGBTQ issues — politics was Robinson relaying radio news from the work carpool. Asked to identify Robinson from the same blurry FBI-website stills the public saw, he answered: “I wouldn't say with 100% certainty, just because of camera quality... that looks like him in terms of the shoes.”",
+      implication: "The person the motive story is about, under oath, doesn't tell it. So where did it come from? Public officials made specific motive claims to national audiences within 72 hours — and briefings to an elected official are administrative records with authors and dates, not investigation files.",
+      sources: [
+        { label: "Twiggs video testimony as played at the hearing (defense-noted redactions)", url: "" }
+      ],
+      requests: [
+        {
+          agencyId: "gov",
+          summary: "Governor's office — the briefing materials behind the September motive statements",
+          subject: "GRAMA Request: briefing records preceding the Governor's September 2025 public statements on the UVU homicide suspect",
+          records: "I request, for the period September 11–16, 2025, the briefing document(s), talking points, or written summaries provided to the Governor or the Governor's communications staff by any law-enforcement agency prior to the Governor's public statements characterizing the suspect's motive, ideology, or the suspect's roommate, together with a record identifying the providing agency and date of each. I am not requesting investigation records held by a law-enforcement agency — the request is for the briefing records as held by the Office of the Governor.",
+          ask_no_records: true
+        }
+      ]
+    },
+    {
+      id: "discord-timing",
+      short: "Discord confessions vanish",
+      categories: ["Timeline contradictions", "Witness statements"],
+      entities: ["robinson", "sbi", "fbi-ent"],
+      investigator: "Baron Coleman · Ian Carroll",
+      investigatorLinks: [
+        { label: "Final recap — why the Discord messages matter now", url: "https://www.youtube.com/watch?v=R7mdXcBfQTw" }
+      ],
+      status: "contested",
+      finding: "The Discord messages in which Robinson supposedly confessed to friends before turning himself in — reported worldwide in September 2025 — were never entered or mentioned at the preliminary hearing. Coleman's public hypothesis for the disappearance: the messages may have been sent after Robinson was already in police custody, which would make them worse than useless to the state. (Status contested: their absence from the hearing is the record; the timing hypothesis is unproven — and testable.)",
+      implication: "The hypothesis rises or falls on acquisition metadata, not content: when investigators sent legal process to Discord, what date range the production covered, and when it came back are administrative facts about the evidence trail. If the messages post-date the earliest custody time, the four-custody-times problem stops being a paperwork quirk.",
+      sources: [
+        { label: "September 2025 reporting on the Discord messages vs. the hearing record (no mention)", url: "" }
+      ],
+      requests: [
+        {
+          agencyId: "dps",
+          summary: "DPS/SBI — the acquisition paper trail for the Discord records (dates, not content)",
+          subject: "GRAMA Request: records documenting acquisition of Discord records, UVU homicide investigation",
+          records: "I request, concerning the Utah Valley University homicide investigation of September 10, 2025: (1) the evidence-intake or property log entry documenting receipt of records from Discord Inc. (or from a federal agency relaying them), including the date of receipt; and (2) the transmittal or cover record accompanying that production, identifying the date of the preservation request or legal process and the date range of the records produced. I am NOT requesting the content of any message — only the log and transmittal records documenting when the records were sought and received.",
           ask_no_records: true
         }
       ]
@@ -583,6 +668,31 @@ const FOIA = {
       ]
     },
     {
+      id: "dna-elimination",
+      short: "Roommate DNA, “elimination”",
+      categories: ["Physical evidence"],
+      entities: ["robinson", "twiggs", "sbi"],
+      investigator: "Ian Carroll",
+      investigatorLinks: [
+        { label: "Final recap — the DNA day, summarized", url: "https://www.youtube.com/watch?v=R7mdXcBfQTw" }
+      ],
+      status: "confirmed",
+      finding: "Wednesday's DNA testimony put Robinson's DNA on the rifle, the cartridges, the screwdriver, and the towel — and Lance Twiggs's DNA on the towel and the screwdriver too. Twiggs was presented as an “elimination sample”: his DNA was expected on household items and should be disregarded when found. Every one of those items traces to the residence the two shared.",
+      implication: "An elimination designation is a decision, and decisions leave records. The lab reports showing all contributors on each item, and the case record designating whose reference samples were treated as elimination standards (versus investigated as alternative access), are discrete, numbered lab documents. Expect a § 63G-2-305(10) denial while the prosecution is pending — the written denial still puts what the lab holds on paper.",
+      sources: [
+        { label: "DNA-day testimony (day 3 afternoon), incl. the elimination-sample characterization", url: "" }
+      ],
+      requests: [
+        {
+          agencyId: "dps",
+          summary: "DPS/crime lab — the full-contributor DNA reports and the elimination-standard designation",
+          subject: "GRAMA Request: DNA analysis reports and reference-standard designations, State v. Robinson evidence",
+          records: "I request, concerning laboratory DNA analyses in the Utah Valley University homicide investigation: (1) the DNA examination report(s) for the towel and the screwdriver referenced in July 2026 preliminary-hearing testimony, including all contributor findings for each item; and (2) the case record designating which individuals' reference samples were treated as elimination standards in those analyses, and the basis recorded for each designation. Both items were the subject of public preliminary-hearing testimony.",
+          ask_no_records: true
+        }
+      ]
+    },
+    {
       id: "state-plane",
       short: "The night flight south",
       categories: ["Timeline contradictions"],
@@ -682,6 +792,22 @@ const FOIA = {
     { id: "gap-cut-minutes", label: "What's in the cut minutes?",
       question: "1:16 missing from the 11:53 clip, stairwell cuts out of order, a 55-minute garage gap presented as continuous. The unedited native exports answer whether it's sloppy or deceptive.",
       findings: ["cut-footage"],
-      requests: [{ inv: "cut-footage", idx: 0 }] }
+      requests: [{ inv: "cut-footage", idx: 0 }] },
+    { id: "gap-exhibit-14", label: "What did the 14 see?",
+      question: "The “conclusive” video was shown once, off camera, to 14 in-person seats — and per the journalists in the room, it “isn't going to be released publicly.” The native camera exports and the exhibit-creation paper trail answer what it actually shows.",
+      findings: ["exhibit-121"],
+      requests: [{ inv: "exhibit-121", idx: 0 }, { inv: "exhibit-121", idx: 1 }] },
+    { id: "gap-motive-author", label: "Who wrote the motive?",
+      question: "The state's own centerpiece witness never heard Robinson mention Charlie Kirk — yet officials told the country the motive within 72 hours. Somebody briefed them. The briefing records have authors and dates.",
+      findings: ["motive-testimony"],
+      requests: [{ inv: "motive-testimony", idx: 0 }] },
+    { id: "gap-discord-when", label: "When were the Discord messages sent?",
+      question: "The most-reported confessions of September 2025 never appeared at the hearing. If the acquisition records show they post-date custody, the timeline problem becomes the case's problem.",
+      findings: ["discord-timing", "custody-timeline"],
+      requests: [{ inv: "discord-timing", idx: 0 }] },
+    { id: "gap-elimination", label: "Eliminated — or never examined?",
+      question: "The roommate's DNA is on the towel and the screwdriver, and the lab was told to expect and disregard it. Was alternative access ever examined, or designated away?",
+      findings: ["dna-elimination"],
+      requests: [{ inv: "dna-elimination", idx: 0 }] }
   ]
 };

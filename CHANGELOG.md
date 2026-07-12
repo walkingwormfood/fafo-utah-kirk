@@ -2,6 +2,16 @@
 
 What's new in FAFO Utah — Charlie Kirk Edition. Newest first.
 
+## 2026-07-12 — The final-recap mining: four new threads, four new holes
+
+Ian Carroll's hearing wrap-up (mined against the transcript in the library) lands on the deck:
+
+- **The "4K" exhibit** — exhibit 12.1 was the edited montage the judge REJECTED day one; 12.4 the overnight unedited remake; the final-day showing was off camera, to 14 seats, at Erika Kirk's lawyer's request, explicitly not televised — and the journalists in the room say it shows no such shot. Two requests: UVU's native camera exports, and the state's paper trail for who made the exhibits, from what, with what software. Hole: *what did the 14 see?*
+- **Motive without a witness** — Twiggs, on pre-filmed partially-redacted video (the defense was blocked from calling him live), never heard Robinson talk about Charlie Kirk. Request: the Governor's briefing materials behind the September motive statements. Hole: *who wrote the motive?*
+- **Discord confessions vanish** — never entered at the hearing; Coleman's testable hypothesis is they post-date custody. Request: the acquisition metadata (process date, production date range), not the content. Hole: *when were the Discord messages sent?*
+- **Roommate DNA, "elimination"** — Twiggs's DNA on the towel and screwdriver, designated expected-and-ignorable. Request: the full-contributor lab reports and the elimination-standard designation record. Hole: *eliminated — or never examined?*
+- Updates in place: the TPUSA-contact card now carries Blake Neff's recorded Twitter Space slip ("even if I did [know], I wouldn't tell you… I know that that person didn't do anything"), and the .223 card pins Friday's roof-location testimony.
+
 ## 2026-07-11 (evening) — The drop box: report the request you filed, anonymously
 
 Every request on every card now carries "⚑ filed this one? report your request #" — a tiny form (reference number, date, optional response text) that goes to an anonymous drop box. No name, no email, no cookies; the site itself still collects nothing. Reports land in a human review queue and get verified against the entity's own portal before anything appears on a card — this is an evidence docket, not a wiki. Also under the hood: a control panel replaced the floating toggle (view switch, status selectors, and the how-to-file / why-so-narrow drawers all live in it now).
