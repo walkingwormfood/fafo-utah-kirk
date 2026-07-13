@@ -219,7 +219,8 @@ const FOIA = {
           summary: "Utah County SO — the bodycam that was rolling during the rifle recovery (confirmed on day 4 to exist)",
           subject: "GRAMA Request: body-worn camera footage of evidence recovery, wooded area near UVU, September 10, 2025",
           records: "I request the body-worn camera footage recorded by the Utah County Sheriff's Office officer(s) present at the recovery of a rifle from the wooded area northeast of the Utah Valley University campus on September 10, 2025, at approximately 6:00 p.m. On July 9, 2026, the state's crime-scene sergeant testified at the public preliminary hearing in State v. Robinson that an officer's body camera was recording during that recovery. I also request the associated evidence/property record for the recovered items.",
-          ask_no_records: true
+          ask_no_records: true,
+          filed: "PENDING — filed Jul 12, 2026, 2:51 p.m. via NextRequest, request #26-2791 (Utah County). Response due July 28. Confirmation received on submission; no invoice due. Photo-ID upload applies only to subject-of-record requests — this is a public-records ask."
         },
         {
           agencyId: "uvupd",
