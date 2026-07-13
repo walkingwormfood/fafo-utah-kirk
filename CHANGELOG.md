@@ -2,6 +2,10 @@
 
 What's new in FAFO Utah — Charlie Kirk Edition. Newest first.
 
+## 2026-07-13 — The Panguitch alibi: a sighting nobody ran down
+
+Diligent Denizen's on-camera interview (captured + Wayback-archived same day) meets Coleman Ep. 143's timeline math: two Cowboy's Smokehouse staff put Robinson in Panguitch until ~10 p.m. Sept 10 — 100% ID, card payment, FBI tip that went nowhere per the witnesses — while the state's text exhibits have him outside UVU from 11:00 p.m. Fastest drive: 2h46m. New thread + hole (*was the Panguitch tip run down?*), with absence-is-the-finding requests to DPS/SBI (the lead-log entry) and the Utah County Attorney (any follow-up record). The FBI intake side belongs to the federal FAFO. Bonus corroboration logged on the card: the restaurant's ceiling camera was already missing before Robinson arrived, and a 4:33 p.m. text in the state's own exhibits contradicts Twiggs's "hadn't heard from him all day until 11."
+
 ## 2026-07-12 — The final-recap mining: four new threads, four new holes
 
 Ian Carroll's hearing wrap-up (mined against the transcript in the library) lands on the deck:

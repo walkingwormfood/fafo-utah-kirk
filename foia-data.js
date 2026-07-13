@@ -487,6 +487,41 @@ const FOIA = {
       ]
     },
     {
+      id: "panguitch-alibi",
+      short: "The Panguitch alibi",
+      categories: ["Timeline contradictions", "Witness statements"],
+      entities: ["robinson", "twiggs", "fbi-ent", "sbi"],
+      investigator: "Diligent Denizen · Baron Coleman · Candace Owens",
+      investigatorLinks: [
+        { label: "Diligent Denizen — the on-camera staff interview (posted Jul 12)", url: "https://x.com/DiligentDenizen/status/2076405974597063038" },
+        { label: "Coleman Ep. 143 — the timeline math against the state's own texts", url: "https://www.youtube.com/watch?v=yBDB-mpI-Xw" },
+        { label: "Interview video, archived", url: "https://web.archive.org/web/20260713050144/https://video.twimg.com/ext_tw_video/2076405353022095360/pu/vid/avc1/1280x720/CBzgt2rfdWeCpsLE.mp4" }
+      ],
+      status: "contested",
+      finding: "Two staff at Cowboy's Smokehouse in Panguitch — on camera, one of whom personally took Robinson's card at checkout near the 10 p.m. close — say they served him the evening of September 10 and are \"100%\" on the ID (face, voice, mannerisms; more certain than Lance Twiggs was about the stairwell figure). They reported it to the FBI, who took contact information and never followed up; the sighting reached Candace Owens months ago. Neither the prosecution nor the defense has ever contacted the restaurant. The math: fastest route Panguitch→UVU is ~2h46m, so a ~9:50 p.m. departure puts the earliest Orem arrival at ~12:36 a.m. — while the state's text-message exhibits have \"Robinson\" texting Twiggs from outside UVU, watching a lingering cop, with the first message at 11:00 p.m. A card payment record with a hard timestamp exists at a named business. (Status contested: the interview is on tape and archived; the sighting itself is a witness claim outside the court record — which is exactly the problem the records requests attack.)",
+      implication: "If the tip is wrong, the case file shows it was run down and excluded — routine. If the tip was never run down, a 100%-ID alibi sighting with a checkable payment record sat in the FBI's intake while the state built a timeline it contradicts. Either way the paper answers: the tip/lead log entry, and any record of follow-up, are discrete administrative records on the state side. (The FBI intake itself is federal — that request lives on the federal FAFO.) Coleman's read of the same facts: \"either the texts are fabricated... or someone was pretending to be Tyler.\"",
+      sources: [
+        { label: "On-camera interview (3:09), receipts + Wayback archives in the library", url: "https://web.archive.org/web/20260713050134/https://cdn.syndication.twimg.com/tweet-result?id=2076405974597063038&token=a" },
+        { label: "Ep. 143 segment [20:45–34:30]", url: "https://www.youtube.com/watch?v=yBDB-mpI-Xw" }
+      ],
+      requests: [
+        {
+          agencyId: "dps",
+          summary: "DPS/SBI — the lead/tip log entry for the Panguitch sighting (absence is the finding)",
+          subject: "GRAMA Request: lead or tip records concerning a reported September 10, 2025 sighting in Panguitch, Utah",
+          records: "I request, concerning the Utah Valley University homicide investigation: (1) the lead, tip, or information-report log entry documenting receipt of information that the suspect was seen at a restaurant in Panguitch, Utah on the evening of September 10, 2025 — whether received directly, from the FBI, or from any other agency; and (2) any record documenting investigative follow-up on that information, including any interview of the reporting witnesses or any records request to the business, or a record of the decision not to follow up. Witness personal identifiers may be redacted. If no responsive records exist, I request written confirmation of that fact, including a description of the search conducted.",
+          ask_no_records: true
+        },
+        {
+          agencyId: "ucao",
+          summary: "Utah County Attorney — any record the prosecution received or ran down the Panguitch tip",
+          subject: "GRAMA Request: records concerning a reported alibi sighting, State v. Robinson",
+          records: "I request any record held by the Utah County Attorney's Office documenting receipt of, or follow-up on, information that the defendant in State v. Robinson was seen in Panguitch, Utah on the evening of September 10, 2025 — including any referral from a law-enforcement agency, any internal memorandum, and any record of contact or attempted contact with the business or the reporting witnesses. If no responsive records exist, I request written confirmation of that fact.",
+          ask_no_records: true
+        }
+      ]
+    },
+    {
       id: "motive-testimony",
       short: "Motive without a witness",
       categories: ["Witness statements"],
@@ -798,6 +833,10 @@ const FOIA = {
       question: "The “conclusive” video was shown once, off camera, to 14 in-person seats — and per the journalists in the room, it “isn't going to be released publicly.” The native camera exports and the exhibit-creation paper trail answer what it actually shows.",
       findings: ["exhibit-121"],
       requests: [{ inv: "exhibit-121", idx: 0 }, { inv: "exhibit-121", idx: 1 }] },
+    { id: "gap-panguitch", label: "Was the Panguitch tip run down?",
+      question: "Two witnesses, a 100% ID, a card payment with a hard timestamp — reported to the FBI, never followed up per the witnesses, never contacted by either side. If it was run down and excluded, the log shows it. If it wasn't, the state built a timeline nobody tested against it.",
+      findings: ["panguitch-alibi", "custody-timeline", "noble-report"],
+      requests: [{ inv: "panguitch-alibi", idx: 0 }, { inv: "panguitch-alibi", idx: 1 }] },
     { id: "gap-motive-author", label: "Who wrote the motive?",
       question: "The state's own centerpiece witness never heard Robinson mention Charlie Kirk — yet officials told the country the motive within 72 hours. Somebody briefed them. The briefing records have authors and dates.",
       findings: ["motive-testimony"],
