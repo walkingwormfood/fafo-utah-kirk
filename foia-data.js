@@ -153,7 +153,7 @@ const FOIA = {
           subject: "GRAMA Request: lobby/intake video of September 11, 2025 and its retention/deletion records",
           records: "I request: (1) all video recorded by lobby, intake, sally-port, or booking-area cameras at the Washington County Sheriff's Office facility in Hurricane, Utah between 8:00 p.m. September 11, 2025 and 5:00 a.m. September 12, 2025; (2) the records retention schedule applicable to facility video during that period; and (3) any record documenting the deletion, overwriting, or non-retention of video from that period — including the date of deletion, the system or person that performed it, and any authorization, litigation-hold notice, or preservation request in effect at the time; and (4) all correspondence concerning any prior records request for this video — the request, the response, and any internal discussion of it. If the video no longer exists, items (2) through (4) are the request.",
           ask_no_records: true,
-          filed: "PENDING — filed Jul 9, 2026, 1:11 p.m. via WCSO's web form (copy requested; fee waiver and expedited response asserted; OTHER entitlement). WCSO confirmation email received same hour. Response due within 10 working days (~Jul 23). DO NOT PREPAY — payment instructions come by email."
+          filed: "PENDING — filed Jul 9, 2026, 1:11 p.m. via WCSO's web form (copy requested; fee waiver and expedited response asserted; OTHER entitlement). WCSO confirmation email received same hour. Re-filed identically Jul 12, 2026, 1:18 p.m. (second WCSO confirmation received) — treat Jul 9 as the operative filing date; response due within 10 working days (~Jul 23). DO NOT PREPAY — payment instructions come by email."
         }
       ]
     },
