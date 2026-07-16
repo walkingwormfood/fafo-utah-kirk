@@ -302,7 +302,7 @@ const FOIA = {
           ],
           refined: true,
           ask_no_records: true,
-          filed: "DENIED (curable) — filed Jul 15, 2026 by email to records@orem.gov; denied same day by Records Specialist Angela Campbell (801-229-7298): (1) missing § 63G-2-204 requester info (full mailing address + daytime phone), (2) duplicate submission. Cure and re-file ONCE with the complete § 204 block in the body."
+          filed: "RE-FILED (cured) Jul 16, 2026 by email to records@orem.gov — complete § 63G-2-204 requester block (full mailing address + daytime phone), single copy, replacing all prior submissions. 10-business-day clock (~Jul 30). Original denial preserved in the progression above."
         }
       ]
     },
