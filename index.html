@@ -47,6 +47,8 @@
   .pry{margin-top:12px;border-top:1px dashed var(--line);padding-top:12px}
   .pry .lbl{font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--faint);display:block;margin-bottom:8px}
   .req{display:flex;gap:12px;align-items:flex-start;justify-content:space-between;padding:8px 0;border-top:1px solid var(--panel2)}
+  .req.refined{border-left:3px solid var(--accent2);padding-left:10px;background:rgba(79,109,255,.07);border-radius:4px}
+  .reftag{display:inline-block;margin-left:8px;font-family:var(--mono);font-size:10.5px;color:var(--accent2);border:1px solid var(--accent2);border-radius:4px;padding:1px 6px;vertical-align:middle;opacity:.85}
   .req:first-of-type{border-top:none}
   .req .desc{font-size:13.5px;color:var(--ink)}
   .req .agency{display:block;font-size:11px;color:var(--faint);font-family:var(--mono);margin-top:2px}
@@ -233,7 +235,10 @@
       <div class="field"><label for="name">Your name</label><input type="text" id="name" placeholder="Jane Q. Public"></div>
       <div class="field"><label for="email">Your email</label><input type="email" id="email" placeholder="you@example.com"></div>
     </div>
-    <div class="field"><label for="addr">Mailing address (optional — some Utah entities want one on the form)</label><input type="text" id="addr" placeholder="123 Main St, City, ST 00000"></div>
+    <div class="row">
+      <div class="field"><label for="addr">Mailing address — full street, city, state, ZIP (Utah Code § 63G-2-204 requires it; incomplete addresses draw denials)</label><input type="text" id="addr" placeholder="123 Main St, City, ST 00000"></div>
+      <div class="field"><label for="phone">Daytime phone (§ 63G-2-204 requires it)</label><input type="tel" id="phone" placeholder="555-555-5555"></div>
+    </div>
     <div class="checks">
       <label><input type="checkbox" id="fee" checked> Request fee waiver</label>
       <label><input type="checkbox" id="exp" checked> Request expedited response</label>
@@ -326,7 +331,7 @@
       const tag = email ? "email" : "portal";
       const title = email ? ("Opens a pre-addressed email to " + a.name)
                           : ("Copies the letter and opens " + (a?a.name:"the entity") + "'s records page");
-      return `<div class="req"><div class="desc">${esc(r.summary)}<span class="agency">${esc(a?a.name:r.agencyId)} · ${tag}</span>`+
+      return `<div class="req${r.refined ? " refined" : ""}"><div class="desc">${esc(r.summary)}${r.refined ? '<span class="reftag">⟳ refined</span>' : ""}<span class="agency">${esc(a?a.name:r.agencyId)} · ${tag}</span>`+
              (r.response ? `<span class="resp">📬 ${esc(r.response)}</span>` : r.filed ? `<span class="resp pending collapsed">⏳ ${esc(r.filed)}</span>` : "")+
              `</div>`+
              `<div class="reqbtns">`+
@@ -470,11 +475,12 @@
     const name = $("name").value.trim() || "[your name]";
     const email = $("email").value.trim() || "[your email]";
     const addr = $("addr").value.trim();
+    const phone = $("phone").value.trim();
     const today = new Date().toLocaleDateString("en-US", {year:"numeric", month:"long", day:"numeric"});
     const map = { NAME:name, EMAIL:email, ADDRESS:addr, DATE:today };
     const b = FOIA.boilerplate;
     const L = [];
-    L.push(name); if(addr) L.push(addr); L.push(email); L.push(today); L.push("");
+    L.push(name); if(addr) L.push(addr); L.push(email); if(phone) L.push("Daytime phone: " + phone); L.push(today); L.push("");
     L.push("Records Officer"); L.push(a ? a.name : current.agencyId); L.push("");
     L.push(current.subject); L.push("");
     L.push("Dear Records Officer,"); L.push("");
