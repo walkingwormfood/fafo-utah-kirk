@@ -603,6 +603,7 @@ const FOIA = {
           summary: "WCSO — the original September 12 Mitchell interview records",
           subject: "GRAMA Request: records of witness interview conducted September 12, 2025",
           records: "I request the report, recording log entry, or interview summary documenting the interview of the individual who facilitated Tyler Robinson's arrival at the Washington County Sheriff's Office, conducted in the early morning hours of September 12, 2025. The individual is publicly identified in Day 3 preliminary-hearing testimony in State v. Robinson as Mike Mitchell, a retired law-enforcement officer; the interview concerns the Utah Valley University homicide investigation, and the interviewing deputy’s or detective’s name — unknown — is part of the records requested. Personal identifiers other than the interviewers' names and the date, time, location, and duration of the interview may be redacted — the existence, custodian, and metadata of the original interview record are the core of this request.",
+          filed: "PENDING — filed Jul 16, 2026, 1:19 p.m. via WCSO's web form (§ 204 block in the body; fee waiver and expedited asserted; OTHER entitlement). Confirmation received same hour. Response due within 10 working days (~Jul 30).",
           ask_no_records: true
         }
       ]
@@ -660,7 +661,8 @@ const FOIA = {
           summary: "WCSO — its copy of the McBride letter and any reply",
           subject: "GRAMA Request: correspondence from the Utah County prosecutor concerning statements by sheriff's office personnel",
           records: "I request the letter sent by or on behalf of prosecutor Ryan McBride (Utah County) to the Washington County Sheriff or Sheriff's Office concerning statements by sheriff's office personnel about Tyler Robinson's invocation of his Fifth Amendment rights, together with any written response or internal distribution memo. A version of this letter has already been publicly displayed; I request the office's copy as held.",
-          ask_no_records: true
+          ask_no_records: true,
+          filed: "PENDING — filed Jul 16, 2026, 1:21 p.m. via WCSO's web form (§ 204 block in the body; fee waiver and expedited asserted; OTHER entitlement). Confirmation received same hour. Response due within 10 working days (~Jul 30)."
         }
       ]
     },
