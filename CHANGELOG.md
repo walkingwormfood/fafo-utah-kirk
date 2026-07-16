@@ -2,6 +2,10 @@
 
 What's new in FAFO Utah — Charlie Kirk Edition. Newest first.
 
+## 2026-07-16 — Docket day: two mysteries solved, one denial to cure, one filing added
+
+The Jul 15 mail identified two of the unmatched filings: **UVU #26-212** (Jul 13) is the paved-scene work-orders request — acknowledged Jul 15 with the request text quoted back, due ~Jul 27–28 (**#26-217** turned out to be an accidental identical re-file; expect a duplicate closure, no action needed) — and **Utah County #26-2812** (Jul 13) is the UCSO K9-deployment request, identified when the county closed accidental duplicate **#26-2833** under § 63G-2-201(7)(a)(iv) with "a response will be provided through request 26-2812." New on the docket: the **WCSO CAD/radio-log** request (custody-timeline card) filed Jul 15, due ~Jul 29. One denial to cure: **Orem PD K9** denied same-day for missing § 204 requester info plus duplicate submission — re-file once with the full address/phone block. Still unmatched: UVU #26-214 and #26-215 (Jul 14). Filing lesson now twice-learned: the § 204 completeness block (name, full mailing address, email, daytime phone) belongs in every request body, and one copy per office — three accidental duplicates this week all drew § 201(7) closures or denials.
+
 ## 2026-07-14 — Docket note: four filings in flight, card attribution pending
 
 Filed and confirmed but not yet matched to cards (the portal confirmations don't quote the request text, and the requests sit unpublished in NextRequest): **UVU #26-212** (Jul 13), **UVU #26-214** and **#26-215** (Jul 14), and **Utah County #26-2812** (Jul 13). A Utah DPS GovQA account was also created Jul 13, which implies a DPS filing may exist too. Until the first agency responses quote the requests back (or the portal accounts are checked), treat every UVU, Utah County, and DPS card as possibly already filed — **do not file new requests at those three entities without checking the portals first.** Also on the wire: the WCSO intake-video request was re-filed Jul 12; Jul 9 remains the operative clock (~Jul 23 due).

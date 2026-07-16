@@ -186,7 +186,8 @@ const FOIA = {
           summary: "WCSO — dispatch/CAD log for the night of the turn-in",
           subject: "GRAMA Request: CAD/dispatch records, evening of September 11, 2025",
           records: "I request the computer-aided dispatch (CAD) log entries and radio log records for the Washington County Sheriff's Office for September 11, 2025, 6:00 p.m. through September 12, 2025, 6:00 a.m., concerning the arrival, custody, or processing of any individual in connection with the Utah Valley University homicide investigation. Redaction of unrelated calls for service is acceptable.",
-          ask_no_records: true
+          ask_no_records: true,
+          filed: "PENDING — filed Jul 15, 2026, 12:26 p.m. via WCSO's web form (copy requested; fee waiver and expedited asserted; § 204 profile complete). Confirmation received same hour. Response due within 10 working days (~Jul 29). DO NOT PREPAY."
         }
       ]
     },
@@ -285,14 +286,16 @@ const FOIA = {
           summary: "Utah County — K9 deployment logs for the UVU response",
           subject: "GRAMA Request: K9 unit deployment records, UVU campus, September 10–11, 2025",
           records: "I request the K9 deployment or utilization records for any canine unit deployed to the Utah Valley University campus or surrounding area on September 10–11, 2025 — including the handler log or deployment report identifying each unit, its certification/discipline (tracking, article search, explosives, or firearms detection), its tasking, and the recorded outcome of each deployment.",
-          ask_no_records: true
+          ask_no_records: true,
+          filed: "PENDING — filed via NextRequest as Utah County request #26-2812, Jul 13, 2026. Identified via the county's Jul 15 closure of #26-2833 (an accidental duplicate) under § 63G-2-201(7)(a)(iv): 'A response will be provided through request 26-2812.'"
         },
         {
           agencyId: "orem",
           summary: "Orem PD — same K9 records for its units, if deployed",
           subject: "GRAMA Request: K9 unit deployment records, UVU response, September 10–11, 2025",
           records: "I request the K9 deployment or utilization records for any City of Orem canine unit deployed in connection with the Utah Valley University incident response on September 10–11, 2025 — including handler logs identifying each unit, its certification/discipline, its tasking, and the recorded outcome.",
-          ask_no_records: true
+          ask_no_records: true,
+          filed: "DENIED (curable) — filed Jul 15, 2026 by email to records@orem.gov; denied same day by Records Specialist Angela Campbell (801-229-7298): (1) missing § 63G-2-204 requester info (full mailing address + daytime phone), (2) duplicate submission. Cure and re-file ONCE with the complete § 204 block in the body."
         }
       ]
     },
@@ -318,7 +321,8 @@ const FOIA = {
           summary: "UVU — the work orders and authorizations for the tent removal and paving",
           subject: "GRAMA Request: facilities records for courtyard work following September 10, 2025",
           records: "I request, for the period September 10 – October 15, 2025: (1) all work orders, purchase orders, and contractor invoices concerning removal of the medical tent and any resurfacing, paving, concreting, or landscaping of the courtyard area adjacent to the Sorensen Center / Hall of Flags at Utah Valley University; and (2) the written authorization or approval for that work, including the requesting office and any record of coordination with, or clearance from, any law-enforcement agency before the work proceeded.",
-          ask_no_records: true
+          ask_no_records: true,
+          filed: "PENDING — filed via NextRequest as UVU request #26-212, received Jul 13, 2026; acknowledged Jul 15 with the full request text quoted back. 10-business-day clock, stretched by the Jul 24 Pioneer Day closure — response due ~Jul 27–28. NOTE: UVU #26-217 (Jul 15) is an accidental identical re-file — expect a § 63G-2-201(7) duplicate closure; no action needed on it."
         },
         {
           agencyId: "gov",
