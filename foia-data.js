@@ -294,6 +294,12 @@ const FOIA = {
           summary: "Orem PD — same K9 records for its units, if deployed",
           subject: "GRAMA Request: K9 unit deployment records, UVU response, September 10–11, 2025",
           records: "I request the K9 deployment or utilization records for any City of Orem canine unit deployed in connection with the Utah Valley University incident response on September 10–11, 2025 — including handler logs identifying each unit, its certification/discipline, its tasking, and the recorded outcome.",
+          history: [
+            { label: "filed Jul 15, 2026 by email to records@orem.gov",
+              records: "I request the K9 deployment or utilization records for any City of Orem canine unit deployed in connection with the Utah Valley University incident response on September 10–11, 2025 — including handler logs identifying each unit, its certification/discipline, its tasking, and the recorded outcome.",
+              outcome: "DENIED same day by Records Specialist Angela Campbell (801-229-7298): (1) missing § 63G-2-204 requester information — full mailing address and daytime phone; (2) duplicate submission.",
+              refinement: "Request text unchanged — the cure is procedural: the complete § 204 requester block (name, full street/city/state/ZIP, daytime phone, email) now leads the letter, filed once. The generator letterhead carries these fields for every Utah request going forward." }
+          ],
           refined: true,
           ask_no_records: true,
           filed: "DENIED (curable) — filed Jul 15, 2026 by email to records@orem.gov; denied same day by Records Specialist Angela Campbell (801-229-7298): (1) missing § 63G-2-204 requester info (full mailing address + daytime phone), (2) duplicate submission. Cure and re-file ONCE with the complete § 204 block in the body."
