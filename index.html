@@ -497,6 +497,7 @@
     const today = new Date().toLocaleDateString("en-US", {year:"numeric", month:"long", day:"numeric"});
     const map = { NAME:name, EMAIL:email, ADDRESS:addr, DATE:today };
     const b = FOIA.boilerplate;
+    const reqBlock = [name, addr, email, phone ? "Daytime phone: " + phone : "", today].filter(Boolean).join("\n");
     const L = [];
     L.push(name); if(addr) L.push(addr); L.push(email); if(phone) L.push("Daytime phone: " + phone); L.push(today); L.push("");
     L.push("Records Officer"); L.push(a ? a.name : current.agencyId); L.push("");
@@ -532,7 +533,7 @@
       // Entities whose form has its OWN named fields (e.g. WCSO's reason/entitlement
       // boxes): one paste box per form field, mapped in the agency's formMap.
       const partText = key => ({
-        records: current.records,
+        records: reqBlock + "\n\n" + current.records,
         no_records: current.askNoRecords ? b.no_records : "",
         format: b.format,
         reason: [b.reason_public, $("fee").checked ? b.fee_waiver : "", $("exp").checked ? b.expedited : ""].filter(Boolean).join("\n\n"),
@@ -563,6 +564,7 @@
       // their own fields — pasting the whole letter duplicates all of that. Show a
       // description-box version instead; fee/expedited text gets its own paste boxes.
       const P = [];
+      P.push(reqBlock); P.push("");
       if(current.bare){
         P.push(current.records);
       } else {
@@ -576,7 +578,7 @@
         if(b.deadline){ P.push(""); P.push(b.deadline); }
       }
       $("out").value = P.join("\n");
-      $("outLabel").textContent = "Form version — paste into the request-description box (the form collects your name, address, and fees separately)";
+      $("outLabel").textContent = "Form version — paste into the request-description box (§ 63G-2-204 requester block included even though the form collects it separately — incomplete requester info is Utah’s favorite denial)";
       $("formBoxes").innerHTML = "";
       updateCharline();
       $("charline").style.display = "block";
