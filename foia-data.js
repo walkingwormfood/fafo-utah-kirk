@@ -81,9 +81,12 @@ const FOIA = {
       "I look forward to your determination on this request within the 20 business days provided by " +
       "5 U.S.C. \u00a7 552(a)(6)(A)(i).",
     expedited:
-      "Expedited processing: I request expedited processing under 5 U.S.C. \u00a7 552(a)(6)(E). There is an urgency to " +
-      "inform the public concerning actual or alleged federal government activity that is the subject of widespread " +
-      "and ongoing media attention.",
+      "Expedited processing: I request expedited processing under 5 U.S.C. \u00a7 552(a)(6)(E) on two grounds. " +
+      "(1) There is an urgency to inform the public about actual or alleged federal government activity, and I am a " +
+      "person primarily engaged in disseminating information: I publish the government records I obtain through a " +
+      "public records docket available to the general public. (2) This request concerns a matter of widespread and " +
+      "exceptional media interest in which there exist possible questions about the government\u2019s integrity that " +
+      "affect public confidence. I certify that the foregoing is true and correct to the best of my knowledge and belief.",
     segregability:
       "If any portion of a responsive record is withheld, please cite the specific FOIA exemption claimed and release " +
       "all reasonably segregable non-exempt portions, as required by 5 U.S.C. \u00a7 552(b).",
@@ -215,7 +218,8 @@ const FOIA = {
           summary: "ATF — the DNA reports, the consumption authorization, and the elimination-sample records",
           subject: "FOIA Request: ATF DNA laboratory records concerning the Utah Valley University homicide investigation",
           records: "I request, concerning ATF Forensic Science Laboratory DNA analyses performed for the September 10, 2025 Utah Valley University homicide investigation (State v. Robinson, Utah Fourth District No. 251403576), whose author testified publicly at the July 10, 2026 preliminary hearing: (1) the three DNA examination reports authored by the DNA section chief (admitted in court as exhibits 30 and 34, plus the elimination-sample report referenced as report 157); (2) the case-file record authorizing complete consumption of samples 1.4, 1.6, 1.9, 1.10, 1.12, 2.1, 3.1, 4.1, and 5.1, including the permission-to-consume communication referenced in testimony; and (3) the records of elimination-sample requests made to household members and to investigating agents, including whether the agents' samples were ever provided. These records were described in public testimony; I am not seeking the underlying DNA profiles or any person's genetic data.",
-          ask_no_records: true
+          ask_no_records: true,
+          filed: "PENDING \u2014 filed Jul 17, 2026 via ATF\u2019s FOIA Public Access Portal (dojatf.secureocp.com). Requester category News Media; fee waiver requested (\u00a7 552(a)(4)(A)(iii)); expedited processing requested under 28 C.F.R. \u00a7 16.5(e)(1)(ii) AND (iv) \u2014 disseminator status plus the government-integrity / widespread-media-interest ground, with certification. Date range 09/10/2025\u201307/31/2026. Registration confirmation comes from noreply@ains.com. FOIPA tracking number to follow. Expect Exemption 7(A) while State v. Robinson is pending."
         }
       ]
     },
