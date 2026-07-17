@@ -327,7 +327,7 @@ const FOIA = {
           agencyId: "uvu",
           summary: "UVU — the work orders and authorizations for the tent removal and paving",
           subject: "GRAMA Request: facilities records for courtyard work following September 10, 2025",
-          records: "I request, for the period September 10 – October 15, 2025: (1) all work orders, purchase orders, and contractor invoices concerning removal of the medical tent and any resurfacing, paving, concreting, or landscaping of the courtyard area adjacent to the Sorensen Center / Hall of Flags at Utah Valley University; and (2) the written authorization or approval for that work, including the requesting office and any record of coordination with, or clearance from, any law-enforcement agency before the work proceeded.",
+          records: "I request, for the period September 10 – October 15, 2025: (1) all work orders, purchase orders, and contractor invoices concerning removal of the medical tent and any resurfacing, paving, concreting, or landscaping of the courtyard area adjacent to the Sorensen Center / Hall of Flags at Utah Valley University; and (2) the written authorization or approval for that work, including the requesting office and any record of coordination with, or clearance from, any law-enforcement agency before the work proceeded. I additionally request any record identifying the excavation/paving contractor (on-camera reporting names contractor Dan Merrill describing over-excavation, topsoil removal, and concrete pour within roughly a week on FBI/Governor direction), and any record of the disposal, transport, or testing of soil or debris removed from the site.",
           ask_no_records: true,
           filed: "PENDING — filed via NextRequest as UVU request #26-212, received Jul 13, 2026; acknowledged Jul 15 with the full request text quoted back. 10-business-day clock, stretched by the Jul 24 Pioneer Day closure — response due ~Jul 27–28. NOTE: UVU #26-217 (Jul 15) is an accidental identical re-file — expect a § 63G-2-201(7) duplicate closure; no action needed on it."
         },
@@ -489,6 +489,31 @@ const FOIA = {
       ]
     },
     {
+      id: "noble-nest-original",
+      short: "The Nest witness's raw file",
+      categories: ["Missing & deleted footage", "Witness statements"],
+      entities: ["uvu-ent"],
+      investigator: "Baron Coleman (Ep 141) · preliminary-hearing cross",
+      investigatorLinks: [
+        { label: "Coleman Ep. 141", url: "https://www.youtube.com/watch?v=FT8kJN3n_cA" }
+      ],
+      status: "confirmed",
+      finding: "On cross at the preliminary hearing, it emerged that homeowner Cynthia Noble’s Nest doorbell captured a vehicle on her street overnight September 10–11, 2025, and that her statement described the driver as bald with three passengers — detail that surfaced only on cross-examination, not in the state’s direct case. (The FBI’s own interview report on this doorbell footage is sought separately on the federal docket.)",
+      implication: "The original Nest export (with device metadata and timestamps) and Noble’s recorded statement, as held by the Utah investigating agency, are discrete records — distinct from the FBI’s interview report. They fix what the camera actually showed and what the witness actually said, independent of the state’s characterization.",
+      sources: [
+        { label: "Preliminary-hearing cross-examination testimony (Coleman Ep. 141 recap)", url: "" }
+      ],
+      requests: [
+        {
+          agencyId: "dps",
+          summary: "DPS/SBI — the original Nest export + Cynthia Noble’s recorded statement",
+          subject: "GRAMA Request: original Nest doorbell file and witness statement, Utah Valley University homicide investigation",
+          records: "I request, concerning the September 10, 2025 Utah Valley University homicide investigation: (1) the original Nest doorbell video file recovered from the residence of witness Cynthia Noble depicting a vehicle on her street overnight September 10–11, 2025, in its native format with original metadata and timestamps; and (2) the report, recording, or summary of the Utah investigator’s interview of Cynthia Noble, in which she described the vehicle’s driver and occupants. Witness personal identifiers may be redacted; the original file and the substance of the statement are the request. If no responsive record exists, I request written confirmation of that fact.",
+          ask_no_records: true
+        }
+      ]
+    },
+    {
       id: "twiggs-location",
       short: "Twiggs: which building?",
       categories: ["Timeline contradictions", "Witness statements"],
@@ -516,6 +541,13 @@ const FOIA = {
           summary: "WCSO — the same facility records for the same window",
           subject: "GRAMA Request: interview room and visitor logs, night of September 11–12, 2025",
           records: "I request the interview-room usage log, visitor log, and any facility-use record for the Washington County Sheriff's Office for September 11, 2025, 10:00 p.m. through September 12, 2025, 8:00 a.m., including any record of facility use by another agency (FBI or Utah DPS/SBI) during that window. Names of uninvolved members of the public may be redacted.",
+          ask_no_records: true
+        },
+        {
+          agencyId: "sgpd",
+          summary: "St. George PD — Lance Twiggs’s first interview report",
+          subject: "GRAMA Request: initial interview report of Lance Twiggs, Utah Valley University homicide investigation",
+          records: "I request the report, recording, or interview summary documenting the FIRST interview of Lance Twiggs conducted by or at the St. George Police Department in connection with the September 10, 2025 Utah Valley University homicide investigation (State v. Robinson). Per preliminary-hearing testimony, an early Twiggs interview exists that pre-dates the pre-filmed, partially-redacted video later shown at the hearing. I seek the original interview record — its existence, date, custodian, and content — with witness personal identifiers redactable. If no responsive record exists, I request written confirmation of that fact.",
           ask_no_records: true
         }
       ]
