@@ -212,7 +212,7 @@ const FOIA = {
           agencyId: "uvupd",
           summary: "UVU PD — Bagley's bodycam footage plus the device's audit/battery logs",
           subject: "GRAMA Request: body-worn camera footage and device audit logs, September 10, 2025",
-          records: "I request: (1) all body-worn camera footage recorded on September 10, 2025 by the UVU police officer who first accessed the Losee Center rooftop; (2) the device audit log for that officer's body-worn camera for September 10, 2025 — including power-on/power-off events, battery-depletion events, docking and upload timestamps; and (3) the department's body-worn camera policy in effect on that date, including battery-management and activation requirements.",
+          records: "I request: (1) all body-worn camera footage recorded on September 10, 2025 by the UVU police officer who first accessed the Losee Center rooftop; (2) the device audit log for that officer's body-worn camera for September 10, 2025 — including power-on/power-off events, battery-depletion events, docking and upload timestamps; and (3) the department's body-worn camera policy in effect on that date, including battery-management and activation requirements. I also request the device's location/GPS track for September 10, 2025 where the camera model (Axon Body 3/4) logs it, which would establish the unit's movement and position independent of the footage.",
           ask_no_records: true
         },
         {
@@ -394,6 +394,29 @@ const FOIA = {
           summary: "UVU — parking garage access-control log for the morning of Sept 10",
           subject: "GRAMA Request: parking structure access-control records, morning of September 10, 2025",
           records: "I request the access-control log (key-card, key-pass, gate, or license-plate-recognition entries) for the Utah Valley University parking structure adjacent to the Losee Center for September 10, 2025, 8:00 a.m. – 10:00 a.m. Entries of uninvolved third parties may be redacted; the request is for the log covering the vehicle entry shown at 8:29 a.m. in exhibits at the State v. Robinson preliminary hearing.",
+          ask_no_records: true
+        }
+      ]
+    },
+    {
+      id: "backpack-stop-testing",
+      short: "Who stopped the backpack test",
+      categories: ["Physical evidence", "Crime scene handling"],
+      entities: ["uvu-ent"],
+      investigator: "Preliminary-hearing record; Candace Owens Ep 360\u2013361; Baron Coleman",
+      investigatorLinks: [],
+      status: "confirmed",
+      finding: "Day-2 FBI-lab testimony (Amanda Baker) and Ep-360 testimony (UVU DPS Sgt. Filomena) together describe an instruction to the FBI Laboratory to STOP testing the Fulton Library backpack (Exhibit 9) because it \u2018belongs to Kirk\u2019s detail\u2019 \u2014 an instruction neither witness will claim as their own. The federal lab record is sought on the FOIA side; this asks the Utah investigating agency (DPS/SBI) for the same instruction as IT sent or received.",
+      implication: "If a Utah investigator conveyed the \u2018Kirk\u2019s detail\u2019 attribution to the federal lab, that communication is a Utah government record. The instruction, and who originated it, is the whole question \u2014 a discrete communication, not a broad search.",
+      sources: [
+        { label: "Amanda Baker & Sgt. Filomena preliminary-hearing testimony, State v. Robinson" }
+      ],
+      requests: [
+        {
+          agencyId: "dps",
+          summary: "DPS/SBI \u2014 the communication instructing the FBI lab that the backpack belonged to Kirk\u2019s detail / to stop testing",
+          subject: "GRAMA Request: SBI communication to the FBI Laboratory concerning Exhibit 9 (the Fulton Library backpack)",
+          records: "I request any communication sent or received by the Utah Department of Public Safety / State Bureau of Investigation, concerning the September 10, 2025 Utah Valley University homicide investigation, that (a) conveyed to the FBI Laboratory or any other laboratory that the backpack recovered at the Fulton Library bus stop (logged in the FBI Laboratory as Exhibit 9) belonged to Charlie Kirk\u2019s security detail, and/or (b) directed or requested that testing of that backpack, or the jacket or gloves recovered with it, be stopped or not performed \u2014 together with the record identifying who originated that communication. This is a discrete instrument, not a broad search. If no such record exists, I request written confirmation of that fact.",
           ask_no_records: true
         }
       ]
