@@ -253,8 +253,8 @@
       <div class="field"><label for="email">Your email</label><input type="email" id="email" placeholder="you@example.com"></div>
     </div>
     <div class="row">
-      <div class="field"><label for="addr">Mailing address — full street, city, state, ZIP (Utah Code § 63G-2-204 requires it; incomplete addresses draw denials)</label><input type="text" id="addr" placeholder="123 Main St, City, ST 00000"></div>
-      <div class="field"><label for="phone">Daytime phone (§ 63G-2-204 requires it)</label><input type="tel" id="phone" placeholder="555-555-5555"></div>
+      <div class="field"><label for="addr" id="addrLabel">Mailing address — full street, city, state, ZIP (Utah Code § 63G-2-204 requires it; incomplete addresses draw denials)</label><input type="text" id="addr" placeholder="123 Main St, City, ST 00000"></div>
+      <div class="field"><label for="phone" id="phoneLabel">Daytime phone (§ 63G-2-204 requires it)</label><input type="tel" id="phone" placeholder="555-555-5555"></div>
     </div>
     <div class="checks">
       <label><input type="checkbox" id="fee" checked> Request fee waiver</label>
@@ -496,6 +496,13 @@
   function loadRequest(req){
     current = req;
     const a = agencyById(req.agencyId);
+    const fed = !!(a && a.fed);
+    $("addrLabel").textContent = fed
+      ? "Mailing address — full street, city, state, ZIP"
+      : "Mailing address — full street, city, state, ZIP (Utah Code § 63G-2-204 requires it; incomplete addresses draw denials)";
+    $("phoneLabel").textContent = fed
+      ? "Daytime phone (optional for federal FOIA)"
+      : "Daytime phone (§ 63G-2-204 requires it)";
     $("genFor").innerHTML = "Drafting: <b>" + esc(req.label) + "</b> — to " + esc(a?a.name:req.agencyId);
     $("outWrap").style.display = "none";
     $("gen").classList.add("open");
@@ -613,8 +620,12 @@
       $("expWrap").style.display = (!current.bare && $("exp").checked) ? "block" : "none";
       const routing = [];
       if(current.component) routing.push("<b>Where to route it:</b> " + esc(current.component) + ".");
-      if(a && a.portalNote) routing.push(esc(a.portalNote));
-      routing.push("<b>Utah records forms usually also ask:</b> requester status → member of the public (or media, if you publish what you receive) · copies vs. inspection → copies, electronic delivery · date-range fields → the window stated in the request text · fees → the fee-waiver paste box below covers it; if the form makes you acknowledge fees, cap at $25 · expedite box → the paste box below.");
+      if(fed){
+        if(a && a.submitNote) routing.push(esc(a.submitNote));
+      } else {
+        if(a && a.portalNote) routing.push(esc(a.portalNote));
+        routing.push("<b>Utah records forms usually also ask:</b> requester status → member of the public (or media, if you publish what you receive) · copies vs. inspection → copies, electronic delivery · date-range fields → the window stated in the request text · fees → the fee-waiver paste box below covers it; if the form makes you acknowledge fees, cap at $25 · expedite box → the paste box below.");
+      }
       $("portalRouting").innerHTML = routing.join(" ");
       $("portalRouting").style.display = "block";
     }
