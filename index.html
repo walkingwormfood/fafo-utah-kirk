@@ -59,8 +59,8 @@
   .req:first-of-type{border-top:none}
   .req .desc{font-size:13.5px;color:var(--ink)}
   .req .agency{display:block;font-size:11px;color:var(--faint);font-family:var(--mono);margin-top:2px}
-  .req .resp,.creq .resp{display:block;font-size:12px;color:var(--ink);background:var(--panel2);border-left:3px solid var(--ok);border-radius:4px;padding:6px 8px;margin-top:6px;overflow-wrap:anywhere}
-  .req .resp.pending,.creq .resp.pending{border-left:4px solid #a9c7ff;border-top:1px solid rgba(169,199,255,.4);border-right:1px solid rgba(169,199,255,.4);border-bottom:1px solid rgba(169,199,255,.4);background:rgba(138,180,255,.18);color:#f2f7ff;font-weight:500;box-shadow:0 0 20px rgba(138,180,255,.35)}
+  .req .resp,.creq .resp,.ereply-full .resp{display:block;font-size:12px;color:var(--ink);background:var(--panel2);border-left:3px solid var(--ok);border-radius:4px;padding:6px 8px;margin-top:6px;overflow-wrap:anywhere}
+  .req .resp.pending,.creq .resp.pending,.ereply-full .resp.pending{border-left:4px solid #a9c7ff;border-top:1px solid rgba(169,199,255,.4);border-right:1px solid rgba(169,199,255,.4);border-bottom:1px solid rgba(169,199,255,.4);background:rgba(138,180,255,.18);color:#f2f7ff;font-weight:500;box-shadow:0 0 20px rgba(138,180,255,.35)}
   .btn{font-family:var(--mono);font-size:12.5px;border-radius:7px;padding:8px 13px;cursor:pointer;border:1px solid var(--line);background:var(--panel2);color:var(--ink);white-space:nowrap;text-decoration:none;display:inline-block}
   .btn:hover{border-color:var(--accent)}
   .btn.primary{background:var(--accent);color:var(--bg);border-color:var(--accent);font-weight:600}
@@ -157,24 +157,40 @@
   .gsec{font-size:12px;font-family:var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--faint);margin:22px 0 2px;border-bottom:1px solid var(--line);padding-bottom:7px}
   .gsec b{color:#a9c7ff;text-shadow:0 0 8px rgba(138,180,255,.4)}
   #evGrid{margin:10px 0 4px}
-  .ehead{display:grid;grid-template-columns:150px 1fr 92px 158px 20px;gap:0 14px;padding:6px 13px 0;font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--faint)}
+  .ehead{display:grid;grid-template-columns:168px 1fr 94px 20px;gap:0 14px;padding:6px 13px 0;font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--faint)}
   .egroup{font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;padding:18px 2px 7px;border-bottom:1px solid var(--line)}
   .egroup.unclaimed{color:var(--accent);text-shadow:0 0 8px rgba(255,59,59,.4)}
   .egroup.pending{color:#a9c7ff;text-shadow:0 0 8px rgba(138,180,255,.4)}
   .egroup.posted{color:var(--ok)}
-  .erow{display:grid;grid-template-columns:150px 1fr 92px 158px 20px;gap:0 14px;align-items:center;padding:11px 12px;border:1px solid var(--panel2);border-left-width:3px;border-radius:8px;margin:8px 0;background:var(--panel);cursor:pointer;font-size:12.5px;line-height:1.5}
-  .erow:hover{border-color:var(--accent);border-left-width:3px}
-  .erow.exp{border-color:var(--accent);background:var(--panel2);margin-bottom:0;border-bottom-left-radius:0;border-bottom-right-radius:0}
+  .ethread{border:1px solid var(--panel2);border-left-width:3px;border-radius:8px;margin:8px 0;background:var(--panel);overflow:hidden}
+  .ethread:hover{border-color:#39414e}
+  .ethread.unclaimed{border-left-color:rgba(255,59,59,.55)}
+  .ethread.pending{border-left-color:#a9c7ff}
+  .ethread.posted{border-left-color:var(--ok)}
+  .erow{display:grid;grid-template-columns:168px 1fr 94px 20px;gap:0 14px;align-items:center;padding:11px 12px;cursor:pointer;font-size:12.5px;line-height:1.5}
+  .erow:hover{background:var(--panel2)}
+  .erow.exp{background:var(--panel2)}
   .erow .ev b{font-size:12.5px;line-height:1.3}
   .eshows{color:var(--ink);font-size:12.5px;line-height:1.4}
   .eshowstxt{display:-webkit-box;-webkit-line-clamp:1;-webkit-box-orient:vertical;overflow:hidden}
   .estatus .badge{margin:0}
   .chev{justify-self:center;color:var(--faint);font-size:13px;transition:transform .15s ease}
   .erow.exp .chev{transform:rotate(90deg);color:var(--accent)}
-  .epanel{border:1px solid var(--accent);border-top:none;border-left-width:3px;border-radius:0 0 8px 8px;margin:0 0 8px;padding:14px 16px 16px;background:var(--panel2);animation:genExpand .18s ease}
-  .epanel.unclaimed{border-left-color:rgba(255,59,59,.55)}
-  .epanel.pending{border-left-color:#a9c7ff}
-  .epanel.posted{border-left-color:var(--ok)}
+  /* inline reply rows — the docket: one per request, always visible in the collapsed view */
+  .ereply{display:grid;grid-template-columns:120px 146px 1fr 16px;gap:0 12px;align-items:center;padding:7px 12px 7px 22px;border-top:1px solid var(--panel2);font-size:11.5px;line-height:1.45;cursor:default}
+  .ereply[data-rexp]{cursor:pointer}
+  .ereply[data-rexp]:hover{background:var(--panel2)}
+  .erp-status{font-family:var(--mono);font-size:10px;letter-spacing:.03em;text-transform:uppercase;white-space:nowrap}
+  .ereply.flight .erp-status{color:#a9c7ff}
+  .ereply.got .erp-status{color:var(--ok)}
+  .ereply.unclaimed .erp-status{color:var(--accent)}
+  .erp-ag{font-family:var(--mono);font-size:10.5px;color:var(--ink2);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .erp-txt{color:var(--ink2);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .ereply.flight .erp-txt{color:#dfe8ff}
+  .erp-rchev{justify-self:center;color:var(--faint);font-size:10px;transition:transform .15s ease}
+  .ereply.exp .erp-rchev{transform:rotate(90deg);color:var(--accent)}
+  .ereply-full{padding:8px 12px 12px 22px;border-top:1px solid var(--panel2);background:#0c0c10;animation:genExpand .16s ease}
+  .epanel{border-top:1px solid var(--line);padding:14px 16px 16px;background:var(--panel2);animation:genExpand .18s ease}
   .ep-sec{font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--faint);margin:14px 0 5px}
   .ep-sec:first-child{margin-top:0}
   .ep-txt{font-size:14px;color:var(--ink);margin-bottom:2px}
@@ -192,22 +208,12 @@
   .crst.flight{color:#a9c7ff}
   .crst.unclaimed{color:var(--accent)}
   .ep-foot{margin-top:15px}
-  .erow.unclaimed{border-left-color:rgba(255,59,59,.55)}
-  .erow.pending{border-left-color:#a9c7ff}
-  .erow.posted{border-left-color:var(--ok)}
-  .erow .ev b{font-size:13px;line-height:1.3;display:block;margin-bottom:6px}
-  .erow .badge{margin:0 0 6px;display:inline-block}
-  .erow .cat{display:block;width:max-content;margin:0 0 4px}
-  .erow .shows{color:var(--ink2)}
   .hpill{display:inline-block;border:1px dashed var(--faint);border-radius:20px;padding:2px 9px;margin:0 4px 4px 0;font-family:var(--mono);font-size:10.5px;color:var(--ink2);background:#0a0a0d;cursor:help}
   .hpill:hover{border-color:#a9c7ff;color:#a9c7ff}
   .nohole{color:var(--faint)}
-  .res .pl{display:block;font-family:var(--mono);font-size:11px;margin:0 0 6px}
-  .res .unclaimed{color:var(--accent)}
-  .res .flight{color:#a9c7ff;animation:ppulse 2.4s ease-in-out infinite}
+  .ereply.flight .erp-status{animation:ppulse 2.4s ease-in-out infinite}
   @keyframes ppulse{0%,100%{text-shadow:0 0 4px rgba(138,180,255,.3)}50%{text-shadow:0 0 12px rgba(138,180,255,.9)}}
-  @media (prefers-reduced-motion: reduce){.res .flight{animation:none;text-shadow:0 0 8px rgba(138,180,255,.5)}}
-  .res .got{color:var(--ok)}
+  @media (prefers-reduced-motion: reduce){.ereply.flight .erp-status{animation:none;text-shadow:0 0 8px rgba(138,180,255,.5)}}
   .modechip{margin-left:8px;letter-spacing:.04em;text-transform:none}
   .modechip.on-unclaimed{background:rgba(255,59,59,.12);color:var(--accent);border-color:var(--accent)}
   .modechip.on-pending{background:rgba(138,180,255,.12);color:#a9c7ff;border-color:#a9c7ff}
@@ -216,9 +222,12 @@
   .ecl{display:none}
   @media (max-width:640px){
     .ehead{display:none}
-    .erow{grid-template-columns:1fr;gap:10px 0}
+    .erow{grid-template-columns:1fr;gap:8px 0}
     .erow .chev{display:none}
     .eshowstxt{-webkit-line-clamp:unset;overflow:visible;display:block}
+    .ereply{grid-template-columns:1fr;gap:4px 0;padding-left:16px}
+    .erp-ag,.erp-txt{white-space:normal;overflow:visible}
+    .erp-rchev{display:none}
     .ecl{display:block;font-family:var(--mono);font-size:9.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--faint);margin-bottom:4px}
   }
   .card.flash{outline:2px solid var(--accent);box-shadow:0 0 24px rgba(255,59,59,.35)}
@@ -271,7 +280,7 @@
   </div>
 
   <div id="graphWrap">
-    <div class="note"><b>The evidence chart.</b> Every thread from the five hearing days as a scannable ledger — the one-line challenge it poses to the official story, whether it's confirmed or contested, and where each records request stands. <b style="color:var(--accent)">Red inquiries are unclaimed</b> — drafted, waiting for someone to file them; that someone can be you. Glowing ⏳ = filed, results pending. 📬 = results posted. Rows sink toward the bottom as answers land. <b>Click any row (▸) to expand</b> the full finding and track every request's progress; the button inside opens its card to draft and send.</div>
+    <div class="note"><b>The evidence chart.</b> Every thread from the five hearing days as a live docket — the one-line challenge it poses to the official story, whether it's confirmed or contested, and <b>every records request stacked beneath it as its own row</b> so you can see at a glance what came back and what's still pending. <b style="color:var(--accent)">Red = unclaimed</b> (drafted, waiting for someone to file — that can be you). Glowing ⏳ = filed, pending. 📬 = posted. Click a reply row (▸) to drop its full text; click the thread row for the finding behind it and to draft the request.</div>
     <div class="gsec" id="chartHead"></div>
     <div id="evGrid"></div>
   </div>
@@ -771,42 +780,42 @@
   function chartRow(inv, gaps){
     const holes = gaps.filter(g => (g.findings || []).includes(inv.id));
     const st = rowStatus(inv);
-    // Collapsed spreadsheet row: scannable columns only — the long descriptions
-    // live in the expansion panel below.
-    const prog = inv.requests.map(r => {
-      const ag = AG_SHORT[r.agencyId] || r.agencyId;
-      if(r.response) return `<span class="pl got">&#128236; ${esc(ag)}</span>`;
-      if(r.filed)    return `<span class="pl flight">&#9203; ${esc(ag)}</span>`;
-      return `<span class="pl unclaimed">&#9998; ${esc(ag)}</span>`;
-    }).join("");
-    const row = `<div class="erow ${st}" data-exp="${esc(inv.id)}">` +
+    // Thread header row — title, the one-line challenge, verification status.
+    const head = `<div class="erow ${st}" data-exp="${esc(inv.id)}">` +
       `<div class="ev"><span class="ecl">thread</span><b>${esc(inv.short || inv.id)}</b></div>` +
       `<div class="eshows"><span class="ecl">the challenge to the official story</span><span class="eshowstxt">${esc(inv.challenge || inv.finding)}</span></div>` +
       `<div class="estatus"><span class="ecl">status</span><span class="badge ${esc(inv.status)}">${esc(inv.status)}</span></div>` +
-      `<div class="res"><span class="ecl">records fight</span>${prog}</div>` +
       `<div class="chev">&#9656;</div></div>`;
-    // Expansion: full finding + implication + holes-with-questions + the reply stack
-    // for every request, mirroring the finding cards.
-    const stacks = inv.requests.map(r => {
+    // Inline reply rows — one per request, always visible: status, agency, and a
+    // one-line read of the response (or what's pending). Click a filed/answered one
+    // to drop its full text (mirrors the card reply stack).
+    const replies = inv.requests.map((r, ri) => {
       const a = agencyById(r.agencyId);
       const fed = !!(a && a.fed);
       const jtag = fed ? "FOIA" : "GRAMA";
-      const status = r.response ? `<span class="crst got">&#128236; posted</span>`
-                   : r.filed ? `<span class="crst flight">&#9203; pending</span>`
-                   : `<span class="crst unclaimed">&#9998; unclaimed — file it</span>`;
-      const chain = reqChainHTML(r, true);
-      return `<div class="creq"><div class="crhead"><span class="jtag ${fed?"fed":"state"}">${jtag}</span> <b>${esc(r.summary)}</b> <span class="cragency">· ${esc(a?a.name:r.agencyId)}</span> ${status}</div>` +
-        (chain || `<span class="resp unclaimed-note" style="display:block;font-size:12px;color:var(--ink2);background:var(--panel);border-left:3px solid var(--accent);border-radius:4px;padding:6px 8px;margin-top:6px">Drafted and ready — nobody has filed this one yet. Open the card to generate and send it.</span>`) + `</div>`;
+      const agShort = AG_SHORT[r.agencyId] || (a ? a.name : r.agencyId);
+      let cls, word, txt;
+      if(r.response){ cls = "got"; word = "📬 posted"; txt = r.response; }
+      else if(r.filed){ cls = "flight"; word = "⏳ pending"; txt = r.filed; }
+      else { cls = "unclaimed"; word = "✎ unclaimed"; txt = "Drafted and ready — nobody has filed this yet."; }
+      const hasFull = !!(r.response || r.filed || r.history);
+      const key = esc(inv.id) + "::" + ri;
+      return `<div class="ereply ${cls}"${hasFull ? ` data-rexp="${key}"` : ""}>` +
+        `<span class="erp-status">${word}</span>` +
+        `<span class="erp-ag"><span class="jtag ${fed?"fed":"state"}">${jtag}</span> ${esc(agShort)}</span>` +
+        `<span class="erp-txt" title="${esc(r.summary)}">${esc(txt)}</span>` +
+        (hasFull ? `<span class="erp-rchev">&#9656;</span>` : `<span></span>`) + `</div>` +
+        (hasFull ? `<div class="ereply-full" data-rpanel="${key}" hidden>${reqChainHTML(r, true)}</div>` : "");
     }).join("");
+    // Detail panel (chevron on the thread row) — the long descriptions.
     const panel = `<div class="epanel ${st}" data-panel="${esc(inv.id)}" hidden>` +
       `<div class="ep-sec">What the sworn record shows</div><div class="ep-txt">${esc(inv.finding)}</div>` +
       (inv.implication ? `<div class="ep-sec">Why it matters</div><div class="ep-txt dim">${esc(inv.implication)}</div>` : "") +
       (holes.length ? `<div class="ep-sec">The hole it leaves</div><div class="ep-holes">` +
         holes.map(h => `<div class="ephole"><b>${esc(h.label)}</b> — ${esc(h.question)}</div>`).join("") + `</div>` : "") +
-      `<div class="ep-sec">Track each request — where every inquiry stands</div><div class="ep-reqs">${stacks}</div>` +
       `<div class="ep-foot"><button class="btn gen" data-card="${esc(inv.id)}">Open full card &amp; draft the request →</button></div>` +
       `</div>`;
-    return row + panel;
+    return `<div class="ethread ${st}">${head}${replies}${panel}</div>`;
   }
 
   function buildChart(){
@@ -828,7 +837,7 @@
     const LABELS = { unclaimed: "Unclaimed inquiries — nobody has filed these yet; pick one",
                      pending: "Results pending — requests in flight",
                      posted: "Results posted — answers on the record" };
-    let html = `<div class="ehead"><span>Thread</span><span>The challenge to the official story</span><span>Status</span><span>Records fight</span><span></span></div>`;
+    let html = `<div class="ehead"><span>Thread</span><span>The challenge to the official story</span><span>Status</span><span></span></div>`;
     order.forEach(k => {
       if(!groups[k].length || !chartShow[k]) return;
       html += `<div class="egroup ${k}">${LABELS[k]} · ${groups[k].length}</div>`;
@@ -858,7 +867,17 @@
       }
       return;
     }
-    // otherwise a row click toggles its expansion panel
+    // a reply row toggles its own full text (the mirrored reply stack)
+    const rep = e.target.closest("[data-rexp]");
+    if(rep){
+      const rpanel = $("evGrid").querySelector('[data-rpanel="' + rep.dataset.rexp + '"]');
+      if(!rpanel) return;
+      const op = rpanel.hidden;
+      rpanel.hidden = !op;
+      rep.classList.toggle("exp", op);
+      return;
+    }
+    // the thread row toggles its detail panel (finding / why it matters / holes)
     const rowEl = e.target.closest("[data-exp]");
     if(rowEl){
       const panel = $("evGrid").querySelector('[data-panel="' + rowEl.dataset.exp + '"]');
