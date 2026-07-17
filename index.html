@@ -49,6 +49,13 @@
   .req{display:flex;gap:12px;align-items:flex-start;justify-content:space-between;padding:8px 0;border-top:1px solid var(--panel2)}
   .req.refined{border-left:3px solid var(--accent2);padding-left:10px;background:rgba(79,109,255,.07);border-radius:4px}
   .reftag{display:inline-block;margin-left:8px;font-family:var(--mono);font-size:10.5px;color:var(--accent2);border:1px solid var(--accent2);border-radius:4px;padding:1px 6px;vertical-align:middle;opacity:.85}
+  .jtag{display:inline-block;font-family:var(--mono);font-size:9.5px;letter-spacing:.06em;border-radius:3px;padding:0 5px;margin-right:6px;vertical-align:1px}
+  .jtag.state{color:var(--accent);border:1px solid var(--accent)}
+  .jtag.fed{color:var(--accent2);border:1px solid var(--accent2)}
+  .jbar{display:flex;gap:8px;flex-wrap:wrap;margin:10px 0 2px;align-items:center}
+  .jbtn{font-family:var(--mono);font-size:11px;letter-spacing:.04em;border:1px solid var(--line);border-radius:20px;padding:5px 13px;cursor:pointer;background:var(--panel);color:var(--ink2)}
+  .jbtn:hover{border-color:#39414e}
+  .jbtn.active{background:rgba(79,109,255,.14);color:var(--ink);border-color:var(--accent2);font-weight:600}
   .req:first-of-type{border-top:none}
   .req .desc{font-size:13.5px;color:var(--ink)}
   .req .agency{display:block;font-size:11px;color:var(--faint);font-family:var(--mono);margin-top:2px}
@@ -226,6 +233,7 @@
   </div>
   <div id="cardsView">
     <div class="facet"><span class="facet-lbl">Biggest threads — who &amp; what the findings touch · click any to connect the dots</span><div class="filters" id="entityFilters"></div></div>
+    <div class="facet"><span class="facet-lbl">This case spans state and federal records \u2014 filter by which law reaches them</span><div class="jbar" id="jbar"><button class="jbtn active" data-j="All">All \u2014 the whole case</button><button class="jbtn" data-j="state">GRAMA (Utah state/local)</button><button class="jbtn" data-j="federal">FOIA (federal)</button></div></div>
     <details class="facet catfacet"><summary><span class="facet-lbl">Filter by category</span></summary><div class="filters" id="filters"></div></details>
     <details class="facet catfacet"><summary><span class="facet-lbl">Filter by who surfaced it — from the courtroom record via these streams</span></summary><div class="filters" id="voiceFilters"></div></details>
     <div class="note" id="entityCallout" style="display:none"></div>
@@ -331,16 +339,20 @@
     card.dataset.cats = (inv.categories||[]).join("|");
     card.dataset.ents = (inv.entities||[]).join("|");
     card.dataset.voices = voicesFor(inv).join("|");
+    const jset = new Set((inv.requests||[]).map(r => { const ag = agencyById(r.agencyId); return ag && ag.fed ? "federal" : "state"; }));
+    card.dataset.juris = [...jset].join("|");
     const links = (inv.investigatorLinks||[]).map(l => `<a href="${esc(l.url)}" target="_blank" rel="noopener">${esc(l.label)} ↗</a>`).join(" · ");
     const sources = (inv.sources||[]).map(s => s.url ? `<a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.label)}</a>` : esc(s.label)).join(" · ");
     const reqs = inv.requests.map((r,i) => {
       const a = agencyById(r.agencyId);
       const email = !!(a && a.email);
+      const fed = !!(a && a.fed);
+      const jtag = fed ? "FOIA" : "GRAMA";
       const icon = email ? "✉" : "↗";
       const tag = email ? "email" : "portal";
       const title = email ? ("Opens a pre-addressed email to " + a.name)
                           : ("Copies the letter and opens " + (a?a.name:"the entity") + "'s records page");
-      return `<div class="req${r.refined ? " refined" : ""}"><div class="desc">${esc(r.summary)}${r.refined ? '<span class="reftag">⟳ refined</span>' : ""}<span class="agency">${esc(a?a.name:r.agencyId)} · ${tag}</span>`+
+      return `<div class="req${r.refined ? " refined" : ""}"><div class="desc">${esc(r.summary)}${r.refined ? '<span class="reftag">⟳ refined</span>' : ""}<span class="agency"><span class="jtag ${fed?"fed":"state"}">${jtag}</span> ${esc(a?a.name:r.agencyId)} · ${tag}</span>`+
              (r.history ? `<div class="resp chain collapsed">`+
                r.history.map((h,n)=>`<div class="round"><div class="rlbl">Round ${n+1}${h.label ? " — "+esc(h.label) : ""}</div><div class="rreq">${esc(h.records)}</div><div class="rout">⛔ ${esc(h.outcome)}</div><div class="rfix">⟳ ${esc(h.refinement)}</div></div>`).join("")+
                `<div class="round cur"><div class="rlbl">Current request — what Generate produces</div><div class="rreq">${esc(r.records)}</div>`+
@@ -373,6 +385,7 @@
   // category filter chips
   const allCats = [...new Set(FOIA.investigations.flatMap(i => i.categories || []))];
   let activeCat = "All";
+  let activeJuris = "All";
   function renderChips(){
     const box = $("filters"); box.innerHTML = "";
     ["All", ...allCats].forEach(c => {
@@ -409,10 +422,12 @@
       const cats = (card.dataset.cats || "").split("|");
       const ents = (card.dataset.ents || "").split("|");
       const voices = (card.dataset.voices || "").split("|");
+      const juris = (card.dataset.juris || "").split("|");
       const catOk = activeCat === "All" || cats.includes(activeCat);
       const entOk = !activeEnt || ents.includes(activeEnt);
       const voiceOk = !activeVoice || voices.includes(activeVoice);
-      card.classList.toggle("hide", !(catOk && entOk && voiceOk));
+      const jOk = activeJuris === "All" || juris.includes(activeJuris);
+      card.classList.toggle("hide", !(catOk && entOk && voiceOk && jOk));
     });
     document.querySelectorAll(".epill").forEach(p => p.classList.toggle("active", !!activeEnt && p.dataset.ent === activeEnt));
     updateCallout();
@@ -451,6 +466,11 @@
     $("entityFilters").scrollIntoView({behavior:"smooth", block:"nearest"});
   });
 
+  document.querySelectorAll("#jbar .jbtn").forEach(btn => btn.addEventListener("click", () => {
+    activeJuris = btn.dataset.j;
+    document.querySelectorAll("#jbar .jbtn").forEach(b => b.classList.toggle("active", b === btn));
+    applyFilter();
+  }));
   renderChips();
   renderVoiceChips();
   renderEntityChips();
@@ -489,6 +509,7 @@
   function generate(){
     if(!current) return;
     const a = agencyById(current.agencyId);
+    const fed = !!(a && a.fed);
     const isEmail = !!(a && a.email);
     const name = $("name").value.trim() || "[your name]";
     const email = $("email").value.trim() || "[your email]";
@@ -496,18 +517,20 @@
     const phone = $("phone").value.trim();
     const today = new Date().toLocaleDateString("en-US", {year:"numeric", month:"long", day:"numeric"});
     const map = { NAME:name, EMAIL:email, ADDRESS:addr, DATE:today };
-    const b = FOIA.boilerplate;
+    const b = fed ? FOIA.boilerplateFederal : FOIA.boilerplate;
+    const statute = fed ? FOIA.meta.statuteFederal : FOIA.meta.statute;
+    const officer = fed ? "FOIA Officer" : "Records Officer";
     const reqBlock = [name, addr, email, phone ? "Daytime phone: " + phone : "", today].filter(Boolean).join("\n");
     const L = [];
     L.push(name); if(addr) L.push(addr); L.push(email); if(phone) L.push("Daytime phone: " + phone); L.push(today); L.push("");
-    L.push("Records Officer"); L.push(a ? a.name : current.agencyId); L.push("");
+    L.push(officer); L.push(a ? a.name : current.agencyId); L.push("");
     L.push(current.subject); L.push("");
-    L.push("Dear Records Officer,"); L.push("");
+    L.push("Dear " + officer + ","); L.push("");
     if(current.bare){
       // Follow-ups carry no boilerplate stack — the original request already did.
       L.push(current.records); L.push("");
     } else {
-      L.push("This is a request for records under the " + FOIA.meta.statute + "."); L.push("");
+      L.push("This is a request for records under the " + statute + "."); L.push("");
       L.push(current.records); L.push("");
       if(current.askNoRecords){ L.push(b.no_records); L.push(""); }
       L.push(b.burden_carveout); L.push("");
@@ -564,11 +587,11 @@
       // their own fields — pasting the whole letter duplicates all of that. Show a
       // description-box version instead; fee/expedited text gets its own paste boxes.
       const P = [];
-      P.push(reqBlock); P.push("");
+      if(!fed){ P.push(reqBlock); P.push(""); }
       if(current.bare){
         P.push(current.records);
       } else {
-        P.push("This is a request for records under the " + FOIA.meta.statute + ".");
+        P.push("This is a request for records under the " + statute + ".");
         P.push("");
         P.push(current.records); P.push("");
         if(current.askNoRecords){ P.push(b.no_records); P.push(""); }
@@ -578,7 +601,9 @@
         if(b.deadline){ P.push(""); P.push(b.deadline); }
       }
       $("out").value = P.join("\n");
-      $("outLabel").textContent = "Form version — paste into the request-description box (§ 63G-2-204 requester block included even though the form collects it separately — incomplete requester info is Utah’s favorite denial)";
+      $("outLabel").textContent = fed
+        ? "Form version — paste into the FOIA portal's request-description box (the portal collects your name, address, and fee preference in its own fields)"
+        : "Form version — paste into the request-description box (§ 63G-2-204 requester block included even though the form collects it separately — incomplete requester info is Utah’s favorite denial)";
       $("formBoxes").innerHTML = "";
       updateCharline();
       $("charline").style.display = "block";
