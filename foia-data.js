@@ -203,6 +203,8 @@ const FOIA = {
   investigations: [
     {
       id: "atf-dna-consumed",
+      short: "DNA consumed in testing",
+      challenge: "9 evidence samples were used up in testing — none saved for the defense to retest.",
       categories: ["Kirk assassination & coverup"],
       entities: ["atf", "charlie-kirk"],
       investigator: "Day 5 courtroom record, State v. Robinson prelim",
@@ -228,6 +230,8 @@ const FOIA = {
     },
     {
       id: "influencer-govt-contracts",
+      short: "Influencers with federal ties",
+      challenge: "The influencers steering the story held prior federal-government jobs.",
       categories: ["Kirk assassination & coverup"],
       entities: ["dod", "graham-allen"],
       investigator: "Liberty Lockdown (surfacing)",
@@ -250,6 +254,8 @@ const FOIA = {
     },
     {
       id: "backpack-untested-returned",
+      short: "Backpack returned untested",
+      challenge: "A backpack on the shooter's escape route was returned untested.",
       categories: ["Kirk assassination & coverup"],
       entities: ["fbi", "atf", "charlie-kirk"],
       investigator: "Preliminary-hearing record (State v. Robinson); Baron Coleman & Candace Owens (surfacing)",
@@ -286,6 +292,8 @@ const FOIA = {
     },
     {
       id: "nest-doorbell-vehicle",
+      short: "Nest caught the vehicle",
+      challenge: "A doorbell filmed the suspect vehicle; only a report about it reached court.",
       categories: ["Kirk assassination & coverup"],
       entities: ["fbi", "charlie-kirk"],
       investigator: "Preliminary-hearing record (State v. Robinson)",
@@ -309,6 +317,8 @@ const FOIA = {
     },
     {
       id: "fbi-kirk-tipline",
+      short: "Fake FBI tip-line preview",
+      challenge: "A federal “Kirk tip-line” preview was built — the real .gov was never registered.",
       categories: ["Kirk assassination & coverup", "NDS takeover"],
       entities: ["nds", "fbi", "charlie-kirk"],
       investigator: "The Drey Dossier",
@@ -335,6 +345,8 @@ const FOIA = {
     },
     {
       id: "kolvet-eeob-visit",
+      short: "Kolvet at the White House",
+      challenge: "Kirk's producer was at the White House the day before the Epstein files dropped.",
       categories: ["Kirk assassination & coverup"],
       entities: ["kolvet", "charlie-kirk", "kash-patel", "eop", "epstein"],
       investigator: "Candace Owens",
@@ -360,6 +372,8 @@ const FOIA = {
     },
     {
       id: "dod-erika-messaging",
+      short: "Pentagon boosted Erika",
+      challenge: "Claim: the Pentagon juiced Erika Kirk's #1 trend — with no proof shown.",
       categories: ["Kirk assassination & coverup"],
       entities: ["erika-kirk", "charlie-kirk", "dod"],
       investigator: "Candace Owens",
@@ -384,6 +398,8 @@ const FOIA = {
     },
     {
       id: "crane-aes-xs-device",
+      short: "Crane–AES explosives contract",
+      challenge: "A Navy contract links the destroyed AES plant to a Crane weapons program.",
       categories: ["Kirk assassination & coverup"],
       entities: ["aes", "nswc-crane", "dod", "charlie-kirk"],
       investigator: "Baron Coleman",
@@ -422,6 +438,7 @@ const FOIA = {
     },
     {
       id: "wcso-intake-video",
+      challenge: "The video of Robinson's turn-in — where the timeline starts — was deleted.",
       short: "Deleted turn-in video",
       categories: ["Missing & deleted footage"],
       entities: ["robinson", "davis", "brooksby", "wcso-ent"],
@@ -448,6 +465,7 @@ const FOIA = {
     },
     {
       id: "custody-timeline",
+      challenge: "Four different custody times sit in the official record.",
       short: "Four custody times",
       categories: ["Timeline contradictions"],
       entities: ["robinson", "davis", "brooksby", "wcso-ent", "fbi-ent"],
@@ -482,6 +500,7 @@ const FOIA = {
     },
     {
       id: "bagley-bodycam",
+      challenge: "The first officer's bodycam died the moment he reached the roof.",
       short: "Bodycam died on the roof",
       categories: ["Missing & deleted footage", "Crime scene handling"],
       entities: ["bagley", "uvu-ent"],
@@ -524,6 +543,7 @@ const FOIA = {
     },
     {
       id: "second-roof-round",
+      challenge: "A round of the wrong caliber turned up on a second roof.",
       short: "The .223 on the other roof",
       categories: ["Physical evidence"],
       entities: ["schneider", "davis", "sbi", "uvu-ent"],
@@ -557,6 +577,7 @@ const FOIA = {
     },
     {
       id: "k9-no-results",
+      challenge: "Tracking dogs were run for whoever jumped from the roof and found nothing.",
       short: "K9s: no results",
       categories: ["Crime scene handling"],
       entities: ["uvu-ent", "sbi"],
@@ -598,6 +619,7 @@ const FOIA = {
     },
     {
       id: "paved-scene",
+      challenge: "The lead detective says he never authorized paving the crime scene.",
       short: "Scene paved over",
       categories: ["Crime scene handling"],
       entities: ["uvu-ent", "davis"],
@@ -633,6 +655,7 @@ const FOIA = {
     },
     {
       id: "noble-report",
+      challenge: "Officer omitted that the doorbell witness saw a bald driver and three passengers.",
       short: "Omitted doorbell report",
       categories: ["Witness statements", "Video evidence"],
       entities: ["robinson", "sbi"],
@@ -659,6 +682,7 @@ const FOIA = {
     },
     {
       id: "cut-footage",
+      challenge: "The state's courtroom videos have cuts visible in their own timestamps.",
       short: "Edited courtroom video",
       categories: ["Video evidence"],
       entities: ["robinson", "uvu-ent"],
@@ -693,6 +717,7 @@ const FOIA = {
     },
     {
       id: "backpack-stop-testing",
+      challenge: "The FBI lab was told to stop testing the backpack — “it's Kirk's detail's.”",
       short: "Who stopped the backpack test",
       categories: ["Physical evidence", "Crime scene handling"],
       entities: ["uvu-ent"],
@@ -716,6 +741,7 @@ const FOIA = {
     },
     {
       id: "exhibit-121",
+      challenge: "The judge tossed the roof-descent video as edited; it was shown anyway.",
       short: "The “4K” exhibit",
       categories: ["Video evidence"],
       entities: ["robinson", "uvu-ent", "tpusa"],
@@ -750,6 +776,7 @@ const FOIA = {
     },
     {
       id: "tpusa-contact",
+      challenge: "Robinson reportedly met TPUSA reps at the quad the morning of the shooting.",
       short: "TPUSA contact that morning",
       categories: ["Witness statements", "Video evidence"],
       entities: ["robinson", "tpusa", "uvu-ent", "neff"],
@@ -785,6 +812,7 @@ const FOIA = {
     },
     {
       id: "noble-nest-original",
+      challenge: "The witness's original doorbell file — bald driver, three passengers — was never produced.",
       short: "The Nest witness's raw file",
       categories: ["Missing & deleted footage", "Witness statements"],
       entities: ["uvu-ent"],
@@ -810,6 +838,7 @@ const FOIA = {
     },
     {
       id: "twiggs-location",
+      challenge: "Two sworn records put Twiggs's first interview in two different buildings.",
       short: "Twiggs: which building?",
       categories: ["Timeline contradictions", "Witness statements"],
       entities: ["twiggs", "davis", "fbi-ent", "wcso-ent"],
@@ -849,6 +878,7 @@ const FOIA = {
     },
     {
       id: "panguitch-alibi",
+      challenge: "Two restaurant staff put Robinson three hours from the scene that night.",
       short: "The Panguitch alibi",
       categories: ["Timeline contradictions", "Witness statements"],
       entities: ["robinson", "twiggs", "fbi-ent", "sbi"],
@@ -884,6 +914,7 @@ const FOIA = {
     },
     {
       id: "motive-testimony",
+      challenge: "The official motive's key witness never delivered it under oath.",
       short: "Motive without a witness",
       categories: ["Witness statements"],
       entities: ["twiggs", "robinson"],
@@ -910,6 +941,7 @@ const FOIA = {
     },
     {
       id: "discord-timing",
+      challenge: "The worldwide Discord “confessions” never surfaced at the hearing.",
       short: "Discord confessions vanish",
       categories: ["Timeline contradictions", "Witness statements"],
       entities: ["robinson", "sbi", "fbi-ent"],
@@ -935,6 +967,7 @@ const FOIA = {
     },
     {
       id: "mitchell-statements",
+      challenge: "The facilitator's real interview was swapped for a statement written months later.",
       short: "Mitchell re-papered",
       categories: ["Witness statements", "Timeline contradictions"],
       entities: ["mitchell", "brooksby", "wcso-ent"],
@@ -961,6 +994,7 @@ const FOIA = {
     },
     {
       id: "brooksby-severance",
+      challenge: "The sheriff whose office owns the turn-in timeline left with a ~$100k severance.",
       short: "Brooksby's severance",
       categories: ["Personnel & credibility"],
       entities: ["brooksby", "wcso-ent"],
@@ -993,6 +1027,7 @@ const FOIA = {
     },
     {
       id: "fifth-letter",
+      challenge: "A prosecutor told deputies not to mention Robinson invoking the Fifth.",
       short: "The Fifth-Amendment letter",
       categories: ["Personnel & credibility"],
       entities: ["robinson", "wcso-ent"],
@@ -1019,6 +1054,7 @@ const FOIA = {
     },
     {
       id: "ballistics-inconclusive",
+      challenge: "The recovered fragment couldn't be matched to the rifle — and measured too small for it.",
       short: "Ballistics inconclusive",
       categories: ["Physical evidence"],
       entities: ["robinson", "sbi"],
@@ -1044,6 +1080,7 @@ const FOIA = {
     },
     {
       id: "prints-excluded",
+      challenge: "Three prints below the roof descent point were tested — and excluded Robinson.",
       short: "Prints exclude Robinson",
       categories: ["Physical evidence"],
       entities: ["robinson", "sbi", "fbi-ent"],
@@ -1069,6 +1106,7 @@ const FOIA = {
     },
     {
       id: "dna-elimination",
+      challenge: "The roommate's DNA was on the evidence too — labeled only an “elimination sample.”",
       short: "Roommate DNA, “elimination”",
       categories: ["Physical evidence"],
       entities: ["robinson", "twiggs", "sbi"],
@@ -1094,6 +1132,7 @@ const FOIA = {
     },
     {
       id: "state-plane",
+      challenge: "Investigators landed south hours after the earliest claimed custody time.",
       short: "The night flight south",
       categories: ["Timeline contradictions"],
       entities: ["davis", "sbi"],
@@ -1119,6 +1158,7 @@ const FOIA = {
     },
     {
       id: "me-chain",
+      challenge: "The ME logged up to seven bullet fragments; the case counts four.",
       short: "Seven fragments vs. four",
       categories: ["Physical evidence"],
       entities: ["davis", "sbi"],

@@ -166,8 +166,8 @@
   .erow:hover{border-color:var(--accent);border-left-width:3px}
   .erow.exp{border-color:var(--accent);background:var(--panel2);margin-bottom:0;border-bottom-left-radius:0;border-bottom-right-radius:0}
   .erow .ev b{font-size:12.5px;line-height:1.3}
-  .eshows{color:var(--ink2);font-size:12px;line-height:1.42}
-  .eshowstxt{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+  .eshows{color:var(--ink);font-size:12.5px;line-height:1.4}
+  .eshowstxt{display:-webkit-box;-webkit-line-clamp:1;-webkit-box-orient:vertical;overflow:hidden}
   .estatus .badge{margin:0}
   .chev{justify-self:center;color:var(--faint);font-size:13px;transition:transform .15s ease}
   .erow.exp .chev{transform:rotate(90deg);color:var(--accent)}
@@ -271,7 +271,7 @@
   </div>
 
   <div id="graphWrap">
-    <div class="note"><b>The evidence chart.</b> Every thread from the five hearing days as a scannable ledger — what the sworn record shows, whether it's confirmed or contested, and where each records request stands. <b style="color:var(--accent)">Red inquiries are unclaimed</b> — drafted, waiting for someone to file them; that someone can be you. Glowing ⏳ = filed, results pending. 📬 = results posted. Rows sink toward the bottom as answers land. <b>Click any row (▸) to expand</b> the full finding and track every request's progress; the button inside opens its card to draft and send.</div>
+    <div class="note"><b>The evidence chart.</b> Every thread from the five hearing days as a scannable ledger — the one-line challenge it poses to the official story, whether it's confirmed or contested, and where each records request stands. <b style="color:var(--accent)">Red inquiries are unclaimed</b> — drafted, waiting for someone to file them; that someone can be you. Glowing ⏳ = filed, results pending. 📬 = results posted. Rows sink toward the bottom as answers land. <b>Click any row (▸) to expand</b> the full finding and track every request's progress; the button inside opens its card to draft and send.</div>
     <div class="gsec" id="chartHead"></div>
     <div id="evGrid"></div>
   </div>
@@ -781,7 +781,7 @@
     }).join("");
     const row = `<div class="erow ${st}" data-exp="${esc(inv.id)}">` +
       `<div class="ev"><span class="ecl">thread</span><b>${esc(inv.short || inv.id)}</b></div>` +
-      `<div class="eshows"><span class="ecl">what the sworn record shows</span><span class="eshowstxt">${esc(inv.finding)}</span></div>` +
+      `<div class="eshows"><span class="ecl">the challenge to the official story</span><span class="eshowstxt">${esc(inv.challenge || inv.finding)}</span></div>` +
       `<div class="estatus"><span class="ecl">status</span><span class="badge ${esc(inv.status)}">${esc(inv.status)}</span></div>` +
       `<div class="res"><span class="ecl">records fight</span>${prog}</div>` +
       `<div class="chev">&#9656;</div></div>`;
@@ -828,7 +828,7 @@
     const LABELS = { unclaimed: "Unclaimed inquiries — nobody has filed these yet; pick one",
                      pending: "Results pending — requests in flight",
                      posted: "Results posted — answers on the record" };
-    let html = `<div class="ehead"><span>Thread</span><span>What the sworn record shows</span><span>Status</span><span>Records fight</span><span></span></div>`;
+    let html = `<div class="ehead"><span>Thread</span><span>The challenge to the official story</span><span>Status</span><span>Records fight</span><span></span></div>`;
     order.forEach(k => {
       if(!groups[k].length || !chartShow[k]) return;
       html += `<div class="egroup ${k}">${LABELS[k]} · ${groups[k].length}</div>`;
