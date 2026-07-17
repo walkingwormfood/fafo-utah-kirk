@@ -517,7 +517,8 @@ const FOIA = {
           summary: "UVU PD — scene access log and multi-agency deployment roster for Sept 10",
           subject: "GRAMA Request: crime scene access log and assisting-agency roster, September 10, 2025",
           records: "I request: (1) the crime scene access/entry log maintained for the Losee Center rooftop and the courtyard scene at Utah Valley University on September 10–11, 2025; and (2) any roster, mutual-aid record, or deployment list identifying the law-enforcement agencies and personnel (including plainclothes personnel) present on the UVU campus on September 10, 2025 in connection with the incident response.",
-          ask_no_records: true
+          ask_no_records: true,
+          filed: "PENDING — filed via NextRequest as UVU #26-231, Jul 17, 2026; acknowledged Jul 17. EXPEDITE DENIED (same finding). 10-business-day clock, due ~Aug 1."
         }
       ]
     },
@@ -676,14 +677,16 @@ const FOIA = {
           summary: "UVU PD — unedited native exports of the specific clipped segments (campus security video)",
           subject: "GRAMA Request: unedited surveillance video exports, specified cameras and times, September 10, 2025",
           records: "I request unedited, native-format exports (with original metadata intact) of Utah Valley University surveillance video for September 10, 2025 from: (1) the camera covering the campus approach shown in court with timestamps 11:53:00 a.m. – 11:56:00 a.m.; (2) the parking-structure stairwell camera shown with timestamps 11:55:00 a.m. – 11:58:00 a.m.; and (3) the parking-structure camera covering the vehicle that arrived at 8:29 a.m., for 8:29 a.m. – 9:35 a.m. These segments were exhibited publicly at the preliminary hearing in State v. Robinson; I request the unedited sources of the same segments.",
-          ask_no_records: true
+          ask_no_records: true,
+          filed: "PENDING — filed via NextRequest as UVU #26-230, Jul 17, 2026; acknowledged Jul 17. EXPEDITE DENIED (same public-benefit finding as #26-229). 10-business-day clock, due ~Aug 1."
         },
         {
           agencyId: "uvu",
           summary: "UVU — parking garage access-control log for the morning of Sept 10",
           subject: "GRAMA Request: parking structure access-control records, morning of September 10, 2025",
           records: "I request the access-control log (key-card, key-pass, gate, or license-plate-recognition entries) for the Utah Valley University parking structure adjacent to the Losee Center for September 10, 2025, 8:00 a.m. – 10:00 a.m. Entries of uninvolved third parties may be redacted; the request is for the log covering the vehicle entry shown at 8:29 a.m. in exhibits at the State v. Robinson preliminary hearing.",
-          ask_no_records: true
+          ask_no_records: true,
+          filed: "PENDING — filed via NextRequest as UVU #26-220, Jul 16, 2026; acknowledged Jul 16 with the request text quoted back. 10-business-day clock, extended by the Jul 24 Pioneer Day closure — due ~Jul 30–31."
         }
       ]
     },
@@ -732,7 +735,8 @@ const FOIA = {
           summary: "UVU PD — native export of the camera segments behind exhibits 12.1/12.4",
           subject: "GRAMA Request: unedited surveillance exports, Losee Center roof and courtyard cameras, midday September 10, 2025",
           records: "I request unedited, native-format exports (original resolution and metadata intact) of Utah Valley University surveillance video for September 10, 2025, 12:10 p.m. – 12:35 p.m., from the camera or cameras whose footage was used to create the video exhibits designated 12.1 and 12.4 at the public preliminary hearing in State v. Robinson — the footage covering the Losee Center roofline and descent point. If the original recordings have been provided to or seized by an investigating agency, I request the transfer or evidence-receipt record identifying that agency and the date of transfer.",
-          ask_no_records: true
+          ask_no_records: true,
+          filed: "PENDING — filed via NextRequest as UVU #26-229, Jul 17, 2026; acknowledged Jul 17. EXPEDITE DENIED — UVU: request 'failed to meet that burden' of demonstrating public benefit under § 63G-2-204(4a); the standard 10-business-day clock still applies, due ~Aug 1 (Pioneer Day)."
         },
         {
           agencyId: "dps",
@@ -766,7 +770,8 @@ const FOIA = {
           summary: "UVU — event coordination and credentialing records naming the TPUSA advance staff",
           subject: "GRAMA Request: event coordination records for the September 10, 2025 TPUSA event",
           records: "I request, concerning the September 10, 2025 Turning Point USA event at Utah Valley University: (1) the event agreement, facility-use contract, and coordination correspondence between UVU event services (or student engagement) and TPUSA advance or event staff; (2) any credentialing, access, or staff roster provided to UVU identifying TPUSA personnel present on campus for event setup that morning; and (3) the vendor or contractor list for the event, including audio/visual contractors. I am not requesting attendee lists or any student records.",
-          ask_no_records: true
+          ask_no_records: true,
+          filed: "PENDING — filed via NextRequest as UVU #26-221, Jul 16, 2026; acknowledged Jul 16 with the request text quoted back. Due ~Jul 30–31 (Pioneer Day)."
         },
         {
           agencyId: "uvupd",
