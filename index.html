@@ -59,8 +59,8 @@
   .req:first-of-type{border-top:none}
   .req .desc{font-size:13.5px;color:var(--ink)}
   .req .agency{display:block;font-size:11px;color:var(--faint);font-family:var(--mono);margin-top:2px}
-  .req .resp{display:block;font-size:12px;color:var(--ink);background:var(--panel2);border-left:3px solid var(--ok);border-radius:4px;padding:6px 8px;margin-top:6px;overflow-wrap:anywhere}
-  .req .resp.pending{border-left:4px solid #a9c7ff;border-top:1px solid rgba(169,199,255,.4);border-right:1px solid rgba(169,199,255,.4);border-bottom:1px solid rgba(169,199,255,.4);background:rgba(138,180,255,.18);color:#f2f7ff;font-weight:500;box-shadow:0 0 20px rgba(138,180,255,.35)}
+  .req .resp,.creq .resp{display:block;font-size:12px;color:var(--ink);background:var(--panel2);border-left:3px solid var(--ok);border-radius:4px;padding:6px 8px;margin-top:6px;overflow-wrap:anywhere}
+  .req .resp.pending,.creq .resp.pending{border-left:4px solid #a9c7ff;border-top:1px solid rgba(169,199,255,.4);border-right:1px solid rgba(169,199,255,.4);border-bottom:1px solid rgba(169,199,255,.4);background:rgba(138,180,255,.18);color:#f2f7ff;font-weight:500;box-shadow:0 0 20px rgba(138,180,255,.35)}
   .btn{font-family:var(--mono);font-size:12.5px;border-radius:7px;padding:8px 13px;cursor:pointer;border:1px solid var(--line);background:var(--panel2);color:var(--ink);white-space:nowrap;text-decoration:none;display:inline-block}
   .btn:hover{border-color:var(--accent)}
   .btn.primary{background:var(--accent);color:var(--bg);border-color:var(--accent);font-weight:600}
@@ -157,13 +157,38 @@
   .gsec{font-size:12px;font-family:var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--faint);margin:22px 0 2px;border-bottom:1px solid var(--line);padding-bottom:7px}
   .gsec b{color:#a9c7ff;text-shadow:0 0 8px rgba(138,180,255,.4)}
   #evGrid{margin:10px 0 4px}
-  .ehead{display:grid;grid-template-columns:180px 1fr 160px 168px;gap:0 14px;padding:6px 13px 0;font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--faint)}
+  .ehead{display:grid;grid-template-columns:200px 150px 78px 1fr 26px;gap:0 14px;padding:6px 13px 0;font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--faint)}
   .egroup{font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;padding:18px 2px 7px;border-bottom:1px solid var(--line)}
   .egroup.unclaimed{color:var(--accent);text-shadow:0 0 8px rgba(255,59,59,.4)}
   .egroup.pending{color:#a9c7ff;text-shadow:0 0 8px rgba(138,180,255,.4)}
   .egroup.posted{color:var(--ok)}
-  .erow{display:grid;grid-template-columns:180px 1fr 160px 168px;gap:0 14px;padding:12px;border:1px solid var(--panel2);border-left-width:3px;border-radius:8px;margin:8px 0;background:var(--panel);cursor:pointer;font-size:12.5px;line-height:1.5}
+  .erow{display:grid;grid-template-columns:200px 150px 78px 1fr 26px;gap:0 14px;align-items:center;padding:11px 12px;border:1px solid var(--panel2);border-left-width:3px;border-radius:8px;margin:8px 0;background:var(--panel);cursor:pointer;font-size:12.5px;line-height:1.5}
   .erow:hover{border-color:var(--accent);border-left-width:3px}
+  .erow.exp{border-color:var(--accent);background:var(--panel2);margin-bottom:0;border-bottom-left-radius:0;border-bottom-right-radius:0}
+  .ccat,.choles{color:var(--ink2)}
+  .chev{justify-self:center;color:var(--faint);font-size:13px;transition:transform .15s ease}
+  .erow.exp .chev{transform:rotate(90deg);color:var(--accent)}
+  .epanel{border:1px solid var(--accent);border-top:none;border-left-width:3px;border-radius:0 0 8px 8px;margin:0 0 8px;padding:14px 16px 16px;background:var(--panel2);animation:genExpand .18s ease}
+  .epanel.unclaimed{border-left-color:rgba(255,59,59,.55)}
+  .epanel.pending{border-left-color:#a9c7ff}
+  .epanel.posted{border-left-color:var(--ok)}
+  .ep-sec{font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--faint);margin:14px 0 5px}
+  .ep-sec:first-child{margin-top:0}
+  .ep-txt{font-size:14px;color:var(--ink);margin-bottom:2px}
+  .ep-txt.dim{color:var(--ink2);font-size:13px}
+  .ep-holes .ephole{font-size:13px;color:var(--ink2);border-left:2px solid var(--faint);padding:2px 0 2px 10px;margin:5px 0}
+  .ep-holes .ephole b{color:var(--ink)}
+  .ep-reqs{display:flex;flex-direction:column;gap:12px}
+  .creq{border-top:1px solid var(--line);padding-top:11px}
+  .creq:first-child{border-top:none;padding-top:0}
+  .crhead{font-size:13px;color:var(--ink);margin-bottom:2px}
+  .crhead b{font-weight:600}
+  .cragency{font-family:var(--mono);font-size:11px;color:var(--faint)}
+  .crst{font-family:var(--mono);font-size:10.5px;margin-left:4px;white-space:nowrap}
+  .crst.got{color:var(--ok)}
+  .crst.flight{color:#a9c7ff}
+  .crst.unclaimed{color:var(--accent)}
+  .ep-foot{margin-top:15px}
   .erow.unclaimed{border-left-color:rgba(255,59,59,.55)}
   .erow.pending{border-left-color:#a9c7ff}
   .erow.posted{border-left-color:var(--ok)}
@@ -189,6 +214,7 @@
   @media (max-width:640px){
     .ehead{display:none}
     .erow{grid-template-columns:1fr;gap:10px 0}
+    .erow .chev{display:none}
     .ecl{display:block;font-family:var(--mono);font-size:9.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--faint);margin-bottom:4px}
   }
   .card.flash{outline:2px solid var(--accent);box-shadow:0 0 24px rgba(255,59,59,.35)}
@@ -241,7 +267,7 @@
   </div>
 
   <div id="graphWrap">
-    <div class="note"><b>The evidence chart.</b> Every thread from the five hearing days: what the sworn record shows, <b>the hole it leaves</b> in the official account (hover a dashed pill for the question it asks), and where the records fight stands. <b style="color:var(--accent)">Red inquiries are unclaimed</b> — drafted, waiting for someone to file them; that someone can be you. Glowing ⏳ = filed, results pending. 📬 = results posted. Rows sink toward the bottom as answers land. Click any row to open its card and draft the request.</div>
+    <div class="note"><b>The evidence chart.</b> Every thread from the five hearing days as a sortable ledger — the evidence, its category, the holes it leaves, and where each records request stands. <b style="color:var(--accent)">Red inquiries are unclaimed</b> — drafted, waiting for someone to file them; that someone can be you. Glowing ⏳ = filed, results pending. 📬 = results posted. Rows sink toward the bottom as answers land. <b>Click any row (▸) to expand</b> the full finding and track every request's progress; the button inside opens its card to draft and send.</div>
     <div class="gsec" id="chartHead"></div>
     <div id="evGrid"></div>
   </div>
@@ -331,6 +357,23 @@
     return VOICES.filter(([,pats]) => pats.some(p => hay.includes(p))).map(([name]) => name);
   }
 
+  // The reply stack for one request — the filed → response progression, optionally
+  // with the full refinement history. Shared by the finding cards and the evidence
+  // chart so both render progress identically. open=false keeps it collapsed behind
+  // a toggle (cards); open=true shows it expanded (chart).
+  function reqChainHTML(r, open){
+    const cl = open ? "" : " collapsed";
+    if(r.history){
+      return `<div class="resp chain${cl}">`+
+        r.history.map((h,n)=>`<div class="round"><div class="rlbl">Round ${n+1}${h.label ? " — "+esc(h.label) : ""}</div><div class="rreq">${esc(h.records)}</div><div class="rout">⛔ ${esc(h.outcome)}</div><div class="rfix">⟳ ${esc(h.refinement)}</div></div>`).join("")+
+        `<div class="round cur"><div class="rlbl">Current request — what Generate produces</div><div class="rreq">${esc(r.records)}</div>`+
+        (r.response ? `<div class="rout ok">📬 ${esc(r.response)}</div>` : r.filed ? `<div class="rout">⏳ ${esc(r.filed)}</div>` : "")+`</div></div>`;
+    }
+    return r.response ? `<span class="resp${cl}">📬 ${esc(r.response)}</span>`
+         : r.filed ? `<span class="resp pending${cl}">⏳ ${esc(r.filed)}</span>`
+         : "";
+  }
+
   const wrap = $("findings");
   FOIA.investigations.forEach(inv => {
     const card = document.createElement("div");
@@ -353,11 +396,7 @@
       const title = email ? ("Opens a pre-addressed email to " + a.name)
                           : ("Copies the letter and opens " + (a?a.name:"the entity") + "'s records page");
       return `<div class="req${r.refined ? " refined" : ""}"><div class="desc">${esc(r.summary)}${r.refined ? '<span class="reftag">⟳ refined</span>' : ""}<span class="agency"><span class="jtag ${fed?"fed":"state"}">${jtag}</span> ${esc(a?a.name:r.agencyId)} · ${tag}</span>`+
-             (r.history ? `<div class="resp chain collapsed">`+
-               r.history.map((h,n)=>`<div class="round"><div class="rlbl">Round ${n+1}${h.label ? " — "+esc(h.label) : ""}</div><div class="rreq">${esc(h.records)}</div><div class="rout">⛔ ${esc(h.outcome)}</div><div class="rfix">⟳ ${esc(h.refinement)}</div></div>`).join("")+
-               `<div class="round cur"><div class="rlbl">Current request — what Generate produces</div><div class="rreq">${esc(r.records)}</div>`+
-               (r.response ? `<div class="rout ok">📬 ${esc(r.response)}</div>` : r.filed ? `<div class="rout">⏳ ${esc(r.filed)}</div>` : "")+`</div></div>`
-               : r.response ? `<span class="resp collapsed">📬 ${esc(r.response)}</span>` : r.filed ? `<span class="resp pending collapsed">⏳ ${esc(r.filed)}</span>` : "")+
+             reqChainHTML(r, false)+
              `</div>`+
              `<div class="reqbtns">`+
              (r.refined
@@ -727,19 +766,45 @@
 
   function chartRow(inv, gaps){
     const holes = gaps.filter(g => (g.findings || []).includes(inv.id));
-    const res = inv.requests.map(r => {
+    const st = rowStatus(inv);
+    // Collapsed spreadsheet row: scannable columns only — the long descriptions
+    // live in the expansion panel below.
+    const prog = inv.requests.map(r => {
       const ag = AG_SHORT[r.agencyId] || r.agencyId;
-      if(r.response) return `<span class="pl got" title="${esc(r.response)}">&#128236; ${esc(ag)} — posted</span>`;
-      if(r.filed)    return `<span class="pl flight" title="${esc(r.filed)}">&#9203; ${esc(ag)} — pending</span>`;
-      return `<span class="pl unclaimed">&#9998; ${esc(ag)} — unclaimed</span>`;
+      if(r.response) return `<span class="pl got">&#128236; ${esc(ag)}</span>`;
+      if(r.filed)    return `<span class="pl flight">&#9203; ${esc(ag)}</span>`;
+      return `<span class="pl unclaimed">&#9998; ${esc(ag)}</span>`;
     }).join("");
-    return `<div class="erow ${rowStatus(inv)}" data-card="${esc(inv.id)}">` +
-      `<div class="ev"><b>${esc(inv.short || inv.id)}</b><span class="badge ${esc(inv.status)}">${esc(inv.status)}</span>` +
-        (inv.categories || []).map(c => `<span class="cat">${esc(c)}</span>`).join("") + `</div>` +
-      `<div><span class="ecl">what the sworn record shows</span><span class="shows">${esc(inv.finding)}</span></div>` +
-      `<div><span class="ecl">the hole it leaves</span>` +
-        (holes.length ? holes.map(h => `<span class="hpill" title="${esc(h.question)}">${esc(h.label)}</span>`).join("") : `<span class="nohole">—</span>`) + `</div>` +
-      `<div class="res"><span class="ecl">results</span>${res}</div></div>`;
+    const cat = (inv.categories && inv.categories[0]) ? `<span class="cat">${esc(inv.categories[0])}</span>` : "";
+    const holeCell = holes.length ? (holes.length + " hole" + (holes.length>1?"s":"")) : `<span class="nohole">—</span>`;
+    const row = `<div class="erow ${st}" data-exp="${esc(inv.id)}">` +
+      `<div class="ev"><span class="ecl">the evidence</span><b>${esc(inv.short || inv.id)}</b><span class="badge ${esc(inv.status)}">${esc(inv.status)}</span></div>` +
+      `<div class="ccat"><span class="ecl">category</span>${cat || "<span class=\"nohole\">—</span>"}</div>` +
+      `<div class="choles"><span class="ecl">holes</span>${holeCell}</div>` +
+      `<div class="res"><span class="ecl">request progress</span>${prog}</div>` +
+      `<div class="chev">&#9656;</div></div>`;
+    // Expansion: full finding + implication + holes-with-questions + the reply stack
+    // for every request, mirroring the finding cards.
+    const stacks = inv.requests.map(r => {
+      const a = agencyById(r.agencyId);
+      const fed = !!(a && a.fed);
+      const jtag = fed ? "FOIA" : "GRAMA";
+      const status = r.response ? `<span class="crst got">&#128236; posted</span>`
+                   : r.filed ? `<span class="crst flight">&#9203; pending</span>`
+                   : `<span class="crst unclaimed">&#9998; unclaimed — file it</span>`;
+      const chain = reqChainHTML(r, true);
+      return `<div class="creq"><div class="crhead"><span class="jtag ${fed?"fed":"state"}">${jtag}</span> <b>${esc(r.summary)}</b> <span class="cragency">· ${esc(a?a.name:r.agencyId)}</span> ${status}</div>` +
+        (chain || `<span class="resp unclaimed-note" style="display:block;font-size:12px;color:var(--ink2);background:var(--panel);border-left:3px solid var(--accent);border-radius:4px;padding:6px 8px;margin-top:6px">Drafted and ready — nobody has filed this one yet. Open the card to generate and send it.</span>`) + `</div>`;
+    }).join("");
+    const panel = `<div class="epanel ${st}" data-panel="${esc(inv.id)}" hidden>` +
+      `<div class="ep-sec">What the sworn record shows</div><div class="ep-txt">${esc(inv.finding)}</div>` +
+      (inv.implication ? `<div class="ep-sec">Why it matters</div><div class="ep-txt dim">${esc(inv.implication)}</div>` : "") +
+      (holes.length ? `<div class="ep-sec">The hole it leaves</div><div class="ep-holes">` +
+        holes.map(h => `<div class="ephole"><b>${esc(h.label)}</b> — ${esc(h.question)}</div>`).join("") + `</div>` : "") +
+      `<div class="ep-sec">Track each request — where every inquiry stands</div><div class="ep-reqs">${stacks}</div>` +
+      `<div class="ep-foot"><button class="btn gen" data-card="${esc(inv.id)}">Open full card &amp; draft the request →</button></div>` +
+      `</div>`;
+    return row + panel;
   }
 
   function buildChart(){
@@ -761,7 +826,7 @@
     const LABELS = { unclaimed: "Unclaimed inquiries — nobody has filed these yet; pick one",
                      pending: "Results pending — requests in flight",
                      posted: "Results posted — answers on the record" };
-    let html = `<div class="ehead"><span>The evidence</span><span>What the sworn record shows</span><span>The hole it leaves</span><span>Results</span></div>`;
+    let html = `<div class="ehead"><span>The evidence</span><span>Category</span><span>Holes</span><span>Request progress</span><span></span></div>`;
     order.forEach(k => {
       if(!groups[k].length || !chartShow[k]) return;
       html += `<div class="egroup ${k}">${LABELS[k]} · ${groups[k].length}</div>`;
@@ -776,17 +841,29 @@
   });
 
   $("graphWrap").addEventListener("click", e => {
-    const el = e.target.closest("[data-card]");
-    if(!el || !el.dataset.card) return;
-    activeCat = "All"; activeVoice = null; activeEnt = null;   // the target card must not be filtered away
-    applyFilter(); renderChips(); renderVoiceChips(); renderEntityChips();
-    setView("cards");
-    const c = $("card-" + el.dataset.card);
-    if(c){
-      // instant + synchronous: smooth scroll gets cancelled by scroll anchoring when
-      // the tall cards view re-appears — jump cut + flash is the reliable version
-      c.scrollIntoView({ block: "start" });
-      c.classList.add("flash"); setTimeout(() => c.classList.remove("flash"), 2500);
+    // "Open full card" button — jump to the card and open the drafter
+    const jump = e.target.closest("[data-card]");
+    if(jump && jump.dataset.card){
+      activeCat = "All"; activeVoice = null; activeEnt = null;   // the target card must not be filtered away
+      applyFilter(); renderChips(); renderVoiceChips(); renderEntityChips();
+      setView("cards");
+      const c = $("card-" + jump.dataset.card);
+      if(c){
+        // instant + synchronous: smooth scroll gets cancelled by scroll anchoring when
+        // the tall cards view re-appears — jump cut + flash is the reliable version
+        c.scrollIntoView({ block: "start" });
+        c.classList.add("flash"); setTimeout(() => c.classList.remove("flash"), 2500);
+      }
+      return;
+    }
+    // otherwise a row click toggles its expansion panel
+    const rowEl = e.target.closest("[data-exp]");
+    if(rowEl){
+      const panel = $("evGrid").querySelector('[data-panel="' + rowEl.dataset.exp + '"]');
+      if(!panel) return;
+      const opening = panel.hidden;
+      panel.hidden = !opening;
+      rowEl.classList.toggle("exp", opening);
     }
   });
 
