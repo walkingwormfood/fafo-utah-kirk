@@ -178,6 +178,8 @@ const FOIA = {
     { id: "charlie-kirk", name: "Charlie Kirk", type: "person" },
     { id: "erika-kirk", name: "Erika Kirk", type: "person" },
     { id: "kolvet", name: "Andrew Kolvet", type: "person" },
+    { id: "usss", name: "U.S. Secret Service", type: "org" },
+    { id: "amodei", name: "Rep. Mark Amodei", type: "person" },
     { id: "kash-patel", name: "Kash Patel", type: "person" },
     { id: "graham-allen", name: "Graham Allen", type: "person" },
     { id: "aes", name: "Accurate Energetic Systems (AES)", type: "company" },
@@ -1178,6 +1180,32 @@ const FOIA = {
           summary: "Medical Examiner — the transmittal and chain-of-custody paperwork (not the autopsy)",
           subject: "GRAMA Request: evidence transmittal and chain-of-custody records, September 2025 case",
           records: "I request, concerning the Office of the Medical Examiner case arising from the September 10, 2025 death at Utah Valley University: (1) the evidence transmittal or release forms documenting transfers of physical evidence (including bullet or projectile fragments, fingerprint records, and photographic media) to any law-enforcement agency; and (2) the log identifying the agencies or officials who provided investigative information incorporated into the case file's administrative cover documentation. I am NOT requesting the autopsy report, photographs, or any medical findings — administrative transfer records only.",
+          ask_no_records: true
+        }
+      ]
+    },
+    {
+      id: "memorial-nsse",
+      short: "Was the memorial an NSSE?",
+      challenge: "Was Kirk's Glendale memorial a National Special Security Event — and who held security lead?",
+      categories: ["Kirk assassination & coverup"],
+      entities: ["charlie-kirk", "erika-kirk", "usss", "amodei"],
+      investigator: "Ana Escobar (Fort Banana: Connecting the Dots, Part 1)",
+      investigatorLinks: [
+        { label: "Ana Escobar — Fort Banana: Connecting the Dots (Part 1)", url: "https://www.youtube.com/watch?v=OEsx7hpIFic" }
+      ],
+      status: "reported",
+      finding: "Ana Escobar builds an inference chain connecting the Butler rally, the second inauguration, and Charlie Kirk's September 2025 Glendale memorial as Secret Service events, pivoting on Rep. Mark Amodei's seat on the House Appropriations Subcommittee on Homeland Security — which funds the Secret Service — toward a claim about who shaped the memorial's security. The through-line is her inference; the underlying checkable fact is narrower and real: whether the memorial at State Farm Stadium was designated a National Special Security Event (NSSE) or given a Special Event Assessment Rating (SEAR) level, and which agency held operational security lead.",
+      implication: "Whether the memorial was an NSSE is a discrete, documentable fact. NSSE designations are made by DHS through the Secret Service; the designation determination, the lead-agency assignment, and the operational-plan summary are records. A designation — or its absence — either supports or deflates the 'same story as Butler' framing. (The Amodei-appropriations-to-Secret-Service motive chain is Escobar's explicitly speculative inference; her flagship search-trends evidence failed to reproduce live in the sibling Danks/Huachuca digest. This request tests the one underlying fact, not the theory.)",
+      sources: [
+        { label: "Ana Escobar — Fort Banana (Part 1): the NSSE / Amodei-appropriations through-line", url: "https://www.youtube.com/watch?v=OEsx7hpIFic" }
+      ],
+      requests: [
+        {
+          agencyId: "usss",
+          summary: "Secret Service — NSSE/SEAR designation and security-lead records for the Glendale memorial",
+          subject: "FOIA Request: NSSE or SEAR designation and operational security-lead records for the September 2025 Charlie Kirk memorial, Glendale, Arizona",
+          records: "I request records sufficient to show whether the memorial service for Charlie Kirk held on or about September 21, 2025 at State Farm Stadium in Glendale, Arizona was designated a National Special Security Event (NSSE) or assigned a Special Event Assessment Rating (SEAR) level, including the designation determination, request, or notification, and any record identifying the federal agency assigned operational security lead for the event. I am requesting the designation and lead-agency records only, not tactical operational details whose release could reasonably endanger safety. To keep this request narrow and minimize search burden, I am not seeking general email correspondence.",
           ask_no_records: true
         }
       ]
