@@ -615,7 +615,7 @@ const FOIA = {
           ],
           refined: true,
           ask_no_records: true,
-          filed: "RE-FILED (cured) Jul 16, 2026 by email to records@orem.gov — complete § 63G-2-204 requester block (full mailing address + daytime phone), single copy, replacing all prior submissions. 10-business-day clock (~Jul 30). Original denial preserved in the progression above."
+          filed: "RE-FILED (cured) Jul 16, 2026, 12:29 p.m. by email to records@orem.gov — complete § 63G-2-204 requester block (full mailing address + daytime phone), single copy — CONFIRMED sent (verified against the inbox). Records officer (Angela) replied the SAME DAY that it cannot be granted: 'anything related to September 10, 2025 cannot be released since it's an active investigation... out of our hands till the trial is over,' and directed future requests to orem.gov/recordsrequest/. That is an active-investigation withholding (cf. Utah Code § 63G-2-305) — NOT an automatic bar, and contestable. Because she stated it informally before the cured re-file landed, a formal written determination on the re-file may still be owed; the substantive posture, though, is already a no."
         }
       ]
     },
