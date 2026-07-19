@@ -668,11 +668,12 @@ const FOIA = {
         { label: "Tucker Carlson Network — 'This Is How You Get a Revolution' (Flock LPRs)", url: "https://www.youtube.com/watch?v=r8WiovU29MM" }
       ],
       status: "reported",
-      finding: "Flock Safety automated license-plate readers blanket the Orem/UVU area and the I-15 corridor; the network captured plate reads of vehicles moving on September 10, 2025 and the days after — the UVU approach, the hospital drive, and the route south to Washington County. But Flock's default retention is ~30 days: raw reads auto-delete unless an agency places a legal/preservation hold or saves them to a case. Flock is a private vendor and can't be GRAMA'd — but the agencies that use it hold the records showing whether this data was preserved, searched, or allowed to purge.",
+      finding: "Flock Safety automated license-plate readers blanket the Orem/UVU area and the I-15 corridor; the network captured plate reads of vehicles moving on September 10, 2025 and the days after — the UVU approach, the hospital drive, and the route south to Washington County. But Flock's default retention is ~30 days: raw reads auto-delete unless an agency places a legal/preservation hold or saves them to a case. Flock is a private vendor and can't be GRAMA'd — but per Flock's own policy the agency customer, not Flock, OWNS the data, and a purged read is permanently unrecoverable (\"not by the customer, not by Flock, not by AWS\"). The September 2025 reads are now well past 30 days, so unless a hold was placed that fall they are already gone — and only the agencies' own records show whether that happened.",
       implication: "Three government records answer it: (1) any preservation/legal hold sent to Flock — its ABSENCE means the most-surveilled day in Utah's history was left to auto-delete; (2) the Flock search/audit log — every plate query investigators ran, exposing whether Robinson's, Qureshi's, or the hospital-drive vehicle was ever checked; (3) the Flock contract, which sets retention and data-sharing. If reads were preserved and show a timeline at odds with the state's, that is Brady material; if they were not, that is spoliation. Either way the paper is dispositive.",
       sources: [
         { label: "Tucker Carlson Network — Flock monologue (Harris County: ~3,700 LPRs, 500+ murders in 2025)", url: "https://www.youtube.com/watch?v=r8WiovU29MM" },
-        { label: "Flock Safety standard data retention (~30 days, agency-configurable)", url: "" }
+        { label: "Flock Safety — LPR data hard-deleted on a rolling ~30-day default (AWS S3 lifecycle); customer owns the data; purged reads unrecoverable", url: "https://www.flocksafety.com/blog/how-does-flock-handle-license-plate-data-deletion" },
+        { label: "Flock Safety — LPR Policy (retention default + agency configuration)", url: "https://www.flocksafety.com/legal/lpr-policy" }
       ],
       requests: [
         {
