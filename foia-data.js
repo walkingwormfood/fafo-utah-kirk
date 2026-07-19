@@ -452,7 +452,8 @@ const FOIA = {
       finding: "The Washington County Sheriff's Office video of Robinson's turn-in — the moment the official timeline starts — was reportedly deleted, per day-three testimony. A news organization's request was refused, then answered with a 30-day-retention deletion claim — yet on day four the state exhibited surrender footage cropped so tightly the timestamps were cut out, with Robinson facing away from the camera.",
       implication: "Government video of the most consequential arrest in Utah's history was not preserved — or was it? The retention schedule, the deletion authorization, the county's handling of the earlier request, and any litigation-hold notice are all administrative records, and the contradiction between \"deleted\" and the pleadings is exactly what they'd resolve.",
       sources: [
-        { label: "Day 3 testimony, Agent Brian Davis (State v. Robinson prelim)", url: "" }
+        { label: "Day 3 testimony, Agent Brian Davis (State v. Robinson prelim)", url: "" },
+        { label: "Sam Parker — 13 officials who (he argues) knew Robinson was already in WCSO custody at the 7:51 PM Sept 11 presser (\"NOW YOU KNOW WHY THEY 'LOST' ALL THE SURVEILLANCE VIDEO\")", url: "https://x.com/BasedSamParker/status/2053915544420508047" }
       ],
       requests: [
         {
@@ -1146,7 +1147,8 @@ const FOIA = {
       finding: "Agent Davis testified he flew to St. George the night of September 11 — a state aircraft landed there at ~11:37 p.m. — putting lead investigators in Washington County hours after the earliest claimed custody time.",
       implication: "State aircraft generate flight logs and passenger manifests. Who flew south that night, and when the flight was tasked, is a hard timestamp against the shifting custody timeline.",
       sources: [
-        { label: "Day 3 testimony; public flight tracking", url: "" }
+        { label: "Day 3 testimony; public flight tracking", url: "" },
+        { label: "Sam Parker — WCSO Attorney confirmed a Sept 11 Washington County arrest; Robinson Mirandized 6:25 PM (1.5 hrs before the 7:57 PM Discord message), and Davis reached WCSO by ~10 PM despite the 3+ hr drive — the night flight is what closes that gap", url: "https://x.com/BasedSamParker/status/2055008839985135940" }
       ],
       requests: [
         {
