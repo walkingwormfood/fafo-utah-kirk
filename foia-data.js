@@ -178,10 +178,7 @@ const FOIA = {
     { id: "charlie-kirk", name: "Charlie Kirk", type: "person" },
     { id: "erika-kirk", name: "Erika Kirk", type: "person" },
     { id: "kolvet", name: "Andrew Kolvet", type: "person" },
-    { id: "usss", name: "U.S. Secret Service", type: "org" },
-    { id: "amodei", name: "Rep. Mark Amodei", type: "person" },
     { id: "kash-patel", name: "Kash Patel", type: "person" },
-    { id: "graham-allen", name: "Graham Allen", type: "person" },
     { id: "aes", name: "Accurate Energetic Systems (AES)", type: "company" },
     { id: "nswc-crane", name: "NSWC Crane Division", type: "org" },
     { id: "nds", name: "National Design Studio", type: "org" },
@@ -227,68 +224,6 @@ const FOIA = {
           records: "I request, concerning ATF Forensic Science Laboratory DNA analyses performed for the September 10, 2025 Utah Valley University homicide investigation (State v. Robinson, Utah Fourth District No. 251403576), whose author testified publicly at the July 10, 2026 preliminary hearing: (1) the three DNA examination reports authored by the DNA section chief (admitted in court as exhibits 30 and 34, plus the elimination-sample report referenced as report 157); (2) the case-file record authorizing complete consumption of samples 1.4, 1.6, 1.9, 1.10, 1.12, 2.1, 3.1, 4.1, and 5.1, including the permission-to-consume communication referenced in testimony; and (3) the records of elimination-sample requests made to household members and to investigating agents, including whether the agents' samples were ever provided. These records were described in public testimony; I am not seeking the underlying DNA profiles or any person's genetic data.",
           ask_no_records: true,
           filed: "PENDING \u2014 filed Jul 17, 2026 via ATF\u2019s FOIA Public Access Portal (dojatf.secureocp.com). Requester category News Media; fee waiver requested (\u00a7 552(a)(4)(A)(iii)); expedited processing requested under 28 C.F.R. \u00a7 16.5(e)(1)(ii) AND (iv) \u2014 disseminator status plus the government-integrity / widespread-media-interest ground, with certification. Date range 09/10/2025\u201307/31/2026. Registration confirmation comes from noreply@ains.com. FOIPA tracking number to follow. Expect Exemption 7(A) while State v. Robinson is pending."
-        }
-      ]
-    },
-    {
-      id: "influencer-govt-contracts",
-      short: "Influencers with federal ties",
-      challenge: "The influencers steering the story held prior federal-government jobs.",
-      categories: ["Kirk assassination & coverup"],
-      entities: ["dod", "graham-allen"],
-      investigator: "Liberty Lockdown (surfacing)",
-      investigatorLinks: [],
-      status: "reported",
-      finding: "In the post-assassination influencer fight, TPUSA-aligned commentators with prior federal-government roles have surfaced. Graham Allen \u2014 who appears alongside newly-hired TPUSA \u2018debate trainer\u2019 Andrew Wilson \u2014 has a disclosed prior job as a Pentagon \u2018senior strategic consultant for digital media, communications, and rapid response.\u2019 That is a government contract or engagement, a discrete record, distinct from anyone\u2019s opinions about it.",
-      implication: "Where a paid-messaging figure in a pending prosecution\u2019s media environment held a federal digital-communications contract, that contract\u2019s scope, dates, and deliverables are records \u2014 the documentary layer beneath the jury-taint question, sitting next to the Salem/Clock Tower X FARA paper.",
-      sources: [
-        { label: "Liberty Lockdown episode surfacing Allen\u2019s disclosed Pentagon role" }
-      ],
-      requests: [
-        {
-          agencyId: "dod",
-          summary: "DoD \u2014 Graham Allen\u2019s digital-media / strategic-communications contract or engagement",
-          subject: "FOIA Request: Department of Defense contract or engagement records for Graham Allen (strategic communications / digital media)",
-          records: "I request the contract, task order, consulting agreement, or engagement record under which Graham Allen served as a strategic consultant, advisor, or contractor for digital media, communications, or rapid-response work for the Department of Defense or any component, together with the statement of work and period of performance. These are discrete named records, not a broad search. If no responsive records exist, I request written confirmation of that fact.",
-          ask_no_records: true
-        }
-      ]
-    },
-    {
-      id: "backpack-untested-returned",
-      short: "Backpack returned untested",
-      challenge: "A backpack on the shooter's escape route was returned untested.",
-      categories: ["Kirk assassination & coverup"],
-      entities: ["fbi", "atf", "charlie-kirk"],
-      investigator: "Preliminary-hearing record (State v. Robinson); Baron Coleman & Candace Owens (surfacing)",
-      investigatorLinks: [],
-      status: "confirmed",
-      finding: "At the preliminary hearing, FBI laboratory analyst Amanda Baker testified that a backpack recovered at the Fulton Library bus stop \u2014 logged as Exhibit 9, and found with a jacket and gloves on the route the shooter allegedly fled \u2014 was DNA-processed and then had testing stopped. Per defense counsel reading her file, the stated reason was a note \u2018at page 20\u2019 that \u2018the backpack belongs to Kirk\u2019s detail.\u2019 Baker disowned authorship of that note: \u2018that was not my communication log, that was someone else within the laboratory.\u2019 The Ep-360 record has UVU DPS Sgt. Filomena similarly not remembering telling the lab to stop testing \u2014 so two named witnesses disclaim an instruction that both the physical evidence and the stop-testing decision turned on.",
-      implication: "Untested items dropped on the shooter\u2019s escape route were returned on the claim they belonged to a member of the victim\u2019s own security detail \u2014 a claim neither testifying witness will own. The lab\u2019s own communication log, the Exhibit 9 examination report, and the ATF\u2019s parallel record are discrete, named documents. They either contain the \u2018page 20\u2019 attribution and who wrote it, or they don\u2019t.",
-      sources: [
-        { label: "Amanda Baker Day-2 preliminary-hearing testimony, State v. Robinson (Utah Fourth District No. 251403576)" }
-      ],
-      requests: [
-        {
-          agencyId: "fbi",
-          summary: "FBI Lab \u2014 the communication log with the \u2018page 20\u2019 note attributing the backpack to Kirk\u2019s detail",
-          subject: "FOIA Request: FBI Laboratory communication log for Exhibit 9, Utah Valley University homicide investigation",
-          records: "I request, concerning the September 10, 2025 Utah Valley University homicide investigation (State v. Robinson, Utah Fourth District No. 251403576): the FBI Laboratory communication log, bench notes, or case-communication record \u2014 referenced in preliminary-hearing testimony as containing a note \u2018at page 20\u2019 stating that the backpack logged as Exhibit 9 \u2018belongs to Kirk\u2019s detail\u2019 and on which the decision to stop testing was based. The analyst who testified (Amanda Baker) stated this was not her communication log; I therefore request the record as authored, including any indication of the author or originating unit. To keep this request narrow, I am not seeking general case-file correspondence.",
-          ask_no_records: true
-        },
-        {
-          agencyId: "fbi",
-          summary: "FBI Lab \u2014 the Exhibit 9 examination report (backpack, jacket, gloves)",
-          subject: "FOIA Request: FBI Laboratory examination report for Exhibit 9 and associated items",
-          records: "I request the FBI Laboratory examination report(s) and DNA processing records for the backpack logged as Exhibit 9, and the jacket and gloves recovered with it at the Fulton Library bus stop, in the September 10, 2025 Utah Valley University homicide investigation \u2014 including the record of what analysis was performed, what was left unperformed, and the decision to discontinue testing. I am not seeking any person\u2019s underlying DNA profile or genetic data; I seek the examination and decision records described in public testimony.",
-          ask_no_records: true
-        },
-        {
-          agencyId: "atfagency",
-          summary: "ATF \u2014 any report on the same items and the decision not to test them",
-          subject: "FOIA Request: ATF records concerning the Fulton Library bus-stop items, Utah Valley University homicide investigation",
-          records: "I request any ATF report, laboratory record, or evidence-processing record concerning the backpack, jacket, and gloves recovered at the Fulton Library bus stop in the September 10, 2025 Utah Valley University homicide investigation, together with any record of a decision to discontinue or forgo testing of those items and the stated basis for it. If ATF holds no such records, I request written confirmation of that fact.",
-          ask_no_records: true
         }
       ]
     },
@@ -522,7 +457,7 @@ const FOIA = {
           agencyId: "uvupd",
           summary: "UVU PD — Bagley's bodycam footage plus the device's audit/battery logs",
           subject: "GRAMA Request: body-worn camera footage and device audit logs, September 10, 2025",
-          records: "I request: (1) all body-worn camera footage recorded on September 10, 2025 by the UVU police officer who first accessed the Losee Center rooftop; (2) the device audit log for that officer's body-worn camera for September 10, 2025 — including power-on/power-off events, battery-depletion events, docking and upload timestamps; and (3) the department's body-worn camera policy in effect on that date, including battery-management and activation requirements. I also request the device's location/GPS track for September 10, 2025 where the camera model (Axon Body 3/4) logs it, which would establish the unit's movement and position independent of the footage.",
+          records: "I request: (1) all body-worn camera footage recorded on September 10, 2025 by the UVU police officer who first accessed the Losee Center rooftop; (2) the device audit log for that officer's body-worn camera for September 10, 2025 — including power-on/power-off events, battery-depletion events, docking and upload timestamps; and (3) the department's body-worn camera policy in effect on that date, including battery-management and activation requirements.",
           ask_no_records: true
         },
         {
@@ -641,7 +576,7 @@ const FOIA = {
           agencyId: "uvu",
           summary: "UVU — the work orders and authorizations for the tent removal and paving",
           subject: "GRAMA Request: facilities records for courtyard work following September 10, 2025",
-          records: "I request, for the period September 10 – October 15, 2025: (1) all work orders, purchase orders, and contractor invoices concerning removal of the medical tent and any resurfacing, paving, concreting, or landscaping of the courtyard area adjacent to the Sorensen Center / Hall of Flags at Utah Valley University; and (2) the written authorization or approval for that work, including the requesting office and any record of coordination with, or clearance from, any law-enforcement agency before the work proceeded. I additionally request any record identifying the excavation/paving contractor (on-camera reporting names contractor Dan Merrill describing over-excavation, topsoil removal, and concrete pour within roughly a week on FBI/Governor direction), and any record of the disposal, transport, or testing of soil or debris removed from the site.",
+          records: "I request, for the period September 10 – October 15, 2025: (1) all work orders, purchase orders, and contractor invoices concerning removal of the medical tent and any resurfacing, paving, concreting, or landscaping of the courtyard area adjacent to the Sorensen Center / Hall of Flags at Utah Valley University; and (2) the written authorization or approval for that work, including the requesting office and any record of coordination with, or clearance from, any law-enforcement agency before the work proceeded.",
           ask_no_records: true,
           filed: "PENDING — filed via NextRequest as UVU request #26-212, received Jul 13, 2026; acknowledged Jul 15 with the full request text quoted back. 10-business-day clock, stretched by the Jul 24 Pioneer Day closure — response due ~Jul 27–28. NOTE: UVU #26-217 (Jul 15) is an accidental identical re-file — expect a § 63G-2-201(7) duplicate closure; no action needed on it."
         },
@@ -718,30 +653,6 @@ const FOIA = {
       ]
     },
     {
-      id: "backpack-stop-testing",
-      challenge: "The FBI lab was told to stop testing the backpack — “it's Kirk's detail's.”",
-      short: "Who stopped the backpack test",
-      categories: ["Physical evidence", "Crime scene handling"],
-      entities: ["uvu-ent"],
-      investigator: "Preliminary-hearing record; Candace Owens Ep 360\u2013361; Baron Coleman",
-      investigatorLinks: [],
-      status: "confirmed",
-      finding: "Day-2 FBI-lab testimony (Amanda Baker) and Ep-360 testimony (UVU DPS Sgt. Filomena) together describe an instruction to the FBI Laboratory to STOP testing the Fulton Library backpack (Exhibit 9) because it \u2018belongs to Kirk\u2019s detail\u2019 \u2014 an instruction neither witness will claim as their own. The federal lab record is sought on the FOIA side; this asks the Utah investigating agency (DPS/SBI) for the same instruction as IT sent or received.",
-      implication: "If a Utah investigator conveyed the \u2018Kirk\u2019s detail\u2019 attribution to the federal lab, that communication is a Utah government record. The instruction, and who originated it, is the whole question \u2014 a discrete communication, not a broad search.",
-      sources: [
-        { label: "Amanda Baker & Sgt. Filomena preliminary-hearing testimony, State v. Robinson" }
-      ],
-      requests: [
-        {
-          agencyId: "dps",
-          summary: "DPS/SBI \u2014 the communication instructing the FBI lab that the backpack belonged to Kirk\u2019s detail / to stop testing",
-          subject: "GRAMA Request: SBI communication to the FBI Laboratory concerning Exhibit 9 (the Fulton Library backpack)",
-          records: "I request any communication sent or received by the Utah Department of Public Safety / State Bureau of Investigation, concerning the September 10, 2025 Utah Valley University homicide investigation, that (a) conveyed to the FBI Laboratory or any other laboratory that the backpack recovered at the Fulton Library bus stop (logged in the FBI Laboratory as Exhibit 9) belonged to Charlie Kirk\u2019s security detail, and/or (b) directed or requested that testing of that backpack, or the jacket or gloves recovered with it, be stopped or not performed \u2014 together with the record identifying who originated that communication. This is a discrete instrument, not a broad search. If no such record exists, I request written confirmation of that fact.",
-          ask_no_records: true
-        }
-      ]
-    },
-    {
       id: "exhibit-121",
       challenge: "The judge tossed the roof-descent video as edited; it was shown anyway.",
       short: "The “4K” exhibit",
@@ -813,32 +724,6 @@ const FOIA = {
       ]
     },
     {
-      id: "noble-nest-original",
-      challenge: "The witness's original doorbell file — bald driver, three passengers — was never produced.",
-      short: "The Nest witness's raw file",
-      categories: ["Missing & deleted footage", "Witness statements"],
-      entities: ["uvu-ent"],
-      investigator: "Baron Coleman (Ep 141) · preliminary-hearing cross",
-      investigatorLinks: [
-        { label: "Coleman Ep. 141", url: "https://www.youtube.com/watch?v=FT8kJN3n_cA" }
-      ],
-      status: "confirmed",
-      finding: "On cross at the preliminary hearing, it emerged that homeowner Cynthia Noble’s Nest doorbell captured a vehicle on her street overnight September 10–11, 2025, and that her statement described the driver as bald with three passengers — detail that surfaced only on cross-examination, not in the state’s direct case. (The FBI’s own interview report on this doorbell footage is sought separately on the federal docket.)",
-      implication: "The original Nest export (with device metadata and timestamps) and Noble’s recorded statement, as held by the Utah investigating agency, are discrete records — distinct from the FBI’s interview report. They fix what the camera actually showed and what the witness actually said, independent of the state’s characterization.",
-      sources: [
-        { label: "Preliminary-hearing cross-examination testimony (Coleman Ep. 141 recap)", url: "" }
-      ],
-      requests: [
-        {
-          agencyId: "dps",
-          summary: "DPS/SBI — the original Nest export + Cynthia Noble’s recorded statement",
-          subject: "GRAMA Request: original Nest doorbell file and witness statement, Utah Valley University homicide investigation",
-          records: "I request, concerning the September 10, 2025 Utah Valley University homicide investigation: (1) the original Nest doorbell video file recovered from the residence of witness Cynthia Noble depicting a vehicle on her street overnight September 10–11, 2025, in its native format with original metadata and timestamps; and (2) the report, recording, or summary of the Utah investigator’s interview of Cynthia Noble, in which she described the vehicle’s driver and occupants. Witness personal identifiers may be redacted; the original file and the substance of the statement are the request. If no responsive record exists, I request written confirmation of that fact.",
-          ask_no_records: true
-        }
-      ]
-    },
-    {
       id: "twiggs-location",
       challenge: "Two sworn records put Twiggs's first interview in two different buildings.",
       short: "Twiggs: which building?",
@@ -869,13 +754,6 @@ const FOIA = {
           records: "I request the interview-room usage log, visitor log, and any facility-use record for the Washington County Sheriff's Office for September 11, 2025, 10:00 p.m. through September 12, 2025, 8:00 a.m., including any record of facility use by another agency (FBI or Utah DPS/SBI) during that window. Names of uninvolved members of the public may be redacted.",
           ask_no_records: true
         },
-        {
-          agencyId: "sgpd",
-          summary: "St. George PD — Lance Twiggs’s first interview report",
-          subject: "GRAMA Request: initial interview report of Lance Twiggs, Utah Valley University homicide investigation",
-          records: "I request the report, recording, or interview summary documenting the FIRST interview of Lance Twiggs conducted by or at the St. George Police Department in connection with the September 10, 2025 Utah Valley University homicide investigation (State v. Robinson). Per preliminary-hearing testimony, an early Twiggs interview exists that pre-dates the pre-filmed, partially-redacted video later shown at the hearing. I seek the original interview record — its existence, date, custodian, and content — with witness personal identifiers redactable. If no responsive record exists, I request written confirmation of that fact.",
-          ask_no_records: true
-        }
       ]
     },
     {
@@ -1184,32 +1062,6 @@ const FOIA = {
         }
       ]
     },
-    {
-      id: "memorial-nsse",
-      short: "Was the memorial an NSSE?",
-      challenge: "Was Kirk's Glendale memorial a National Special Security Event — and who held security lead?",
-      categories: ["Kirk assassination & coverup"],
-      entities: ["charlie-kirk", "erika-kirk", "usss", "amodei"],
-      investigator: "Ana Escobar (Fort Banana: Connecting the Dots, Part 1)",
-      investigatorLinks: [
-        { label: "Ana Escobar — Fort Banana: Connecting the Dots (Part 1)", url: "https://www.youtube.com/watch?v=OEsx7hpIFic" }
-      ],
-      status: "reported",
-      finding: "Ana Escobar builds an inference chain connecting the Butler rally, the second inauguration, and Charlie Kirk's September 2025 Glendale memorial as Secret Service events, pivoting on Rep. Mark Amodei's seat on the House Appropriations Subcommittee on Homeland Security — which funds the Secret Service — toward a claim about who shaped the memorial's security. The through-line is her inference; the underlying checkable fact is narrower and real: whether the memorial at State Farm Stadium was designated a National Special Security Event (NSSE) or given a Special Event Assessment Rating (SEAR) level, and which agency held operational security lead.",
-      implication: "Whether the memorial was an NSSE is a discrete, documentable fact. NSSE designations are made by DHS through the Secret Service; the designation determination, the lead-agency assignment, and the operational-plan summary are records. A designation — or its absence — either supports or deflates the 'same story as Butler' framing. (The Amodei-appropriations-to-Secret-Service motive chain is Escobar's explicitly speculative inference; her flagship search-trends evidence failed to reproduce live in the sibling Danks/Huachuca digest. This request tests the one underlying fact, not the theory.)",
-      sources: [
-        { label: "Ana Escobar — Fort Banana (Part 1): the NSSE / Amodei-appropriations through-line", url: "https://www.youtube.com/watch?v=OEsx7hpIFic" }
-      ],
-      requests: [
-        {
-          agencyId: "usss",
-          summary: "Secret Service — NSSE/SEAR designation and security-lead records for the Glendale memorial",
-          subject: "FOIA Request: NSSE or SEAR designation and operational security-lead records for the September 2025 Charlie Kirk memorial, Glendale, Arizona",
-          records: "I request records sufficient to show whether the memorial service for Charlie Kirk held on or about September 21, 2025 at State Farm Stadium in Glendale, Arizona was designated a National Special Security Event (NSSE) or assigned a Special Event Assessment Rating (SEAR) level, including the designation determination, request, or notification, and any record identifying the federal agency assigned operational security lead for the event. I am requesting the designation and lead-agency records only, not tactical operational details whose release could reasonably endanger safety. To keep this request narrow and minimize search burden, I am not seeking general email correspondence.",
-          ask_no_records: true
-        }
-      ]
-    }
   ],
 
   /* The holes in the case — records everyone can see are missing from the public
