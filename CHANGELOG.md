@@ -2,6 +2,14 @@
 
 What's new in FAFO Utah — Charlie Kirk Edition. Newest first.
 
+## 2026-07-20 — Ep 359 mined: the second SUV, and was the transport vehicle ever processed?
+
+Candace Ep 359 (re-scraped and re-verified against a fresh caption pull today; v2 transcript in the library) lands two new cards and two new holes:
+
+- **The second SUV** — Blake Neff, in his own voice on a recorded X space, can't say where the second rented SUV went between the Salt Lake City landing and the UVU event ("we just like parked and we marked time"), who drove, or who rode along — conceding only "that might be who it was" when Danny Phillip's name is supplied. The records don't need his memory: the airport's GA landing report and ramp vehicle-access logs (Salt Lake City Dept of Airports — *route not yet audited, verify before filing*), plus UVU's event parking credentials. Hole: *where did the second SUV go?*
+- **What was left in the transport SUV?** — the charred object in the released photos, identified by a convergent wave of unsolicited viewer emails (fashion workers, a seamstress mother of 10, a plastic-surgery nurse) as the burnt remains of Kirk's polyester shirt — possibly with charred skin. The records question underneath is cleaner than the identification: was the vehicle that carried the victim ever processed as evidence at all? DPS/SBI property-intake and vehicle-processing records, plus the ME's personal-effects/clothing inventory (complementing, not duplicating, the me-chain transmittal ask). Hole: *was the transport SUV processed?*
+- Updates in place: the Kolvet EEOB card now logs Kolvet's own Ep 359-read tweet conceding two elements of Owens' Netanyahu account (show declined; the Ackman-house call) as credibility context for her single-source Kolvet reporting. New entities: Mikey McCoy, Danny Phillip.
+
 ## 2026-07-16 (afternoon) — Filing spree: two WCSO, two UVU, one FBI
 
 Filed today and carded: the **Mitchell interview records** (WCSO, 1:19 p.m., with the retrieval keys — Mitchell named per Day 3 testimony, interviewing detective's identity part of the ask) and the **McBride letter** (WCSO, 1:21 p.m. — the office's copy of the prosecutor's Fifth-Amendment letter and any reply), both due ~Jul 30. Also filed: **UVU #26-220 and #26-221** (card attribution pending UVU's acknowledgment quotes, joining #26-214/215 on the unmatched list) and a **federal first — the FBI Nest-doorbell homeowner-interview report** via eFOIPA, carded on OG FAFO with a filing-quirk note (the as-filed text cited Utah GRAMA; the FBI will process it as FOIA). Orem K9 was cured and re-filed this morning; DPS/SBI filings are in progress on the GovQA portal, whose gotchas (division picker, Involved Parties field, attachment gate, occurrence-date trap) now live on the DPS agency note.

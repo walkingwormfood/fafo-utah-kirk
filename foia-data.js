@@ -162,6 +162,9 @@ const FOIA = {
     { id: "orem", name: "Orem Police Department (City of Orem)", email: "records@orem.gov",
       portal: "https://orem.gov/police-records-request/",
       submitNote: "Orem PD takes records requests via its JotForm (linked from orem.gov/police-records-request — heads-up: the form may require a Google-account sign-in) or by email/walk-in at the records counter: records@orem.gov, verified on the city's police-records page (Mon–Fri 8:30–5:30). Don't use policerecords@orem.org from older pages — that domain is retired. No published fee schedule; the city quotes fees and waits for your agreement before processing." },
+    { id: "slcda", name: "Salt Lake City Department of Airports (SLC Corp)", email: null,
+      portal: "https://www.slc.gov/recorder/grama/",
+      submitNote: "ROUTE NOT YET AUDITED — Salt Lake City Corporation GRAMA intake runs through the City Recorder (slc.gov/recorder/grama; the city has used a NextRequest-style portal). Verify the current intake and that the Department of Airports doesn't take GRAMA directly before filing. The airport is a city department, so its landing reports and access logs are city records under GRAMA." },
     { id: "gov", name: "Office of the Governor of Utah", email: "aduncan@utah.gov", emailSubject: "GRAMA Request",
       portal: "https://openrecords.utah.gov",
       submitNote: "Email the records officer directly: Adam Duncan (aduncan@utah.gov, 801-538-1046), Public Records Officer, Governor's Office, State Capitol Complex, SLC 84114 — verified via the state Open Records Portal directory, Jul 15, 2026. The central portal does NOT take the request itself for this entity (it redirects to an 'Agency GRAMA Website' whose button is a dead link as of Jul 15, 2026). § 63G-2-204 requires your name, mailing address, email, and daytime phone in the request body." },
@@ -199,7 +202,9 @@ const FOIA = {
     { id: "wcso-ent", name: "Washington County SO", type: "org" },
     { id: "fbi-ent", name: "FBI", type: "org" },
     { id: "tpusa", name: "TPUSA", type: "org" },
-    { id: "flock", name: "Flock Safety (ALPR vendor)", type: "company" }
+    { id: "flock", name: "Flock Safety (ALPR vendor)", type: "company" },
+    { id: "mccoy", name: "Mikey McCoy (Kirk chief of staff)", type: "person" },
+    { id: "phillip", name: "Danny Phillip (Kirk's assistant)", type: "person" }
   ],
 
   investigations: [
@@ -297,7 +302,8 @@ const FOIA = {
       finding: "Candace Owens reports that Andrew Kolvet, Charlie Kirk's producer, was at the White House / Eisenhower Executive Office Building the day before the DOJ released the Epstein files — while a Charlie Kirk show was pre-recorded (with Kash Patel) to make it appear he was in Arizona.",
       implication: "If a Kirk-world figure took a White House meeting the day before a major Epstein-files release, entry records would document it. Strong caveat: courts have ruled White House visitor logs held by the Secret Service are often NOT agency records subject to FOIA, so this may be denied on that ground (EEOB-tenant agencies like OMB are a separate avenue). Single-source, on-air account.",
       sources: [
-        { label: "Candace Owens, Ep 352", url: "https://www.youtube.com/watch?v=3QJqtW_NOSI" }
+        { label: "Candace Owens, Ep 352", url: "https://www.youtube.com/watch?v=3QJqtW_NOSI" },
+        { label: "Credibility context (Ep 359, Jul 14 2026): Kolvet's own tweet, read on air, concedes two elements of Owens' Kolvet-sourced Netanyahu account — TPUSA declined a Netanyahu show appearance, and Kirk later took a Netanyahu call at Bill Ackman's house — while disputing her 'take TPUSA to the next level' claim. Doesn't bear on the EEOB visit directly; logged for weighing her single-source Kolvet reporting.", url: "https://www.youtube.com/watch?v=X3VKJVJ7cN4" }
       ],
       requests: [
         {
@@ -1191,6 +1197,72 @@ const FOIA = {
           ask_no_records: true
         }
       ]
+    },
+    {
+      id: "second-suv",
+      short: "The second SUV",
+      challenge: "Neff, on tape, can't say where the second SUV went between the SLC landing and UVU.",
+      categories: ["Timeline contradictions", "Witness statements"],
+      entities: ["neff", "phillip", "mccoy", "tpusa", "charlie-kirk"],
+      investigator: "Candace Owens (Ep 359 — the X-space audio)",
+      investigatorLinks: [
+        { label: "Candace — Ep 359 (X-space audio played at length)", url: "https://www.youtube.com/watch?v=X3VKJVJ7cN4" }
+      ],
+      status: "confirmed",
+      finding: "On a recorded X space played in Ep 359, Blake Neff — who flew into Salt Lake City (not Provo) on Charlie Kirk's jet the morning of September 10 — says he rode in the SECOND of two SUVs Mikey McCoy rented, skipped Charlie's final restaurant interview, and cannot say where his vehicle went, who drove it, or who rode with him: \"We drove somewhere and because I wasn't going to that event, we just like parked and we marked time until the actual Utah Valley event\"; \"I actually have no idea where they parked it\"; \"I don't remember the specific people in my car.\" When a participant supplies \"It was just you and Danny Philip,\" he allows: \"That might be who it was.\" (The gap itself is confirmed — it's his own voice; what filled it is the open question.) Context from Owens' prior call-log reporting: Danny Phillip — Kirk's assistant, hired straight out of Ohio State in May 2025 — appears on Mikey McCoy's phone immediately before the 12:02 shot and for ~10 minutes after.",
+      implication: "Roughly a two-hour window between wheels-down and the event, and the only account from inside the second vehicle is \"we marked time\" somewhere unknown. Nobody's memory is required to close it: the airport end is a city facility that generates records — the general-aviation landing report fixes the aircraft and the exact arrival time, and any ramp/gate vehicle-access record fixes when and where the SUVs met it — and the campus end issued event parking credentials. Neff also said no authority has asked him these questions (\"Why would I be asked the questions like that by the authorities?\") — so the paper trail is the only account being built at all.",
+      sources: [
+        { label: "Ep 359 [13:29–15:19] — the X-space exchange, verbatim; [11:54–12:50] the two-SUV logistics; [17:07–17:22] the McCoy–Phillip call-log claims (transcript + digest in the library, re-verified against a fresh scrape Jul 20 2026)", url: "https://www.youtube.com/watch?v=X3VKJVJ7cN4" }
+      ],
+      requests: [
+        {
+          agencyId: "slcda",
+          summary: "SLC Airports — the GA landing report + ramp vehicle-access records for the morning arrival",
+          subject: "GRAMA Request: general-aviation arrival and ramp vehicle-access records, morning of September 10, 2025",
+          records: "I request, for Salt Lake City International Airport on September 10, 2025, between 6:00 a.m. and 12:00 noon: (1) the general-aviation / itinerant landing report or landing-fee record for that window — the routine operational record identifying arriving aircraft and arrival times; and (2) any AOA gate log, vehicle-escort record, or ramp vehicle-access record documenting ground vehicles admitted to a fixed-base-operator ramp to meet an arriving general-aviation aircraft during that window. I am requesting routine airfield operations records for a six-hour window on a single morning; I am not seeking security-system technical details, and vehicle records unrelated to general-aviation arrivals may be redacted.",
+          ask_no_records: true
+        },
+        {
+          agencyId: "uvu",
+          summary: "UVU — event parking credentials and lot assignments issued for the TPUSA event",
+          subject: "GRAMA Request: event parking credentials and lot assignments, September 10, 2025 event",
+          records: "I request, concerning the September 10, 2025 Turning Point USA event at Utah Valley University: the parking passes, vehicle placards, or parking-credential records issued for the event, and the lot-assignment or reserved-parking coordination records identifying which vehicles (by organization, not by attendee) were authorized to park where. I am not requesting attendee lists or any student records. (This complements, and does not duplicate, the event-agreement and staff-roster request already on file as UVU #26-221.)",
+          ask_no_records: true
+        }
+      ]
+    },
+    {
+      id: "transport-suv-contents",
+      short: "What was left in the transport SUV?",
+      challenge: "Photos show a charred object in the SUV that carried Kirk — no inventory of the vehicle's contents is public.",
+      categories: ["Physical evidence", "Crime scene handling"],
+      entities: ["charlie-kirk", "mccoy", "sbi"],
+      investigator: "Candace Owens (Ep 359) + unsolicited viewer identifications",
+      investigatorLinks: [
+        { label: "Candace — Ep 359 (the photos, the emails, the burn test)", url: "https://www.youtube.com/watch?v=X3VKJVJ7cN4" }
+      ],
+      status: "reported",
+      finding: "Ep 359 shows photos from inside the SUV that carried Charlie Kirk from UVU to the hospital, including an unidentified charred object Owens had earlier described as \"a burnt piece of cardboard with blood.\" A convergent wave of unsolicited viewer identifications — fashion-industry workers, home sewers, and an anonymous self-described plastic/reconstructive-surgery nurse — say it is the burnt remains of a polyester shirt, the nurse adding that melted polyester chars like cardboard and that the black material reads as burned skin (\"they likely ripped off his shirt and ripped off his skin\"). Owens' team partially replicated the appearance by burning a 50%-polyester shirt on camera; Baron Coleman states Kirk's shirt that day was 100% polyester; a full-poly retest is pending, and Owens says she is trying to obtain the items left in the vehicle. (Status reported: the photos are real and shown; the shirt identification is a crowd-sourced hypothesis she flags as such herself.)",
+      implication: "Whether the identification is right is secondary to a records question nobody has answered: was the private vehicle that transported the victim ever processed as evidence at all? A homicide victim's clothing is itemized somewhere — an agency property/evidence intake log, or the medical examiner's personal-effects inventory — and a vehicle that carried a shooting victim either has a processing record or it doesn't. If no agency processed the vehicle or logged its contents, that absence is itself the finding.",
+      sources: [
+        { label: "Ep 359 [1:55–7:47] — the photos, the email pattern (mother-of-10 seamstress, the nurse email read in full), the burn-test side-by-side (transcript + digest in the library, re-verified against a fresh scrape Jul 20 2026)", url: "https://www.youtube.com/watch?v=X3VKJVJ7cN4" }
+      ],
+      requests: [
+        {
+          agencyId: "dps",
+          summary: "DPS/SBI — the vehicle-processing and property/evidence intake records for the transport vehicle",
+          subject: "GRAMA Request: evidence and property records concerning the vehicle used to transport the victim, September 10, 2025",
+          records: "I request, concerning the September 10, 2025 Utah Valley University homicide investigation: (1) the property or evidence intake log entries for any items recovered from, or documented inside, the sport-utility vehicle used to transport the victim from the campus to the hospital; (2) the record of any forensic processing, photography, or examination of that vehicle, or the record of its release without processing (including to whom it was released and when); and (3) the photograph log for any images taken of the vehicle's interior. I am requesting administrative intake, processing, and release records — not medical records and not the photographs' evidentiary content where restricted. If no agency processed the vehicle or logged its contents, I request written confirmation of that fact, including a description of the search conducted.",
+          ask_no_records: true
+        },
+        {
+          agencyId: "ome",
+          summary: "Medical Examiner — the personal-effects/clothing inventory (not the autopsy)",
+          subject: "GRAMA Request: personal-effects and clothing inventory records, September 2025 case",
+          records: "I request, concerning the Office of the Medical Examiner case arising from the September 10, 2025 death at Utah Valley University: the personal-effects or clothing inventory documenting what clothing or clothing remnants accompanied the decedent or were subsequently received, and the transmittal or release records for any clothing item transferred to a law-enforcement agency or laboratory. I am NOT requesting the autopsy report, photographs, or any medical findings — administrative inventory and transfer records only. (This complements the evidence-transmittal request already drafted to this office concerning bullet fragments; this request concerns clothing and personal effects specifically.)",
+          ask_no_records: true
+        }
+      ]
     }
   ],
 
@@ -1262,6 +1334,14 @@ const FOIA = {
     { id: "gap-elimination", label: "Eliminated — or never examined?",
       question: "The roommate's DNA is on the towel and the screwdriver, and the lab was told to expect and disregard it. Was alternative access ever examined, or designated away?",
       findings: ["dna-elimination"],
-      requests: [{ inv: "dna-elimination", idx: 0 }] }
+      requests: [{ inv: "dna-elimination", idx: 0 }] },
+    { id: "gap-second-suv", label: "Where did the second SUV go?",
+      question: "Two rented SUVs met Kirk's jet in Salt Lake City the morning of 9/10. The one without Charlie \"drove somewhere... parked and marked time,\" per its own passenger — who says he can't recall where, who drove, or who rode along. The airport's landing report and ramp-access records, and UVU's event parking credentials, close a two-hour window memory won't.",
+      findings: ["second-suv", "tpusa-contact"],
+      requests: [{ inv: "second-suv", idx: 0 }, { inv: "second-suv", idx: 1 }] },
+    { id: "gap-suv-processed", label: "Was the transport SUV processed?",
+      question: "Photos show a charred object — plausibly the victim's burned shirt — left in the vehicle that carried Kirk to the hospital. A homicide victim's clothing is itemized somewhere. Either an intake log and processing record exist for that vehicle, or nobody ever processed it.",
+      findings: ["transport-suv-contents", "me-chain"],
+      requests: [{ inv: "transport-suv-contents", idx: 0 }, { inv: "transport-suv-contents", idx: 1 }] }
   ]
 };
