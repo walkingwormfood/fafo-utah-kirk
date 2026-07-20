@@ -1128,7 +1128,7 @@ const FOIA = {
       investigator: "Baron Coleman",
       investigatorLinks: [
         { label: "Ep. 142 — Day Four", url: "https://www.youtube.com/watch?v=6ZZ_e53ZDnY" },
-        { label: "Rob O'Neill (SEAL Team 6) & a Brigadier General publicly question the wound ballistics — \"that looks like an explosion, not a bullet\" (surfaced via Candace Owens, Jul 18)", url: "https://x.com/RealCandaceO/status/2078625293208568239" }
+        { label: "Rob O'Neill (SEAL Team 6, killed bin Laden) on Newsmax: \"I've killed more than a handful of people... I've never seen a shirt move like that, that looks like an explosion to me\" — plus a Brigadier General questioning the same wound ballistics", url: "https://x.com/VladTheInflator/status/2078977593597120930" }
       ],
       status: "confirmed",
       finding: "Day-four testimony: the comparison of the recovered bullet-jacket fragment to the charged rifle was \"inconclusive\" — it \"could not be identified or excluded\" — and the examiner measured the fragment at .286–.301 inches, below the .308-inch bullet diameter of a .30-06. A GSR analysis was performed on the car and never introduced.",
