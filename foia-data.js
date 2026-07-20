@@ -980,6 +980,40 @@ const FOIA = {
       ]
     },
     {
+      id: "hospital-searcher",
+      challenge: "Someone went hospital-to-hospital hunting Charlie Kirk — locking hospitals down — reportedly a fed.",
+      short: "The hospital searcher",
+      categories: ["Timeline contradictions"],
+      entities: ["fbi-ent", "charlie-kirk", "bagley", "sbi"],
+      investigator: "Baron Coleman (Ep. 147 — police audio)",
+      investigatorLinks: [
+        { label: "Coleman Ep. 147 — the hospital police audio", url: "https://www.youtube.com/watch?v=DzzvnsEXOOk" }
+      ],
+      status: "reported",
+      finding: "In the immediate aftermath on September 10, an armed man went hospital to hospital (Utah Valley Hospital, Timpanogos Regional, others) demanding to know where Charlie Kirk was — before any public narrative. It triggered a hospital lockdown: a witness at Timpanogos Regional documented caution tape, police vehicles, an ME vehicle and tactical officers, the hospital sealed ~5:19–5:40 p.m. (\"told me I can't leave\"). Per the police audio Coleman walks through, the searcher was described as HEAVY SET and, in his read, \"was an FBI guy, apparently.\" Two other men were briefly and wrongly conflated with him — Zechariah Qureshi (reported \"in tactical gear going hospital to hospital\") and Andrew Piscaldo, \"the one-armed man\" (officially confirmed on the audio as \"not involved\").",
+      implication: "A heavy-set armed man searching hospitals for the victim before any public suspect existed — reportedly a federal agent — is either in the record or it isn't. And the build cuts against the shooter: Officer Bagley (the first officer to the Losee roof, whose bodycam then died) described the roof figure as \"NOT heavy set\" — so the hospital searcher is not the person on the roof. The dispatch/CAD audio for the hospital calls, any report identifying the hospital-search subject or their agency, and the lockdown coordination are discrete records; the \"not heavy set\" roof description is already in the preliminary-hearing record.",
+      sources: [
+        { label: "Coleman Ep. 147 police audio; Timpanogos Regional witness posts (hospital lockdown, ~5:19–5:40 p.m.)", url: "https://www.youtube.com/watch?v=DzzvnsEXOOk" },
+        { label: "Officer Bagley preliminary-hearing testimony — roof figure described as \"not heavy set\"", url: "" }
+      ],
+      requests: [
+        {
+          agencyId: "dps",
+          summary: "DPS/SBI — dispatch/CAD for the hospital-search calls + any report identifying the subject",
+          subject: "GRAMA Request: dispatch/CAD records concerning an individual searching hospitals for the victim, September 10, 2025",
+          records: "I request the computer-aided dispatch (CAD) and radio log records, and any incident or information report, concerning reports on September 10, 2025 of an individual going between hospitals (including Utah Valley Hospital and Timpanogos Regional Hospital) seeking the location of Charlie Kirk in connection with the Utah Valley University homicide investigation — including any record identifying that individual or their agency, any BOLO or lookout issued, and any record of the resulting hospital-lockdown coordination. Unrelated calls for service may be redacted. If no responsive records exist, I request written confirmation of that fact, including a description of the search conducted.",
+          ask_no_records: true
+        },
+        {
+          agencyId: "orem",
+          summary: "Orem PD — dispatch/incident records for the hospital lockdown, Sept 10",
+          subject: "GRAMA Request: dispatch and incident records concerning a hospital lockdown, September 10, 2025",
+          records: "I request the dispatch/CAD and any incident report records held by the Orem Police Department concerning the lockdown of, or law-enforcement response to, Timpanogos Regional Hospital (and any other Orem-area hospital) on September 10, 2025 in connection with reports of an individual searching for Charlie Kirk — including the reason for the lockdown, the agency that requested it, and any record identifying the individual whose conduct prompted it. If no responsive records exist, I request written confirmation of that fact.",
+          ask_no_records: true
+        }
+      ]
+    },
+    {
       id: "motive-testimony",
       challenge: "The official motive's key witness never delivered it under oath.",
       short: "Motive without a witness",
