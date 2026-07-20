@@ -2,6 +2,15 @@
 
 What's new in FAFO Utah — Charlie Kirk Edition. Newest first.
 
+## 2026-07-20 (later) — The withheld cards, verified from full transcript reads and rebuilt
+
+Three cards held back during the Opus audit are now verified against complete start-to-finish reads of the primary transcripts (Ep 141, Ep 360, Ep 361 — verbatim extraction only, no paraphrase) and built:
+
+- **The bus-stop backpack** (`backpack-stop-testing`) — Sgt. Filomena (SBI): backpack/jacket/gloves seized at the Fulton Library bus stops on the shooter's flight route, sent to the FBI lab — then testing stopped. FBI examiner Amanda Baker: the backpack was exhibit 9, DNA processing was underway, and her own lab notes at page 20 say it "belongs to Kirk's detail" — a note she says "someone else within the laboratory" wrote. Requests: the SBI property/stand-down records, and the FBI lab communication log + the page-20 note's provenance. Hole: *whose backpack was at the bus stop?*
+- **Twiggs's first interview — where?** (`twiggs-first-interview`) — testimony says St. George PD; the sworn warrant statements say FBI Special Agent Lang at the Washington County Sheriff's Office, 0100 hours Sept 12. Facility-log requests to both buildings; if neither has a record, that's the finding. Hole: *where was Twiggs's first interview?*
+- **The original Nest file** — new second request on the noble-report card: the native cloud export, its metadata, and the processing chain between acquisition and the cut, degraded version played in court. Hole: *where's the original Nest file?*
+- Killed for lack of any source: the "election address vs. record" thread — it appears in none of the three transcripts and nowhere else in the vault.
+
 ## 2026-07-20 — Ep 359 mined: the second SUV, and was the transport vehicle ever processed?
 
 Candace Ep 359 (re-scraped and re-verified against a fresh caption pull today; v2 transcript in the library) lands two new cards and two new holes:

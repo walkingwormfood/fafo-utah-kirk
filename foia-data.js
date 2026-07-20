@@ -685,6 +685,13 @@ const FOIA = {
           subject: "GRAMA Request: report of witness interview concerning residential doorbell video, September 2025",
           records: "I request the investigative report, or interview summary, documenting the interview of the homeowners whose Nest doorbell camera captured a vehicle associated with the Utah Valley University homicide investigation parked on their street overnight September 10–11, 2025 — the report whose contents (including the description of the vehicle's driver and occupants) were confirmed by a testifying officer during the preliminary hearing in State v. Robinson. Witness personal identifiers may be redacted; the substance of the recorded descriptions is the request.",
           ask_no_records: true
+        },
+        {
+          agencyId: "dps",
+          summary: "DPS/SBI — the ORIGINAL Nest export and its metadata (the courtroom copy was cut and degraded)",
+          subject: "GRAMA Request: original doorbell-video files and export metadata, September 2025 investigation",
+          records: "Concerning the residential Nest doorbell video of a vehicle parked overnight September 10–11, 2025, portions of which were played at the July 2026 preliminary hearing in State v. Robinson: I request (1) records sufficient to show the acquisition of the video from the homeowners or from the camera vendor's cloud service — the date acquired, the file count, and the acquiring officer or agency; (2) the technical metadata of the files as acquired (native resolution, duration, timestamps, and any export or processing history); and (3) records documenting any editing, clipping, or re-encoding of the video between acquisition and its courtroom presentation, including who prepared the version played in court. I am requesting acquisition and processing records, not the video content itself, so no protected-content withholding should be necessary; the courtroom copy contained visible cuts and was materially degraded relative to the camera's native quality, and the processing chain is the question. (Verbatim basis: Ep 141 [20:43–22:15], re-verified Jul 20 2026.)",
+          ask_no_records: true
         }
       ]
     },
@@ -1263,6 +1270,74 @@ const FOIA = {
           ask_no_records: true
         }
       ]
+    },
+    {
+      id: "backpack-stop-testing",
+      short: "The bus-stop backpack",
+      challenge: "A backpack on the shooter's flight route went to the FBI lab — then someone stopped the testing.",
+      categories: ["Physical evidence", "Crime scene handling"],
+      entities: ["robinson", "charlie-kirk", "sbi", "fbi-ent"],
+      investigator: "Preliminary-hearing record (courtroom audio via Candace Eps 360–361)",
+      investigatorLinks: [
+        { label: "Candace Ep 360 — the Filomena seizure testimony, played", url: "https://www.youtube.com/watch?v=puuMVxEu5NU" },
+        { label: "Candace Ep 361 — the Baker lab-notes cross, played", url: "https://www.youtube.com/watch?v=mLvJqdxS-FY" }
+      ],
+      status: "confirmed",
+      finding: "Two witnesses, both on courtroom audio. Sgt. Jennifer Filomena (State Bureau of Investigation) testified that officers canvassing the shooter's flight route deemed the Fulton Library a potential crime scene because of unattended items at the bus stops — \"a backpack, a jacket, as well as some gloves, and there may have been some other things\" — seized them, and sent them to the FBI lab for processing \"along with some information that the suspect may have shed some of these items as he fled.\" Asked whether she later told the lab the items weren't connected and testing should stop: \"I don't remember communicating that\" — but agreed the FBI/ATF lab notes recording that communication would not be inconsistent with what she knows. FBI examiner Amanda Baker testified the backpack was exhibit 9, was processed for DNA, and then \"no comparisons needed\" once it was \"potentially left behind by a bystander\" — at which point the cross-examiner read her own lab notes at page 20: the backpack \"belongs to Kirk's detail.\" Baker: \"that was not my communication log. That was someone else within the laboratory.\" Nobody named the detail member, the note's author, or who ordered the stop.",
+      implication: "Whoever the backpack belonged to, the paper trail is administrative and discrete: the seizure/property record for the bus-stop items, the communication that told the FBI lab to stand down, the lab-note entry attributing the backpack to the protective detail, and — if the items were returned to an owner — the release record naming them. Testing that stops because \"the person was on Charlie's team\" is exactly the kind of determination that has to be written down somewhere; either the record exists or the stop was undocumented, and both answers are findings.",
+      sources: [
+        { label: "Ep 360 [9:57–11:23] — Filomena: seizure, FBI lab, \"pull a plug,\" the FBI/ATF notes exchange (verbatim, re-read Jul 20 2026)", url: "https://www.youtube.com/watch?v=puuMVxEu5NU" },
+        { label: "Ep 361 [16:27–20:42] — Baker: exhibit 9, DNA processing halted, the page-20 \"Kirk's detail\" note authored by \"someone else within the laboratory\" (verbatim, re-read Jul 20 2026)", url: "https://www.youtube.com/watch?v=mLvJqdxS-FY" }
+      ],
+      requests: [
+        {
+          agencyId: "dps",
+          summary: "DPS/SBI — the seizure/property records and the stand-down communication for the bus-stop items",
+          subject: "GRAMA Request: property and evidence records concerning items seized at the Fulton Library bus stops, September 10, 2025",
+          records: "I request, concerning the September 10, 2025 Utah Valley University homicide investigation: (1) the property or evidence seizure records for the unattended items collected at or near the Fulton Library bus stops (a backpack, jacket, and gloves, and any other items in that seizure group); (2) any record of a communication from the State Bureau of Investigation to the FBI laboratory concerning whether those items were connected to the case or whether analysis should be discontinued; (3) the record of any determination that the items belonged to a member of the decedent's protective detail or to any other identified person; and (4) if the items were released or returned, the release record showing to whom and when. Personal identifiers of uninvolved private persons may be redacted; the existence, date, and authorship of the determination records is the request. If no record of the discontinuation communication exists, I request written confirmation of that fact.",
+          ask_no_records: true
+        },
+        {
+          agencyId: "fbi",
+          summary: "FBI — the lab communication log and the page-20 note attributing the backpack to Kirk's detail",
+          subject: "FOIA Request: laboratory communication log and case-note records concerning exhibit 9 (backpack), Utah Valley University homicide investigation",
+          records: "I request, concerning FBI laboratory processing in the September 10, 2025 Utah Valley University homicide investigation (State v. Robinson, Utah Fourth District No. 251403576): (1) the laboratory communication log entries concerning the backpack designated exhibit 9 and its contents, including the communication that DNA comparisons were no longer needed; (2) the case-note entry (referenced at the July 2026 preliminary hearing as appearing at page 20 of the examiner's notes) recording that the backpack belonged to the decedent's protective detail, together with records sufficient to show which agency or official communicated that information to the laboratory; and (3) any record of the laboratory's disposition of the item thereafter. Names of laboratory personnel may be redacted; the originating agency and role of the communicating official is the request. Expect and please state any Exemption 7(A) withholding in writing with the volume of records withheld.",
+          ask_no_records: true
+        }
+      ]
+    },
+    {
+      id: "twiggs-first-interview",
+      short: "Twiggs's first interview — where?",
+      challenge: "Testimony says St. George PD; the sworn warrants say FBI at Washington County. Both can't be right.",
+      categories: ["Witness statements", "Timeline contradictions"],
+      entities: ["twiggs", "davis", "fbi-ent", "wcso-ent"],
+      investigator: "Baron Coleman (Ep 141)",
+      investigatorLinks: [
+        { label: "Coleman Ep. 141 — the testimony vs. the sworn statements, side by side", url: "https://www.youtube.com/watch?v=yBDB-mpI-Xw" }
+      ],
+      status: "confirmed",
+      finding: "Agent Brian Davis testified that Lance Twiggs — Robinson's roommate — was interviewed twice, and that \"the first time was the early morning hours of September 12th and that occurred at St. George Police Department.\" Coleman's on-air response: the sworn statements submitted to a judge in the same case say \"on 9/12/2025 at approximately 0100 hours, FBI Special Agent Lang conducted an interview with the boyfriend of Tyler Robinson at the Washington County Sheriff's Office.\" Same interview, same night — two different buildings and two different agencies on the record, and the first-interview record itself has never been produced: the hearing used a recorded statement taken in April 2026 instead. (Both quotes verbatim from the Ep 141 read-through, re-verified Jul 20 2026.)",
+      implication: "Which building Twiggs was actually in at 1 a.m. on September 12 is answerable without touching the interview's content. Police facilities log who comes through them — visitor logs, interview-room schedules, officer-assist records for a federal agency using local space. One of the two records fights confirms its version; if neither facility has any record of hosting the interview, that absence is the sharper finding.",
+      sources: [
+        { label: "Ep 141 [1:37:23–1:38:14] — Davis: \"St. George Police Department\" vs. the sworn statement: \"Special Agent Lang... at the Washington County Sheriff's Office\" (verbatim)", url: "https://www.youtube.com/watch?v=yBDB-mpI-Xw" }
+      ],
+      requests: [
+        {
+          agencyId: "sgpd",
+          summary: "St. George PD — did the first Twiggs interview happen in your building?",
+          subject: "GRAMA Request: facility and interview-room records, early morning September 12, 2025",
+          records: "I request, for the period September 11, 2025, 9:00 p.m. through September 12, 2025, 6:00 a.m.: (1) any visitor log, lobby log, or facility sign-in record for the St. George Police Department; (2) any interview-room schedule, booking-area log, or officer-assist record reflecting an interview conducted at the facility during that window, including any interview conducted by or with the assistance of a federal agency; and (3) any record reflecting the presence of Lance Twiggs at the facility during that window. I am requesting administrative facility records only — not the content of any interview. If no responsive records exist, I request written confirmation of that fact; sworn testimony in State v. Robinson places an interview at your facility during this window, so the absence of any record would itself be significant.",
+          ask_no_records: true
+        },
+        {
+          agencyId: "wcso",
+          summary: "WCSO — or did it happen in yours, with FBI Special Agent Lang?",
+          subject: "GRAMA Request: facility and interview-room records, early morning September 12, 2025",
+          records: "I request, for the period September 11, 2025, 9:00 p.m. through September 12, 2025, 6:00 a.m.: (1) any visitor log, lobby log, or facility sign-in record for the Washington County Sheriff's Office; (2) any interview-room schedule or officer-assist record reflecting an interview conducted at the facility during that window by or with the assistance of the Federal Bureau of Investigation (sworn statements in State v. Robinson identify FBI Special Agent Lang conducting an interview at approximately 0100 hours); and (3) any record reflecting the presence of Lance Twiggs at the facility during that window. I am requesting administrative facility records only — not the content of any interview. If no responsive records exist, I request written confirmation of that fact.",
+          ask_no_records: true
+        }
+      ]
     }
   ],
 
@@ -1342,6 +1417,18 @@ const FOIA = {
     { id: "gap-suv-processed", label: "Was the transport SUV processed?",
       question: "Photos show a charred object — plausibly the victim's burned shirt — left in the vehicle that carried Kirk to the hospital. A homicide victim's clothing is itemized somewhere. Either an intake log and processing record exist for that vehicle, or nobody ever processed it.",
       findings: ["transport-suv-contents", "me-chain"],
-      requests: [{ inv: "transport-suv-contents", idx: 0 }, { inv: "transport-suv-contents", idx: 1 }] }
+      requests: [{ inv: "transport-suv-contents", idx: 0 }, { inv: "transport-suv-contents", idx: 1 }] },
+    { id: "gap-backpack-owner", label: "Whose backpack was at the bus stop?",
+      question: "A backpack, jacket, and gloves on the shooter's flight route went to the FBI lab — then testing stopped, on a lab note (page 20) saying the backpack \"belongs to Kirk's detail,\" written by someone the examiner can't name. Who on the detail, who wrote the note, and who ordered the stand-down are all records.",
+      findings: ["backpack-stop-testing"],
+      requests: [{ inv: "backpack-stop-testing", idx: 0 }, { inv: "backpack-stop-testing", idx: 1 }] },
+    { id: "gap-twiggs-interview-where", label: "Where was Twiggs's first interview?",
+      question: "Sworn testimony: St. George PD. Sworn warrant statements: FBI Special Agent Lang at the Washington County Sheriff's Office. Same 1 a.m. interview, two buildings, two agencies — and the record of it has never been produced. Facility logs settle it.",
+      findings: ["twiggs-first-interview", "custody-timeline"],
+      requests: [{ inv: "twiggs-first-interview", idx: 0 }, { inv: "twiggs-first-interview", idx: 1 }] },
+    { id: "gap-nest-original", label: "Where's the original Nest file?",
+      question: "The courtroom copy of the doorbell video was cut mid-sequence and visibly degraded — and the homeowner's signed statement (bald driver, three passengers) says she could see things the played version doesn't show. The native cloud export, its metadata, and the processing chain answer whether that's compression or curation.",
+      findings: ["noble-report", "cut-footage"],
+      requests: [{ inv: "noble-report", idx: 1 }] }
   ]
 };
