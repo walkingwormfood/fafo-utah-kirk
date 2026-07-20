@@ -199,8 +199,7 @@ const FOIA = {
     { id: "sbi", name: "Utah SBI / DPS", type: "org" },
     { id: "wcso-ent", name: "Washington County SO", type: "org" },
     { id: "fbi-ent", name: "FBI", type: "org" },
-    { id: "tpusa", name: "TPUSA", type: "org" },
-    { id: "flock", name: "Flock Safety (ALPR vendor)", type: "company" }
+    { id: "tpusa", name: "TPUSA", type: "org" }
   ],
 
   investigations: [
@@ -453,8 +452,7 @@ const FOIA = {
       finding: "The Washington County Sheriff's Office video of Robinson's turn-in — the moment the official timeline starts — was reportedly deleted, per day-three testimony. A news organization's request was refused, then answered with a 30-day-retention deletion claim — yet on day four the state exhibited surrender footage cropped so tightly the timestamps were cut out, with Robinson facing away from the camera.",
       implication: "Government video of the most consequential arrest in Utah's history was not preserved — or was it? The retention schedule, the deletion authorization, the county's handling of the earlier request, and any litigation-hold notice are all administrative records, and the contradiction between \"deleted\" and the pleadings is exactly what they'd resolve.",
       sources: [
-        { label: "Day 3 testimony, Agent Brian Davis (State v. Robinson prelim)", url: "" },
-        { label: "Sam Parker — 13 officials who (he argues) knew Robinson was already in WCSO custody at the 7:51 PM Sept 11 presser (\"NOW YOU KNOW WHY THEY 'LOST' ALL THE SURVEILLANCE VIDEO\")", url: "https://x.com/BasedSamParker/status/2053915544420508047" }
+        { label: "Day 3 testimony, Agent Brian Davis (State v. Robinson prelim)", url: "" }
       ],
       requests: [
         {
@@ -654,67 +652,6 @@ const FOIA = {
           records: "I request, for the period September 10 – October 15, 2025, any record held by the Office of the Governor — including correspondence, directives, meeting notes, or coordination records with Utah Valley University, the FBI, or the Utah Department of Public Safety — concerning the removal of the medical tent and the excavation, resurfacing, or concreting of the courtyard area at Utah Valley University where the September 10, 2025 shooting occurred. The excavation contractor has stated publicly that this work was ordered by the FBI and the Governor of Utah; this request seeks the records of any such direction or coordination. If no such records exist, I request written confirmation of that fact.",
           ask_no_records: true,
           filed: "INVOICED — filed Jul 16, 2026, 11:29 a.m. by email to the Governor's records officer (Adam Duncan, aduncan@utah.gov). Response Jul 17, 2026: EXPEDITE DENIED and FEE WAIVER DENIED, both on the same ground — failed to show the request 'benefits the public rather than the person' under § 63G-2-204(4)(a); records officer wrote it was 'unclear how you intend to use records' and how the Utah public would access the intended publication. Prepayment required before any processing: invoice No. 260716AB1 / GO-071726-0087 = $276 (4.6 hrs staff time @ $60) + $75 out-of-state filing fee = $351.00, due Aug 3, 2026. Fee-waiver-denial OVERRIDE FILED Jul 17, 2026 to CAO Jon Pierpont (jonpierpont@utah.gov, cc Duncan) — within the 5-business-day window (deadline ~Jul 27, Pioneer Day-adjusted). Override cures Duncan's sole stated deficiency (names the free non-commercial public docket as the publication) and stacks all three G-302(5) waiver grounds; asks for a written per-ground explanation if re-denied. DO NOT PREPAY pending the override decision. Response .eml + invoice PDF archived to gdrive."
-        }
-      ]
-    },
-    {
-      id: "flock-alpr-preservation",
-      short: "Flock ALPR: preserved or purged?",
-      challenge: "Flock's cameras blanketed 9/10 — did any agency preserve the reads before the ~30-day auto-purge?",
-      categories: ["Missing & deleted footage"],
-      entities: ["robinson", "flock", "sbi", "davis", "wcso-ent"],
-      investigator: "Tucker Carlson Network (Flock monologue) · Flock's ~30-day retention",
-      investigatorLinks: [
-        { label: "Tucker Carlson Network — 'This Is How You Get a Revolution' (Flock LPRs)", url: "https://www.youtube.com/watch?v=r8WiovU29MM" }
-      ],
-      status: "reported",
-      finding: "Flock Safety automated license-plate readers blanket the Orem/UVU area and the I-15 corridor; the network captured plate reads of vehicles moving on September 10, 2025 and the days after — the UVU approach, the hospital drive, and the route south to Washington County. But Flock's default retention is ~30 days: raw reads auto-delete unless an agency places a legal/preservation hold or saves them to a case. Flock is a private vendor and can't be GRAMA'd — but per Flock's own policy the agency customer, not Flock, OWNS the data, and a purged read is permanently unrecoverable (\"not by the customer, not by Flock, not by AWS\"). The September 2025 reads are now well past 30 days, so unless a hold was placed that fall they are already gone — and only the agencies' own records show whether that happened.",
-      implication: "Three government records answer it: (1) any preservation/legal hold sent to Flock — its ABSENCE means the most-surveilled day in Utah's history was left to auto-delete; (2) the Flock search/audit log — every plate query investigators ran, exposing whether Robinson's, Qureshi's, or the hospital-drive vehicle was ever checked; (3) the Flock contract, which sets retention and data-sharing. If reads were preserved and show a timeline at odds with the state's, that is Brady material; if they were not, that is spoliation. Either way the paper is dispositive.",
-      sources: [
-        { label: "Tucker Carlson Network — Flock monologue (Harris County: ~3,700 LPRs, 500+ murders in 2025)", url: "https://www.youtube.com/watch?v=r8WiovU29MM" },
-        { label: "Flock Safety — LPR data hard-deleted on a rolling ~30-day default (AWS S3 lifecycle); customer owns the data; purged reads unrecoverable", url: "https://www.flocksafety.com/blog/how-does-flock-handle-license-plate-data-deletion" },
-        { label: "Flock Safety — LPR Policy (retention default + agency configuration)", url: "https://www.flocksafety.com/legal/lpr-policy" }
-      ],
-      requests: [
-        {
-          agencyId: "uvupd",
-          summary: "UVU PD — Flock preservation hold + search/audit log + vendor contract",
-          subject: "GRAMA Request: Flock/ALPR preservation hold, search-audit log, and vendor contract — September 2025 UVU homicide investigation",
-          records: "I request three categories of records concerning UVU Police Department's use of Flock Safety automated license-plate-reader (ALPR) data in connection with the September 10, 2025 Utah Valley University homicide investigation, on and around the UVU campus: (1) any preservation request, legal hold, or litigation-hold notice sent to Flock Safety (or any ALPR vendor) to prevent deletion of reads related to this investigation, including the date sent and the plates or date range covered; (2) the ALPR search/audit log for September 10 – October 15, 2025 showing queries run in connection with this investigation — querying user, plate or search term, timestamp, and stated reason/case number (unrelated third-party queries may be redacted); and (3) the department's current contract, service agreement, or data-processing agreement with Flock Safety, including data-retention settings and any data-sharing or network-access terms. The contract is a standing public record; if the investigation-related items are withheld under § 63G-2-305, I request the segregable public portions and a written denial citing the provision. If no preservation hold exists, I request written confirmation of that fact.",
-          ask_no_records: true,
-          filed: "NOT FILED — queued; the absence of a preservation hold is itself the finding."
-        },
-        {
-          agencyId: "orem",
-          summary: "Orem PD — Flock preservation hold + search/audit log + vendor contract",
-          subject: "GRAMA Request: Flock/ALPR preservation hold, search-audit log, and vendor contract — September 2025 UVU homicide investigation",
-          records: "I request three categories of records concerning the Orem Police Department's use of Flock Safety automated license-plate-reader (ALPR) data in connection with the September 10, 2025 Utah Valley University homicide investigation, within the City of Orem: (1) any preservation request, legal hold, or litigation-hold notice sent to Flock Safety (or any ALPR vendor) to prevent deletion of reads related to this investigation, including the date sent and the plates or date range covered; (2) the ALPR search/audit log for September 10 – October 15, 2025 showing queries run in connection with this investigation — querying user, plate or search term, timestamp, and stated reason/case number (unrelated third-party queries may be redacted); and (3) the city's current contract, service agreement, or data-processing agreement with Flock Safety, including data-retention settings and any data-sharing or network-access terms. The contract is a standing public record; if the investigation-related items are withheld under § 63G-2-305, I request the segregable public portions and a written denial citing the provision. If no preservation hold exists, I request written confirmation of that fact.",
-          ask_no_records: true,
-          filed: "NOT FILED — queued; the absence of a preservation hold is itself the finding."
-        },
-        {
-          agencyId: "ucso",
-          summary: "Utah County SO — Flock preservation hold + search/audit log + vendor contract",
-          subject: "GRAMA Request: Flock/ALPR preservation hold, search-audit log, and vendor contract — September 2025 UVU homicide investigation",
-          records: "I request three categories of records concerning the Utah County Sheriff's Office use of Flock Safety automated license-plate-reader (ALPR) data in connection with the September 10, 2025 Utah Valley University homicide investigation, in Utah County: (1) any preservation request, legal hold, or litigation-hold notice sent to Flock Safety (or any ALPR vendor) to prevent deletion of reads related to this investigation, including the date sent and the plates or date range covered; (2) the ALPR search/audit log for September 10 – October 15, 2025 showing queries run in connection with this investigation — querying user, plate or search term, timestamp, and stated reason/case number (unrelated third-party queries may be redacted); and (3) the office's current contract, service agreement, or data-processing agreement with Flock Safety, including data-retention settings and any data-sharing or network-access terms. The contract is a standing public record; if the investigation-related items are withheld under § 63G-2-305, I request the segregable public portions and a written denial citing the provision. If no preservation hold exists, I request written confirmation of that fact.",
-          ask_no_records: true,
-          filed: "NOT FILED — queued; the absence of a preservation hold is itself the finding."
-        },
-        {
-          agencyId: "dps",
-          summary: "DPS/SBI — Flock preservation hold + search/audit log + statewide-network access",
-          subject: "GRAMA Request: Flock/ALPR preservation hold, search-audit log, and vendor contract — September 2025 UVU homicide investigation",
-          records: "I request three categories of records concerning the Utah Department of Public Safety / State Bureau of Investigation use of Flock Safety automated license-plate-reader (ALPR) data in connection with the September 10, 2025 Utah Valley University homicide investigation, including any access to a statewide or shared ALPR network: (1) any preservation request, legal hold, or litigation-hold notice sent to Flock Safety (or any ALPR vendor) to prevent deletion of reads related to this investigation, including the date sent and the plates or date range covered; (2) the ALPR search/audit log for September 10 – October 15, 2025 showing queries run by DPS/SBI personnel in connection with this investigation — querying user, plate or search term, timestamp, and stated reason/case number (unrelated third-party queries may be redacted); and (3) the department's current contract, service agreement, data-processing agreement, or network-sharing agreement with Flock Safety, including data-retention settings and data-sharing terms. The contract is a standing public record; if the investigation-related items are withheld under § 63G-2-305, I request the segregable public portions and a written denial citing the provision. If no preservation hold exists, I request written confirmation of that fact.",
-          ask_no_records: true,
-          filed: "NOT FILED — queued; the absence of a preservation hold is itself the finding."
-        },
-        {
-          agencyId: "wcso",
-          summary: "Washington County SO — Flock preservation hold + search/audit log + vendor contract (I-15 south / surrender area)",
-          subject: "GRAMA Request: Flock/ALPR preservation hold, search-audit log, and vendor contract — September 2025 UVU homicide investigation",
-          records: "I request three categories of records concerning the Washington County Sheriff's Office use of Flock Safety automated license-plate-reader (ALPR) data in connection with the September 10-12, 2025 Utah Valley University homicide investigation, in Washington County and along the I-15 corridor south, including the area of the September 11 surrender: (1) any preservation request, legal hold, or litigation-hold notice sent to Flock Safety (or any ALPR vendor) to prevent deletion of reads related to this investigation, including the date sent and the plates or date range covered; (2) the ALPR search/audit log for September 10 – October 15, 2025 showing queries run in connection with this investigation — querying user, plate or search term, timestamp, and stated reason/case number (unrelated third-party queries may be redacted); and (3) the office's current contract, service agreement, or data-processing agreement with Flock Safety, including data-retention settings and any data-sharing or network-access terms. The contract is a standing public record; if the investigation-related items are withheld under § 63G-2-305, I request the segregable public portions and a written denial citing the provision. If no preservation hold exists, I request written confirmation of that fact.",
-          ask_no_records: true,
-          filed: "NOT FILED — queued; the absence of a preservation hold is itself the finding."
         }
       ]
     },
@@ -950,13 +887,11 @@ const FOIA = {
       investigator: "Diligent Denizen · Baron Coleman · Candace Owens",
       investigatorLinks: [
         { label: "Diligent Denizen — the on-camera staff interview (posted Jul 12)", url: "https://x.com/DiligentDenizen/status/2076405974597063038" },
-        { label: "Diligent Denizen — VIDEO of the physical receipt (Jul 16, 957K views): two eyewitnesses ID Robinson 8:55–9:47pm; his read — the 2h57m Panguitch→Orem drive makes the ~11pm Orem texts impossible, so \"the texts, the confession, and Lance Twiggs' testimony are ALL FAKE\"", url: "https://x.com/DiligentDenizen/status/2077905879341433104" },
-        { label: "Diligent Denizen — full Cowboy's Smokehouse visit (Jul 19): owner hands over the receipt (\"IS the ticket in question\") + full on-camera eyewitness interview", url: "https://x.com/DiligentDenizen/status/2078967048521036149" },
         { label: "Coleman Ep. 143 — the timeline math against the state's own texts", url: "https://www.youtube.com/watch?v=yBDB-mpI-Xw" },
         { label: "Interview video, archived", url: "https://web.archive.org/web/20260713050144/https://video.twimg.com/ext_tw_video/2076405353022095360/pu/vid/avc1/1280x720/CBzgt2rfdWeCpsLE.mp4" }
       ],
       status: "contested",
-      finding: "Two staff at Cowboy's Smokehouse in Panguitch — on camera, one of whom personally took Robinson's card at checkout near the 10 p.m. close — say they served him the evening of September 10 and are \"100%\" on the ID (face, voice, mannerisms; more certain than Lance Twiggs was about the stairwell figure). They reported it to the FBI, who took contact information and never followed up; the sighting reached Candace Owens months ago. Neither the prosecution nor the defense has ever contacted the restaurant. The math: fastest route Panguitch→UVU is ~2h46m, so a ~9:50 p.m. departure puts the earliest Orem arrival at ~12:36 a.m. — while the state's text-message exhibits have \"Robinson\" texting Twiggs from outside UVU, watching a lingering cop, with the first message at 11:00 p.m. A card payment record with a hard timestamp exists at a named business. Update (Jul 19): the owner of Cowboy's Smokehouse physically handed Diligent Denizen a copy of that receipt — \"it IS the ticket in question\" — confirmed the eyewitness on camera, and disclosed the restaurant had no working camera the night of the sighting and is now fielding harassing calls. (Status contested: the interview is on tape and archived; the sighting itself is a witness claim outside the court record — which is exactly the problem the records requests attack.)",
+      finding: "Two staff at Cowboy's Smokehouse in Panguitch — on camera, one of whom personally took Robinson's card at checkout near the 10 p.m. close — say they served him the evening of September 10 and are \"100%\" on the ID (face, voice, mannerisms; more certain than Lance Twiggs was about the stairwell figure). They reported it to the FBI, who took contact information and never followed up; the sighting reached Candace Owens months ago. Neither the prosecution nor the defense has ever contacted the restaurant. The math: fastest route Panguitch→UVU is ~2h46m, so a ~9:50 p.m. departure puts the earliest Orem arrival at ~12:36 a.m. — while the state's text-message exhibits have \"Robinson\" texting Twiggs from outside UVU, watching a lingering cop, with the first message at 11:00 p.m. A card payment record with a hard timestamp exists at a named business. (Status contested: the interview is on tape and archived; the sighting itself is a witness claim outside the court record — which is exactly the problem the records requests attack.)",
       implication: "If the tip is wrong, the case file shows it was run down and excluded — routine. If the tip was never run down, a 100%-ID alibi sighting with a checkable payment record sat in the FBI's intake while the state built a timeline it contradicts. Either way the paper answers: the tip/lead log entry, and any record of follow-up, are discrete administrative records on the state side. (The FBI intake itself is federal — that request lives on the federal FAFO.) Coleman's read of the same facts: \"either the texts are fabricated... or someone was pretending to be Tyler.\"",
       sources: [
         { label: "On-camera interview (3:09), receipts + Wayback archives in the library", url: "https://web.archive.org/web/20260713050134/https://cdn.syndication.twimg.com/tweet-result?id=2076405974597063038&token=a" },
@@ -975,40 +910,6 @@ const FOIA = {
           summary: "Utah County Attorney — any record the prosecution received or ran down the Panguitch tip",
           subject: "GRAMA Request: records concerning a reported alibi sighting, State v. Robinson",
           records: "I request any record held by the Utah County Attorney's Office documenting receipt of, or follow-up on, information that the defendant in State v. Robinson was seen in Panguitch, Utah on the evening of September 10, 2025 — including any referral from a law-enforcement agency, any internal memorandum, and any record of contact or attempted contact with the business or the reporting witnesses. If no responsive records exist, I request written confirmation of that fact.",
-          ask_no_records: true
-        }
-      ]
-    },
-    {
-      id: "hospital-searcher",
-      challenge: "Someone went hospital-to-hospital hunting Charlie Kirk — locking hospitals down — reportedly a fed.",
-      short: "The hospital searcher",
-      categories: ["Timeline contradictions"],
-      entities: ["fbi-ent", "charlie-kirk", "bagley", "sbi"],
-      investigator: "Baron Coleman (Ep. 147 — police audio)",
-      investigatorLinks: [
-        { label: "Coleman Ep. 147 — the hospital police audio", url: "https://www.youtube.com/watch?v=DzzvnsEXOOk" }
-      ],
-      status: "reported",
-      finding: "In the immediate aftermath on September 10, an armed man went hospital to hospital (Utah Valley Hospital, Timpanogos Regional, others) demanding to know where Charlie Kirk was — before any public narrative. It triggered a hospital lockdown: a witness at Timpanogos Regional documented caution tape, police vehicles, an ME vehicle and tactical officers, the hospital sealed ~5:19–5:40 p.m. (\"told me I can't leave\"). Per the police audio Coleman walks through, the searcher was described as HEAVY SET and, in his read, \"was an FBI guy, apparently.\" Two other men were briefly and wrongly conflated with him — Zechariah Qureshi (reported \"in tactical gear going hospital to hospital\") and Andrew Piscaldo, \"the one-armed man\" (officially confirmed on the audio as \"not involved\").",
-      implication: "A heavy-set armed man searching hospitals for the victim before any public suspect existed — reportedly a federal agent — is either in the record or it isn't. And the build cuts against the shooter: Officer Bagley (the first officer to the Losee roof, whose bodycam then died) described the roof figure as \"NOT heavy set\" — so the hospital searcher is not the person on the roof. The dispatch/CAD audio for the hospital calls, any report identifying the hospital-search subject or their agency, and the lockdown coordination are discrete records; the \"not heavy set\" roof description is already in the preliminary-hearing record.",
-      sources: [
-        { label: "Coleman Ep. 147 police audio; Timpanogos Regional witness posts (hospital lockdown, ~5:19–5:40 p.m.)", url: "https://www.youtube.com/watch?v=DzzvnsEXOOk" },
-        { label: "Officer Bagley preliminary-hearing testimony — roof figure described as \"not heavy set\"", url: "" }
-      ],
-      requests: [
-        {
-          agencyId: "dps",
-          summary: "DPS/SBI — dispatch/CAD for the hospital-search calls + any report identifying the subject",
-          subject: "GRAMA Request: dispatch/CAD records concerning an individual searching hospitals for the victim, September 10, 2025",
-          records: "I request the computer-aided dispatch (CAD) and radio log records, and any incident or information report, concerning reports on September 10, 2025 of an individual going between hospitals (including Utah Valley Hospital and Timpanogos Regional Hospital) seeking the location of Charlie Kirk in connection with the Utah Valley University homicide investigation — including any record identifying that individual or their agency, any BOLO or lookout issued, and any record of the resulting hospital-lockdown coordination. Unrelated calls for service may be redacted. If no responsive records exist, I request written confirmation of that fact, including a description of the search conducted.",
-          ask_no_records: true
-        },
-        {
-          agencyId: "orem",
-          summary: "Orem PD — dispatch/incident records for the hospital lockdown, Sept 10",
-          subject: "GRAMA Request: dispatch and incident records concerning a hospital lockdown, September 10, 2025",
-          records: "I request the dispatch/CAD and any incident report records held by the Orem Police Department concerning the lockdown of, or law-enforcement response to, Timpanogos Regional Hospital (and any other Orem-area hospital) on September 10, 2025 in connection with reports of an individual searching for Charlie Kirk — including the reason for the lockdown, the agency that requested it, and any record identifying the individual whose conduct prompted it. If no responsive records exist, I request written confirmation of that fact.",
           ask_no_records: true
         }
       ]
@@ -1161,8 +1062,7 @@ const FOIA = {
       entities: ["robinson", "sbi"],
       investigator: "Baron Coleman",
       investigatorLinks: [
-        { label: "Ep. 142 — Day Four", url: "https://www.youtube.com/watch?v=6ZZ_e53ZDnY" },
-        { label: "Rob O'Neill (SEAL Team 6, killed bin Laden) on Newsmax: \"I've killed more than a handful of people... I've never seen a shirt move like that, that looks like an explosion to me\" — plus a Brigadier General questioning the same wound ballistics", url: "https://x.com/VladTheInflator/status/2078977593597120930" }
+        { label: "Ep. 142 — Day Four", url: "https://www.youtube.com/watch?v=6ZZ_e53ZDnY" }
       ],
       status: "confirmed",
       finding: "Day-four testimony: the comparison of the recovered bullet-jacket fragment to the charged rifle was \"inconclusive\" — it \"could not be identified or excluded\" — and the examiner measured the fragment at .286–.301 inches, below the .308-inch bullet diameter of a .30-06. A GSR analysis was performed on the car and never introduced.",
@@ -1246,8 +1146,7 @@ const FOIA = {
       finding: "Agent Davis testified he flew to St. George the night of September 11 — a state aircraft landed there at ~11:37 p.m. — putting lead investigators in Washington County hours after the earliest claimed custody time.",
       implication: "State aircraft generate flight logs and passenger manifests. Who flew south that night, and when the flight was tasked, is a hard timestamp against the shifting custody timeline.",
       sources: [
-        { label: "Day 3 testimony; public flight tracking", url: "" },
-        { label: "Sam Parker — WCSO Attorney confirmed a Sept 11 Washington County arrest; Robinson Mirandized 6:25 PM (1.5 hrs before the 7:57 PM Discord message), and Davis reached WCSO by ~10 PM despite the 3+ hr drive — the night flight is what closes that gap", url: "https://x.com/BasedSamParker/status/2055008839985135940" }
+        { label: "Day 3 testimony; public flight tracking", url: "" }
       ],
       requests: [
         {
