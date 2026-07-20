@@ -950,6 +950,7 @@ const FOIA = {
       investigator: "Diligent Denizen · Baron Coleman · Candace Owens",
       investigatorLinks: [
         { label: "Diligent Denizen — the on-camera staff interview (posted Jul 12)", url: "https://x.com/DiligentDenizen/status/2076405974597063038" },
+        { label: "Diligent Denizen — VIDEO of the physical receipt (Jul 16, 957K views): two eyewitnesses ID Robinson 8:55–9:47pm; his read — the 2h57m Panguitch→Orem drive makes the ~11pm Orem texts impossible, so \"the texts, the confession, and Lance Twiggs' testimony are ALL FAKE\"", url: "https://x.com/DiligentDenizen/status/2077905879341433104" },
         { label: "Diligent Denizen — full Cowboy's Smokehouse visit (Jul 19): owner hands over the receipt (\"IS the ticket in question\") + full on-camera eyewitness interview", url: "https://x.com/DiligentDenizen/status/2078967048521036149" },
         { label: "Coleman Ep. 143 — the timeline math against the state's own texts", url: "https://www.youtube.com/watch?v=yBDB-mpI-Xw" },
         { label: "Interview video, archived", url: "https://web.archive.org/web/20260713050144/https://video.twimg.com/ext_tw_video/2076405353022095360/pu/vid/avc1/1280x720/CBzgt2rfdWeCpsLE.mp4" }
