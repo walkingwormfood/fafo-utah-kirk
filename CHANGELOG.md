@@ -2,6 +2,15 @@
 
 What's new in FAFO Utah — Charlie Kirk Edition. Newest first.
 
+## 2026-07-21 (later) — Crane–AES card synced to the OG rebuild
+
+The **Crane–AES explosives contract** card was moved here in the Jul 17 one-docket commit still carrying un-audited Opus-era text — it missed the transcript audits and today's staleness pass both. Now synced to the fully re-verified rebuild on the federal deck (OG commit 2d0ba6b):
+
+- **Verified production facts on the card**: the Jun 23, 2026 Navy FOIA production — 33 pages, firm-fixed-price "demolition charge, AP, extra small mini," ~$440,000 total with quantity and unit price redacted, ordered ~Apr 1, 2025 with a firm Aug 25, 2025 delivery date, sensitivity category 1.1D (the mass-casualty tier), the additive-manufacturing clause with tolerance deviations accepted "provided assembly may be completed," B7F on the project code / operational-requirement name / quantities, and the SAM.gov discovery route (found two days after the blast). AES destroyed Oct 10, 2025, 16 dead; the EPA's September 2025 citation of the Crane installation broke the next day.
+- **Demotions applied**: "sole-source" is now what the J&A request TESTS, not a stated fact (the production shows firm-fixed-price but not competition status); "C4-based" demoted to Coleman's read off a partly redacted line, with the TriggerSmart PETN dispute flagged as unresolved; "novel/prototype" demoted to his inference from the 3D-print clause. His Kirk-connection hypothesis stays labeled as his, disclaimed on air at least three times — the requests test the record, not the hypothesis.
+- **All three requests now carry mail-verified statuses**: the two NAVSEA FOIAs (J&A + requirements doc; DD Form 250 + post-Oct-10 modifications) filed Jul 21 by email, determinations due ~Aug 18; the EPA violation-file request filed Jul 21 via FOIA.gov (confirmation 3042521), case 2026-EPA-06621 assigned same day, due ~Aug 18.
+- Registry check: `navsea`, `epa`, `aes`, and `nswc-crane` were already wired in from the Jul 17 move — no additions, no orphans.
+
 ## 2026-07-21 — Full-deck staleness pass: two formal denials on appeal, the misrouted overrides resent, and the docket numbers folded in
 
 Every card's filed/status text swept against today's mail and the results ledger; nothing left saying yesterday's posture:

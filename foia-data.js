@@ -350,35 +350,39 @@ const FOIA = {
       entities: ["aes", "nswc-crane", "dod", "charlie-kirk"],
       investigator: "Baron Coleman",
       investigatorLinks: [
-        { label: "\"Explosive\" Documents FOIA; AES Documents Produced — Ep 135", url: "https://www.youtube.com/watch?v=l3lKV39xOjs&t=1742s" }
+        { label: "\"Explosive\" Documents FOIA; AES Documents Produced — Ep 135 (document walkthrough begins ~29:00)", url: "https://www.youtube.com/watch?v=l3lKV39xOjs&t=1742s" }
       ],
       status: "reported",
-      finding: "Baron Coleman obtained, via a Navy FOIA answered June 23, 2026, 33 pages on a contract between Naval Surface Warfare Center, Crane Division (Crane, Indiana) and Accurate Energetic Systems (AES) — the Tennessee explosives plant destroyed with 16 dead on October 10, 2025 — for a C4-based \"demolition charge, AP, extra small mini\" (~$440,000), ordered around April 1, 2025 with a firm August 25, 2025 delivery date. The production applied the rare exemption B7F (disclosure \"could reasonably be expected to endanger the life or physical safety of any individual\") to the project code, the operational requirement name, and quantities; the statement of work unusually permitted additive manufacturing (3D printing) with tolerance deviations accepted \"provided assembly may be completed.\" The day after the AES blast, news broke that EPA had cited Crane in September 2025 for mishandling hazardous waste and explosives.",
-      implication: "A sole-source buy of a novel miniature anti-personnel charge, on a hard deadline, whose very requirement name is withheld as life-endangering — followed within weeks by the destruction of its manufacturer. The procurement paperwork that must exist answers what B7F conceals: the sole-source Justification & Approval states the requirement and why AES; the receiving report shows who accepted delivery and when; post-October-10 contract modifications show how the government closed out a contract with a vendor that had ceased to exist. (The contract facts are from the produced FOIA documents as shown on-screen by Coleman; any connection to the Kirk assassination is his explicitly-labeled hypothesis — these requests test the record, not the hypothesis.)",
+      finding: "Baron Coleman — a Tennessee lawyer who does FOIA and records work about 60 miles from the plant — obtained, via a Navy FOIA answered June 23, 2026, a 33-page production on a contract between Naval Surface Warfare Center, Crane Division (Crane, Indiana) and Accurate Energetic Systems (AES) — the McEwen, Tennessee explosives plant destroyed with 16 dead on October 10, 2025 — for a firm-fixed-price \"demolition charge, AP, extra small mini\" (~$440,000 total; quantity and unit price redacted), ordered around April 1, 2025 with a firm August 25, 2025 delivery date. He found the award on SAM.gov two days after the blast and reads the production on air page by page. The production applied the rare exemption B7F (disclosure \"could reasonably be expected to endanger the life or physical safety of any individual\") to the project code, the operational-requirement name, and quantities; the statement of work permitted additive manufacturing (3D printing) with dimensional-tolerance deviations accepted \"provided assembly may be completed\"; and the item's sensitivity category is 1.1D — the mass-casualty tier. Coleman reads the explosive as Composition C4 off a partly redacted line (a TriggerSmart researcher has said PETN; Coleman concedes the point is unresolved). The day after the AES blast, news broke that EPA had cited the Crane installation in September 2025 for mishandling hazardous waste and explosives.",
+      implication: "A buy of a miniature anti-personnel charge on a hard deadline, whose very requirement name is withheld as life-endangering — followed within weeks by the destruction of its manufacturer. What the production withholds is what the procurement file must still contain: if the award was made without full and open competition, a Justification & Approval names the requirement and why AES (whether one exists is itself a finding — the production shows firm-fixed-price but not the competition status); the DD Form 250 receiving report shows who accepted delivery and when; post-October-10 contract modifications show how the government closed out a contract with a vendor that had ceased to exist; and EPA's own violation file fixes the regulator's paper on conditions at Crane. (The contract facts are read off the produced FOIA documents as shown on-screen by Coleman — the full transcript and digest are preserved in the FAFO library. His \"prototype, not standard Navy inventory\" read of the 3D-print clause is his inference, and any connection to the Kirk assassination is his explicitly-labeled hypothesis, disclaimed on air at least three times — these requests test the record, not the hypothesis.)",
       sources: [
-        { label: "Baron Coleman, Ep 135 — document walkthrough begins ~29:00", url: "https://www.youtube.com/watch?v=l3lKV39xOjs&t=1742s" }
+        { label: "Baron Coleman, Ep 135 — the Navy's 33-page production read on air (full transcript + digest in the FAFO library)", url: "https://www.youtube.com/watch?v=l3lKV39xOjs&t=1742s" },
+        { label: "SAM.gov — AES federal award records (the public anchor the thread rests on)", url: "https://sam.gov" }
       ],
       requests: [
         {
           agencyId: "navsea",
-          summary: "NAVSEA — the sole-source Justification & Approval for the Crane–AES \"extra small\" charge",
+          summary: "NAVSEA — the J&A / sole-source justification + requirements document for the Crane–AES \"extra small\" charge",
           subject: "FOIA Request: Justification & Approval and requirements document for NSWC Crane contract with Accurate Energetic Systems (demolition charge, AP, extra small mini)",
           records: "I request a copy of the Justification and Approval (J&A) for other than full and open competition, or any limited-source or sole-source justification, supporting the contract awarded in or around April 2025 by Naval Surface Warfare Center, Crane Division to Accurate Energetic Systems, LLC (McEwen, Tennessee) for the item described in the statement of work as \"demolition charge, AP, extra small mini,\" together with the purchase request or requirements document stating the operational requirement the procurement supported. To keep this request narrow and minimize search burden, I am not seeking general email correspondence.",
-          ask_no_records: true
+          ask_no_records: true,
+          filed: "PENDING — filed Jul 21, 2026 by email to NAVSEAFOIA@navy.mil; confirmed in the sent-mail record. No acknowledgment yet. Determination due ~Aug 18, 2026."
         },
         {
           agencyId: "navsea",
           summary: "NAVSEA — acceptance record + any post-explosion modification/close-out of the same contract",
           subject: "FOIA Request: DD Form 250 and post-October 2025 modifications for NSWC Crane contract with Accurate Energetic Systems",
           records: "I request a copy of the material inspection and receiving report (DD Form 250) or equivalent acceptance record, and any contract modification, termination notice, or close-out document dated after October 10, 2025, for the contract awarded in or around April 2025 by Naval Surface Warfare Center, Crane Division to Accurate Energetic Systems, LLC (McEwen, Tennessee) for the item described as \"demolition charge, AP, extra small mini.\" To keep this request narrow and minimize search burden, I am not seeking general email correspondence.",
-          ask_no_records: true
+          ask_no_records: true,
+          filed: "PENDING — filed Jul 21, 2026 by email to NAVSEAFOIA@navy.mil; confirmed in the sent-mail record. No acknowledgment yet. Determination due ~Aug 18, 2026."
         },
         {
           agencyId: "epa",
           summary: "EPA — the September 2025 notice of violation to Crane for hazardous-waste/explosives handling",
           subject: "FOIA Request: EPA notice of violation and inspection report concerning Naval Support Activity Crane (September 2025)",
           records: "I request a copy of the notice of violation or enforcement notice issued by the U.S. Environmental Protection Agency in or around September 2025 to Naval Support Activity Crane and/or Crane Army Ammunition Activity (Crane, Indiana) concerning the handling, storage, or management of hazardous waste and explosives, together with the underlying RCRA inspection report and any written response from the Navy or Army, dated between June 1, 2025 and the date this request is processed. To keep this request narrow and minimize search burden, I am not seeking general email correspondence.",
-          ask_no_records: true
+          ask_no_records: true,
+          filed: "PENDING — filed Jul 21, 2026 via FOIA.gov (confirmation 3042521); EPA case number 2026-EPA-06621 assigned the same day. Determination due ~Aug 18, 2026."
         }
       ]
     },
