@@ -112,7 +112,7 @@ const FOIA = {
       portalNote: "eFOIPA works best as one subject per submission — don't combine requests. The link lands on the eFOIPA home page: click through the agreement step to reach the form (it's an interactive app behind reCAPTCHA, so there's no deep link and no scripted filing — a human clicks it through). Choose the request type for records about a topic/organization (not about yourself), and paste the portal version into the request-description box; the form collects your name, address, and fee preference in its own fields." },
     { id: "atfagency", name: "Bureau of Alcohol, Tobacco, Firearms and Explosives", email: null, fed: true,
       portal: "https://dojatf.secureocp.com/app/Home.aspx",
-      submitNote: "This button opens ATF's FOIA Public Access Portal directly (dojatf.secureocp.com). Register or Sign In, then submit the request — ATF takes FOIA ONLY through this portal and no longer accepts email (verified Jul 2026); the registration confirmation comes from noreply@ains.com, so safelist it. Paste the request text into the description field; the portal collects your name, address, and fee preference in its own fields. Requester Service Center: 202-648-8740. Expect Exemption 7(A) claims while the related prosecution is pending; the written denial still fixes what records exist." },
+      submitNote: "This button opens ATF's FOIA Public Access Portal directly (dojatf.secureocp.com). Register or Sign In, then submit the request — ATF takes FOIA ONLY through this portal and no longer accepts email (verified Jul 2026); the registration confirmation comes from noreply@ains.com, so safelist it. Paste the request text into the description field; the portal collects your name, address, and fee preference in its own fields. Requester Service Center: 202-648-8740. Expect Exemption 7(A) claims while the related prosecution is pending — and don't count on the denial fixing what records exist: the Jul 20, 2026 full denial of 2026-01995 came with no document inventory and no segregability finding." },
     { id: "dod", name: "U.S. Department of Defense (OSD / Joint Staff — WHS)", email: null, fed: true,
       portal: "https://pal.whs.mil/",
       submitNote: "This button opens the OSD/Joint Staff FOIA Public Access Link portal directly (pal.whs.mil) — the actual request form, skipping the WHS info page. This office (OSW/JS FOID) processes records held by the Office of the Secretary of Defense/Joint Staff, which explicitly includes Public Affairs and the OSD-level offices — so it's the right one for both DoD asks here (OSD strategic-communications contracting and DoD public-affairs activity). Paste the request text into the form. DoD's own fee-waiver factors are at 32 C.F.R. § 286.28(d), and its expedite standard at 32 C.F.R. § 286.28 — the request's statutory § 552 language covers you, but you can cite the DoD reg if the form asks. If a record turns out to belong to a different DoD component (e.g., Department of the Army), WHS refers it, or file that component via FOIA.gov." },
@@ -220,7 +220,7 @@ const FOIA = {
       ],
       status: "confirmed",
       finding: "ATF's DNA section chief (Katelyn Oliver) testified on the final day of the Robinson preliminary hearing that NINE evidence samples were entirely consumed in testing — no split preserved for independent defense retesting, against the practice recommended since the 1996 NRC report — that the reported \"1 trillion times more likely\" figures are a reporting CAP, and that elimination testing showed \"support for inclusion\" of the defendant's father on the rifle bolt and of Lance Twiggs on the Dremel tool.",
-      implication: "The federal lab records behind the state's DNA case are ATF records: the three reports, the case notes containing the permission-to-consume authorization, and the elimination-sample paperwork. Expect Exemption 7(A) while the prosecution is pending — the written response still fixes on paper what exists and what was destroyed.",
+      implication: "The federal lab records behind the state's DNA case are ATF records: the three reports, the case notes containing the permission-to-consume authorization, and the elimination-sample paperwork. The anticipated Exemption 7(A) wall arrived Jul 20, 2026 — but as a blanket full denial with no document inventory and no segregability finding, it fixes nothing on paper about what records exist or what was destroyed. That silence is itself a ground of the pending appeal.",
       sources: [
         { label: "Day 5 courtroom audio (whisper transcript), Jul 10 2026 — direct and cross of ATF examiner Katelyn Oliver", url: "" }
       ],
@@ -231,7 +231,7 @@ const FOIA = {
           subject: "FOIA Request: ATF DNA laboratory records concerning the Utah Valley University homicide investigation",
           records: "I request, concerning ATF Forensic Science Laboratory DNA analyses performed for the September 10, 2025 Utah Valley University homicide investigation (State v. Robinson, Utah Fourth District No. 251403576), whose author testified publicly at the July 10, 2026 preliminary hearing: (1) the three DNA examination reports authored by the DNA section chief (admitted in court as exhibits 30 and 34, plus the elimination-sample report referenced as report 157); (2) the case-file record authorizing complete consumption of samples 1.4, 1.6, 1.9, 1.10, 1.12, 2.1, 3.1, 4.1, and 5.1, including the permission-to-consume communication referenced in testimony; and (3) the records of elimination-sample requests made to household members and to investigating agents, including whether the agents' samples were ever provided. These records were described in public testimony; I am not seeking the underlying DNA profiles or any person's genetic data.",
           ask_no_records: true,
-          filed: "PENDING \u2014 filed Jul 17, 2026 via ATF\u2019s FOIA Public Access Portal (dojatf.secureocp.com). Requester category News Media; fee waiver requested (\u00a7 552(a)(4)(A)(iii)); expedited processing requested under 28 C.F.R. \u00a7 16.5(e)(1)(ii) AND (iv) \u2014 disseminator status plus the government-integrity / widespread-media-interest ground, with certification. Date range 09/10/2025\u201307/31/2026. Registration confirmation comes from noreply@ains.com. FOIPA tracking number to follow. Expect Exemption 7(A) while State v. Robinson is pending."
+          filed: "DENIED IN FULL \u2014 ON APPEAL. Filed Jul 17, 2026 via ATF\u2019s FOIA Public Access Portal (dojatf.secureocp.com) \u2014 requester category News Media; fee waiver requested (\u00a7 552(a)(4)(A)(iii)); expedited processing requested under 28 C.F.R. \u00a7 16.5(e)(1)(ii) AND (iv); date range 09/10/2025\u201307/31/2026 \u2014 logged as ATF 2026-01995. Jul 20, 2026: denied IN FULL under 5 U.S.C. \u00a7 552(b)(7)(A) \u2014 'the investigation relating to your request is still open' \u2014 signed Hirsh D. Kravitz, Chief, Information and Privacy Governance Division. The portal's 'documents delivered' notice was the determination letter itself: no document inventory, no segregability finding \u2014 the denial confirms nothing about which of the requested records exist, itself now an appeal ground. Administrative appeal A-2026-01952 filed via FOIA STAR Jul 21, 2026, with expedited processing requested under Standard 4; OIP response due Aug 18, 2026."
         }
       ]
     },
@@ -468,7 +468,8 @@ const FOIA = {
           summary: "UVU PD — Bagley's bodycam footage plus the device's audit/battery logs",
           subject: "GRAMA Request: body-worn camera footage and device audit logs, September 10, 2025",
           records: "I request: (1) all body-worn camera footage recorded on September 10, 2025 by the UVU police officer who first accessed the Losee Center rooftop; (2) the device audit log for that officer's body-worn camera for September 10, 2025 — including power-on/power-off events, battery-depletion events, docking and upload timestamps; and (3) the department's body-worn camera policy in effect on that date, including battery-management and activation requirements.",
-          ask_no_records: true
+          ask_no_records: true,
+          filed: "PENDING, two rounds. Round one: UVU #26-215 — EXPEDITE DENIED Jul 16, 2026, on the same § 63G-2-204(4)(a) 'failed to meet that burden' public-benefit finding UVU issued across the deck; the standard 10-business-day clock still runs, substantive response due ~Jul 27. Round two, filed Jul 21, 2026 directly to UVU PD by email (uvpdrecords@uvu.edu): the rooftop officer's BWC footage + the device audit log (power/battery events) + the BWC policy, expedite requested; due ~Aug 5."
         },
         {
           agencyId: "ucso",
@@ -484,7 +485,7 @@ const FOIA = {
           subject: "GRAMA Request: crime scene access log and assisting-agency roster, September 10, 2025",
           records: "I request: (1) the crime scene access/entry log maintained for the Losee Center rooftop and the courtyard scene at Utah Valley University on September 10–11, 2025; and (2) any roster, mutual-aid record, or deployment list identifying the law-enforcement agencies and personnel (including plainclothes personnel) present on the UVU campus on September 10, 2025 in connection with the incident response.",
           ask_no_records: true,
-          filed: "PENDING — filed via NextRequest as UVU #26-231, Jul 17, 2026; acknowledged Jul 17. EXPEDITE DENIED (same finding). 10-business-day clock, due ~Aug 1."
+          filed: "PENDING, two rounds. Round one: UVU #26-214 — EXPEDITE DENIED Jul 16, 2026, on the § 63G-2-204(4)(a) 'failed to meet that burden' public-benefit finding; substantive response due ~Jul 27. Round two: filed via NextRequest as UVU #26-231, Jul 17, 2026; acknowledged Jul 17; EXPEDITE DENIED (same finding); 10-business-day clock, due ~Aug 1."
         }
       ]
     },
@@ -546,7 +547,7 @@ const FOIA = {
           subject: "GRAMA Request: K9 unit deployment records, UVU campus, September 10–11, 2025",
           records: "I request the K9 deployment or utilization records for any canine unit deployed to the Utah Valley University campus or surrounding area on September 10–11, 2025 — including the handler log or deployment report identifying each unit, its certification/discipline (tracking, article search, explosives, or firearms detection), its tasking, and the recorded outcome of each deployment.",
           ask_no_records: true,
-          filed: "PENDING — filed via NextRequest as Utah County request #26-2812, Jul 13, 2026. Identified via the county's Jul 15 closure of #26-2833 (an accidental duplicate) under § 63G-2-201(7)(a)(iv): 'A response will be provided through request 26-2812.'"
+          filed: "PENDING — filed via NextRequest as Utah County request #26-2812, Jul 13, 2026. Identified via the county's Jul 15 closure of #26-2833 (an accidental duplicate) under § 63G-2-201(7)(a)(iv): 'A response will be provided through request 26-2812.' Response due ~Jul 27 — the parallel track to the Orem denial now on appeal."
         },
         {
           agencyId: "orem",
@@ -557,11 +558,15 @@ const FOIA = {
             { label: "filed Jul 15, 2026 by email to records@orem.gov",
               records: "I request the K9 deployment or utilization records for any City of Orem canine unit deployed in connection with the Utah Valley University incident response on September 10–11, 2025 — including handler logs identifying each unit, its certification/discipline, its tasking, and the recorded outcome.",
               outcome: "DENIED same day by Records Specialist Angela Campbell (801-229-7298): (1) missing § 63G-2-204 requester information — full mailing address and daytime phone; (2) duplicate submission.",
-              refinement: "Request text unchanged — the cure is procedural: the complete § 204 requester block (name, full street/city/state/ZIP, daytime phone, email) now leads the letter, filed once. The generator letterhead carries these fields for every Utah request going forward." }
+              refinement: "Request text unchanged — the cure is procedural: the complete § 204 requester block (name, full street/city/state/ZIP, daytime phone, email) now leads the letter, filed once. The generator letterhead carries these fields for every Utah request going forward." },
+            { label: "re-filed (cured) Jul 16, 2026, 12:29 p.m. by email to records@orem.gov",
+              records: "I request the K9 deployment or utilization records for any City of Orem canine unit deployed in connection with the Utah Valley University incident response on September 10–11, 2025 — including handler logs identifying each unit, its certification/discipline, its tasking, and the recorded outcome.",
+              outcome: "Answered informally the SAME DAY by the records officer (Angela): 'anything related to September 10, 2025 cannot be released since it's an active investigation... out of our hands till the trial is over,' with future requests directed to orem.gov/recordsrequest/. An active-investigation withholding (cf. Utah Code § 63G-2-305) stated without the formal written determination GRAMA requires (§ 63G-2-205).",
+              refinement: "None — the request stood as filed; the formal written determination remained owed on this re-file, and it arrived Jul 21." }
           ],
           refined: true,
           ask_no_records: true,
-          filed: "RE-FILED (cured) Jul 16, 2026, 12:29 p.m. by email to records@orem.gov — complete § 63G-2-204 requester block (full mailing address + daytime phone), single copy — CONFIRMED sent (verified against the inbox). Records officer (Angela) replied the SAME DAY that it cannot be granted: 'anything related to September 10, 2025 cannot be released since it's an active investigation... out of our hands till the trial is over,' and directed future requests to orem.gov/recordsrequest/. That is an active-investigation withholding (cf. Utah Code § 63G-2-305) — NOT an automatic bar, and contestable. Because she stated it informally before the cured re-file landed, a formal written determination on the re-file may still be owed; the substantive posture, though, is already a no."
+          filed: "DENIED — twice in one day — and ON APPEAL. Jul 21, 2026, 11:43 a.m.: Orem issued its formal written denial — the Utah County Attorney's Office 'has requested that these records be classified as Protected under Utah Code § 63G-2-305(10)'; 'the City is compelled to classify... As such, your request is herein formally denied.' A formal cure was sent at 12:45 p.m. the same day; Orem re-denied at 1:50 p.m. — 65 minutes later — on a denial form listing the record as 'K9 inquiry' and the ground as 'Active Case,' citing no subsection of § 305(10) and making no interference finding. GRAMA appeal filed with City Manager (CAO) Brenn Bybee the same evening under § 63G-2-401; determination due ~Aug 5, 2026 (Pioneer Day-adjusted). All further questions were pointed at the Utah State Bureau of Investigation."
         }
       ]
     },
@@ -597,7 +602,7 @@ const FOIA = {
           subject: "GRAMA Request: records concerning courtyard restoration work at Utah Valley University, September 2025",
           records: "I request, for the period September 10 – October 15, 2025, any record held by the Office of the Governor — including correspondence, directives, meeting notes, or coordination records with Utah Valley University, the FBI, or the Utah Department of Public Safety — concerning the removal of the medical tent and the excavation, resurfacing, or concreting of the courtyard area at Utah Valley University where the September 10, 2025 shooting occurred. The excavation contractor has stated publicly that this work was ordered by the FBI and the Governor of Utah; this request seeks the records of any such direction or coordination. If no such records exist, I request written confirmation of that fact.",
           ask_no_records: true,
-          filed: "INVOICED — filed Jul 16, 2026, 11:29 a.m. by email to the Governor's records officer (Adam Duncan, aduncan@utah.gov). Response Jul 17, 2026: EXPEDITE DENIED and FEE WAIVER DENIED, both on the same ground — failed to show the request 'benefits the public rather than the person' under § 63G-2-204(4)(a); records officer wrote it was 'unclear how you intend to use records' and how the Utah public would access the intended publication. Prepayment required before any processing: invoice No. 260716AB1 / GO-071726-0087 = $276 (4.6 hrs staff time @ $60) + $75 out-of-state filing fee = $351.00, due Aug 3, 2026. Fee-waiver-denial OVERRIDE FILED Jul 17, 2026 to CAO Jon Pierpont (jonpierpont@utah.gov, cc Duncan) — within the 5-business-day window (deadline ~Jul 27, Pioneer Day-adjusted). Override cures Duncan's sole stated deficiency (names the free non-commercial public docket as the publication) and stacks all three G-302(5) waiver grounds; asks for a written per-ground explanation if re-denied. DO NOT PREPAY pending the override decision. Response .eml + invoice PDF archived to gdrive."
+          filed: "INVOICED — filed Jul 16, 2026, 11:29 a.m. by email to the Governor's records officer (Adam Duncan, aduncan@utah.gov). Response Jul 17, 2026: EXPEDITE DENIED and FEE WAIVER DENIED, both on the same ground — failed to show the request 'benefits the public rather than the person' under § 63G-2-204(4)(a); records officer wrote it was 'unclear how you intend to use records' and how the Utah public would access the intended publication. Prepayment required before any processing: invoice No. 260716AB1 / GO-071726-0087 = $276 (4.6 hrs staff time @ $60) + $75 out-of-state filing fee = $351.00, due Aug 3, 2026. Fee-waiver-denial OVERRIDE FILED Jul 17, 2026, addressed to CAO Jon Pierpont — but MISROUTED: it went only to Duncan, as his own Jul 20 replies confirmed. RESENT directly to Pierpont (jonpierpont@utah.gov, cc Duncan) Jul 21, 2026 with the Jul 17 timeliness preserved — decision pending. Override cures Duncan's sole stated deficiency (names the free non-commercial public docket as the publication) and stacks all three G-302(5) waiver grounds; asks for a written per-ground explanation if re-denied. DO NOT PREPAY pending the override decision. Response .eml + invoice PDF archived to gdrive."
         }
       ]
     },
@@ -767,7 +772,8 @@ const FOIA = {
           summary: "DPS/SBI — the paper trail of the exhibit work: who made 12.1 and 12.4, from what, with what",
           records: "I request, concerning the video exhibits designated 12.1 and 12.4 at the July 2026 preliminary hearing in State v. Robinson: (1) the work request, lab request, or tasking record for the creation, enhancement, magnification, or editing of those exhibits, identifying the person, unit, or vendor that performed the work and the software used; (2) the record identifying the source video files used (camera, export date, and file hash or comparable integrity record, if maintained); and (3) any record documenting the revision of the exhibit after July 7, 2026 — the overnight remake ordered when the original version was ruled edited. I am not requesting the video content itself in this item — the records documenting how the exhibits were made.",
           subject: "GRAMA Request: records documenting the creation of video exhibits 12.1 and 12.4, State v. Robinson",
-          ask_no_records: true
+          ask_no_records: true,
+          filed: "PENDING — filed Jul 16, 2026 via the DPS GovQA Records Center and acknowledged: one of the five-request P-series batch P012986/87/89/92/95 (exhibit 12.1/12.4 tasking records, Panguitch tip log, Discord evidence intake, ballistics + GSR reports, latent prints 11B–11D). 10-business-day clock, due ~Jul 31."
         }
       ]
     },
@@ -870,7 +876,8 @@ const FOIA = {
           summary: "DPS/SBI — the lead/tip log entry for the Panguitch sighting (absence is the finding)",
           subject: "GRAMA Request: lead or tip records concerning a reported September 10, 2025 sighting in Panguitch, Utah",
           records: "I request, concerning the Utah Valley University homicide investigation: (1) the lead, tip, or information-report log entry documenting receipt of information that the suspect was seen at a restaurant in Panguitch, Utah on the evening of September 10, 2025 — whether received directly, from the FBI, or from any other agency; and (2) any record documenting investigative follow-up on that information, including any interview of the reporting witnesses or any records request to the business, or a record of the decision not to follow up. Witness personal identifiers may be redacted. If no responsive records exist, I request written confirmation of that fact, including a description of the search conducted.",
-          ask_no_records: true
+          ask_no_records: true,
+          filed: "PENDING — filed Jul 16, 2026 via the DPS GovQA Records Center and acknowledged: one of the five-request P-series batch P012986/87/89/92/95 (exhibit 12.1/12.4 tasking records, Panguitch tip log, Discord evidence intake, ballistics + GSR reports, latent prints 11B–11D). 10-business-day clock, due ~Jul 31."
         },
         {
           agencyId: "ucao",
@@ -939,7 +946,7 @@ const FOIA = {
           subject: "GRAMA Request: briefing records preceding the Governor's September 2025 public statements on the UVU homicide suspect",
           records: "I request, for the period September 11–16, 2025, the briefing document(s), talking points, or written summaries provided to the Governor or the Governor's communications staff by any law-enforcement agency prior to the Governor's public statements characterizing the suspect's motive, ideology, or the suspect's roommate, together with a record identifying the providing agency and date of each. I am not requesting investigation records held by a law-enforcement agency — the request is for the briefing records as held by the Office of the Governor.",
           ask_no_records: true,
-          filed: "INVOICED — filed Jul 16, 2026, 1:10 p.m. by email to the Governor's records officer (Adam Duncan, aduncan@utah.gov). Response Jul 17, 2026: EXPEDITE DENIED and FEE WAIVER DENIED, same public-benefit finding as the courtyard request (§ 63G-2-204(4)(a); 'unclear how you intend to use records' / how the Utah public accesses the publication). Prepayment required before any processing: invoice No. 260716AB2 / GO-071726-0088 = $540 (9.0 hrs staff time @ $60) + $75 out-of-state filing fee = $615.00, due Aug 3, 2026. Fee-waiver-denial OVERRIDE FILED Jul 17, 2026 to CAO Jon Pierpont (jonpierpont@utah.gov, cc Duncan) — within the 5-business-day window (deadline ~Jul 27, Pioneer Day-adjusted). Override cures Duncan's sole stated deficiency (names the free non-commercial public docket as the publication) and stacks all three G-302(5) waiver grounds; also flags on the record that this request was priced at nearly 2x the courtyard request for a narrower ask. DO NOT PREPAY pending the override decision. Response .eml + invoice PDF archived to gdrive."
+          filed: "INVOICED — filed Jul 16, 2026, 1:10 p.m. by email to the Governor's records officer (Adam Duncan, aduncan@utah.gov). Response Jul 17, 2026: EXPEDITE DENIED and FEE WAIVER DENIED, same public-benefit finding as the courtyard request (§ 63G-2-204(4)(a); 'unclear how you intend to use records' / how the Utah public accesses the publication). Prepayment required before any processing: invoice No. 260716AB2 / GO-071726-0088 = $540 (9.0 hrs staff time @ $60) + $75 out-of-state filing fee = $615.00, due Aug 3, 2026. Fee-waiver-denial OVERRIDE FILED Jul 17, 2026, addressed to CAO Jon Pierpont — but MISROUTED: it went only to Duncan, as his own Jul 20 replies confirmed. RESENT directly to Pierpont (jonpierpont@utah.gov, cc Duncan) Jul 21, 2026 with the Jul 17 timeliness preserved — decision pending. Override cures Duncan's sole stated deficiency (names the free non-commercial public docket as the publication) and stacks all three G-302(5) waiver grounds; also flags on the record that this request was priced at nearly 2x the courtyard request for a narrower ask. DO NOT PREPAY pending the override decision. Response .eml + invoice PDF archived to gdrive."
         }
       ]
     },
@@ -965,7 +972,8 @@ const FOIA = {
           summary: "DPS/SBI — the acquisition paper trail for the Discord records (dates, not content)",
           subject: "GRAMA Request: records documenting acquisition of Discord records, UVU homicide investigation",
           records: "I request, concerning the Utah Valley University homicide investigation of September 10, 2025: (1) the evidence-intake or property log entry documenting receipt of records from Discord Inc. (or from a federal agency relaying them), including the date of receipt; and (2) the transmittal or cover record accompanying that production, identifying the date of the preservation request or legal process and the date range of the records produced. I am NOT requesting the content of any message — only the log and transmittal records documenting when the records were sought and received.",
-          ask_no_records: true
+          ask_no_records: true,
+          filed: "PENDING — filed Jul 16, 2026 via the DPS GovQA Records Center and acknowledged: one of the five-request P-series batch P012986/87/89/92/95 (exhibit 12.1/12.4 tasking records, Panguitch tip log, Discord evidence intake, ballistics + GSR reports, latent prints 11B–11D). 10-business-day clock, due ~Jul 31."
         }
       ]
     },
@@ -991,7 +999,7 @@ const FOIA = {
           summary: "WCSO — the original September 12 Mitchell interview records",
           subject: "GRAMA Request: records of witness interview conducted September 12, 2025",
           records: "I request the report, recording log entry, or interview summary documenting the interview of the individual who facilitated Tyler Robinson's arrival at the Washington County Sheriff's Office, conducted in the early morning hours of September 12, 2025. The individual is publicly identified in Day 3 preliminary-hearing testimony in State v. Robinson as Mike Mitchell, a retired law-enforcement officer; the interview concerns the Utah Valley University homicide investigation, and the interviewing deputy’s or detective’s name — unknown — is part of the records requested. Personal identifiers other than the interviewers' names and the date, time, location, and duration of the interview may be redacted — the existence, custodian, and metadata of the original interview record are the core of this request.",
-          filed: "PENDING — filed Jul 16, 2026, 1:19 p.m. via WCSO's web form (§ 204 block in the body; fee waiver and expedited asserted; OTHER entitlement). Confirmation received same hour. Response due within 10 working days (~Jul 30).",
+          filed: "PENDING — filed Jul 16, 2026, 1:19 p.m. via WCSO's web form (§ 204 block in the body; fee waiver and expedited asserted; OTHER entitlement). Confirmation received same hour; request number pending. Response due within 10 working days (~Jul 31, Pioneer Day-adjusted).",
           ask_no_records: true
         }
       ]
@@ -1052,7 +1060,7 @@ const FOIA = {
           subject: "GRAMA Request: correspondence from the Utah County prosecutor concerning statements by sheriff's office personnel",
           records: "I request the letter sent by or on behalf of prosecutor Ryan McBride (Utah County) to the Washington County Sheriff or Sheriff's Office concerning statements by sheriff's office personnel about Tyler Robinson's invocation of his Fifth Amendment rights, together with any written response or internal distribution memo. A version of this letter has already been publicly displayed; I request the office's copy as held.",
           ask_no_records: true,
-          filed: "PENDING — filed Jul 16, 2026, 1:21 p.m. via WCSO's web form (§ 204 block in the body; fee waiver and expedited asserted; OTHER entitlement). Confirmation received same hour. Response due within 10 working days (~Jul 30)."
+          filed: "PENDING — filed Jul 16, 2026, 1:21 p.m. via WCSO's web form (§ 204 block in the body; fee waiver and expedited asserted; OTHER entitlement). Confirmation received same hour; request number pending. Response due within 10 working days (~Jul 31, Pioneer Day-adjusted)."
         }
       ]
     },
@@ -1079,7 +1087,8 @@ const FOIA = {
           summary: "DPS/crime lab — the firearms report and the never-introduced GSR analysis",
           subject: "GRAMA Request: firearms comparison report and gunshot-residue analysis, State v. Robinson evidence",
           records: "I request, concerning laboratory analyses in the Utah Valley University homicide investigation of September 10, 2025: (1) the firearms examination report documenting the measurement of the recovered bullet-jacket fragment (lab item referenced in preliminary-hearing testimony as 25 W41 / Exhibit 6) and the comparison of that fragment to the recovered rifle, including the reported result; and (2) the gunshot-residue (GSR) analysis performed on the Dodge Challenger associated with the case, including the result. Both analyses were referenced in public preliminary-hearing testimony on July 9, 2026.",
-          ask_no_records: true
+          ask_no_records: true,
+          filed: "PENDING — filed Jul 16, 2026 via the DPS GovQA Records Center and acknowledged: one of the five-request P-series batch P012986/87/89/92/95 (exhibit 12.1/12.4 tasking records, Panguitch tip log, Discord evidence intake, ballistics + GSR reports, latent prints 11B–11D). 10-business-day clock, due ~Jul 31."
         }
       ]
     },
@@ -1105,7 +1114,8 @@ const FOIA = {
           summary: "DPS/SBI — the latent-print report and any identification efforts on the excluded prints",
           subject: "GRAMA Request: latent print examination report, State v. Robinson evidence",
           records: "I request, concerning the Utah Valley University homicide investigation (victim Charlie Kirk; defendant Tyler James Robinson, State v. Robinson): (1) the SBI latent-print examination report (examiner Elisa Farmer) covering the latent prints designated 11B, 11C, and 11D recovered from the window glass below the roof descent point, whose conclusions — including the exclusion of the defendant as the source — were stipulated on the public record at the July 9, 2026 preliminary hearing; and (2) any record of database searches (AFIS/NGI) or comparisons run to identify the actual source of those three prints, including the result or a record that no such search was run.",
-          ask_no_records: true
+          ask_no_records: true,
+          filed: "PENDING — filed Jul 16, 2026 via the DPS GovQA Records Center and acknowledged: one of the five-request P-series batch P012986/87/89/92/95 (exhibit 12.1/12.4 tasking records, Panguitch tip log, Discord evidence intake, ballistics + GSR reports, latent prints 11B–11D). 10-business-day clock, due ~Jul 31."
         }
       ]
     },

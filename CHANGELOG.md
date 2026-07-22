@@ -2,6 +2,18 @@
 
 What's new in FAFO Utah — Charlie Kirk Edition. Newest first.
 
+## 2026-07-21 — Full-deck staleness pass: two formal denials on appeal, the misrouted overrides resent, and the docket numbers folded in
+
+Every card's filed/status text swept against today's mail and the results ledger; nothing left saying yesterday's posture:
+
+- **K9s: no results** — the Orem thread caught up with reality. The card's "a formal written determination may still be owed" gave way to the determination itself: Orem formally DENIED Jul 21 (11:43 a.m.) — the Utah County Attorney's Office "has requested that these records be classified as Protected under Utah Code § 63G-2-305(10)"; "the City is compelled to classify... As such, your request is herein formally denied." A formal cure went out at 12:45 p.m.; Orem re-denied at 1:50 p.m. — 65 minutes — on a form listing "K9 inquiry — Active Case," no subsection, no interference finding. GRAMA appeal filed with City Manager Brenn Bybee the same evening (§ 63G-2-401), determination due ~Aug 5. The Jul 16 re-file and its informal same-day brush-off moved into the request history where they belong; the parallel UCSO track (#26-2812, due ~Jul 27) noted unchanged.
+- **DNA consumed in testing** — ATF denied 2026-01995 IN FULL Jul 20 under 5 U.S.C. § 552(b)(7)(A) ("the investigation relating to your request is still open"), signed Hirsh D. Kravitz, Chief, Information and Privacy Governance Division; the PAL "documents delivered" notice was the determination letter itself. The card's prediction that "the written denial still fixes what records exist" is corrected on the card and the ATF agency note: no document inventory, no segregability finding — the denial confirms nothing about what exists, itself now an appeal ground. Appeal A-2026-01952 filed via FOIA STAR Jul 21 (expedited under Standard 4); OIP response due Aug 18.
+- **Scene paved over** + **Motive without a witness** — the Jul 17 fee-waiver overrides to CAO Pierpont turned out to be MISROUTED (they went only to Duncan, per his own Jul 20 replies); both resent directly to Pierpont (cc Duncan) Jul 21 with the Jul 17 timeliness preserved. Decision pending; still not prepaying the $351/$615 invoices due Aug 3.
+- **Bodycam died on the roof** — round one surfaced and round two filed: the Bagley BWC ask is UVU #26-215 (expedite denied Jul 16 on the same "failed to meet that burden" § 63G-2-204(4)(a) finding; due ~Jul 27), and a second, expanded BWC request went directly to UVU PD by email Jul 21 (footage + device audit log with power/battery events + BWC policy; due ~Aug 5). The scene-access-log/roster ask likewise now shows both tracks: round-one #26-214 (due ~Jul 27) alongside #26-231 (due ~Aug 1).
+- **DPS P-series carded** — the five Jul 16 GovQA filings (P012986/87/89/92/95, all acknowledged, due ~Jul 31) folded onto the cards that carry the asks: exhibit 12.1/12.4 tasking records (the "4K" exhibit), the Panguitch tip log, the Discord evidence intake, ballistics + GSR reports, and latent prints 11B–11D.
+- **WCSO housekeeping** — the McBride-letter and Mitchell-interview filings (Jul 16) now note numbers pending and the Pioneer-Day-adjusted ~Jul 31 due date.
+- Confirmed against the ledger and left alone: the second-roof-round DPS asks (Schneider .223 report; rooftop overwatch) remain unfiled and say so by omission; the FBI Nest-doorbell card already reads number-pending; everything else's clocks match the ledger.
+
 ## 2026-07-20 (night) — The trend grab: the restaurant speaks, the anomaly claim gets a name, both sides go on the record
 
 Three cards updated in place from the Jul 20 "acting alone" X-trend grab (full post texts with fxtwitter + syndication receipt pairs in the library; every receipt named on the cards):
