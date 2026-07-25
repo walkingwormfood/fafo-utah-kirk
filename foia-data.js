@@ -313,7 +313,8 @@ const FOIA = {
           summary: "Secret Service — EEOB/White House entry records for Andrew Kolvet",
           subject: "FOIA Request: White House complex / EEOB access records for Andrew Kolvet",
           records: "I request a copy of any entry, exit, visitor, or access records for Andrew Kolvet at the White House complex and the Eisenhower Executive Office Building on the date of, and the day before, the Department of Justice's public release of the Epstein files (please insert the specific calendar date before filing). I am not seeking general email correspondence.",
-          ask_no_records: true
+          ask_no_records: true,
+          filed: "PENDING — filed Jul 25, 2026 via SecureRelease (DHS → U.S. Secret Service component); acknowledged the same day as FOIA File Number 2026-USSSFOIA-01640 ('reviewing your submission to determine appropriate next steps'). The card's caveat stands: WAVES/ACR-type entry records held by USSS have been held non-agency records under FOIA, so a denial on that ground is the expected first move — itself documentable, with the EEOB-tenant-agency lane (OMB et al.) as the follow-on."
         }
       ]
     },
