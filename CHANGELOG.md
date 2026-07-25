@@ -2,6 +2,22 @@
 
 What's new in FAFO Utah — Charlie Kirk Edition. Newest first.
 
+## 2026-07-25 — WCSO answers in writing: the video is gone, nothing papers the deletion, and the schedule they cite doesn't say what they did
+
+The **Deleted turn-in video** card carries its finding now, re-verified word-for-word against the Jul 22, 2026 WCSO letter (Records Officer Sherrie Maxwell, preserved in the library's foia-mail archive with the attached schedule):
+
+- **The triple absence, confirmed by the agency itself**: no video ("the video was not clipped and exported, therefore it was deleted between 14-30 days after it was recorded"; Robinson "was never at Purgatory Correctional Facility"); "no records documenting the deletion, overwriting, or non retention of the video"; and no county-own retention schedule — WCSO "adhere[s] to" the Utah State schedule GRS-2021, attached to the letter. The counterweight stays on the card: deletion inside a routine auto-purge window is only anomalous if a preservation duty had attached — which is exactly what no record now shows either way. A records finding, not an accusation.
+- **The schedule mismatch is the new edge**: GRS-2021's disposition is "Retain until resolution of issue, and then destroy records" — no 14–30-day window anywhere in it — and its own scope note excludes "incidents requiring further evaluation." Whatever setting erased the video, no produced record ties it to schedule authority. A new draft request targets that gap: the VMS retention/auto-purge configuration, any schedule-appraisal record (GRS-2021 vs. GRS-2027), and any preservation or clip request from the Sept 11 – Oct 11, 2025 window. Unfiled; drafted and ready.
+- **The surviving record is in redaction**: item (4) — every email "with the words, 'Tyler Robinson and Video'" — is the only record left of what happened to the footage. Pre-announced redactions are narrow PII only (home addresses § 63G-2-305(51), personal emails § 63G-2-302(2)(d)) — notably NOT the § 305(10) active-case wall Orem and Utah County have used. Fee waiver denied ("extensive search... significant use of staff time"); lowest-paid-capable-employee rate, first 15 minutes free, "It will exceed $25," 4+ hours of redaction anticipated; "proceed" sent — Maxwell wouldn't start redacting without it; exact cost by Jul 30, completion anticipated Jul 30, records on receipt of fee. Appeal to Sheriff Barry Golding as CAO stays live 30 days — the fee appeal waits until the amount is known.
+- **The gap node answers and re-opens**: "Where's the turn-in video?" now points at both the thread-in-redaction and the retention-setting draft.
+
+Staleness swept against the Jul 22–25 mail:
+
+- **Four custody times** — Utah County CLOSED #26-2775 Jul 23: booking records "denied as this case is currently under investigation and classified as protected under Utah Code § 63G-2-305(10)(a)(b) and (c)," re-file invited after resolution. The same § 305(10) wall Orem used on the K9s, now on the booking sheet. Appeal available to the Utah County Administrator (CAO) within 30 days, per Utah County Code § 2.03.080. The parallel WCSO CAD ask (due ~Jul 29) rides unchanged.
+- **DNA consumed in testing** — OIP acknowledged appeal A-2026-01952 Jul 22 (letter dated Jul 21, Priscilla Jones), flagging delay from the Oct 2025 appropriations lapse; the expedite request was found unperfected under 28 C.F.R. § 16.5(e)(3) and perfected the same day with a § 1746 certification via FOIA STAR.
+- **WCSO agency note** — field-tested through a full response cycle: replies come from records@washeriff.net as a letter PDF; expect fee-waiver denial plus a hold (redaction doesn't start until you accept the fee); replies valid 30 days; appeals to Sheriff Golding by mail.
+- Checked and left alone — nothing landed Jul 22–25 on: UVU #26-214/215 (due ~Jul 27), #26-229/230/231 (~Aug 1), UCSO #26-2791 (Jul 28) and #26-2812 (~Jul 27), the DPS P-series P012986/87/89/92/95 (~Jul 31), the Orem K9 appeal (~Aug 5), and the WCSO/St. George facility-log pair (~Jul 31). Their clocks still match the ledger.
+
 ## 2026-07-21 (later) — Crane–AES card synced to the OG rebuild
 
 The **Crane–AES explosives contract** card was moved here in the Jul 17 one-docket commit still carrying un-audited Opus-era text — it missed the transcript audits and today's staleness pass both. Now synced to the fully re-verified rebuild on the federal deck (OG commit 2d0ba6b):
