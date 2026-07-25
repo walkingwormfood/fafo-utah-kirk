@@ -284,7 +284,8 @@ const FOIA = {
           summary: "FBI — records of any Charlie Kirk tip-line site/program + NDS role",
           subject: "FOIA Request: FBI \"Charlie Kirk\" tip-line website or program and any National Design Studio involvement",
           records: "I request a copy of any interagency agreement, task order, statement of work, or written authorization between the FBI and the National Design Studio concerning an FBI \"Charlie Kirk\" tip-line website or program (including any site at fbi-kirk-tipline.gov), dated from September 1, 2025 to the date this request is processed. To keep this request narrow, I am not seeking general email correspondence; if no such records exist, I request written confirmation of that fact.",
-          ask_no_records: true
+          ask_no_records: true,
+          filed: "FILED — via the FBI eFOIPA portal (efoia.fbi.gov), Jul 18–20, 2026 (eFOIPA receipts carry no filing date; the request-as-filed receipt PDF is saved on the Hearth). FOIPA number pending — same as the OG copy of this request, which is the filing of record."
         }
       ]
     },
