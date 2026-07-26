@@ -2,6 +2,17 @@
 
 What's new in FAFO Utah — Charlie Kirk Edition. Newest first.
 
+## 2026-07-26 — The cleanup paper arrives: Judicial Watch pries loose UVU's own texts, and the chain-of-custody lane gets its documents
+
+The **Scene paved over** card graduates from testimony to production. Judicial Watch's GRAMA appeal (State Records Committee case 2026-004) produced UVU's cleanup file — Bates UVU 25-326 — and the card now carries it verbatim, with both JW PDFs linked as sources (local copies banked in the library's legal-artifacts):
+
+- **The timeline, from UVU's own records**: emergency cleanup order placed **September 11** (procurement policy bypassed) — while the scene was still under external law-enforcement control per UVU's own sworn declaration (AVP Frank Young: scene released back "on or about Friday, September 12"). The vendor texts "this job is complete… Sorry for the circumstances" on **September 12** — the same day the scene came back. That evening: "Am I good to turn sprinklers all back on?" → **"Chief says let the water flow!"** → "The cops just called me into the fountain area… i bet we can just wash it all down" — while an "eight inch puddle" washdown ("the solution to pollution is dilution") is deferred: **"No, tomorrow. The FBI is still there. I guess."** A 20×30 paver pad goes in by September 16 behind State Fairpark fencing, in gray ("They made me change the paver color this morning" — "they" unnamed).
+- **The custody contradiction, on UVU's paper**: the appeal response swears UVUPD "did not have control of the handling of the crime scene" — and on that basis *never searched police emails or texts at all* — while the produced texts show "Chief says" authorizing the water and "the cops" summoning the crew to the fountain. The vendor's identity and the check are withheld in full (§ 305(11)/(12)); the PO was created January 14, 2026 — four months post-hoc; Young's sworn search used one term ("pavers") and found zero emails.
+- **New request drafted — DFCM**: UVU swears it neither paid for nor performed the paving and formally directed requesters to DFCM (§ 63G-2-204(4)(b)(iii)). The draft asks DFCM for the contract, the firm, the invoices, the September 12 "getting a firm under contract" thread, and who requested/approved the work. Unfiled, preservation ask included.
+- **UVU #26-212 gets a grading key**: anything UVU withholds from the pending paving request that JW already holds is a scoreable inconsistency.
+
+The **What was left in the transport SUV?** card picks up the failure-to-preserve lane: a Jul 25 livestream claim (Danks — carried as attributed discourse, documents not yet produced) that the vehicle was altered and sold at auction (~$62k, interior carpet cut out, rear seat removed). Both draft requests hardened: the DPS/SBI ask now covers any authorization or notice of the vehicle's alteration, sale, or disposal and any preservation instruction or litigation hold; both drafts carry the standing preservation ask.
+
 ## 2026-07-25 — WCSO answers in writing: the video is gone, nothing papers the deletion, and the schedule they cite doesn't say what they did
 
 The **Deleted turn-in video** card carries its finding now, re-verified word-for-word against the Jul 22, 2026 WCSO letter (Records Officer Sherrie Maxwell, preserved in the library's foia-mail archive with the attached schedule):
