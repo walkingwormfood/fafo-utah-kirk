@@ -308,6 +308,7 @@
         <div class="charline" id="charline" style="display:none"></div></div>
       <div class="field" id="feeWrap" style="display:none"><label for="feeOut">Fee waiver — if the form has its own fee section, paste this where it asks for a waiver justification</label><textarea id="feeOut" class="snip" spellcheck="false"></textarea></div>
       <div class="field" id="expWrap" style="display:none"><label for="expOut">Expedited response — if the form has an expedite box, paste this there</label><textarea id="expOut" class="snip" spellcheck="false"></textarea></div>
+      <div class="field" id="partiesWrap" style="display:none"><label for="partiesOut">Involved Parties — paste into the form's Involved Parties field (unknown names go in as descriptions; that's accepted)</label><textarea id="partiesOut" class="snip" spellcheck="false"></textarea></div>
       <div id="formBoxes"></div>
       <div class="actions" id="actions"></div>
       <div class="submit-hint" id="submitHint"></div>
@@ -551,7 +552,7 @@
     const r = inv.requests[+b.dataset.req];
     const card = b.closest(".card");
     if(card) card.insertAdjacentElement("afterend", $("gen"));  // expand the drafter inline, right below this finding
-    loadRequest({ subject:r.subject, records:r.records, agencyId:r.agencyId, askNoRecords:!!r.ask_no_records, label:r.summary, component:r.component||null });
+    loadRequest({ subject:r.subject, records:r.records, agencyId:r.agencyId, askNoRecords:!!r.ask_no_records, label:r.summary, component:r.component||null, parties:r.parties||null });
   }));
 
   function loadRequest(req){
@@ -600,6 +601,7 @@
     } else {
       L.push("This is a request for records under the " + statute + "."); L.push("");
       L.push(current.records); L.push("");
+      if(current.parties){ L.push("Involved parties, for your routing and file location: " + current.parties); L.push(""); }
       if(current.askNoRecords){ L.push(b.no_records); L.push(""); }
       L.push(b.burden_carveout); L.push("");
       if($("fee").checked){ L.push(b.fee_waiver); L.push(""); }
@@ -618,6 +620,7 @@
       $("charline").style.display = "none";
       $("feeWrap").style.display = "none";
       $("expWrap").style.display = "none";
+      $("partiesWrap").style.display = "none";
       $("formBoxes").innerHTML = "";
       $("portalRouting").style.display = "none";
     } else if(a && a.formMap && !current.bare){
@@ -638,6 +641,8 @@
       $("charline").style.display = "block";
       $("feeWrap").style.display = "none";
       $("expWrap").style.display = "none";
+      $("partiesOut").value = current.parties || "";
+      $("partiesWrap").style.display = current.parties ? "block" : "none";
       const fb = $("formBoxes"); fb.innerHTML = "";
       boxes.slice(1).forEach(bx => {
         const d = document.createElement("div"); d.className = "field";
@@ -679,6 +684,8 @@
       $("feeWrap").style.display = (!current.bare && $("fee").checked) ? "block" : "none";
       $("expOut").value = b.expedited;
       $("expWrap").style.display = (!current.bare && $("exp").checked) ? "block" : "none";
+      $("partiesOut").value = current.parties || "";
+      $("partiesWrap").style.display = current.parties ? "block" : "none";
       const routing = [];
       if(current.component) routing.push("<b>Where to route it:</b> " + esc(current.component) + ".");
       if(fed){
