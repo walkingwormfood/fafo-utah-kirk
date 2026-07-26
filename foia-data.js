@@ -138,7 +138,13 @@ const FOIA = {
     { id: "dps", name: "Utah Department of Public Safety (SBI, Aero Bureau)", email: null,
       portal: "https://publicsafetyutah.govqa.us/WEBAPP/_rs/SupportHome.aspx",
       submitNote: "DPS runs a department-wide GovQA Records Center — submission starts with a division picker; no records email is published, the portal is the route. Fees and payment run through the portal.",
-      portalNote: "Pick the division that holds the record: State Bureau of Investigation for investigative/deployment records, or the video/GRAMA request category. The Aero Bureau isn't its own picker entry — if absent, file under the department-level GRAMA option and name the Aero Bureau in the text. The form's 'Involved Parties' field is how records staff route and locate the file: name the record's author or subject (examiner, deputy, witness), the defendant, and the victim, each with their role; unknown names can be described ('interviewing detective, name unknown — identification is part of the request'). The form also demands a file attachment — a driver-license photo satisfies it (.jpeg or .pdf, not .heic) — and an occurrence date: September 10, 2025, not the hearing date." },
+      portalNote: "Pick the division that holds the record: State Bureau of Investigation for investigative/deployment records, or the video/GRAMA request category. The Aero Bureau isn't its own picker entry — if absent, file under the department-level GRAMA option and name the Aero Bureau in the text. The form's 'Involved Parties' field is how records staff route and locate the file: name the record's author or subject (examiner, deputy, witness), the defendant, and the victim, each with their role; unknown names can be described ('interviewing detective, name unknown — identification is part of the request'). The form also demands a file attachment — a driver-license photo satisfies it (.jpeg or .pdf, not .heic) — and an occurrence date: September 10, 2025, not the hearing date." ,
+      formAnswers: [
+        { label: "Incident involved fatality?", value: "Yes — the September 10, 2025 homicide at Utah Valley University" },
+        { label: "Relationship to incident", value: "Member of the Media — records are published to a free, non-commercial public docket" },
+        { label: "Citation number", value: "None — this is a records request, not citation-related" },
+        { label: "Case number", value: "Unknown to requester — please locate via the involved parties and date of occurrence" }
+      ] },
     { id: "ucso", name: "Utah County Sheriff's Office", email: null,
       portal: "https://utah-county-ut.nextrequest.com/",
       submitNote: "UCSO GRAMA goes through Utah County's NextRequest portal — field-tested Jul 9, 2026: the SheriffRecords@utahcounty.gov address on the sheriff's records page auto-replies that it's UNMONITORED and routes you to NextRequest. Quirks: photo ID before release; reports start at $15; body/dash cam $20 per case plus staff time; 10 business days. Records office: 3075 North Main, Spanish Fork (801-851-4500).",
@@ -714,6 +720,10 @@ const FOIA = {
           subject: "GRAMA Request: Flock/ALPR preservation hold, search-audit log, and vendor contract — September 2025 UVU homicide investigation",
           records: "I request three categories of records concerning the Utah Department of Public Safety / State Bureau of Investigation use of Flock Safety automated license-plate-reader (ALPR) data in connection with the September 10, 2025 Utah Valley University homicide investigation, including any access to a statewide or shared ALPR network: (1) any preservation request, legal hold, or litigation-hold notice sent to Flock Safety (or any ALPR vendor) to prevent deletion of reads related to this investigation, including the date sent and the plates or date range covered; (2) the ALPR search/audit log for September 10 – October 15, 2025 showing queries run by DPS/SBI personnel in connection with this investigation — querying user, plate or search term, timestamp, and stated reason/case number (unrelated third-party queries may be redacted); and (3) the department's current contract, service agreement, data-processing agreement, or network-sharing agreement with Flock Safety, including data-retention settings and data-sharing terms. The contract is a standing public record; if the investigation-related items are withheld under § 63G-2-305, I request the segregable public portions and a written denial citing the provision. If no preservation hold exists, I request written confirmation of that fact. Please also retain this correspondence and all records related to the processing of this request.",
           parties: "Tyler James Robinson (defendant); Charlie Kirk (victim); the records custodian of SBI's ALPR/Flock account (identification is part of the request).",
+          formAnswers: [
+            { label: "Date of occurrence", value: "09/10/2025" },
+            { label: "Time of occurrence", value: "full day — September 10, 2025, with the retention/audit window running through October 15, 2025" }
+          ],
           ask_no_records: true,
           filed: "NOT FILED — queued; the absence of a preservation hold is itself the finding."
         },
@@ -751,6 +761,10 @@ const FOIA = {
           subject: "GRAMA Request: report of witness interview concerning residential doorbell video, September 2025",
           records: "I request the investigative report, or interview summary, documenting the interview of the homeowners whose Nest doorbell camera captured a vehicle associated with the Utah Valley University homicide investigation parked on their street overnight September 10–11, 2025 — the report whose contents (including the description of the vehicle's driver and occupants) were confirmed by a testifying officer during the preliminary hearing in State v. Robinson. Witness personal identifiers may be redacted; the substance of the recorded descriptions is the request. Please also retain this correspondence and all records related to the processing of this request.",
           parties: "Tyler James Robinson (defendant); Charlie Kirk (victim); the interviewed homeowners (identifiers may be redacted); the interviewing officer or agent (name unknown — the testifying officer confirmed the report's contents at the preliminary hearing).",
+          formAnswers: [
+            { label: "Date of occurrence", value: "09/10/2025" },
+            { label: "Time of occurrence", value: "overnight September 10–11, 2025 (the vehicle was parked on the street overnight; the interview followed)" }
+          ],
           ask_no_records: true
         },
         {
@@ -759,6 +773,10 @@ const FOIA = {
           subject: "GRAMA Request: original doorbell-video files and export metadata, September 2025 investigation",
           records: "Concerning the residential Nest doorbell video of a vehicle parked overnight September 10–11, 2025, portions of which were played at the July 2026 preliminary hearing in State v. Robinson: I request (1) records sufficient to show the acquisition of the video from the homeowners or from the camera vendor's cloud service — the date acquired, the file count, and the acquiring officer or agency; (2) the technical metadata of the files as acquired (native resolution, duration, timestamps, and any export or processing history); and (3) records documenting any editing, clipping, or re-encoding of the video between acquisition and its courtroom presentation, including who prepared the version played in court. I am requesting acquisition and processing records, not the video content itself, so no protected-content withholding should be necessary; the courtroom copy contained visible cuts and was materially degraded relative to the camera's native quality, and the processing chain is the question. (Verbatim basis: Ep 141 [20:43–22:15], re-verified Jul 20 2026.) Please also retain this correspondence and all records related to the processing of this request.",
           parties: "Tyler James Robinson (defendant); Charlie Kirk (victim); the acquiring officer or evidence technician (name unknown — identification is part of the request).",
+          formAnswers: [
+            { label: "Date of occurrence", value: "09/10/2025" },
+            { label: "Time of occurrence", value: "overnight September 10–11, 2025 (the recording window; acquisition followed)" }
+          ],
           ask_no_records: true
         }
       ]
@@ -975,6 +993,10 @@ const FOIA = {
           subject: "GRAMA Request: dispatch/CAD records concerning an individual searching hospitals for the victim, September 10, 2025",
           records: "I request the computer-aided dispatch (CAD) and radio log records, and any incident or information report, concerning reports on September 10, 2025 of an individual going between hospitals (including Utah Valley Hospital and Timpanogos Regional Hospital) seeking the location of Charlie Kirk in connection with the Utah Valley University homicide investigation — including any record identifying that individual or their agency, any BOLO or lookout issued, and any record of the resulting hospital-lockdown coordination. Unrelated calls for service may be redacted. If no responsive records exist, I request written confirmation of that fact, including a description of the search conducted. Please also retain this correspondence and all records related to the processing of this request.",
           parties: "Tyler James Robinson (defendant); Charlie Kirk (victim, subject of the searches); the individual reported going between hospitals (identification is part of the request).",
+          formAnswers: [
+            { label: "Date of occurrence", value: "09/10/2025" },
+            { label: "Time of occurrence", value: "afternoon–evening of September 10, 2025, following the ~12:23 p.m. shooting" }
+          ],
           ask_no_records: true
         },
         {
@@ -1206,6 +1228,10 @@ const FOIA = {
           subject: "GRAMA Request: DNA analysis reports and reference-standard designations, State v. Robinson evidence",
           records: "I request, concerning laboratory DNA analyses in the Utah Valley University homicide investigation: (1) the DNA examination report(s) for the towel and the screwdriver referenced in July 2026 preliminary-hearing testimony, including all contributor findings for each item; and (2) the case record designating which individuals' reference samples were treated as elimination standards in those analyses, and the basis recorded for each designation. Both items were the subject of public preliminary-hearing testimony. Please also retain this correspondence and all records related to the processing of this request.",
           parties: "Tyler James Robinson (defendant); Charlie Kirk (victim); the crime-lab DNA examiner(s) of record for the towel and screwdriver analyses, including any examiner whose verification results differed (names unknown — identification is part of the request).",
+          formAnswers: [
+            { label: "Date of occurrence", value: "09/10/2025" },
+            { label: "Time of occurrence", value: "full day — evidence collected September 10–11, 2025; laboratory analyses followed" }
+          ],
           ask_no_records: true
         }
       ]
@@ -1234,6 +1260,10 @@ const FOIA = {
           subject: "GRAMA Request: DPS aircraft flight records, September 11–12, 2025",
           records: "I request the flight log, tasking record, and passenger manifest for any Utah Department of Public Safety aircraft flight from the Salt Lake City area to St. George or Washington County on September 11, 2025 (including the flight arriving at approximately 11:37 p.m.), and any return flight through September 12, 2025 — including the time the flight was requested and by whom. Please also retain this correspondence and all records related to the processing of this request.",
           parties: "Tyler James Robinson (defendant, reported transported subject); the requesting official and flight crew (names unknown — identification is part of the request).",
+          formAnswers: [
+            { label: "Date of occurrence", value: "09/11/2025" },
+            { label: "Time of occurrence", value: "evening — flight arriving approximately 11:37 p.m.; any return through September 12, 2025" }
+          ],
           ask_no_records: true
         }
       ]
@@ -1347,6 +1377,10 @@ const FOIA = {
           subject: "GRAMA Request: evidence and property records concerning the vehicle used to transport the victim, September 10, 2025",
           records: "I request, concerning the September 10, 2025 Utah Valley University homicide investigation: (1) the property or evidence intake log entries for any items recovered from, or documented inside, the sport-utility vehicle used to transport the victim from the campus to the hospital; (2) the record of any forensic processing, photography, or examination of that vehicle, or the record of its release without processing (including to whom it was released and when); (3) any record authorizing, noting, or conditioning the vehicle's subsequent alteration, sale, or disposal, including any preservation instruction or litigation-hold notice concerning the vehicle; and (4) the photograph log for any images taken of the vehicle's interior. I am requesting administrative intake, processing, and release records — not medical records and not the photographs' evidentiary content where restricted. Please also retain this correspondence and all records related to the processing of this request, including the records described above. If no agency processed the vehicle or logged its contents, I request written confirmation of that fact, including a description of the search conducted.",
           parties: "Tyler James Robinson (defendant); Charlie Kirk (victim, transported in the vehicle); the vehicle's registered owner or custodian and the recipient of any release (identification is part of the request).",
+          formAnswers: [
+            { label: "Date of occurrence", value: "09/10/2025" },
+            { label: "Time of occurrence", value: "approximately 12:20–1:00 p.m. (transport from campus to hospital); processing and release thereafter" }
+          ],
           ask_no_records: true
         },
         {
@@ -1383,6 +1417,10 @@ const FOIA = {
           subject: "GRAMA Request: property and evidence records concerning items seized at the Fulton Library bus stops, September 10, 2025",
           records: "I request, concerning the September 10, 2025 Utah Valley University homicide investigation: (1) the property or evidence seizure records for the unattended items collected at or near the Fulton Library bus stops (a backpack, jacket, and gloves, and any other items in that seizure group); (2) any record of a communication from the State Bureau of Investigation to the FBI laboratory concerning whether those items were connected to the case or whether analysis should be discontinued; (3) the record of any determination that the items belonged to a member of the decedent's protective detail or to any other identified person; and (4) if the items were released or returned, the release record showing to whom and when. Personal identifiers of uninvolved private persons may be redacted; the existence, date, and authorship of the determination records is the request. If no record of the discontinuation communication exists, I request written confirmation of that fact. Please also retain this correspondence and all records related to the processing of this request.",
           parties: "Tyler James Robinson (defendant); Charlie Kirk (victim); the SBI official who communicated with the FBI laboratory, and the protective-detail member to whom any determination attributed the items (names unknown — identification is part of both).",
+          formAnswers: [
+            { label: "Date of occurrence", value: "09/10/2025" },
+            { label: "Time of occurrence", value: "midday, in the hours after the shooting (bus-stop items collected during the response)" }
+          ],
           ask_no_records: true
         },
         {
