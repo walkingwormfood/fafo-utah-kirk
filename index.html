@@ -426,7 +426,7 @@
                    ? `<button class="btn viewpending" title="Answered — click for the response and what survives">📬 View answer${f.includes("IN PART") ? " — in part" : ""}</button>`
                    : `<button class="btn viewpending" title="Already filed and in flight — one copy per office; click for the docket status">⏳ View pending</button>`
                  )((r.filed||"").toUpperCase())
-               : `<button class="btn gen" title="${esc(title)}" data-inv="${esc(inv.id)}" data-req="${i}">${icon} Generate this request</button>`)+
+               : `<button class="btn gen" title="${esc(title)}" data-inv="${esc(inv.id)}" data-req="${i}">${icon} ${r.existing ? "Request existing" : "Generate this request"}</button>`)+
              `<button class="rep" data-inv="${esc(inv.id)}" data-req="${i}">⚑ filed? report your request #</button></div></div>`;
     }).join("");
     card.innerHTML =

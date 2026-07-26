@@ -213,6 +213,35 @@ const FOIA = {
 
   investigations: [
     {
+      id: "long-production-refile",
+      short: "Chief Long's released file — re-request it",
+      challenge: "113 pages of the police chief's communications were already released to another requester — with 682 redactions. Previously released means re-requestable.",
+      categories: ["Kirk assassination & coverup"],
+      entities: ["jeff-long", "uvu-ent"],
+      investigator: "Daily Caller News Foundation · Blaze News · Danks (panel read-through)",
+      investigatorLinks: [
+        { label: "DCNF — the 113-page production reported, Apr 6 2026", url: "https://dailycaller.com/2026/04/06/exclusive-utah-valley-university-charlie-kirk-assassination-tyler-robinson-redactions/" },
+        { label: "Blaze — UVU relents slightly after the publicness-presumption push: 19 screenshots", url: "https://www.theblaze.com/news/utah-valley-university-is-working-very-hard-to-hide-the-truth-about-charlie-kirks-assassination" }
+      ],
+      status: "reported",
+      finding: "UVU has already produced Chief Jeff Long's communications about the shooting — to other requesters. The Daily Caller News Foundation received a 113-page production in April 2026 covering the days around September 10, carrying 682 individual redactions across 96 of its pages; after Blaze News pressed UVU on GRAMA's presumption that a chief's messages are public absent a specific exemption, the university released 19 further screenshots (eight of them campus-wide alert texts). A Jul 25, 2026 livestream (Danks) read from what he described as a downloaded copy of a Long production and attributed to it three specifics: UVU's standing payment into a pooled EMS/police services fund that could have summoned extra ambulance and patrol coverage for the event; Sens. Mike Lee and John Curtis arriving at UVU police around 10:35 p.m. on September 9 asking to talk \"about a plan\"; and an urgent 2:30 p.m. September 9 attempt to get a message to Kirk through UVU police or security. Those three claims ride as attributed discourse until the pages are in hand.",
+      implication: "Records an agency has already located, processed, redacted, and released to one requester are re-requestable by anyone — no new search, no new redaction judgment, and no plausible active-case wall over pages already sitting in a newsroom. The re-request also captures what the articles can't show: the request-and-response correspondence, which maps all 682 redactions to their claimed statutes — the withholding pattern itself, scoreable against what UVU produced to Judicial Watch in SRC 2026-004. Filed from another requester's production and logged here so the docket tracks what UVU already considers releasable against what it withholds from everyone else.",
+      sources: [
+        { label: "DCNF reporting on the production (113 pages, 682 redactions across 96)", url: "https://dailycaller.com/2026/04/06/exclusive-utah-valley-university-charlie-kirk-assassination-tyler-robinson-redactions/" },
+        { label: "Danks livestream, Jul 25 2026 — the read-through and the three content claims (transcript banked in the library)", url: "https://www.youtube.com/watch?v=XKjDIDF1Pjk" }
+      ],
+      requests: [
+        {
+          agencyId: "uvu",
+          existing: true,
+          summary: "UVU — the previously-released Long production, plus the exemption trail",
+          subject: "GRAMA Request: copy of records previously released in response to the Daily Caller News Foundation request for Chief Long's communications",
+          records: "I request: (1) a complete copy, in electronic form, of all records previously released by Utah Valley University in response to the GRAMA request submitted by the Daily Caller News Foundation seeking communications of UVU Police Chief Jeff Long concerning the September 10, 2025 shooting — reported by the Daily Caller on April 6, 2026 as a production of approximately 113 pages; (2) a copy of the records subsequently released to Blaze News concerning the same subject matter (reported as 19 screenshots); and (3) the request-and-response correspondence for each: the requester's request text, UVU's determination letters, and any exemption log or index of withholdings. Because items (1) and (2) consist of records UVU has already located, processed, redacted, and released, no new search or redaction should be required, and no basis for withholding exists beyond the redactions already applied. I request a fee waiver: release primarily benefits the public — the records will be published on a free, non-commercial public docket — and duplication of an existing electronic production imposes minimal burden. Please also retain this correspondence and all records related to the processing of this request, including the productions described above. If any portion is denied, I request written citation of the specific statutory basis for each withholding.",
+          ask_no_records: true
+        }
+      ]
+    },
+    {
       id: "atf-dna-consumed",
       short: "DNA consumed in testing",
       challenge: "9 evidence samples were used up in testing — none saved for the defense to retest.",
@@ -1383,34 +1412,6 @@ const FOIA = {
           summary: "WCSO — or did it happen in yours, with FBI Special Agent Lang?",
           subject: "GRAMA Request: facility and interview-room records, early morning September 12, 2025",
           records: "I request, for the period September 11, 2025, 9:00 p.m. through September 12, 2025, 6:00 a.m.: (1) any visitor log, lobby log, or facility sign-in record for the Washington County Sheriff's Office; (2) any interview-room schedule or officer-assist record reflecting an interview conducted at the facility during that window by or with the assistance of the Federal Bureau of Investigation (sworn statements in State v. Robinson identify FBI Special Agent Lang conducting an interview at approximately 0100 hours); and (3) any record reflecting the presence of Lance Twiggs at the facility during that window. I am requesting administrative facility records only — not the content of any interview. If no responsive records exist, I request written confirmation of that fact.",
-          ask_no_records: true
-        }
-      ]
-    },
-    {
-      id: "long-production-refile",
-      short: "Chief Long's released file — re-request it",
-      challenge: "113 pages of the police chief's communications were already released to another requester — with 682 redactions. Previously released means re-requestable.",
-      categories: ["Kirk assassination & coverup"],
-      entities: ["jeff-long", "uvu-ent"],
-      investigator: "Daily Caller News Foundation · Blaze News · Danks (panel read-through)",
-      investigatorLinks: [
-        { label: "DCNF — the 113-page production reported, Apr 6 2026", url: "https://dailycaller.com/2026/04/06/exclusive-utah-valley-university-charlie-kirk-assassination-tyler-robinson-redactions/" },
-        { label: "Blaze — UVU relents slightly after the publicness-presumption push: 19 screenshots", url: "https://www.theblaze.com/news/utah-valley-university-is-working-very-hard-to-hide-the-truth-about-charlie-kirks-assassination" }
-      ],
-      status: "reported",
-      finding: "UVU has already produced Chief Jeff Long's communications about the shooting — to other requesters. The Daily Caller News Foundation received a 113-page production in April 2026 covering the days around September 10, carrying 682 individual redactions across 96 of its pages; after Blaze News pressed UVU on GRAMA's presumption that a chief's messages are public absent a specific exemption, the university released 19 further screenshots (eight of them campus-wide alert texts). A Jul 25, 2026 livestream (Danks) read from what he described as a downloaded copy of a Long production and attributed to it three specifics: UVU's standing payment into a pooled EMS/police services fund that could have summoned extra ambulance and patrol coverage for the event; Sens. Mike Lee and John Curtis arriving at UVU police around 10:35 p.m. on September 9 asking to talk \"about a plan\"; and an urgent 2:30 p.m. September 9 attempt to get a message to Kirk through UVU police or security. Those three claims ride as attributed discourse until the pages are in hand.",
-      implication: "Records an agency has already located, processed, redacted, and released to one requester are re-requestable by anyone — no new search, no new redaction judgment, and no plausible active-case wall over pages already sitting in a newsroom. The re-request also captures what the articles can't show: the request-and-response correspondence, which maps all 682 redactions to their claimed statutes — the withholding pattern itself, scoreable against what UVU produced to Judicial Watch in SRC 2026-004. Filed from another requester's production and logged here so the docket tracks what UVU already considers releasable against what it withholds from everyone else.",
-      sources: [
-        { label: "DCNF reporting on the production (113 pages, 682 redactions across 96)", url: "https://dailycaller.com/2026/04/06/exclusive-utah-valley-university-charlie-kirk-assassination-tyler-robinson-redactions/" },
-        { label: "Danks livestream, Jul 25 2026 — the read-through and the three content claims (transcript banked in the library)", url: "https://www.youtube.com/watch?v=XKjDIDF1Pjk" }
-      ],
-      requests: [
-        {
-          agencyId: "uvu",
-          summary: "UVU — the previously-released Long production, plus the exemption trail",
-          subject: "GRAMA Request: copy of records previously released in response to the Daily Caller News Foundation request for Chief Long's communications",
-          records: "I request: (1) a complete copy, in electronic form, of all records previously released by Utah Valley University in response to the GRAMA request submitted by the Daily Caller News Foundation seeking communications of UVU Police Chief Jeff Long concerning the September 10, 2025 shooting — reported by the Daily Caller on April 6, 2026 as a production of approximately 113 pages; (2) a copy of the records subsequently released to Blaze News concerning the same subject matter (reported as 19 screenshots); and (3) the request-and-response correspondence for each: the requester's request text, UVU's determination letters, and any exemption log or index of withholdings. Because items (1) and (2) consist of records UVU has already located, processed, redacted, and released, no new search or redaction should be required, and no basis for withholding exists beyond the redactions already applied. I request a fee waiver: release primarily benefits the public — the records will be published on a free, non-commercial public docket — and duplication of an existing electronic production imposes minimal burden. Please also retain this correspondence and all records related to the processing of this request, including the productions described above. If any portion is denied, I request written citation of the specific statutory basis for each withholding.",
           ask_no_records: true
         }
       ]
