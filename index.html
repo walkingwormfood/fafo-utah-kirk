@@ -416,7 +416,9 @@
              `<div class="reqbtns">`+
              (r.refined
                ? `<button class="btn gen" title="${esc(title)}" data-inv="${esc(inv.id)}" data-req="${i}">${icon} Generate refined request</button>`+
-                 (r.filed || r.response ? `<button class="btn viewpending" title="Click for the full request-refinement history">⏳ ${r.history ? "View progression" : "View status"}</button>` : "")
+                 (r.filed || r.response ? ((r.filed||"").toUpperCase().startsWith("DENIED")
+                     ? `<button class="btn viewpending denial" title="Denied — click for the full request-refinement history and where the appeal stands">⛔ ${r.history ? "View progression" : "View status"}${(r.filed||"").toUpperCase().includes("ON APPEAL") ? " — on appeal" : ""}</button>`
+                     : `<button class="btn viewpending" title="Click for the full request-refinement history">⏳ ${r.history ? "View progression" : "View status"}</button>`) : "")
                : r.response
                ? `<button class="btn viewpending" title="This request has been answered — click for the response">📬 View answer</button>`
                : r.filed
