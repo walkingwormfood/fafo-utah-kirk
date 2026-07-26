@@ -70,6 +70,8 @@
   .btn.gen:hover{background:var(--accent);color:var(--bg);border-color:var(--accent)}
   .btn.viewpending{flex:0 0 auto;background:transparent;border-color:var(--line);color:var(--ink2)}
   .btn.viewpending:hover{border-color:var(--ink2);color:var(--ink)}
+  .btn.viewpending.denial{border-color:rgba(255,59,59,.5);color:var(--accent)}
+  .btn.viewpending.denial:hover{border-color:var(--accent);color:var(--accent)}
   .req .resp.collapsed{display:none}
   .resp.chain{background:transparent;border-left:none;padding:0;margin-top:8px}
   .chain .round{border-left:2px solid var(--line);margin:8px 0 8px 4px;padding:2px 0 2px 12px}
@@ -418,7 +420,12 @@
                : r.response
                ? `<button class="btn viewpending" title="This request has been answered — click for the response">📬 View answer</button>`
                : r.filed
-               ? `<button class="btn viewpending" title="Already filed and in flight — one copy per office; click for the docket status">⏳ View pending</button>`
+               ? (f => f.startsWith("DENIED")
+                   ? `<button class="btn viewpending denial" title="Denied — click for the determination and where the appeal stands">⛔ View denial${f.includes("ON APPEAL") ? " — on appeal" : ""}</button>`
+                   : f.startsWith("ANSWERED")
+                   ? `<button class="btn viewpending" title="Answered — click for the response and what survives">📬 View answer${f.includes("IN PART") ? " — in part" : ""}</button>`
+                   : `<button class="btn viewpending" title="Already filed and in flight — one copy per office; click for the docket status">⏳ View pending</button>`
+                 )((r.filed||"").toUpperCase())
                : `<button class="btn gen" title="${esc(title)}" data-inv="${esc(inv.id)}" data-req="${i}">${icon} Generate this request</button>`)+
              `<button class="rep" data-inv="${esc(inv.id)}" data-req="${i}">⚑ filed? report your request #</button></div></div>`;
     }).join("");
