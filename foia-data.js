@@ -560,6 +560,7 @@ const FOIA = {
           agencyId: "dps",
           summary: "DPS/SBI — Schneider's report on the .223 round and its disposition",
           subject: "GRAMA Request: report and evidence records for round recovered on UVU computer science building roof, September 10, 2025",
+          filed: "PENDING — this ask is already in flight as DPS reference P013306-072126, filed Jul 21, 2026 via the GovQA portal (confirmed in the acknowledgment: Schneider's report on the unfired round, the evidence/property-log entry or the record of the decision not to log it, and the identity of the rifle-cycling officer). Acknowledged Jul 21; 10-business-day clock, Pioneer Day skipped — response due ~Aug 5. Its sibling P013307-072126 (same day) carries the rooftop/overwatch post assignments by building and agency. Do not re-file from this card.",
           records: "I request: (1) the report authored or contributed to by Agent Ben Schneider (State Bureau of Investigation) documenting the discovery, photographing, collection, and disposition of an unfired round found on the roof of the computer science building at Utah Valley University on or about September 10, 2025; (2) the evidence or property log entry for that round, or the record documenting a decision not to take it into evidence; and (3) any record identifying the officer whose rifle-cycling was determined to account for it.",
           ask_no_records: true
         },
