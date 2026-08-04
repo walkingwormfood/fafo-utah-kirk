@@ -239,35 +239,6 @@ const FOIA = {
 
   investigations: [
     {
-      id: "purged-911-call",
-      short: "The purged 911 call — open-line records",
-      challenge: "A 3–5 minute open-line 911 call from the transport vehicle — \"get that off of him\" — is allegedly absent from every released call batch. Open-line calls are logged differently from engaged calls; that seam is exactly where a call escapes a records search.",
-      categories: ["Missing & deleted footage", "Timeline contradictions"],
-      entities: ["mccoy", "phillip"],
-      investigator: "Candace Owens (Ep 366 tip) · Coleman/Owens (hospital window, independently)",
-      investigatorLinks: [
-        { label: "Owens Ep 366, Jul 27 2026 — the 911-call tip (transcript banked in the library)", url: "https://www.youtube.com/watch?v=HZvwbfePe7o" }
-      ],
-      status: "reported",
-      finding: "Candace Owens’s July 27, 2026 tip: a 3–5 minute open-line 911 call was placed from the vehicle carrying Kirk to Timpanogos Regional Hospital — voices saying \"We got him, we are taking him to the hospital,\" then \"get that off of him\" — and that call is absent from every released 911 batch. Open-line and abandoned calls are logged and retained differently from engaged calls, which is precisely how such a call could escape productions built from engaged-call queries. Separately, two independent sources (Coleman and Owens threads) describe activity at Timpanogos Regional Hospital in the 10:00–11:30 a.m. window — before the shooting — whose GRAMA-able surface is the dispatch record: inter-facility transfer runs and any hospital diversion or status-change notifications. The tip rides as attributed discourse until records land.",
-      implication: "The dispatch district’s own systems answer this without anyone’s testimony: the CAD event log for the transport window, an open-line/abandoned-call category search run as its own record type, the 10:00–11:30 a.m. transfer and diversion records, and — decisive either way — the retention schedule and deletion/purge audit trail. If the call existed and was purged, the purge trail is itself the record. The standing preservation language matters most on this card.",
-      sources: [
-        { label: "Owens Ep 366, Jul 27 2026 — the open-line call tip", url: "https://www.youtube.com/watch?v=HZvwbfePe7o" },
-        { label: "Owens Ep 369, Jul 31 2026 — the Timpanogos eyewitness (hospital window)", url: "https://www.youtube.com/watch?v=iB-YtO3UZOg" },
-        { label: "Coleman Ep 153, Aug 2 2026 — the diversion-radio-traffic point and the L3 trauma-routing problem (transcript banked)", url: "https://www.youtube.com/watch?v=RjJPLB5e82w" }
-      ],
-      requests: [
-        {
-          agencyId: "uvdispatch",
-          summary: "UV Dispatch SSD — CAD logs, open-line/abandoned 911 records, hospital transfer/diversion records, retention + purge audit trail",
-          subject: "GRAMA Request: open-line and abandoned 911 call records, CAD event logs, and retention audit trail, September 10, 2025",
-          records: "I request: (1) the CAD (computer-aided dispatch) event log and incident history for the transport of the shooting victim from the Utah Valley University campus to Timpanogos Regional Hospital on September 10, 2025, for the window 12:00 p.m. to 2:00 p.m.; (2) all abandoned-call and open-line call records — including audio and call-detail records — received between 12:00 p.m. and 2:00 p.m. on September 10, 2025 and associated with, or geolocated along, the route between the UVU campus and Timpanogos Regional Hospital. I specifically request that open-line and abandoned calls be searched as their own record category, since these are logged differently from engaged calls and may not have been captured by prior productions; (3) CAD records of inter-facility transfer runs dispatched between 10:00 a.m. and 11:30 a.m. on September 10, 2025 involving Timpanogos Regional Hospital, and any hospital diversion notification or status-change records for Timpanogos Regional Hospital for the same window; and (4) the district’s retention schedule for 911 audio and CAD records, and any deletion or purge audit trail showing whether any September 10, 2025 call or CAD records have been deleted, overwritten, or purged, and if so when and under what authority; and (5) dispatch radio traffic recordings and radio log entries for the 12:00 p.m.–2:00 p.m. transport window and the 10:00–11:30 a.m. transfer window, including any hospital diversion or status-change announcements — if a hospital is on diversion, dispatch radio traffic states it. If no responsive records exist for any numbered item — in particular, if no open-line or abandoned call exists for the transport window — I request written confirmation of that fact for that item, including a description of the search conducted. I ask that all potentially responsive records — expressly including all September 10, 2025 911 audio, call-detail records, and CAD data, and the deletion/purge audit trail itself — be preserved immediately upon receipt of this request and for the duration of processing and of any administrative appeal or review.",
-          ask_no_records: true,
-          filed: "PENDING — filed via openrecords.utah.gov (entity: Utah Valley Dispatch Special Service District), early Aug 2026. Reference number and clock start pending the district’s acknowledgment — the state portal is the record trail. The preservation paragraph rode with it; retention clocks were the enemy, which is why this one went in first."
-        }
-      ]
-    },
-    {
       id: "k9-no-results",
       challenge: "Tracking dogs were run for whoever jumped from the roof and found nothing.",
       short: "K9s: no results",
@@ -639,6 +610,539 @@ const FOIA = {
       ]
     },
     {
+      id: "tpusa-contact",
+      challenge: "Robinson reportedly met TPUSA reps at the quad the morning of the shooting.",
+      short: "TPUSA contact that morning",
+      categories: ["Witness statements", "Video evidence"],
+      entities: ["robinson", "tpusa", "uvu-ent", "neff"],
+      investigator: "Baron Coleman · Buckley Carlson · Ian Carroll",
+      investigatorLinks: [
+        { label: "Bombshells crossover (Liberty Lockdown)", url: "https://www.youtube.com/watch?v=Fk4RFSn6gqs" },
+        { label: "Carroll on day two", url: "https://www.youtube.com/watch?v=r8JjODn8-dY" },
+        { label: "Final recap — the Neff Twitter Space clip", url: "https://www.youtube.com/watch?v=R7mdXcBfQTw" }
+      ],
+      status: "confirmed",
+      finding: "Testimony on both day two and day three placed Robinson making contact with TPUSA representatives at the quad the morning of the shooting, while the event was being set up — the SBI lead officer's timeline words were “met with TPUSA representatives.” The state did not name the representatives, and no footage of the contact has been shown. Then Charlie Kirk Show representative Blake Neff, on a recorded Twitter Space during hearing week, first said he didn't know who it was — “and even if I did, I wouldn't tell you, because you guys would just harass that person” — and then added: “and I know that that person didn't do anything.”",
+      implication: "The accused spoke with people from the victim's own organization hours before the shooting, and eleven months of official narrative never mentioned it. UVU hosted the event — its event-services coordination records, credentialing lists, and vendor rosters would name the people the testimony didn't.",
+      sources: [
+        { label: "Day 2 timeline testimony; day 3 testimony (per Coleman/Carroll coverage)", url: "" }
+      ],
+      requests: [
+        {
+          agencyId: "uvu",
+          summary: "UVU — event coordination and credentialing records naming the TPUSA advance staff",
+          subject: "GRAMA Request: event coordination records for the September 10, 2025 TPUSA event",
+          records: "I request, concerning the September 10, 2025 Turning Point USA event at Utah Valley University: (1) the event agreement, facility-use contract, and coordination correspondence between UVU event services (or student engagement) and TPUSA advance or event staff; (2) any credentialing, access, or staff roster provided to UVU identifying TPUSA personnel present on campus for event setup that morning; and (3) the vendor or contractor list for the event, including audio/visual contractors. I am not requesting attendee lists or any student records.",
+          ask_no_records: true,
+          filed: "PENDING — filed via NextRequest as UVU #26-221, Jul 16, 2026; acknowledged Jul 16 with the request text quoted back. Due ~Jul 30–31 (Pioneer Day)."
+        },
+        {
+          agencyId: "uvupd",
+          summary: "UVU PD — quad-area camera footage covering the morning contact window",
+          subject: "GRAMA Request: quad/amphitheater camera footage, morning of September 10, 2025",
+          records: "I request unedited exports of Utah Valley University camera footage covering the quad/amphitheater area where the September 10, 2025 event was being set up, for 8:15 a.m. – 10:30 a.m. that morning — the window in which preliminary-hearing testimony placed the defendant making contact with event representatives. If this footage has been provided to or seized by an investigating agency, I request the transfer record identifying that agency.",
+          ask_no_records: true,
+          filed: "FILED Aug 3, 2026 by email to uvpdrecords@uvu.edu — unedited quad/amphitheater exports, 8:15–10:30 a.m. Sept 10 (the window testimony places the defendant contacting event reps), with the transfer-record fallback if seized. Expect the § 63G-2-106 \"security measures\" wall UVU raised Aug 3 on #26-229/#26-230 — the appeal will target § 106’s categorical use."
+        },
+        {
+          agencyId: "uvu",
+          existing: true,
+          summary: "UVU — the event paper set named in its own #26-221 release: fountain work order, MEAC assessment, film request + 25Live record, amplified-sound approval",
+          subject: "GRAMA Request: fountain work order, MEAC assessment, film request form and 25Live record, and amplified-sound approval — September 10, 2025 event",
+          records: "Each of the following records is identified in, or directly referenced by, the records UVU released on July 31, 2026 in response to request #26-221. I request: (1) the grounds or facilities work order for the courtyard fountain referenced in the event-coordination correspondence for the September 10, 2025 event; (2) the Major Event Assessment Committee (MEAC) risk assessment or review record for that event, conducted on or about August 25, 2025; (3) the film request form and the 25Live reservation record for that event, including any attachments describing the \"total footprint of the set\" and camera placement; and (4) the written amplified-sound approval issued on or about September 8, 2025 for that event. Each item names a discrete, catalogued document already identified in UVU’s own production; this is not a broad search. If no responsive record exists for any numbered item, I request written confirmation of that fact for that item, including a description of the search conducted.",
+          ask_no_records: true,
+          filed: "NOT FILED — DRAFTED Aug 2, 2026, ready to file via NextRequest (or grama@uvu.edu). Every item is named in UVU’s own Jul 31, 2026 release on #26-221 — already located, already catalogued."
+        },
+        {
+          agencyId: "uvupd",
+          summary: "UVU PD — the \"all approved\" paper: event sign-off, security/operations plan, staffing assignments",
+          subject: "GRAMA Request: pre-event coordination and approval records for the September 10, 2025 event",
+          records: "The event-coordination correspondence released by UVU on July 31, 2026 in response to request #26-221 states that the September 10, 2025 event organizers were \"connecting with our campus police\" and that the arrangement \"was all approved.\" I request, for the period August 15 through September 10, 2025: (1) the UVU Police Department’s written approval or sign-off record for the September 10, 2025 event; (2) the event security plan or operations plan prepared by or for the department for that event; and (3) the department’s staffing or post assignment record for that event. Each item names a discrete record generated in ordinary pre-event planning; this is not a broad search. If no responsive record exists for any numbered item — in particular, if no written approval or security plan exists — I request written confirmation of that fact for that item, including a description of the search conducted.",
+          ask_no_records: true,
+          filed: "NOT FILED — DRAFTED Aug 2, 2026, ready to file to uvpdrecords@uvu.edu. Either the approval paper exists, or \"it was all approved\" was said without any."
+        }
+      ]
+    },
+    {
+      id: "dod-erika-messaging",
+      short: "Pentagon boosted Erika",
+      challenge: "Claim: the Pentagon juiced Erika Kirk's #1 trend — with no proof shown.",
+      categories: ["Kirk assassination & coverup"],
+      entities: ["erika-kirk", "charlie-kirk", "dod"],
+      investigator: "Candace Owens",
+      investigatorLinks: [
+        { label: "Candace — Ep 352", url: "https://www.youtube.com/watch?v=3QJqtW_NOSI" }
+      ],
+      status: "reported",
+      finding: "Candace Owens alleges the Department of Defense (\"Department of War\") orchestrated messaging to artificially boost Erika Kirk to the #1 social-media trend; she cites no documentary evidence.",
+      implication: "A claim that a federal department ran a domestic messaging/influence effort around a private individual. If true, public-affairs guidance or social-media records would exist. Single-source, on-air allegation with no evidence shown — this request is what would confirm or refute it.",
+      sources: [
+        { label: "Candace Owens, Ep 352", url: "https://www.youtube.com/watch?v=3QJqtW_NOSI" }
+      ],
+      requests: [
+        {
+          agencyId: "dod",
+          summary: "DoD — any public-affairs/social-media activity re Erika Kirk",
+          subject: "FOIA Request: Department of Defense public-affairs or social-media records concerning Erika Kirk",
+          records: "I request a copy of any public-affairs guidance, social-media activity log, or messaging directive concerning Erika Kirk issued by or within the Department of Defense, from September 1, 2025 to the date this request is processed. To keep this request narrow and minimize search burden, I am not seeking general email correspondence.",
+          ask_no_records: true
+        }
+      ]
+    },
+    {
+      id: "c37-pag-denial",
+      short: "C-37 99-0404 — the Presidential Airlift Group denial",
+      challenge: "A routine flight-records FOIA came back denied at the discretion of the Presidential Airlift Group. A second request either corroborates the anomaly or produces a second appealable denial citing the same irregular authority.",
+      categories: ["Kirk assassination & coverup"],
+      entities: ["pag", "eop"],
+      investigator: "Baron Coleman (the FOIA) · Danks (the report)",
+      investigatorLinks: [
+        { label: "Danks, Jul 27 2026 — Coleman’s Fort Huachuca FOIA and the PAG denial (transcript banked in the library)", url: "https://www.youtube.com/watch?v=InWAoVUD1PA" }
+      ],
+      status: "reported",
+      finding: "Baron Coleman’s FOIA for flight records of C-37 tail 99-0404 — operations at or involving Fort Huachuca, Arizona on September 8–9, 2025, normally a routine ask through the 89th Airlift Wing’s squadrons — came back denied at the discretion of the Presidential Airlift Group. By Coleman’s elimination logic, PAG discretion over the records means White House Military Office tasking. The thread pairs with the WHMO misdirected-email anomaly (the \"Erika Kirk video trending\" email Candace Owens says she received within an hour of the Hilton event). Rides as attributed discourse until the paper lands.",
+      implication: "A parallel request from a second requester is the cheapest possible test: either the 89th produces the schedule, manifests, and tasking records — or it issues a second written denial citing the same irregular authority, which corroborates the anomaly on paper and is appealable. The tasking/authorization item names the record that identifies which office directed the missions; the request asks that any PAG/WHMO-directed withholding be stated in writing in the determination.",
+      sources: [
+        { label: "Danks, Jul 27 2026 — the Coleman FOIA read-through", url: "https://www.youtube.com/watch?v=InWAoVUD1PA" }
+      ],
+      requests: [
+        {
+          agencyId: "af89aw",
+          summary: "89th AW — flight schedule, manifests, and tasking authority for C-37 99-0404, Sept 8–9, 2025 (the parallel to Coleman’s denied request)",
+          subject: "FOIA Request: flight schedule, manifests, and tasking authority for C-37 tail 99-0404, September 8–9, 2025",
+          records: "I request, for the aircraft with tail number 99-0404 for September 8–9, 2025: (1) the flight schedule and mission records for its operations at or involving Fort Huachuca, Arizona; (2) the passenger manifests for those flights; and (3) the tasking or authorization record identifying the office that requested or directed those missions. Each item names a discrete, routinely generated record; this is not a broad search. If any item is withheld at the direction or discretion of the Presidential Airlift Group or the White House Military Office, I request that the withholding authority be stated in writing in the determination. If no responsive records exist for any item, please confirm that in writing, including a description of the search conducted.",
+          ask_no_records: true,
+          filed: "NOT FILED — DRAFTED Aug 2, 2026 — file via Air Force eFOIA or FOIA.gov to the 89th AW FOIA Office, Joint Base Andrews; avoid any Login.gov-gated path — the email trail is the record."
+        }
+      ]
+    },
+    {
+      id: "kolvet-eeob-visit",
+      short: "Kolvet at the White House",
+      challenge: "Kirk's producer was at the White House the day before the Epstein files dropped.",
+      categories: ["Kirk assassination & coverup"],
+      entities: ["kolvet", "charlie-kirk", "kash-patel", "eop", "epstein"],
+      investigator: "Candace Owens",
+      investigatorLinks: [
+        { label: "Candace — Ep 352", url: "https://www.youtube.com/watch?v=3QJqtW_NOSI" }
+      ],
+      status: "reported",
+      finding: "Candace Owens reports that Andrew Kolvet, Charlie Kirk's producer, was at the White House / Eisenhower Executive Office Building the day before the DOJ released the Epstein files — while a Charlie Kirk show was pre-recorded (with Kash Patel) to make it appear he was in Arizona.",
+      implication: "If a Kirk-world figure took a White House meeting the day before a major Epstein-files release, entry records would document it. Strong caveat: courts have ruled White House visitor logs held by the Secret Service are often NOT agency records subject to FOIA, so this may be denied on that ground (EEOB-tenant agencies like OMB are a separate avenue). Single-source, on-air account.",
+      sources: [
+        { label: "Candace Owens, Ep 352", url: "https://www.youtube.com/watch?v=3QJqtW_NOSI" },
+        { label: "Credibility context (Ep 359, Jul 14 2026): Kolvet's own tweet, read on air, concedes two elements of Owens' Kolvet-sourced Netanyahu account — TPUSA declined a Netanyahu show appearance, and Kirk later took a Netanyahu call at Bill Ackman's house — while disputing her 'take TPUSA to the next level' claim. Doesn't bear on the EEOB visit directly; logged for weighing her single-source Kolvet reporting.", url: "https://www.youtube.com/watch?v=X3VKJVJ7cN4" }
+      ],
+      requests: [
+        {
+          agencyId: "usss",
+          component: "U.S. Secret Service (in SecureRelease's component picker)",
+          summary: "Secret Service — EEOB/White House entry records for Andrew Kolvet",
+          subject: "FOIA Request: White House complex / EEOB access records for Andrew Kolvet",
+          records: "I request a copy of any entry, exit, visitor, or access records for Andrew Kolvet at the White House complex and the Eisenhower Executive Office Building on the date of, and the day before, the Department of Justice's public release of the Epstein files (please insert the specific calendar date before filing). I am not seeking general email correspondence.",
+          ask_no_records: true,
+          filed: "PENDING — filed Jul 25, 2026 via SecureRelease (DHS → U.S. Secret Service component); acknowledged the same day as FOIA File Number 2026-USSSFOIA-01640 ('reviewing your submission to determine appropriate next steps'). The card's caveat stands: WAVES/ACR-type entry records held by USSS have been held non-agency records under FOIA, so a denial on that ground is the expected first move — itself documentable, with the EEOB-tenant-agency lane (OMB et al.) as the follow-on."
+        },
+        {
+          agencyId: "usss",
+          summary: "Secret Service — the refile with real dates: WAVES/access records + appointment requests, Jul 26–Aug 1, 2026, for Kolvet, Minez, and TPUSA counsel",
+          subject: "FOIA Request: WAVES/access records and appointment requests, White House complex, July 26 – August 1, 2026",
+          records: "I request, for the period July 26 through August 1, 2026: (1) WAVES (Workers and Visitors Entry System) and ACR access records for the White House complex, including the Eisenhower Executive Office Building, for the following individuals: Andrew Kolvet (Turning Point USA), Marina Minez (Turning Point USA Chief Marketing Officer), and Turning Point USA’s in-house counsel; and (2) the visitor appointment request records submitted for those individuals for that period, including the requesting office and sponsoring official. This request is bounded to a single named week and three named individuals; it is not a broad search. If the Secret Service’s position is that responsive records are presidential records outside its custody, I request that determination in writing, identifying the system of records to which the request was applied. If no responsive records exist, please confirm that in writing, including a description of the search conducted. I request that all records potentially responsive to this request be preserved for the duration of processing and of any administrative appeal or review — expressly including WAVES records otherwise subject to periodic transfer or deletion.",
+          ask_no_records: true,
+          filed: "NOT FILED — DRAFTED Aug 2, 2026. The refile with real dates: the Jul 26–Aug 1 window is anchored to Candace’s Jul 27 tip (\"meeting tomorrow, maybe Wednesday\") and Netanyahu’s Jul 27 DC arrival — adjust if a firmer date surfaces. Email FOIA@usss.dhs.gov preferred over SecureRelease — email is the record."
+        }
+      ]
+    },
+    {
+      id: "memorial-nsse",
+      short: "Was the memorial an NSSE?",
+      challenge: "Was Kirk's Glendale memorial a National Special Security Event — and who held security lead?",
+      categories: ["Kirk assassination & coverup"],
+      entities: ["charlie-kirk", "erika-kirk", "usss", "amodei"],
+      investigator: "Ana Escobar (Fort Banana: Connecting the Dots, Part 1)",
+      investigatorLinks: [
+        { label: "Ana Escobar — Fort Banana: Connecting the Dots (Part 1)", url: "https://www.youtube.com/watch?v=OEsx7hpIFic" }
+      ],
+      status: "reported",
+      finding: "Ana Escobar builds an inference chain connecting the Butler rally, the presidential inauguration, and Charlie Kirk's September 21, 2025 memorial at State Farm Stadium in Glendale as Secret Service events, pivoting on Rep. Mark Amodei's seat on the House Appropriations Subcommittee on Homeland Security — which funds the Secret Service — toward a claim about who shaped the memorial's security. (Re-verified against her transcript Jul 20 2026: the NSSE framing is hers verbatim; she explicitly hedges — \"I'm not trying to make any kind of allegations.\" Two corrections to her chain: Amodei doesn't just sit on that subcommittee, he CHAIRS it; and Butler was a campaign rally, not an NSSE.) The underlying checkable fact is narrower and real: the memorial's actual DHS designation is reported as SEAR Level 1 — Special Event Assessment Rating, Secret Service security lead — not an NSSE, and the designation paperwork is a record either way.",
+      implication: "Whether the memorial was an NSSE or a SEAR-rated event is a discrete, documentable fact. The designation determination, the lead-agency assignment, and the operational-plan summary are records. The designation — or its absence — either supports or deflates the 'same story as Butler' framing. (The Amodei-appropriations-to-Secret-Service motive chain is Escobar's explicitly speculative inference; this request tests the one underlying fact, not the theory.)",
+      sources: [
+        { label: "Ana Escobar — Fort Banana (Part 1): the NSSE / Amodei-appropriations through-line (transcript re-pulled live Jul 20 2026)", url: "https://www.youtube.com/watch?v=OEsx7hpIFic" }
+      ],
+      requests: [
+        {
+          agencyId: "usss",
+          summary: "Secret Service — NSSE/SEAR designation and security-lead records for the Glendale memorial",
+          subject: "FOIA Request: NSSE or SEAR designation and operational security-lead records for the September 2025 Charlie Kirk memorial, Glendale, Arizona",
+          records: "I request records sufficient to show whether the memorial service for Charlie Kirk held on or about September 21, 2025 at State Farm Stadium in Glendale, Arizona was designated a National Special Security Event (NSSE) or assigned a Special Event Assessment Rating (SEAR) level, including the designation determination, request, or notification, and any record identifying the federal agency assigned operational security lead for the event. I am requesting the designation and lead-agency records only, not tactical operational details whose release could reasonably endanger safety. To keep this request narrow and minimize search burden, I am not seeking general email correspondence.",
+          ask_no_records: true
+        }
+      ]
+    },
+    {
+      id: "backpack-stop-testing",
+      short: "The bus-stop backpack",
+      challenge: "A backpack on the shooter's flight route went to the FBI lab — then someone stopped the testing.",
+      categories: ["Physical evidence", "Crime scene handling"],
+      entities: ["robinson", "charlie-kirk", "sbi", "fbi-ent"],
+      investigator: "Preliminary-hearing record (courtroom audio via Candace Eps 360–361)",
+      investigatorLinks: [
+        { label: "Candace Ep 360 — the Filomena seizure testimony, played", url: "https://www.youtube.com/watch?v=puuMVxEu5NU" },
+        { label: "Candace Ep 361 — the Baker lab-notes cross, played", url: "https://www.youtube.com/watch?v=mLvJqdxS-FY" }
+      ],
+      status: "confirmed",
+      finding: "Two witnesses, both on courtroom audio. Sgt. Jennifer Filomena (State Bureau of Investigation) testified that officers canvassing the shooter's flight route deemed the Fulton Library a potential crime scene because of unattended items at the bus stops — \"a backpack, a jacket, as well as some gloves, and there may have been some other things\" — seized them, and sent them to the FBI lab for processing \"along with some information that the suspect may have shed some of these items as he fled.\" Asked whether she later told the lab the items weren't connected and testing should stop: \"I don't remember communicating that\" — but agreed the FBI/ATF lab notes recording that communication would not be inconsistent with what she knows. FBI examiner Amanda Baker testified the backpack was exhibit 9, was processed for DNA, and then \"no comparisons needed\" once it was \"potentially left behind by a bystander\" — at which point the cross-examiner read her own lab notes at page 20: the backpack \"belongs to Kirk's detail.\" Baker: \"that was not my communication log. That was someone else within the laboratory.\" Nobody named the detail member, the note's author, or who ordered the stop.",
+      implication: "Whoever the backpack belonged to, the paper trail is administrative and discrete: the seizure/property record for the bus-stop items, the communication that told the FBI lab to stand down, the lab-note entry attributing the backpack to the protective detail, and — if the items were returned to an owner — the release record naming them. Testing that stops because \"the person was on Charlie's team\" is exactly the kind of determination that has to be written down somewhere; either the record exists or the stop was undocumented, and both answers are findings.",
+      sources: [
+        { label: "Ep 360 [9:57–11:23] — Filomena: seizure, FBI lab, \"pull a plug,\" the FBI/ATF notes exchange (verbatim, re-read Jul 20 2026)", url: "https://www.youtube.com/watch?v=puuMVxEu5NU" },
+        { label: "Ep 361 [16:27–20:42] — Baker: exhibit 9, DNA processing halted, the page-20 \"Kirk's detail\" note authored by \"someone else within the laboratory\" (verbatim, re-read Jul 20 2026)", url: "https://www.youtube.com/watch?v=mLvJqdxS-FY" }
+      ],
+      requests: [
+        {
+          agencyId: "dps",
+          summary: "DPS/SBI — the seizure/property records and the stand-down communication for the bus-stop items",
+          subject: "GRAMA Request: property and evidence records concerning items seized at the Fulton Library bus stops, September 10, 2025",
+          records: "I request, concerning the September 10, 2025 Utah Valley University homicide investigation: (1) the property or evidence seizure records for the unattended items collected at or near the Fulton Library bus stops (a backpack, jacket, and gloves, and any other items in that seizure group); (2) any record of a communication from the State Bureau of Investigation to the FBI laboratory concerning whether those items were connected to the case or whether analysis should be discontinued; (3) the record of any determination that the items belonged to a member of the decedent's protective detail or to any other identified person; and (4) if the items were released or returned, the release record showing to whom and when. Personal identifiers of uninvolved private persons may be redacted; the existence, date, and authorship of the determination records is the request. If no record of the discontinuation communication exists, I request written confirmation of that fact. Please also retain this correspondence and all records related to the processing of this request.",
+          parties: "Tyler James Robinson (defendant); Charlie Kirk (victim); the SBI official who communicated with the FBI laboratory, and the protective-detail member to whom any determination attributed the items (names unknown — identification is part of both).",
+          formAnswers: [
+            { label: "Date of occurrence", value: "09/10/2025" },
+            { label: "Time of occurrence", value: "midday, in the hours after the shooting (bus-stop items collected during the response)" }
+          ],
+          ask_no_records: true
+        },
+        {
+          agencyId: "fbi",
+          summary: "FBI — the lab communication log and the page-20 note attributing the backpack to Kirk's detail",
+          subject: "FOIA Request: laboratory communication log and case-note records concerning exhibit 9 (backpack), Utah Valley University homicide investigation",
+          records: "I request, concerning FBI laboratory processing in the September 10, 2025 Utah Valley University homicide investigation (State v. Robinson, Utah Fourth District No. 251403576): (1) the laboratory communication log entries concerning the backpack designated exhibit 9 and its contents, including the communication that DNA comparisons were no longer needed; (2) the case-note entry (referenced at the July 2026 preliminary hearing as appearing at page 20 of the examiner's notes) recording that the backpack belonged to the decedent's protective detail, together with records sufficient to show which agency or official communicated that information to the laboratory; and (3) any record of the laboratory's disposition of the item thereafter. Names of laboratory personnel may be redacted; the originating agency and role of the communicating official is the request. Expect and please state any Exemption 7(A) withholding in writing with the volume of records withheld.",
+          ask_no_records: true
+        }
+      ]
+    },
+    {
+      id: "panguitch-alibi",
+      challenge: "Two restaurant staff put Robinson three hours from the scene that night.",
+      short: "The Panguitch alibi",
+      categories: ["Timeline contradictions", "Witness statements"],
+      entities: ["robinson", "twiggs", "fbi-ent", "sbi"],
+      investigator: "Diligent Denizen · Baron Coleman · Candace Owens",
+      investigatorLinks: [
+        { label: "Diligent Denizen — the on-camera staff interview (posted Jul 12)", url: "https://x.com/DiligentDenizen/status/2076405974597063038" },
+        { label: "Diligent Denizen — VIDEO of the physical receipt (Jul 16, 957K views): two eyewitnesses ID Robinson 8:55–9:47pm; his read — the 2h57m Panguitch→Orem drive makes the ~11pm Orem texts impossible, so \"the texts, the confession, and Lance Twiggs' testimony are ALL FAKE\"", url: "https://x.com/DiligentDenizen/status/2077905879341433104" },
+        { label: "Diligent Denizen — full Cowboy's Smokehouse visit (Jul 19): owner hands over the receipt (\"IS the ticket in question\") + full on-camera eyewitness interview", url: "https://x.com/DiligentDenizen/status/2078967048521036149" },
+        { label: "Coleman Ep. 143 — the timeline math against the state's own texts", url: "https://www.youtube.com/watch?v=yBDB-mpI-Xw" },
+        { label: "Interview video, archived", url: "https://web.archive.org/web/20260713050144/https://video.twimg.com/ext_tw_video/2076405353022095360/pu/vid/avc1/1280x720/CBzgt2rfdWeCpsLE.mp4" }
+      ],
+      status: "contested",
+      finding: "Two staff at Cowboy's Smokehouse in Panguitch — on camera, one of whom personally took Robinson's card at checkout near the 10 p.m. close — say they served him the evening of September 10 and are \"100%\" on the ID (face, voice, mannerisms; more certain than Lance Twiggs was about the stairwell figure). They reported it to the FBI, who took contact information and never followed up; the sighting reached Candace Owens months ago. Neither the prosecution nor the defense has ever contacted the restaurant. The math: fastest route Panguitch→UVU is ~2h46m, so a ~9:50 p.m. departure puts the earliest Orem arrival at ~12:36 a.m. — while the state's text-message exhibits have \"Robinson\" texting Twiggs from outside UVU, watching a lingering cop, with the first message at 11:00 p.m. DD's original Jul 12 post — preserved in the Jul 18 receipts batch as fxtwitter + syndication captures with full note text and server timestamps — runs the math in his own words: \"Panguich is 2 hours 49 minutes from UVU\"; \"If he left at 10pm the fastest he could be at UVU is 12:47am\"; against a text timeline he characterizes as \"watching & waiting for the police to leave hours before 12:36am-ish on the 11th as is in the texts.\" (Coleman's Ep 146 detail on that clock reading: Robinson was flagged down by a cop while waiting at a red light at 12:36 a.m. that night — flagged down, not \"pulled over\" [3:18:22–28].) A card payment record with a hard timestamp exists at a named business. Update (Jul 19, re-verified against the scrape Jul 20): the owner of Cowboy's Smokehouse set a copy of that receipt in front of Diligent Denizen — \"IS the ticket in question\" — arranged the on-camera (face-cropped) eyewitness interview, disclosed the restaurant had no working camera the night of the sighting, and said the store is fielding harassing calls. The owner himself, who wasn't there that night, says he doesn't think it was Robinson though it \"makes sense it could be\" — the ID rests on the two staff eyewitnesses, one of whom printed the receipt for the FBI. Counterweight (Jul 18–19, from the Jul 20 trend grab): the restaurant itself has now spoken. An \"Official Statement\" posted by Cowboy Smokehouse/Steakhouse on Facebook — circulating as a screenshot, surfaced in a reply to Owens (@_midGRAY; receipts midgray-cowboy-smokehouse-statement-2078627259246579841 fxtwitter + syndication + photo1.jpg) — reads, verbatim as visible in the image: \"Based on the information currently available to us, we have no evidence establishing whether Tyler Robinson was at our restaurant around September 10, 2025. We have responded truthfully to those who have questioned us, based on the information available to us at the time. We have fully cooperated, and will continue to cooperate, with the authorities conducting this investigation. Because this is an active matter, we cannot and will not comment further.\" That gives the alibi no institutional backing — and Owens' receipted reply concedes the ground while reframing it: because the restaurant has no operable cameras, \"the owner cannot definitively state that Tyler was at his restaurant on September 10th\"; there were three servers that night; \"the server that actually served Tyler Robinson was certain it was him\"; the owner then pulled the receipt and found \"at the very least— someone with the name of Tyler Robinson had paid with his credit/debit card\"; the restaurant reported it to the Feds, and \"The Feds hardly cared.\" That is a documented narrative shift against the DD layer above — from two 100%-certain eyewitnesses to ONE server certain plus a name-match on a receipt, with the owner explicitly unable to confirm. What the receipts document is the screenshot's circulation and Owens' response to it; the statement's authenticity rests on the screenshot alone pending the restaurant's original Facebook post. (Status contested: the DD interview layer is on tape and archived; the restaurant's statement-as-screenshot now sits directly against it; the sighting itself remains a witness claim outside the court record — which is exactly the problem the records requests attack.)",
+      implication: "If the tip is wrong, the case file shows it was run down and excluded — routine. If the tip was never run down, a 100%-ID alibi sighting with a checkable payment record sat in the FBI's intake while the state built a timeline it contradicts. Either way the paper answers: the tip/lead log entry, and any record of follow-up, are discrete administrative records on the state side. (The FBI intake itself is federal — that request lives on the federal FAFO.) Coleman's read of the same facts: \"either the texts are fabricated... or someone was pretending to be Tyler.\" The Jul 18 receipts batch pins the remaining checkables that live outside GRAMA: the Smokehouse's own merchant/POS records for the night of September 10 (a private business — discovery territory, not a records request), and whether prosecution or defense ever contacted the restaurant — testable against the witness lists and discovery filings on the public court docket in State v. Robinson. The Jul 20 trend grab adds two more: (1) the restaurant's ORIGINAL Facebook statement — the circulating version is a screenshot; pull the timestamped original from the restaurant's own page. It is now the pivotal document of the alibi fight. (2) For weighing the card's loudest current advocate: the filed Harpole v. Owens complaint, which Owens characterizes in a receipted post (\"Brian Harpole explicitly claims he had to go on Shawn Ryan to refute my claims... he lost business and revenue for which I am to blame\"; receipt realcandaceo-harpole-lawsuit-readback-2078627672758886911) and her detractors characterize the other way — the complaint itself is a public court record, checkable directly; Paramount Tactical's parent post tags @dhillonlaw (Dhillon Law Group — possible counsel identification).",
+      sources: [
+        { label: "On-camera interview (3:09), receipts + Wayback archives in the library", url: "https://web.archive.org/web/20260713050134/https://cdn.syndication.twimg.com/tweet-result?id=2076405974597063038&token=a" },
+        { label: "Receipts batch (captured Jul 18, REFS written Jul 20): DD's Jul 12 post as fxtwitter + syndication JSONs — full note text, server timestamps, as-captured stats (336K views) — plus a 102-post snapshot of the account's timeline the same day. The post's claims (witness ID, FBI report, debit-card payment, drive-time math) remain DD's assertions; what the receipts fix is exactly what he said, when", url: "https://x.com/DiligentDenizen/status/2076405974597063038" },
+        { label: "Ep. 143 segment [20:45–34:30]", url: "https://www.youtube.com/watch?v=yBDB-mpI-Xw" },
+        { label: "The Cowboy Smokehouse \"Official Statement\" as it circulated (Jul 18): a screenshot of a Facebook post, posted in a reply to Owens by @_midGRAY — receipts midgray-cowboy-smokehouse-statement-2078627259246579841 (fxtwitter + syndication JSONs + the screenshot as photo1.jpg); trend grab in the library: X trend 2026-07-20 - Acting-alone debate reignites - POSTS.md. \"[W]e have no evidence establishing whether Tyler Robinson was at our restaurant around September 10, 2025.\" Screenshot only — the restaurant's original Facebook post is the authentication, and pulling it is an open lead", url: "https://x.com/_midGRAY/status/2078627259246579841" },
+        { label: "Owens' receipted response (Jul 19, two posts — receipts realcandaceo-three-servers-reported-feds-2078632931958870381 and realcandaceo-tick-tock-three-servers-2078638277523841385): no operable cameras, so the owner \"cannot definitively state\"; three servers that night, the one who served him \"certain\"; an owner-pulled receipt with \"at the very least\" a Tyler Robinson name-match on the card payment; reported to the Feds, who \"hardly cared.\" Her assertions, on the record verbatim — the concession and the reframing in the same posts", url: "https://x.com/RealCandaceO/status/2078638277523841385" }
+      ],
+      requests: [
+        {
+          agencyId: "dps",
+          summary: "DPS/SBI — the lead/tip log entry for the Panguitch sighting (absence is the finding)",
+          subject: "GRAMA Request: lead or tip records concerning a reported September 10, 2025 sighting in Panguitch, Utah",
+          records: "I request, concerning the Utah Valley University homicide investigation: (1) the lead, tip, or information-report log entry documenting receipt of information that the suspect was seen at a restaurant in Panguitch, Utah on the evening of September 10, 2025 — whether received directly, from the FBI, or from any other agency; and (2) any record documenting investigative follow-up on that information, including any interview of the reporting witnesses or any records request to the business, or a record of the decision not to follow up. Witness personal identifiers may be redacted. If no responsive records exist, I request written confirmation of that fact, including a description of the search conducted.",
+          ask_no_records: true,
+          filed: "TWO OF THE BATCH DENIED — P012986 and P012989 denied Aug 1, 2026 by SBI Records Manager Tina Rodriguez as \"exempt from disclosure\"; the email notice’s \"for the following reasons:\" is followed by nothing — the actual grounds are visible only inside the GovQA portal, and which two of the five asks those numbers map to is pending a portal login. Original batch: filed Jul 16, 2026 via GovQA — P012986/87/89/92/95 (exhibit 12.1/12.4 tasking records, Panguitch tip log, Discord evidence intake, ballistics + GSR reports, latent prints 11B–11D)."
+        },
+        {
+          agencyId: "ucao",
+          summary: "Utah County Attorney — any record the prosecution received or ran down the Panguitch tip",
+          subject: "GRAMA Request: records concerning a reported alibi sighting, State v. Robinson",
+          records: "I request any record held by the Utah County Attorney's Office documenting receipt of, or follow-up on, information that the defendant in State v. Robinson was seen in Panguitch, Utah on the evening of September 10, 2025 — including any referral from a law-enforcement agency, any internal memorandum, and any record of contact or attempted contact with the business or the reporting witnesses. If no responsive records exist, I request written confirmation of that fact.",
+          ask_no_records: true
+        }
+      ]
+    },
+    {
+      id: "ucao-blanket-hold",
+      short: "The UCAO blanket hold — one letter to rule them all",
+      challenge: "A Utah County deputy attorney sent another county’s sheriff a notice pre-classifying ALL Kirk-shooting records as protected — category-wide, no record-by-record determination, \"until further written notice.\" How many entities got one?",
+      categories: ["Kirk assassination & coverup"],
+      entities: ["ucao-ent", "wcso-ent"],
+      investigator: "Produced by WCSO itself, Aug 3 2026, in response to this docket’s McBride-letter request",
+      investigatorLinks: [],
+      status: "confirmed",
+      finding: "In hand: a \"Notice of Records Restriction Due to Ongoing Investigation\" from the Utah County Attorney’s office (Deputy Attorney Katrina Cole, on letterhead listing County Attorney Jeffrey S. Gray and division chiefs including Ryan McBride), sent to the Washington County Sheriff’s Office: under § 63G-2-305(10), ALL \"printed and electronic correspondence, arrest records, witness statements, reports, notes, recordings, internal communications, interviews, body camera footage, or other records related to the shooting of Charlie Kirk on September 10, 2025\" are to be withheld \"until further written notice from this office,\" with staff told to \"notify our office immediately before taking any action\" on any request. WCSO’s temporary records clerk produced it Aug 3, 2026 with the note that she \"did not know this letter existed,\" called to confirm it is \"still active,\" and will release nothing Robinson-related until trial ends. The same notice was cited the same day to deny this docket’s WCSO CAD-log and Mitchell-interview requests.",
+      implication: "GRAMA classification is record-by-record and belongs to the record’s custodian — § 305(10) protects records whose release would actually interfere, not every record an outside prosecutor labels in advance, and segregability (§ 63G-2-308) survives any classification. A standing instruction from one county’s prosecutor to another county’s sheriff — \"notify our office before taking any action\" — is itself a records-suppression paper trail, and it is now in hand. The follow-on ask writes itself: every such notice UCAO has issued, the full recipient list, and the authorization behind the campaign. Each additional recipient is another denial letter that traces back to one desk.",
+      sources: [
+        { label: "The notice itself — produced by WCSO Aug 3, 2026 (banked in the library’s foia-mail archive)", url: "" }
+      ],
+      requests: [
+        {
+          agencyId: "ucao",
+          summary: "UCAO — every Notice of Records Restriction issued on this case, the recipient list, and the authorization behind them",
+          subject: "GRAMA Request: notices of records restriction issued concerning the September 10, 2025 UVU shooting",
+          records: "I request: (1) each \"Notice of Records Restriction\" or similar letter issued by or on behalf of the Utah County Attorney’s office concerning records related to the September 10, 2025 shooting at Utah Valley University — including the notice signed by Deputy Attorney Katrina Cole and sent to the Washington County Sheriff’s Office, a copy of which I hold; (2) the distribution or recipient list for such notices — each governmental entity to which one was sent, with dates; (3) any written responses or notifications received from recipient entities under the notices’ instruction to \"notify our office immediately\" upon receiving a records request; and (4) the record documenting the decision to issue the notices — the requesting official, authorization, and date. Each item names discrete administrative correspondence of the office; this is not a request for investigative files. If no responsive record exists for any numbered item, I request written confirmation of that fact for that item, including a description of the search conducted.",
+          ask_no_records: true,
+          filed: "NOT FILED — DRAFTED Aug 3, 2026, ready to file to ucao@utahcounty.gov / UCAOrecords@utahcounty.gov. The office’s own notice invites the ask: correspondence ABOUT restricting records is not itself a restricted investigative record."
+        }
+      ]
+    },
+    {
+      id: "hospital-searcher",
+      challenge: "Someone searched hospitals for Charlie Kirk within hours — and the police audio ties his vehicle to the FBI.",
+      short: "The hospital searcher",
+      categories: ["Timeline contradictions"],
+      entities: ["fbi-ent", "charlie-kirk", "bagley", "sbi"],
+      investigator: "Baron Coleman (Ep. 147 — police audio)",
+      investigatorLinks: [
+        { label: "Coleman Ep. 147 — the hospital police audio (full transcript read + archived Jul 20 2026)", url: "https://www.youtube.com/watch?v=DzzvnsEXOOk" }
+      ],
+      status: "reported",
+      finding: "Per the police-scanner audio Coleman walks through: on September 10 a man went into Utah Valley Hospital asking for Charlie Kirk — \"when confronted, he took off running, got in that car and jetted out of there.\" A BOLO with his photo went to the area hospitals; radio described him as HEAVIER SET with two normal hands, best-guess vehicle an older Nissan Armada. Later, while units staked out Zechariah Qureshi's apartment, an Armada rolled up on them and dispatch relayed \"Armada is FBI\" — a second arrival was \"with the marshals\" — followed by on-air confusion distinguishing FBI from SBI. The conflations resolved on the audio: Qureshi had come to police attention over alleged social-media posts about Kirk that he was deleting, NOT hospital visits (at one point scanner traffic had him \"in tactical gear going hospital to hospital\" — wrongly); and the one-armed man, Andrew Piscaldo, got \"official confirmation... not involved.\" Separately: a visitor at Timpanogos Regional documented caution tape and police cars going up ~1:20 p.m. and the hospital still locked down 5:19–5:40 p.m. (\"told me I can't leave\"), with ME vehicles and tactical officers arriving ~5:40 per local news. The lockdown PRE-DATES the searcher radio traffic (~2:49 p.m.), and a nurse in Coleman's chat notes area-wide lockdown is standard procedure during a shooting — so the lockdown corroborates the scene, not the searcher.",
+      implication: "A man searching hospitals for the victim — whom the same night's dispatch traffic ties to an FBI vehicle, and who fled when confronted instead of showing a badge — is either in the records or he isn't. And the build cuts against the shooter: Officer Bagley, the first officer to the Losee roof, described the roof figure as \"not heavy set,\" while the hospital searcher was \"heavier set\" on the radio. The dispatch/CAD audio for the hospital calls, any report identifying the search subject or his agency, and the lockdown-coordination records are discrete records; if he was federal, the no-records response itself becomes the finding.",
+      sources: [
+        { label: "Coleman Ep. 147 police audio (whisper transcript archived to sov-library; claims re-verified against the full transcript Jul 20 2026)", url: "https://www.youtube.com/watch?v=DzzvnsEXOOk" },
+        { label: "Timpanogos Regional witness posts (caution tape ~1:20 p.m.; still locked down 5:19–5:40 p.m.) + local-news ME/tactical arrival clip", url: "" },
+        { label: "Officer Bagley preliminary-hearing testimony — roof figure described as \"not heavy set\"", url: "" }
+      ],
+      requests: [
+        {
+          agencyId: "dps",
+          summary: "DPS/SBI — dispatch/CAD for the hospital-search calls + any report identifying the subject",
+          subject: "GRAMA Request: dispatch/CAD records concerning an individual searching hospitals for the victim, September 10, 2025",
+          records: "I request the computer-aided dispatch (CAD) and radio log records, and any incident or information report, concerning reports on September 10, 2025 of an individual going between hospitals (including Utah Valley Hospital and Timpanogos Regional Hospital) seeking the location of Charlie Kirk in connection with the Utah Valley University homicide investigation — including any record identifying that individual or their agency, any BOLO or lookout issued, and any record of the resulting hospital-lockdown coordination. Unrelated calls for service may be redacted. If no responsive records exist, I request written confirmation of that fact, including a description of the search conducted. Please also retain this correspondence and all records related to the processing of this request.",
+          parties: "Tyler James Robinson (defendant); Charlie Kirk (victim, subject of the searches); the individual reported going between hospitals (identification is part of the request).",
+          formAnswers: [
+            { label: "Date of occurrence", value: "09/10/2025" },
+            { label: "Time of occurrence", value: "afternoon–evening of September 10, 2025, following the ~12:23 p.m. shooting" }
+          ],
+          ask_no_records: true
+        },
+        {
+          agencyId: "orem",
+          summary: "Orem PD — dispatch/incident records for the hospital lockdown, Sept 10",
+          subject: "GRAMA Request: dispatch and incident records concerning a hospital lockdown, September 10, 2025",
+          records: "I request the dispatch/CAD and any incident report records held by the Orem Police Department concerning the lockdown of, or law-enforcement response to, Timpanogos Regional Hospital (and any other Orem-area hospital) on September 10, 2025 in connection with reports of an individual searching for Charlie Kirk — including the reason for the lockdown, the agency that requested it, and any record identifying the individual whose conduct prompted it. If no responsive records exist, I request written confirmation of that fact.",
+          ask_no_records: true
+        }
+      ]
+    },
+    {
+      id: "noble-report",
+      challenge: "Officer omitted that the doorbell witness saw a bald driver and three passengers.",
+      short: "Omitted doorbell report",
+      categories: ["Witness statements", "Video evidence"],
+      entities: ["robinson", "sbi"],
+      investigator: "Baron Coleman · Ian Carroll",
+      investigatorLinks: [
+        { label: "Coleman Ep. 141", url: "https://www.youtube.com/watch?v=FT8kJN3n_cA" },
+        { label: "Carroll on day two", url: "https://www.youtube.com/watch?v=r8JjODn8-dY" }
+      ],
+      status: "confirmed",
+      finding: "On cross, the officer who presented the Nest doorbell footage admitted the homeowners' report describes the driver of Robinson's car as bald, with three other people in the car — and that he omitted both facts on direct while presenting the clip as Robinson returning alone.",
+      implication: "The interview report provably exists — the witness confirmed its contents under oath. It will draw a protected-records claim while the prosecution is pending, but the written denial must say so and cite the provision, and the request puts the report's existence and custodian on paper.",
+      sources: [
+        { label: "Day 2 cross-examination (played on both streams)", url: "" }
+      ],
+      requests: [
+        {
+          agencyId: "dps",
+          summary: "DPS/SBI — the interview report described under oath (expect a written 305 denial)",
+          subject: "GRAMA Request: report of witness interview concerning residential doorbell video, September 2025",
+          records: "I request the investigative report, or interview summary, documenting the interview of the homeowners whose Nest doorbell camera captured a vehicle associated with the Utah Valley University homicide investigation parked on their street overnight September 10–11, 2025 — the report whose contents (including the description of the vehicle's driver and occupants) were confirmed by a testifying officer during the preliminary hearing in State v. Robinson. Witness personal identifiers may be redacted; the substance of the recorded descriptions is the request. Please also retain this correspondence and all records related to the processing of this request.",
+          parties: "Tyler James Robinson (defendant); Charlie Kirk (victim); the interviewed homeowners (identifiers may be redacted); the interviewing officer or agent (name unknown — the testifying officer confirmed the report's contents at the preliminary hearing).",
+          formAnswers: [
+            { label: "Date of occurrence", value: "09/10/2025" },
+            { label: "Time of occurrence", value: "overnight September 10–11, 2025 (the vehicle was parked on the street overnight; the interview followed)" }
+          ],
+          ask_no_records: true
+        },
+        {
+          agencyId: "dps",
+          summary: "DPS/SBI — the ORIGINAL Nest export and its metadata (the courtroom copy was cut and degraded)",
+          subject: "GRAMA Request: original doorbell-video files and export metadata, September 2025 investigation",
+          records: "Concerning the residential Nest doorbell video of a vehicle parked overnight September 10–11, 2025, portions of which were played at the July 2026 preliminary hearing in State v. Robinson: I request (1) records sufficient to show the acquisition of the video from the homeowners or from the camera vendor's cloud service — the date acquired, the file count, and the acquiring officer or agency; (2) the technical metadata of the files as acquired (native resolution, duration, timestamps, and any export or processing history); and (3) records documenting any editing, clipping, or re-encoding of the video between acquisition and its courtroom presentation, including who prepared the version played in court. I am requesting acquisition and processing records, not the video content itself, so no protected-content withholding should be necessary; the courtroom copy contained visible cuts and was materially degraded relative to the camera's native quality, and the processing chain is the question. (Verbatim basis: Ep 141 [20:43–22:15], re-verified Jul 20 2026.) Please also retain this correspondence and all records related to the processing of this request.",
+          parties: "Tyler James Robinson (defendant); Charlie Kirk (victim); the acquiring officer or evidence technician (name unknown — identification is part of the request).",
+          formAnswers: [
+            { label: "Date of occurrence", value: "09/10/2025" },
+            { label: "Time of occurrence", value: "overnight September 10–11, 2025 (the recording window; acquisition followed)" }
+          ],
+          ask_no_records: true
+        }
+      ]
+    },
+    {
+      id: "dna-elimination",
+      challenge: "The roommate's DNA was on the evidence too — labeled only an “elimination sample.”",
+      short: "Roommate DNA, “elimination”",
+      categories: ["Physical evidence"],
+      entities: ["robinson", "twiggs", "sbi"],
+      investigator: "Ian Carroll",
+      investigatorLinks: [
+        { label: "Final recap — the DNA day, summarized", url: "https://www.youtube.com/watch?v=R7mdXcBfQTw" }
+      ],
+      status: "confirmed",
+      finding: "Wednesday's DNA testimony put Robinson's DNA on the rifle, the cartridges, the screwdriver, and the towel — and Lance Twiggs's DNA on the towel and the screwdriver too. Twiggs was presented as an “elimination sample”: his DNA was expected on household items and should be disregarded when found. Every one of those items traces to the residence the two shared.",
+      implication: "An elimination designation is a decision, and decisions leave records. The lab reports showing all contributors on each item, and the case record designating whose reference samples were treated as elimination standards (versus investigated as alternative access), are discrete, numbered lab documents. Expect a § 63G-2-305(10) denial while the prosecution is pending — the written denial still puts what the lab holds on paper.",
+      sources: [
+        { label: "DNA-day testimony (day 3 afternoon), incl. the elimination-sample characterization", url: "" },
+        { label: "Coleman Ep 146 context on this card's item: only the screwdriver DISASSEMBLY theory was abandoned (\"that wasn't the feds, that was Governor Cox\") — the assembled-on-the-roof account stands [2:38:17–2:38:36] — and the screwdriver itself, \"the only thing that places him on the roof,\" has never been shown [3:17:52–3:18:00]", url: "https://www.youtube.com/watch?v=jTCL1rt-52Q" }
+      ],
+      requests: [
+        {
+          agencyId: "dps",
+          summary: "DPS/crime lab — the full-contributor DNA reports and the elimination-standard designation",
+          subject: "GRAMA Request: DNA analysis reports and reference-standard designations, State v. Robinson evidence",
+          records: "I request, concerning laboratory DNA analyses in the Utah Valley University homicide investigation: (1) the DNA examination report(s) for the towel and the screwdriver referenced in July 2026 preliminary-hearing testimony, including all contributor findings for each item; and (2) the case record designating which individuals' reference samples were treated as elimination standards in those analyses, and the basis recorded for each designation. Both items were the subject of public preliminary-hearing testimony. Please also retain this correspondence and all records related to the processing of this request.",
+          parties: "Tyler James Robinson (defendant); Charlie Kirk (victim); the crime-lab DNA examiner(s) of record for the towel and screwdriver analyses, including any examiner whose verification results differed (names unknown — identification is part of the request).",
+          formAnswers: [
+            { label: "Date of occurrence", value: "09/10/2025" },
+            { label: "Time of occurrence", value: "full day — evidence collected September 10–11, 2025; laboratory analyses followed" }
+          ],
+          ask_no_records: true
+        }
+      ]
+    },
+    {
+      id: "state-plane",
+      challenge: "Investigators landed south hours after the earliest claimed custody time.",
+      short: "The night flight south",
+      categories: ["Timeline contradictions"],
+      entities: ["davis", "sbi"],
+      investigator: "Baron Coleman",
+      investigatorLinks: [
+        { label: "Ep. 141", url: "https://www.youtube.com/watch?v=FT8kJN3n_cA" }
+      ],
+      status: "confirmed",
+      finding: "Agent Davis testified he flew to St. George the night of September 11 — a state aircraft landed there at ~11:37 p.m. — putting lead investigators in Washington County hours after the earliest claimed custody time.",
+      implication: "State aircraft generate flight logs and passenger manifests. Who flew south that night, and when the flight was tasked, is a hard timestamp against the shifting custody timeline.",
+      sources: [
+        { label: "Day 3 testimony; public flight tracking", url: "" },
+        { label: "Sam Parker — WCSO Attorney confirmed a Sept 11 Washington County arrest; Robinson Mirandized 6:25 PM (1.5 hrs before the 7:57 PM Discord message); Parker poses Davis's ~10 PM WCSO arrival as unaccounted-for given the 3+ hr drive — connecting that gap to this card's night flight is our inference, not Parker's claim", url: "https://x.com/BasedSamParker/status/2055008839985135940" }
+      ],
+      requests: [
+        {
+          agencyId: "dps",
+          summary: "DPS Aero Bureau — flight log and manifest for the Sept 11 flight south",
+          subject: "GRAMA Request: DPS aircraft flight records, September 11–12, 2025",
+          records: "I request the flight log, tasking record, and passenger manifest for any Utah Department of Public Safety aircraft flight from the Salt Lake City area to St. George or Washington County on September 11, 2025 (including the flight arriving at approximately 11:37 p.m.), and any return flight through September 12, 2025 — including the time the flight was requested and by whom. Please also retain this correspondence and all records related to the processing of this request.",
+          parties: "Tyler James Robinson (defendant, reported transported subject); the requesting official and flight crew (names unknown — identification is part of the request).",
+          formAnswers: [
+            { label: "Date of occurrence", value: "09/11/2025" },
+            { label: "Time of occurrence", value: "evening — flight arriving approximately 11:37 p.m.; any return through September 12, 2025" }
+          ],
+          ask_no_records: true
+        }
+      ]
+    },
+    {
+      id: "bagley-bodycam",
+      challenge: "The first officer's bodycam died the moment he reached the roof.",
+      short: "Bodycam died on the roof",
+      categories: ["Missing & deleted footage", "Crime scene handling"],
+      entities: ["bagley", "uvu-ent"],
+      investigator: "Baron Coleman · Ian Carroll",
+      investigatorLinks: [
+        { label: "Carroll on day one/two", url: "https://www.youtube.com/watch?v=r8JjODn8-dY" },
+        { label: "Coleman Ep. 141", url: "https://www.youtube.com/watch?v=FT8kJN3n_cA" }
+      ],
+      status: "confirmed",
+      finding: "The first officer to reach the shooter's rooftop (Officer Bagley) testified his body camera's battery died as he reached the roof — 27 minutes 35 seconds of footage, his only recording that day — that he was accompanied up by an armed man in civilian clothes with a badge whose name and agency he never got, and that he searched the prone position and roof edge and found no spent shell casing.",
+      implication: "Body-camera systems log battery events, docking, and uploads independently of the footage — the metadata says whether the unit died or was powered off. Someone armed was on the key rooftop before it was processed. And the state's own first responder found no brass at the sniper position.",
+      sources: [
+        { label: "Day 1 testimony (cross by Kathryn Nester; courtroom audio aired Jul 8)", url: "" }
+      ],
+      requests: [
+        {
+          agencyId: "uvupd",
+          summary: "UVU PD — Bagley's bodycam footage plus the device's audit/battery logs",
+          subject: "GRAMA Request: body-worn camera footage and device audit logs, September 10, 2025",
+          records: "I request: (1) all body-worn camera footage recorded on September 10, 2025 by the UVU police officer who first accessed the Losee Center rooftop; (2) the device audit log for that officer's body-worn camera for September 10, 2025 — including power-on/power-off events, battery-depletion events, docking and upload timestamps; and (3) the department's body-worn camera policy in effect on that date, including battery-management and activation requirements.",
+          ask_no_records: true,
+          filed: "PENDING, two rounds. Round one: UVU #26-215 — EXPEDITE DENIED Jul 16, 2026, on the same § 63G-2-204(4)(a) 'failed to meet that burden' public-benefit finding UVU issued across the deck; the standard 10-business-day clock still runs, substantive response due ~Jul 27. Round two, filed Jul 21, 2026 directly to UVU PD by email (uvpdrecords@uvu.edu): the rooftop officer's BWC footage + the device audit log (power/battery events) + the BWC policy, expedite requested; due ~Aug 5."
+        },
+        {
+          agencyId: "ucso",
+          summary: "Utah County SO — the bodycam that was rolling during the rifle recovery (confirmed on day 4 to exist)",
+          subject: "GRAMA Request: body-worn camera footage of evidence recovery, wooded area near UVU, September 10, 2025",
+          records: "I request the body-worn camera footage recorded by the Utah County Sheriff's Office officer(s) present at the recovery of a rifle from the wooded area northeast of the Utah Valley University campus on September 10, 2025, at approximately 6:00 p.m. On July 9, 2026, the state's crime-scene sergeant testified at the public preliminary hearing in State v. Robinson that an officer's body camera was recording during that recovery. I also request the associated evidence/property record for the recovered items.",
+          ask_no_records: true,
+          filed: "PENDING — filed Jul 12, 2026, 2:51 p.m. via NextRequest, request #26-2791 (Utah County). Response due July 28. Confirmation received on submission; no invoice due. Photo-ID upload applies only to subject-of-record requests — this is a public-records ask."
+        },
+        {
+          agencyId: "uvupd",
+          summary: "UVU PD — scene access log and multi-agency deployment roster for Sept 10",
+          subject: "GRAMA Request: crime scene access log and assisting-agency roster, September 10, 2025",
+          records: "I request: (1) the crime scene access/entry log maintained for the Losee Center rooftop and the courtyard scene at Utah Valley University on September 10–11, 2025; and (2) any roster, mutual-aid record, or deployment list identifying the law-enforcement agencies and personnel (including plainclothes personnel) present on the UVU campus on September 10, 2025 in connection with the incident response.",
+          ask_no_records: true,
+          filed: "PENDING, two rounds. Round one: UVU #26-214 — EXPEDITE DENIED Jul 16, 2026, on the § 63G-2-204(4)(a) 'failed to meet that burden' public-benefit finding; substantive response due ~Jul 27. Round two: filed via NextRequest as UVU #26-231, Jul 17, 2026; acknowledged Jul 17; EXPEDITE DENIED (same finding); 10-business-day clock, due ~Aug 1."
+        },
+        {
+          agencyId: "uvupd",
+          summary: "UVU PD — follow-on round: native parent file + Axon device audit trail + screwdriver property record",
+          subject: "GRAMA Request: body-worn camera recording, Axon device audit trail, and evidence record for rooftop recovery, September 10, 2025",
+          records: "I request: (1) the complete native body-worn camera recording from Officer Bagley’s Axon Body 4 camera for September 10, 2025, 12:00 p.m. to 1:30 p.m., with original metadata intact — expressly including the full parent file of the approximately 27-minute-35-second clip previously referenced in public proceedings; (2) the Axon Evidence (evidence.com) device audit trail for that camera for September 10, 2025 — including power-on/power-off events, recording start and stop events, battery and fault log entries, and docking/upload records — which will document the reported cessation of recording at approximately 12:44 p.m.; (3) any device malfunction, outage, or repair report filed for that camera unit for September 2025; and (4) the evidence or property record for the screwdriver recovered on the Losee Center rooftop on September 10, 2025 (referenced as prosecution exhibits 12.1 and 12.4), including the date, time, location, and recovering officer recorded in that entry. Each item names a discrete, catalogued record; this is not a broad search. If no responsive record exists for any numbered item — in particular, if no device audit trail or malfunction report exists for the camera — I request written confirmation of that fact for that item, including a description of the search conducted.",
+          ask_no_records: true,
+          filed: "NOT FILED — DRAFTED Aug 2, 2026, ready to file to uvpdrecords@uvu.edu. The audit-trail ask proves or kills the \"camera turned off right before the screwdriver find\" claim — the evidence.com log records every stop event with a timestamp."
+        }
+      ]
+    },
+    {
+      id: "sept11-rifle-removal",
+      short: "The Sept 11 morning rifle walk-out",
+      challenge: "An eyewitness filmed a handcuffed man walked off UVU grounds at ~10:30 a.m. September 11 while an officer separately carried a tagged rifle to a vehicle — before Robinson’s surrender, after media were cleared from the area. Whose rifle, whose arrest, and where’s the paper?",
+      categories: ["Crime scene handling", "Witness statements"],
+      entities: ["uvu-ent"],
+      investigator: "Elizabeth Lane TV (eyewitness \"Chelsea,\" SLC, on stream with her video)",
+      investigatorLinks: [
+        { label: "The War on X stream, Aug 2026 — the eyewitness segment (transcript banked in the library)", url: "https://www.youtube.com/watch?v=3DMcnAcaIHA" }
+      ],
+      status: "reported",
+      finding: "An in-studio eyewitness (\"Chelsea,\" Salt Lake City) describes and shows video: at roughly 10:30 a.m. on September 11, 2025 — less than 24 hours after the shooting, before Tyler Robinson’s surrender, while the suspect was officially still at large — a man identified on the stream as Russell Kennington was walked off the UVU grounds in handcuffs while a bald officer separately carried a rifle bearing an evidence tag to a vehicle, staged so the man and the rifle were never in frame together. She says police first cleared all media across the street and ordered her out of the area, making hers the only camera on it (\"a million% sure\" the rifle carried an evidence tag); she has not appeared on any witness list. The stream adds that Kennington posted his own video walking UVU on September 10. Rides as attributed discourse until the records land.",
+      implication: "If a person was detained and a tagged rifle recovered on campus the morning of September 11, ordinary policing generated paper: an incident or arrest report, a property/evidence log entry for the rifle, a scene log, and whatever order cleared the media. Either that paper exists — identifying a second detained person and a second rifle the public record never mentions — or no responsive records exist in writing, which is its own finding for an armed detention filmed on video. The found-rifle timeline in the K9 card (Freya’s clean search, the ordered re-search) runs through the same morning.",
+      sources: [
+        { label: "The War on X — eyewitness account + video, and the Kennington self-posted Sept 10 video claim", url: "https://www.youtube.com/watch?v=3DMcnAcaIHA" }
+      ],
+      requests: [
+        {
+          agencyId: "uvupd",
+          summary: "UVU PD — Sept 11 morning incident/detention records, the tagged-rifle property entry, scene log, and the media-clearance order",
+          subject: "GRAMA Request: incident, detention, and property records — UVU campus, morning of September 11, 2025",
+          records: "I request, for September 11, 2025, 8:00 a.m. to 1:00 p.m., concerning the UVU campus: (1) any incident report, detention or arrest record, or field-interview record for any individual detained on or escorted from the campus grounds; (2) the property or evidence log entry for any firearm recovered from or transported off the campus grounds in that window, including the recovering officer and receiving custody; (3) the crime-scene or perimeter log for the areas under control that morning; and (4) any order, instruction, or radio-traffic record directing media or the public to leave the area adjacent to the scene during that window. Each item names a discrete, routinely generated record; this is not a broad search. If no responsive record exists for any numbered item, I request written confirmation of that fact for that item, including a description of the search conducted.",
+          ask_no_records: true,
+          filed: "NOT FILED — DRAFTED Aug 3, 2026, ready to file to uvpdrecords@uvu.edu. Item (2) is the sharp end: a tagged rifle on video either has a property entry or it does not."
+        }
+      ]
+    },
+    {
+      id: "purged-911-call",
+      short: "The purged 911 call — open-line records",
+      challenge: "A 3–5 minute open-line 911 call from the transport vehicle — \"get that off of him\" — is allegedly absent from every released call batch. Open-line calls are logged differently from engaged calls; that seam is exactly where a call escapes a records search.",
+      categories: ["Missing & deleted footage", "Timeline contradictions"],
+      entities: ["mccoy", "phillip"],
+      investigator: "Candace Owens (Ep 366 tip) · Coleman/Owens (hospital window, independently)",
+      investigatorLinks: [
+        { label: "Owens Ep 366, Jul 27 2026 — the 911-call tip (transcript banked in the library)", url: "https://www.youtube.com/watch?v=HZvwbfePe7o" }
+      ],
+      status: "reported",
+      finding: "Candace Owens’s July 27, 2026 tip: a 3–5 minute open-line 911 call was placed from the vehicle carrying Kirk to Timpanogos Regional Hospital — voices saying \"We got him, we are taking him to the hospital,\" then \"get that off of him\" — and that call is absent from every released 911 batch. Open-line and abandoned calls are logged and retained differently from engaged calls, which is precisely how such a call could escape productions built from engaged-call queries. Separately, two independent sources (Coleman and Owens threads) describe activity at Timpanogos Regional Hospital in the 10:00–11:30 a.m. window — before the shooting — whose GRAMA-able surface is the dispatch record: inter-facility transfer runs and any hospital diversion or status-change notifications. The tip rides as attributed discourse until records land.",
+      implication: "The dispatch district’s own systems answer this without anyone’s testimony: the CAD event log for the transport window, an open-line/abandoned-call category search run as its own record type, the 10:00–11:30 a.m. transfer and diversion records, and — decisive either way — the retention schedule and deletion/purge audit trail. If the call existed and was purged, the purge trail is itself the record. The standing preservation language matters most on this card.",
+      sources: [
+        { label: "Owens Ep 366, Jul 27 2026 — the open-line call tip", url: "https://www.youtube.com/watch?v=HZvwbfePe7o" },
+        { label: "Owens Ep 369, Jul 31 2026 — the Timpanogos eyewitness (hospital window)", url: "https://www.youtube.com/watch?v=iB-YtO3UZOg" },
+        { label: "Coleman Ep 153, Aug 2 2026 — the diversion-radio-traffic point and the L3 trauma-routing problem (transcript banked)", url: "https://www.youtube.com/watch?v=RjJPLB5e82w" }
+      ],
+      requests: [
+        {
+          agencyId: "uvdispatch",
+          summary: "UV Dispatch SSD — CAD logs, open-line/abandoned 911 records, hospital transfer/diversion records, retention + purge audit trail",
+          subject: "GRAMA Request: open-line and abandoned 911 call records, CAD event logs, and retention audit trail, September 10, 2025",
+          records: "I request: (1) the CAD (computer-aided dispatch) event log and incident history for the transport of the shooting victim from the Utah Valley University campus to Timpanogos Regional Hospital on September 10, 2025, for the window 12:00 p.m. to 2:00 p.m.; (2) all abandoned-call and open-line call records — including audio and call-detail records — received between 12:00 p.m. and 2:00 p.m. on September 10, 2025 and associated with, or geolocated along, the route between the UVU campus and Timpanogos Regional Hospital. I specifically request that open-line and abandoned calls be searched as their own record category, since these are logged differently from engaged calls and may not have been captured by prior productions; (3) CAD records of inter-facility transfer runs dispatched between 10:00 a.m. and 11:30 a.m. on September 10, 2025 involving Timpanogos Regional Hospital, and any hospital diversion notification or status-change records for Timpanogos Regional Hospital for the same window; and (4) the district’s retention schedule for 911 audio and CAD records, and any deletion or purge audit trail showing whether any September 10, 2025 call or CAD records have been deleted, overwritten, or purged, and if so when and under what authority; and (5) dispatch radio traffic recordings and radio log entries for the 12:00 p.m.–2:00 p.m. transport window and the 10:00–11:30 a.m. transfer window, including any hospital diversion or status-change announcements — if a hospital is on diversion, dispatch radio traffic states it. If no responsive records exist for any numbered item — in particular, if no open-line or abandoned call exists for the transport window — I request written confirmation of that fact for that item, including a description of the search conducted. I ask that all potentially responsive records — expressly including all September 10, 2025 911 audio, call-detail records, and CAD data, and the deletion/purge audit trail itself — be preserved immediately upon receipt of this request and for the duration of processing and of any administrative appeal or review.",
+          ask_no_records: true,
+          filed: "PENDING — filed via openrecords.utah.gov (entity: Utah Valley Dispatch Special Service District), early Aug 2026. Reference number and clock start pending the district’s acknowledgment — the state portal is the record trail. The preservation paragraph rode with it; retention clocks were the enemy, which is why this one went in first."
+        }
+      ]
+    },
+    {
       id: "twiggs-location",
       challenge: "Two sworn records put Twiggs's first interview in two different buildings.",
       short: "Twiggs: which building?",
@@ -770,60 +1274,6 @@ const FOIA = {
           records: "I request the access-control log (key-card, key-pass, gate, or license-plate-recognition entries) for the Utah Valley University parking structure adjacent to the Losee Center for September 10, 2025, 8:00 a.m. – 10:00 a.m. Entries of uninvolved third parties may be redacted; the request is for the log covering the vehicle entry shown at 8:29 a.m. in exhibits at the State v. Robinson preliminary hearing.",
           ask_no_records: true,
           filed: "PENDING — filed via NextRequest as UVU #26-220, Jul 16, 2026; acknowledged Jul 16 with the request text quoted back. 10-business-day clock, extended by the Jul 24 Pioneer Day closure — due ~Jul 30–31."
-        }
-      ]
-    },
-    {
-      id: "tpusa-contact",
-      challenge: "Robinson reportedly met TPUSA reps at the quad the morning of the shooting.",
-      short: "TPUSA contact that morning",
-      categories: ["Witness statements", "Video evidence"],
-      entities: ["robinson", "tpusa", "uvu-ent", "neff"],
-      investigator: "Baron Coleman · Buckley Carlson · Ian Carroll",
-      investigatorLinks: [
-        { label: "Bombshells crossover (Liberty Lockdown)", url: "https://www.youtube.com/watch?v=Fk4RFSn6gqs" },
-        { label: "Carroll on day two", url: "https://www.youtube.com/watch?v=r8JjODn8-dY" },
-        { label: "Final recap — the Neff Twitter Space clip", url: "https://www.youtube.com/watch?v=R7mdXcBfQTw" }
-      ],
-      status: "confirmed",
-      finding: "Testimony on both day two and day three placed Robinson making contact with TPUSA representatives at the quad the morning of the shooting, while the event was being set up — the SBI lead officer's timeline words were “met with TPUSA representatives.” The state did not name the representatives, and no footage of the contact has been shown. Then Charlie Kirk Show representative Blake Neff, on a recorded Twitter Space during hearing week, first said he didn't know who it was — “and even if I did, I wouldn't tell you, because you guys would just harass that person” — and then added: “and I know that that person didn't do anything.”",
-      implication: "The accused spoke with people from the victim's own organization hours before the shooting, and eleven months of official narrative never mentioned it. UVU hosted the event — its event-services coordination records, credentialing lists, and vendor rosters would name the people the testimony didn't.",
-      sources: [
-        { label: "Day 2 timeline testimony; day 3 testimony (per Coleman/Carroll coverage)", url: "" }
-      ],
-      requests: [
-        {
-          agencyId: "uvu",
-          summary: "UVU — event coordination and credentialing records naming the TPUSA advance staff",
-          subject: "GRAMA Request: event coordination records for the September 10, 2025 TPUSA event",
-          records: "I request, concerning the September 10, 2025 Turning Point USA event at Utah Valley University: (1) the event agreement, facility-use contract, and coordination correspondence between UVU event services (or student engagement) and TPUSA advance or event staff; (2) any credentialing, access, or staff roster provided to UVU identifying TPUSA personnel present on campus for event setup that morning; and (3) the vendor or contractor list for the event, including audio/visual contractors. I am not requesting attendee lists or any student records.",
-          ask_no_records: true,
-          filed: "PENDING — filed via NextRequest as UVU #26-221, Jul 16, 2026; acknowledged Jul 16 with the request text quoted back. Due ~Jul 30–31 (Pioneer Day)."
-        },
-        {
-          agencyId: "uvupd",
-          summary: "UVU PD — quad-area camera footage covering the morning contact window",
-          subject: "GRAMA Request: quad/amphitheater camera footage, morning of September 10, 2025",
-          records: "I request unedited exports of Utah Valley University camera footage covering the quad/amphitheater area where the September 10, 2025 event was being set up, for 8:15 a.m. – 10:30 a.m. that morning — the window in which preliminary-hearing testimony placed the defendant making contact with event representatives. If this footage has been provided to or seized by an investigating agency, I request the transfer record identifying that agency.",
-          ask_no_records: true,
-          filed: "FILED Aug 3, 2026 by email to uvpdrecords@uvu.edu — unedited quad/amphitheater exports, 8:15–10:30 a.m. Sept 10 (the window testimony places the defendant contacting event reps), with the transfer-record fallback if seized. Expect the § 63G-2-106 \"security measures\" wall UVU raised Aug 3 on #26-229/#26-230 — the appeal will target § 106’s categorical use."
-        },
-        {
-          agencyId: "uvu",
-          existing: true,
-          summary: "UVU — the event paper set named in its own #26-221 release: fountain work order, MEAC assessment, film request + 25Live record, amplified-sound approval",
-          subject: "GRAMA Request: fountain work order, MEAC assessment, film request form and 25Live record, and amplified-sound approval — September 10, 2025 event",
-          records: "Each of the following records is identified in, or directly referenced by, the records UVU released on July 31, 2026 in response to request #26-221. I request: (1) the grounds or facilities work order for the courtyard fountain referenced in the event-coordination correspondence for the September 10, 2025 event; (2) the Major Event Assessment Committee (MEAC) risk assessment or review record for that event, conducted on or about August 25, 2025; (3) the film request form and the 25Live reservation record for that event, including any attachments describing the \"total footprint of the set\" and camera placement; and (4) the written amplified-sound approval issued on or about September 8, 2025 for that event. Each item names a discrete, catalogued document already identified in UVU’s own production; this is not a broad search. If no responsive record exists for any numbered item, I request written confirmation of that fact for that item, including a description of the search conducted.",
-          ask_no_records: true,
-          filed: "NOT FILED — DRAFTED Aug 2, 2026, ready to file via NextRequest (or grama@uvu.edu). Every item is named in UVU’s own Jul 31, 2026 release on #26-221 — already located, already catalogued."
-        },
-        {
-          agencyId: "uvupd",
-          summary: "UVU PD — the \"all approved\" paper: event sign-off, security/operations plan, staffing assignments",
-          subject: "GRAMA Request: pre-event coordination and approval records for the September 10, 2025 event",
-          records: "The event-coordination correspondence released by UVU on July 31, 2026 in response to request #26-221 states that the September 10, 2025 event organizers were \"connecting with our campus police\" and that the arrangement \"was all approved.\" I request, for the period August 15 through September 10, 2025: (1) the UVU Police Department’s written approval or sign-off record for the September 10, 2025 event; (2) the event security plan or operations plan prepared by or for the department for that event; and (3) the department’s staffing or post assignment record for that event. Each item names a discrete record generated in ordinary pre-event planning; this is not a broad search. If no responsive record exists for any numbered item — in particular, if no written approval or security plan exists — I request written confirmation of that fact for that item, including a description of the search conducted.",
-          ask_no_records: true,
-          filed: "NOT FILED — DRAFTED Aug 2, 2026, ready to file to uvpdrecords@uvu.edu. Either the approval paper exists, or \"it was all approved\" was said without any."
         }
       ]
     },
@@ -1025,122 +1475,6 @@ const FOIA = {
       ]
     },
     {
-      id: "dod-erika-messaging",
-      short: "Pentagon boosted Erika",
-      challenge: "Claim: the Pentagon juiced Erika Kirk's #1 trend — with no proof shown.",
-      categories: ["Kirk assassination & coverup"],
-      entities: ["erika-kirk", "charlie-kirk", "dod"],
-      investigator: "Candace Owens",
-      investigatorLinks: [
-        { label: "Candace — Ep 352", url: "https://www.youtube.com/watch?v=3QJqtW_NOSI" }
-      ],
-      status: "reported",
-      finding: "Candace Owens alleges the Department of Defense (\"Department of War\") orchestrated messaging to artificially boost Erika Kirk to the #1 social-media trend; she cites no documentary evidence.",
-      implication: "A claim that a federal department ran a domestic messaging/influence effort around a private individual. If true, public-affairs guidance or social-media records would exist. Single-source, on-air allegation with no evidence shown — this request is what would confirm or refute it.",
-      sources: [
-        { label: "Candace Owens, Ep 352", url: "https://www.youtube.com/watch?v=3QJqtW_NOSI" }
-      ],
-      requests: [
-        {
-          agencyId: "dod",
-          summary: "DoD — any public-affairs/social-media activity re Erika Kirk",
-          subject: "FOIA Request: Department of Defense public-affairs or social-media records concerning Erika Kirk",
-          records: "I request a copy of any public-affairs guidance, social-media activity log, or messaging directive concerning Erika Kirk issued by or within the Department of Defense, from September 1, 2025 to the date this request is processed. To keep this request narrow and minimize search burden, I am not seeking general email correspondence.",
-          ask_no_records: true
-        }
-      ]
-    },
-    {
-      id: "c37-pag-denial",
-      short: "C-37 99-0404 — the Presidential Airlift Group denial",
-      challenge: "A routine flight-records FOIA came back denied at the discretion of the Presidential Airlift Group. A second request either corroborates the anomaly or produces a second appealable denial citing the same irregular authority.",
-      categories: ["Kirk assassination & coverup"],
-      entities: ["pag", "eop"],
-      investigator: "Baron Coleman (the FOIA) · Danks (the report)",
-      investigatorLinks: [
-        { label: "Danks, Jul 27 2026 — Coleman’s Fort Huachuca FOIA and the PAG denial (transcript banked in the library)", url: "https://www.youtube.com/watch?v=InWAoVUD1PA" }
-      ],
-      status: "reported",
-      finding: "Baron Coleman’s FOIA for flight records of C-37 tail 99-0404 — operations at or involving Fort Huachuca, Arizona on September 8–9, 2025, normally a routine ask through the 89th Airlift Wing’s squadrons — came back denied at the discretion of the Presidential Airlift Group. By Coleman’s elimination logic, PAG discretion over the records means White House Military Office tasking. The thread pairs with the WHMO misdirected-email anomaly (the \"Erika Kirk video trending\" email Candace Owens says she received within an hour of the Hilton event). Rides as attributed discourse until the paper lands.",
-      implication: "A parallel request from a second requester is the cheapest possible test: either the 89th produces the schedule, manifests, and tasking records — or it issues a second written denial citing the same irregular authority, which corroborates the anomaly on paper and is appealable. The tasking/authorization item names the record that identifies which office directed the missions; the request asks that any PAG/WHMO-directed withholding be stated in writing in the determination.",
-      sources: [
-        { label: "Danks, Jul 27 2026 — the Coleman FOIA read-through", url: "https://www.youtube.com/watch?v=InWAoVUD1PA" }
-      ],
-      requests: [
-        {
-          agencyId: "af89aw",
-          summary: "89th AW — flight schedule, manifests, and tasking authority for C-37 99-0404, Sept 8–9, 2025 (the parallel to Coleman’s denied request)",
-          subject: "FOIA Request: flight schedule, manifests, and tasking authority for C-37 tail 99-0404, September 8–9, 2025",
-          records: "I request, for the aircraft with tail number 99-0404 for September 8–9, 2025: (1) the flight schedule and mission records for its operations at or involving Fort Huachuca, Arizona; (2) the passenger manifests for those flights; and (3) the tasking or authorization record identifying the office that requested or directed those missions. Each item names a discrete, routinely generated record; this is not a broad search. If any item is withheld at the direction or discretion of the Presidential Airlift Group or the White House Military Office, I request that the withholding authority be stated in writing in the determination. If no responsive records exist for any item, please confirm that in writing, including a description of the search conducted.",
-          ask_no_records: true,
-          filed: "NOT FILED — DRAFTED Aug 2, 2026 — file via Air Force eFOIA or FOIA.gov to the 89th AW FOIA Office, Joint Base Andrews; avoid any Login.gov-gated path — the email trail is the record."
-        }
-      ]
-    },
-    {
-      id: "kolvet-eeob-visit",
-      short: "Kolvet at the White House",
-      challenge: "Kirk's producer was at the White House the day before the Epstein files dropped.",
-      categories: ["Kirk assassination & coverup"],
-      entities: ["kolvet", "charlie-kirk", "kash-patel", "eop", "epstein"],
-      investigator: "Candace Owens",
-      investigatorLinks: [
-        { label: "Candace — Ep 352", url: "https://www.youtube.com/watch?v=3QJqtW_NOSI" }
-      ],
-      status: "reported",
-      finding: "Candace Owens reports that Andrew Kolvet, Charlie Kirk's producer, was at the White House / Eisenhower Executive Office Building the day before the DOJ released the Epstein files — while a Charlie Kirk show was pre-recorded (with Kash Patel) to make it appear he was in Arizona.",
-      implication: "If a Kirk-world figure took a White House meeting the day before a major Epstein-files release, entry records would document it. Strong caveat: courts have ruled White House visitor logs held by the Secret Service are often NOT agency records subject to FOIA, so this may be denied on that ground (EEOB-tenant agencies like OMB are a separate avenue). Single-source, on-air account.",
-      sources: [
-        { label: "Candace Owens, Ep 352", url: "https://www.youtube.com/watch?v=3QJqtW_NOSI" },
-        { label: "Credibility context (Ep 359, Jul 14 2026): Kolvet's own tweet, read on air, concedes two elements of Owens' Kolvet-sourced Netanyahu account — TPUSA declined a Netanyahu show appearance, and Kirk later took a Netanyahu call at Bill Ackman's house — while disputing her 'take TPUSA to the next level' claim. Doesn't bear on the EEOB visit directly; logged for weighing her single-source Kolvet reporting.", url: "https://www.youtube.com/watch?v=X3VKJVJ7cN4" }
-      ],
-      requests: [
-        {
-          agencyId: "usss",
-          component: "U.S. Secret Service (in SecureRelease's component picker)",
-          summary: "Secret Service — EEOB/White House entry records for Andrew Kolvet",
-          subject: "FOIA Request: White House complex / EEOB access records for Andrew Kolvet",
-          records: "I request a copy of any entry, exit, visitor, or access records for Andrew Kolvet at the White House complex and the Eisenhower Executive Office Building on the date of, and the day before, the Department of Justice's public release of the Epstein files (please insert the specific calendar date before filing). I am not seeking general email correspondence.",
-          ask_no_records: true,
-          filed: "PENDING — filed Jul 25, 2026 via SecureRelease (DHS → U.S. Secret Service component); acknowledged the same day as FOIA File Number 2026-USSSFOIA-01640 ('reviewing your submission to determine appropriate next steps'). The card's caveat stands: WAVES/ACR-type entry records held by USSS have been held non-agency records under FOIA, so a denial on that ground is the expected first move — itself documentable, with the EEOB-tenant-agency lane (OMB et al.) as the follow-on."
-        },
-        {
-          agencyId: "usss",
-          summary: "Secret Service — the refile with real dates: WAVES/access records + appointment requests, Jul 26–Aug 1, 2026, for Kolvet, Minez, and TPUSA counsel",
-          subject: "FOIA Request: WAVES/access records and appointment requests, White House complex, July 26 – August 1, 2026",
-          records: "I request, for the period July 26 through August 1, 2026: (1) WAVES (Workers and Visitors Entry System) and ACR access records for the White House complex, including the Eisenhower Executive Office Building, for the following individuals: Andrew Kolvet (Turning Point USA), Marina Minez (Turning Point USA Chief Marketing Officer), and Turning Point USA’s in-house counsel; and (2) the visitor appointment request records submitted for those individuals for that period, including the requesting office and sponsoring official. This request is bounded to a single named week and three named individuals; it is not a broad search. If the Secret Service’s position is that responsive records are presidential records outside its custody, I request that determination in writing, identifying the system of records to which the request was applied. If no responsive records exist, please confirm that in writing, including a description of the search conducted. I request that all records potentially responsive to this request be preserved for the duration of processing and of any administrative appeal or review — expressly including WAVES records otherwise subject to periodic transfer or deletion.",
-          ask_no_records: true,
-          filed: "NOT FILED — DRAFTED Aug 2, 2026. The refile with real dates: the Jul 26–Aug 1 window is anchored to Candace’s Jul 27 tip (\"meeting tomorrow, maybe Wednesday\") and Netanyahu’s Jul 27 DC arrival — adjust if a firmer date surfaces. Email FOIA@usss.dhs.gov preferred over SecureRelease — email is the record."
-        }
-      ]
-    },
-    {
-      id: "memorial-nsse",
-      short: "Was the memorial an NSSE?",
-      challenge: "Was Kirk's Glendale memorial a National Special Security Event — and who held security lead?",
-      categories: ["Kirk assassination & coverup"],
-      entities: ["charlie-kirk", "erika-kirk", "usss", "amodei"],
-      investigator: "Ana Escobar (Fort Banana: Connecting the Dots, Part 1)",
-      investigatorLinks: [
-        { label: "Ana Escobar — Fort Banana: Connecting the Dots (Part 1)", url: "https://www.youtube.com/watch?v=OEsx7hpIFic" }
-      ],
-      status: "reported",
-      finding: "Ana Escobar builds an inference chain connecting the Butler rally, the presidential inauguration, and Charlie Kirk's September 21, 2025 memorial at State Farm Stadium in Glendale as Secret Service events, pivoting on Rep. Mark Amodei's seat on the House Appropriations Subcommittee on Homeland Security — which funds the Secret Service — toward a claim about who shaped the memorial's security. (Re-verified against her transcript Jul 20 2026: the NSSE framing is hers verbatim; she explicitly hedges — \"I'm not trying to make any kind of allegations.\" Two corrections to her chain: Amodei doesn't just sit on that subcommittee, he CHAIRS it; and Butler was a campaign rally, not an NSSE.) The underlying checkable fact is narrower and real: the memorial's actual DHS designation is reported as SEAR Level 1 — Special Event Assessment Rating, Secret Service security lead — not an NSSE, and the designation paperwork is a record either way.",
-      implication: "Whether the memorial was an NSSE or a SEAR-rated event is a discrete, documentable fact. The designation determination, the lead-agency assignment, and the operational-plan summary are records. The designation — or its absence — either supports or deflates the 'same story as Butler' framing. (The Amodei-appropriations-to-Secret-Service motive chain is Escobar's explicitly speculative inference; this request tests the one underlying fact, not the theory.)",
-      sources: [
-        { label: "Ana Escobar — Fort Banana (Part 1): the NSSE / Amodei-appropriations through-line (transcript re-pulled live Jul 20 2026)", url: "https://www.youtube.com/watch?v=OEsx7hpIFic" }
-      ],
-      requests: [
-        {
-          agencyId: "usss",
-          summary: "Secret Service — NSSE/SEAR designation and security-lead records for the Glendale memorial",
-          subject: "FOIA Request: NSSE or SEAR designation and operational security-lead records for the September 2025 Charlie Kirk memorial, Glendale, Arizona",
-          records: "I request records sufficient to show whether the memorial service for Charlie Kirk held on or about September 21, 2025 at State Farm Stadium in Glendale, Arizona was designated a National Special Security Event (NSSE) or assigned a Special Event Assessment Rating (SEAR) level, including the designation determination, request, or notification, and any record identifying the federal agency assigned operational security lead for the event. I am requesting the designation and lead-agency records only, not tactical operational details whose release could reasonably endanger safety. To keep this request narrow and minimize search burden, I am not seeking general email correspondence.",
-          ask_no_records: true
-        }
-      ]
-    },
-    {
       id: "nest-doorbell-vehicle",
       short: "Nest caught the vehicle",
       challenge: "A doorbell filmed the suspect vehicle; only a report about it reached court.",
@@ -1195,46 +1529,6 @@ const FOIA = {
       ]
     },
     {
-      id: "backpack-stop-testing",
-      short: "The bus-stop backpack",
-      challenge: "A backpack on the shooter's flight route went to the FBI lab — then someone stopped the testing.",
-      categories: ["Physical evidence", "Crime scene handling"],
-      entities: ["robinson", "charlie-kirk", "sbi", "fbi-ent"],
-      investigator: "Preliminary-hearing record (courtroom audio via Candace Eps 360–361)",
-      investigatorLinks: [
-        { label: "Candace Ep 360 — the Filomena seizure testimony, played", url: "https://www.youtube.com/watch?v=puuMVxEu5NU" },
-        { label: "Candace Ep 361 — the Baker lab-notes cross, played", url: "https://www.youtube.com/watch?v=mLvJqdxS-FY" }
-      ],
-      status: "confirmed",
-      finding: "Two witnesses, both on courtroom audio. Sgt. Jennifer Filomena (State Bureau of Investigation) testified that officers canvassing the shooter's flight route deemed the Fulton Library a potential crime scene because of unattended items at the bus stops — \"a backpack, a jacket, as well as some gloves, and there may have been some other things\" — seized them, and sent them to the FBI lab for processing \"along with some information that the suspect may have shed some of these items as he fled.\" Asked whether she later told the lab the items weren't connected and testing should stop: \"I don't remember communicating that\" — but agreed the FBI/ATF lab notes recording that communication would not be inconsistent with what she knows. FBI examiner Amanda Baker testified the backpack was exhibit 9, was processed for DNA, and then \"no comparisons needed\" once it was \"potentially left behind by a bystander\" — at which point the cross-examiner read her own lab notes at page 20: the backpack \"belongs to Kirk's detail.\" Baker: \"that was not my communication log. That was someone else within the laboratory.\" Nobody named the detail member, the note's author, or who ordered the stop.",
-      implication: "Whoever the backpack belonged to, the paper trail is administrative and discrete: the seizure/property record for the bus-stop items, the communication that told the FBI lab to stand down, the lab-note entry attributing the backpack to the protective detail, and — if the items were returned to an owner — the release record naming them. Testing that stops because \"the person was on Charlie's team\" is exactly the kind of determination that has to be written down somewhere; either the record exists or the stop was undocumented, and both answers are findings.",
-      sources: [
-        { label: "Ep 360 [9:57–11:23] — Filomena: seizure, FBI lab, \"pull a plug,\" the FBI/ATF notes exchange (verbatim, re-read Jul 20 2026)", url: "https://www.youtube.com/watch?v=puuMVxEu5NU" },
-        { label: "Ep 361 [16:27–20:42] — Baker: exhibit 9, DNA processing halted, the page-20 \"Kirk's detail\" note authored by \"someone else within the laboratory\" (verbatim, re-read Jul 20 2026)", url: "https://www.youtube.com/watch?v=mLvJqdxS-FY" }
-      ],
-      requests: [
-        {
-          agencyId: "dps",
-          summary: "DPS/SBI — the seizure/property records and the stand-down communication for the bus-stop items",
-          subject: "GRAMA Request: property and evidence records concerning items seized at the Fulton Library bus stops, September 10, 2025",
-          records: "I request, concerning the September 10, 2025 Utah Valley University homicide investigation: (1) the property or evidence seizure records for the unattended items collected at or near the Fulton Library bus stops (a backpack, jacket, and gloves, and any other items in that seizure group); (2) any record of a communication from the State Bureau of Investigation to the FBI laboratory concerning whether those items were connected to the case or whether analysis should be discontinued; (3) the record of any determination that the items belonged to a member of the decedent's protective detail or to any other identified person; and (4) if the items were released or returned, the release record showing to whom and when. Personal identifiers of uninvolved private persons may be redacted; the existence, date, and authorship of the determination records is the request. If no record of the discontinuation communication exists, I request written confirmation of that fact. Please also retain this correspondence and all records related to the processing of this request.",
-          parties: "Tyler James Robinson (defendant); Charlie Kirk (victim); the SBI official who communicated with the FBI laboratory, and the protective-detail member to whom any determination attributed the items (names unknown — identification is part of both).",
-          formAnswers: [
-            { label: "Date of occurrence", value: "09/10/2025" },
-            { label: "Time of occurrence", value: "midday, in the hours after the shooting (bus-stop items collected during the response)" }
-          ],
-          ask_no_records: true
-        },
-        {
-          agencyId: "fbi",
-          summary: "FBI — the lab communication log and the page-20 note attributing the backpack to Kirk's detail",
-          subject: "FOIA Request: laboratory communication log and case-note records concerning exhibit 9 (backpack), Utah Valley University homicide investigation",
-          records: "I request, concerning FBI laboratory processing in the September 10, 2025 Utah Valley University homicide investigation (State v. Robinson, Utah Fourth District No. 251403576): (1) the laboratory communication log entries concerning the backpack designated exhibit 9 and its contents, including the communication that DNA comparisons were no longer needed; (2) the case-note entry (referenced at the July 2026 preliminary hearing as appearing at page 20 of the examiner's notes) recording that the backpack belonged to the decedent's protective detail, together with records sufficient to show which agency or official communicated that information to the laboratory; and (3) any record of the laboratory's disposition of the item thereafter. Names of laboratory personnel may be redacted; the originating agency and role of the communicating official is the request. Expect and please state any Exemption 7(A) withholding in writing with the volume of records withheld.",
-          ask_no_records: true
-        }
-      ]
-    },
-    {
       id: "atf-dna-consumed",
       short: "DNA consumed in testing",
       challenge: "9 evidence samples were used up in testing — none saved for the defense to retest.",
@@ -1258,165 +1552,6 @@ const FOIA = {
           records: "I request, concerning ATF Forensic Science Laboratory DNA analyses performed for the September 10, 2025 Utah Valley University homicide investigation (State v. Robinson, Utah Fourth District No. 251403576), whose author testified publicly at the July 10, 2026 preliminary hearing: (1) the three DNA examination reports authored by the DNA section chief (admitted in court as exhibits 30 and 34, plus the elimination-sample report referenced as report 157); (2) the case-file record authorizing complete consumption of samples 1.4, 1.6, 1.9, 1.10, 1.12, 2.1, 3.1, 4.1, and 5.1, including the permission-to-consume communication referenced in testimony; and (3) the records of elimination-sample requests made to household members and to investigating agents, including whether the agents' samples were ever provided. These records were described in public testimony; I am not seeking the underlying DNA profiles or any person's genetic data.",
           ask_no_records: true,
           filed: "DENIED IN FULL \u2014 ON APPEAL. Filed Jul 17, 2026 via ATF\u2019s FOIA Public Access Portal (dojatf.secureocp.com) \u2014 requester category News Media; fee waiver requested (\u00a7 552(a)(4)(A)(iii)); expedited processing requested under 28 C.F.R. \u00a7 16.5(e)(1)(ii) AND (iv); date range 09/10/2025\u201307/31/2026 \u2014 logged as ATF 2026-01995. Jul 20, 2026: denied IN FULL under 5 U.S.C. \u00a7 552(b)(7)(A) \u2014 'the investigation relating to your request is still open' \u2014 signed Hirsh D. Kravitz, Chief, Information and Privacy Governance Division. The portal's 'documents delivered' notice was the determination letter itself: no document inventory, no segregability finding \u2014 the denial confirms nothing about which of the requested records exist, itself now an appeal ground. Administrative appeal A-2026-01952 filed via FOIA STAR Jul 21, 2026, with expedited processing requested under Standard 4; OIP response due Aug 18, 2026. Jul 22: OIP acknowledged the appeal (letter dated Jul 21, Priscilla Jones), flagging delay from the Oct 1–Nov 12, 2025 appropriations lapse — and found the expedite request unperfected for lack of a certified statement under 28 C.F.R. § 16.5(e)(3); perfected the same day with a 28 U.S.C. § 1746 certification via FOIA STAR."
-        }
-      ]
-    },
-    {
-      id: "panguitch-alibi",
-      challenge: "Two restaurant staff put Robinson three hours from the scene that night.",
-      short: "The Panguitch alibi",
-      categories: ["Timeline contradictions", "Witness statements"],
-      entities: ["robinson", "twiggs", "fbi-ent", "sbi"],
-      investigator: "Diligent Denizen · Baron Coleman · Candace Owens",
-      investigatorLinks: [
-        { label: "Diligent Denizen — the on-camera staff interview (posted Jul 12)", url: "https://x.com/DiligentDenizen/status/2076405974597063038" },
-        { label: "Diligent Denizen — VIDEO of the physical receipt (Jul 16, 957K views): two eyewitnesses ID Robinson 8:55–9:47pm; his read — the 2h57m Panguitch→Orem drive makes the ~11pm Orem texts impossible, so \"the texts, the confession, and Lance Twiggs' testimony are ALL FAKE\"", url: "https://x.com/DiligentDenizen/status/2077905879341433104" },
-        { label: "Diligent Denizen — full Cowboy's Smokehouse visit (Jul 19): owner hands over the receipt (\"IS the ticket in question\") + full on-camera eyewitness interview", url: "https://x.com/DiligentDenizen/status/2078967048521036149" },
-        { label: "Coleman Ep. 143 — the timeline math against the state's own texts", url: "https://www.youtube.com/watch?v=yBDB-mpI-Xw" },
-        { label: "Interview video, archived", url: "https://web.archive.org/web/20260713050144/https://video.twimg.com/ext_tw_video/2076405353022095360/pu/vid/avc1/1280x720/CBzgt2rfdWeCpsLE.mp4" }
-      ],
-      status: "contested",
-      finding: "Two staff at Cowboy's Smokehouse in Panguitch — on camera, one of whom personally took Robinson's card at checkout near the 10 p.m. close — say they served him the evening of September 10 and are \"100%\" on the ID (face, voice, mannerisms; more certain than Lance Twiggs was about the stairwell figure). They reported it to the FBI, who took contact information and never followed up; the sighting reached Candace Owens months ago. Neither the prosecution nor the defense has ever contacted the restaurant. The math: fastest route Panguitch→UVU is ~2h46m, so a ~9:50 p.m. departure puts the earliest Orem arrival at ~12:36 a.m. — while the state's text-message exhibits have \"Robinson\" texting Twiggs from outside UVU, watching a lingering cop, with the first message at 11:00 p.m. DD's original Jul 12 post — preserved in the Jul 18 receipts batch as fxtwitter + syndication captures with full note text and server timestamps — runs the math in his own words: \"Panguich is 2 hours 49 minutes from UVU\"; \"If he left at 10pm the fastest he could be at UVU is 12:47am\"; against a text timeline he characterizes as \"watching & waiting for the police to leave hours before 12:36am-ish on the 11th as is in the texts.\" (Coleman's Ep 146 detail on that clock reading: Robinson was flagged down by a cop while waiting at a red light at 12:36 a.m. that night — flagged down, not \"pulled over\" [3:18:22–28].) A card payment record with a hard timestamp exists at a named business. Update (Jul 19, re-verified against the scrape Jul 20): the owner of Cowboy's Smokehouse set a copy of that receipt in front of Diligent Denizen — \"IS the ticket in question\" — arranged the on-camera (face-cropped) eyewitness interview, disclosed the restaurant had no working camera the night of the sighting, and said the store is fielding harassing calls. The owner himself, who wasn't there that night, says he doesn't think it was Robinson though it \"makes sense it could be\" — the ID rests on the two staff eyewitnesses, one of whom printed the receipt for the FBI. Counterweight (Jul 18–19, from the Jul 20 trend grab): the restaurant itself has now spoken. An \"Official Statement\" posted by Cowboy Smokehouse/Steakhouse on Facebook — circulating as a screenshot, surfaced in a reply to Owens (@_midGRAY; receipts midgray-cowboy-smokehouse-statement-2078627259246579841 fxtwitter + syndication + photo1.jpg) — reads, verbatim as visible in the image: \"Based on the information currently available to us, we have no evidence establishing whether Tyler Robinson was at our restaurant around September 10, 2025. We have responded truthfully to those who have questioned us, based on the information available to us at the time. We have fully cooperated, and will continue to cooperate, with the authorities conducting this investigation. Because this is an active matter, we cannot and will not comment further.\" That gives the alibi no institutional backing — and Owens' receipted reply concedes the ground while reframing it: because the restaurant has no operable cameras, \"the owner cannot definitively state that Tyler was at his restaurant on September 10th\"; there were three servers that night; \"the server that actually served Tyler Robinson was certain it was him\"; the owner then pulled the receipt and found \"at the very least— someone with the name of Tyler Robinson had paid with his credit/debit card\"; the restaurant reported it to the Feds, and \"The Feds hardly cared.\" That is a documented narrative shift against the DD layer above — from two 100%-certain eyewitnesses to ONE server certain plus a name-match on a receipt, with the owner explicitly unable to confirm. What the receipts document is the screenshot's circulation and Owens' response to it; the statement's authenticity rests on the screenshot alone pending the restaurant's original Facebook post. (Status contested: the DD interview layer is on tape and archived; the restaurant's statement-as-screenshot now sits directly against it; the sighting itself remains a witness claim outside the court record — which is exactly the problem the records requests attack.)",
-      implication: "If the tip is wrong, the case file shows it was run down and excluded — routine. If the tip was never run down, a 100%-ID alibi sighting with a checkable payment record sat in the FBI's intake while the state built a timeline it contradicts. Either way the paper answers: the tip/lead log entry, and any record of follow-up, are discrete administrative records on the state side. (The FBI intake itself is federal — that request lives on the federal FAFO.) Coleman's read of the same facts: \"either the texts are fabricated... or someone was pretending to be Tyler.\" The Jul 18 receipts batch pins the remaining checkables that live outside GRAMA: the Smokehouse's own merchant/POS records for the night of September 10 (a private business — discovery territory, not a records request), and whether prosecution or defense ever contacted the restaurant — testable against the witness lists and discovery filings on the public court docket in State v. Robinson. The Jul 20 trend grab adds two more: (1) the restaurant's ORIGINAL Facebook statement — the circulating version is a screenshot; pull the timestamped original from the restaurant's own page. It is now the pivotal document of the alibi fight. (2) For weighing the card's loudest current advocate: the filed Harpole v. Owens complaint, which Owens characterizes in a receipted post (\"Brian Harpole explicitly claims he had to go on Shawn Ryan to refute my claims... he lost business and revenue for which I am to blame\"; receipt realcandaceo-harpole-lawsuit-readback-2078627672758886911) and her detractors characterize the other way — the complaint itself is a public court record, checkable directly; Paramount Tactical's parent post tags @dhillonlaw (Dhillon Law Group — possible counsel identification).",
-      sources: [
-        { label: "On-camera interview (3:09), receipts + Wayback archives in the library", url: "https://web.archive.org/web/20260713050134/https://cdn.syndication.twimg.com/tweet-result?id=2076405974597063038&token=a" },
-        { label: "Receipts batch (captured Jul 18, REFS written Jul 20): DD's Jul 12 post as fxtwitter + syndication JSONs — full note text, server timestamps, as-captured stats (336K views) — plus a 102-post snapshot of the account's timeline the same day. The post's claims (witness ID, FBI report, debit-card payment, drive-time math) remain DD's assertions; what the receipts fix is exactly what he said, when", url: "https://x.com/DiligentDenizen/status/2076405974597063038" },
-        { label: "Ep. 143 segment [20:45–34:30]", url: "https://www.youtube.com/watch?v=yBDB-mpI-Xw" },
-        { label: "The Cowboy Smokehouse \"Official Statement\" as it circulated (Jul 18): a screenshot of a Facebook post, posted in a reply to Owens by @_midGRAY — receipts midgray-cowboy-smokehouse-statement-2078627259246579841 (fxtwitter + syndication JSONs + the screenshot as photo1.jpg); trend grab in the library: X trend 2026-07-20 - Acting-alone debate reignites - POSTS.md. \"[W]e have no evidence establishing whether Tyler Robinson was at our restaurant around September 10, 2025.\" Screenshot only — the restaurant's original Facebook post is the authentication, and pulling it is an open lead", url: "https://x.com/_midGRAY/status/2078627259246579841" },
-        { label: "Owens' receipted response (Jul 19, two posts — receipts realcandaceo-three-servers-reported-feds-2078632931958870381 and realcandaceo-tick-tock-three-servers-2078638277523841385): no operable cameras, so the owner \"cannot definitively state\"; three servers that night, the one who served him \"certain\"; an owner-pulled receipt with \"at the very least\" a Tyler Robinson name-match on the card payment; reported to the Feds, who \"hardly cared.\" Her assertions, on the record verbatim — the concession and the reframing in the same posts", url: "https://x.com/RealCandaceO/status/2078638277523841385" }
-      ],
-      requests: [
-        {
-          agencyId: "dps",
-          summary: "DPS/SBI — the lead/tip log entry for the Panguitch sighting (absence is the finding)",
-          subject: "GRAMA Request: lead or tip records concerning a reported September 10, 2025 sighting in Panguitch, Utah",
-          records: "I request, concerning the Utah Valley University homicide investigation: (1) the lead, tip, or information-report log entry documenting receipt of information that the suspect was seen at a restaurant in Panguitch, Utah on the evening of September 10, 2025 — whether received directly, from the FBI, or from any other agency; and (2) any record documenting investigative follow-up on that information, including any interview of the reporting witnesses or any records request to the business, or a record of the decision not to follow up. Witness personal identifiers may be redacted. If no responsive records exist, I request written confirmation of that fact, including a description of the search conducted.",
-          ask_no_records: true,
-          filed: "TWO OF THE BATCH DENIED — P012986 and P012989 denied Aug 1, 2026 by SBI Records Manager Tina Rodriguez as \"exempt from disclosure\"; the email notice’s \"for the following reasons:\" is followed by nothing — the actual grounds are visible only inside the GovQA portal, and which two of the five asks those numbers map to is pending a portal login. Original batch: filed Jul 16, 2026 via GovQA — P012986/87/89/92/95 (exhibit 12.1/12.4 tasking records, Panguitch tip log, Discord evidence intake, ballistics + GSR reports, latent prints 11B–11D)."
-        },
-        {
-          agencyId: "ucao",
-          summary: "Utah County Attorney — any record the prosecution received or ran down the Panguitch tip",
-          subject: "GRAMA Request: records concerning a reported alibi sighting, State v. Robinson",
-          records: "I request any record held by the Utah County Attorney's Office documenting receipt of, or follow-up on, information that the defendant in State v. Robinson was seen in Panguitch, Utah on the evening of September 10, 2025 — including any referral from a law-enforcement agency, any internal memorandum, and any record of contact or attempted contact with the business or the reporting witnesses. If no responsive records exist, I request written confirmation of that fact.",
-          ask_no_records: true
-        }
-      ]
-    },
-    {
-      id: "ucao-blanket-hold",
-      short: "The UCAO blanket hold — one letter to rule them all",
-      challenge: "A Utah County deputy attorney sent another county’s sheriff a notice pre-classifying ALL Kirk-shooting records as protected — category-wide, no record-by-record determination, \"until further written notice.\" How many entities got one?",
-      categories: ["Kirk assassination & coverup"],
-      entities: ["ucao-ent", "wcso-ent"],
-      investigator: "Produced by WCSO itself, Aug 3 2026, in response to this docket’s McBride-letter request",
-      investigatorLinks: [],
-      status: "confirmed",
-      finding: "In hand: a \"Notice of Records Restriction Due to Ongoing Investigation\" from the Utah County Attorney’s office (Deputy Attorney Katrina Cole, on letterhead listing County Attorney Jeffrey S. Gray and division chiefs including Ryan McBride), sent to the Washington County Sheriff’s Office: under § 63G-2-305(10), ALL \"printed and electronic correspondence, arrest records, witness statements, reports, notes, recordings, internal communications, interviews, body camera footage, or other records related to the shooting of Charlie Kirk on September 10, 2025\" are to be withheld \"until further written notice from this office,\" with staff told to \"notify our office immediately before taking any action\" on any request. WCSO’s temporary records clerk produced it Aug 3, 2026 with the note that she \"did not know this letter existed,\" called to confirm it is \"still active,\" and will release nothing Robinson-related until trial ends. The same notice was cited the same day to deny this docket’s WCSO CAD-log and Mitchell-interview requests.",
-      implication: "GRAMA classification is record-by-record and belongs to the record’s custodian — § 305(10) protects records whose release would actually interfere, not every record an outside prosecutor labels in advance, and segregability (§ 63G-2-308) survives any classification. A standing instruction from one county’s prosecutor to another county’s sheriff — \"notify our office before taking any action\" — is itself a records-suppression paper trail, and it is now in hand. The follow-on ask writes itself: every such notice UCAO has issued, the full recipient list, and the authorization behind the campaign. Each additional recipient is another denial letter that traces back to one desk.",
-      sources: [
-        { label: "The notice itself — produced by WCSO Aug 3, 2026 (banked in the library’s foia-mail archive)", url: "" }
-      ],
-      requests: [
-        {
-          agencyId: "ucao",
-          summary: "UCAO — every Notice of Records Restriction issued on this case, the recipient list, and the authorization behind them",
-          subject: "GRAMA Request: notices of records restriction issued concerning the September 10, 2025 UVU shooting",
-          records: "I request: (1) each \"Notice of Records Restriction\" or similar letter issued by or on behalf of the Utah County Attorney’s office concerning records related to the September 10, 2025 shooting at Utah Valley University — including the notice signed by Deputy Attorney Katrina Cole and sent to the Washington County Sheriff’s Office, a copy of which I hold; (2) the distribution or recipient list for such notices — each governmental entity to which one was sent, with dates; (3) any written responses or notifications received from recipient entities under the notices’ instruction to \"notify our office immediately\" upon receiving a records request; and (4) the record documenting the decision to issue the notices — the requesting official, authorization, and date. Each item names discrete administrative correspondence of the office; this is not a request for investigative files. If no responsive record exists for any numbered item, I request written confirmation of that fact for that item, including a description of the search conducted.",
-          ask_no_records: true,
-          filed: "NOT FILED — DRAFTED Aug 3, 2026, ready to file to ucao@utahcounty.gov / UCAOrecords@utahcounty.gov. The office’s own notice invites the ask: correspondence ABOUT restricting records is not itself a restricted investigative record."
-        }
-      ]
-    },
-    {
-      id: "bagley-bodycam",
-      challenge: "The first officer's bodycam died the moment he reached the roof.",
-      short: "Bodycam died on the roof",
-      categories: ["Missing & deleted footage", "Crime scene handling"],
-      entities: ["bagley", "uvu-ent"],
-      investigator: "Baron Coleman · Ian Carroll",
-      investigatorLinks: [
-        { label: "Carroll on day one/two", url: "https://www.youtube.com/watch?v=r8JjODn8-dY" },
-        { label: "Coleman Ep. 141", url: "https://www.youtube.com/watch?v=FT8kJN3n_cA" }
-      ],
-      status: "confirmed",
-      finding: "The first officer to reach the shooter's rooftop (Officer Bagley) testified his body camera's battery died as he reached the roof — 27 minutes 35 seconds of footage, his only recording that day — that he was accompanied up by an armed man in civilian clothes with a badge whose name and agency he never got, and that he searched the prone position and roof edge and found no spent shell casing.",
-      implication: "Body-camera systems log battery events, docking, and uploads independently of the footage — the metadata says whether the unit died or was powered off. Someone armed was on the key rooftop before it was processed. And the state's own first responder found no brass at the sniper position.",
-      sources: [
-        { label: "Day 1 testimony (cross by Kathryn Nester; courtroom audio aired Jul 8)", url: "" }
-      ],
-      requests: [
-        {
-          agencyId: "uvupd",
-          summary: "UVU PD — Bagley's bodycam footage plus the device's audit/battery logs",
-          subject: "GRAMA Request: body-worn camera footage and device audit logs, September 10, 2025",
-          records: "I request: (1) all body-worn camera footage recorded on September 10, 2025 by the UVU police officer who first accessed the Losee Center rooftop; (2) the device audit log for that officer's body-worn camera for September 10, 2025 — including power-on/power-off events, battery-depletion events, docking and upload timestamps; and (3) the department's body-worn camera policy in effect on that date, including battery-management and activation requirements.",
-          ask_no_records: true,
-          filed: "PENDING, two rounds. Round one: UVU #26-215 — EXPEDITE DENIED Jul 16, 2026, on the same § 63G-2-204(4)(a) 'failed to meet that burden' public-benefit finding UVU issued across the deck; the standard 10-business-day clock still runs, substantive response due ~Jul 27. Round two, filed Jul 21, 2026 directly to UVU PD by email (uvpdrecords@uvu.edu): the rooftop officer's BWC footage + the device audit log (power/battery events) + the BWC policy, expedite requested; due ~Aug 5."
-        },
-        {
-          agencyId: "ucso",
-          summary: "Utah County SO — the bodycam that was rolling during the rifle recovery (confirmed on day 4 to exist)",
-          subject: "GRAMA Request: body-worn camera footage of evidence recovery, wooded area near UVU, September 10, 2025",
-          records: "I request the body-worn camera footage recorded by the Utah County Sheriff's Office officer(s) present at the recovery of a rifle from the wooded area northeast of the Utah Valley University campus on September 10, 2025, at approximately 6:00 p.m. On July 9, 2026, the state's crime-scene sergeant testified at the public preliminary hearing in State v. Robinson that an officer's body camera was recording during that recovery. I also request the associated evidence/property record for the recovered items.",
-          ask_no_records: true,
-          filed: "PENDING — filed Jul 12, 2026, 2:51 p.m. via NextRequest, request #26-2791 (Utah County). Response due July 28. Confirmation received on submission; no invoice due. Photo-ID upload applies only to subject-of-record requests — this is a public-records ask."
-        },
-        {
-          agencyId: "uvupd",
-          summary: "UVU PD — scene access log and multi-agency deployment roster for Sept 10",
-          subject: "GRAMA Request: crime scene access log and assisting-agency roster, September 10, 2025",
-          records: "I request: (1) the crime scene access/entry log maintained for the Losee Center rooftop and the courtyard scene at Utah Valley University on September 10–11, 2025; and (2) any roster, mutual-aid record, or deployment list identifying the law-enforcement agencies and personnel (including plainclothes personnel) present on the UVU campus on September 10, 2025 in connection with the incident response.",
-          ask_no_records: true,
-          filed: "PENDING, two rounds. Round one: UVU #26-214 — EXPEDITE DENIED Jul 16, 2026, on the § 63G-2-204(4)(a) 'failed to meet that burden' public-benefit finding; substantive response due ~Jul 27. Round two: filed via NextRequest as UVU #26-231, Jul 17, 2026; acknowledged Jul 17; EXPEDITE DENIED (same finding); 10-business-day clock, due ~Aug 1."
-        },
-        {
-          agencyId: "uvupd",
-          summary: "UVU PD — follow-on round: native parent file + Axon device audit trail + screwdriver property record",
-          subject: "GRAMA Request: body-worn camera recording, Axon device audit trail, and evidence record for rooftop recovery, September 10, 2025",
-          records: "I request: (1) the complete native body-worn camera recording from Officer Bagley’s Axon Body 4 camera for September 10, 2025, 12:00 p.m. to 1:30 p.m., with original metadata intact — expressly including the full parent file of the approximately 27-minute-35-second clip previously referenced in public proceedings; (2) the Axon Evidence (evidence.com) device audit trail for that camera for September 10, 2025 — including power-on/power-off events, recording start and stop events, battery and fault log entries, and docking/upload records — which will document the reported cessation of recording at approximately 12:44 p.m.; (3) any device malfunction, outage, or repair report filed for that camera unit for September 2025; and (4) the evidence or property record for the screwdriver recovered on the Losee Center rooftop on September 10, 2025 (referenced as prosecution exhibits 12.1 and 12.4), including the date, time, location, and recovering officer recorded in that entry. Each item names a discrete, catalogued record; this is not a broad search. If no responsive record exists for any numbered item — in particular, if no device audit trail or malfunction report exists for the camera — I request written confirmation of that fact for that item, including a description of the search conducted.",
-          ask_no_records: true,
-          filed: "NOT FILED — DRAFTED Aug 2, 2026, ready to file to uvpdrecords@uvu.edu. The audit-trail ask proves or kills the \"camera turned off right before the screwdriver find\" claim — the evidence.com log records every stop event with a timestamp."
-        }
-      ]
-    },
-    {
-      id: "hospital-searcher",
-      challenge: "Someone searched hospitals for Charlie Kirk within hours — and the police audio ties his vehicle to the FBI.",
-      short: "The hospital searcher",
-      categories: ["Timeline contradictions"],
-      entities: ["fbi-ent", "charlie-kirk", "bagley", "sbi"],
-      investigator: "Baron Coleman (Ep. 147 — police audio)",
-      investigatorLinks: [
-        { label: "Coleman Ep. 147 — the hospital police audio (full transcript read + archived Jul 20 2026)", url: "https://www.youtube.com/watch?v=DzzvnsEXOOk" }
-      ],
-      status: "reported",
-      finding: "Per the police-scanner audio Coleman walks through: on September 10 a man went into Utah Valley Hospital asking for Charlie Kirk — \"when confronted, he took off running, got in that car and jetted out of there.\" A BOLO with his photo went to the area hospitals; radio described him as HEAVIER SET with two normal hands, best-guess vehicle an older Nissan Armada. Later, while units staked out Zechariah Qureshi's apartment, an Armada rolled up on them and dispatch relayed \"Armada is FBI\" — a second arrival was \"with the marshals\" — followed by on-air confusion distinguishing FBI from SBI. The conflations resolved on the audio: Qureshi had come to police attention over alleged social-media posts about Kirk that he was deleting, NOT hospital visits (at one point scanner traffic had him \"in tactical gear going hospital to hospital\" — wrongly); and the one-armed man, Andrew Piscaldo, got \"official confirmation... not involved.\" Separately: a visitor at Timpanogos Regional documented caution tape and police cars going up ~1:20 p.m. and the hospital still locked down 5:19–5:40 p.m. (\"told me I can't leave\"), with ME vehicles and tactical officers arriving ~5:40 per local news. The lockdown PRE-DATES the searcher radio traffic (~2:49 p.m.), and a nurse in Coleman's chat notes area-wide lockdown is standard procedure during a shooting — so the lockdown corroborates the scene, not the searcher.",
-      implication: "A man searching hospitals for the victim — whom the same night's dispatch traffic ties to an FBI vehicle, and who fled when confronted instead of showing a badge — is either in the records or he isn't. And the build cuts against the shooter: Officer Bagley, the first officer to the Losee roof, described the roof figure as \"not heavy set,\" while the hospital searcher was \"heavier set\" on the radio. The dispatch/CAD audio for the hospital calls, any report identifying the search subject or his agency, and the lockdown-coordination records are discrete records; if he was federal, the no-records response itself becomes the finding.",
-      sources: [
-        { label: "Coleman Ep. 147 police audio (whisper transcript archived to sov-library; claims re-verified against the full transcript Jul 20 2026)", url: "https://www.youtube.com/watch?v=DzzvnsEXOOk" },
-        { label: "Timpanogos Regional witness posts (caution tape ~1:20 p.m.; still locked down 5:19–5:40 p.m.) + local-news ME/tactical arrival clip", url: "" },
-        { label: "Officer Bagley preliminary-hearing testimony — roof figure described as \"not heavy set\"", url: "" }
-      ],
-      requests: [
-        {
-          agencyId: "dps",
-          summary: "DPS/SBI — dispatch/CAD for the hospital-search calls + any report identifying the subject",
-          subject: "GRAMA Request: dispatch/CAD records concerning an individual searching hospitals for the victim, September 10, 2025",
-          records: "I request the computer-aided dispatch (CAD) and radio log records, and any incident or information report, concerning reports on September 10, 2025 of an individual going between hospitals (including Utah Valley Hospital and Timpanogos Regional Hospital) seeking the location of Charlie Kirk in connection with the Utah Valley University homicide investigation — including any record identifying that individual or their agency, any BOLO or lookout issued, and any record of the resulting hospital-lockdown coordination. Unrelated calls for service may be redacted. If no responsive records exist, I request written confirmation of that fact, including a description of the search conducted. Please also retain this correspondence and all records related to the processing of this request.",
-          parties: "Tyler James Robinson (defendant); Charlie Kirk (victim, subject of the searches); the individual reported going between hospitals (identification is part of the request).",
-          formAnswers: [
-            { label: "Date of occurrence", value: "09/10/2025" },
-            { label: "Time of occurrence", value: "afternoon–evening of September 10, 2025, following the ~12:23 p.m. shooting" }
-          ],
-          ask_no_records: true
-        },
-        {
-          agencyId: "orem",
-          summary: "Orem PD — dispatch/incident records for the hospital lockdown, Sept 10",
-          subject: "GRAMA Request: dispatch and incident records concerning a hospital lockdown, September 10, 2025",
-          records: "I request the dispatch/CAD and any incident report records held by the Orem Police Department concerning the lockdown of, or law-enforcement response to, Timpanogos Regional Hospital (and any other Orem-area hospital) on September 10, 2025 in connection with reports of an individual searching for Charlie Kirk — including the reason for the lockdown, the agency that requested it, and any record identifying the individual whose conduct prompted it. If no responsive records exist, I request written confirmation of that fact.",
-          ask_no_records: true
         }
       ]
     },
@@ -1453,50 +1588,6 @@ const FOIA = {
           subject: "GRAMA Request: overwatch/counter-sniper deployment records, UVU, September 10, 2025",
           records: "I request any deployment record, post assignment, or after-action record identifying law-enforcement personnel assigned to rooftop, overwatch, or counter-sniper positions on or around the Utah Valley University campus on September 10, 2025, including which buildings were occupied and by which agency. I am not requesting tactical methodologies — unit, position, and agency identification only.",
           filed: "PENDING — this ask is already in flight as DPS reference P013307-072126, filed Jul 21, 2026 via the GovQA portal (verbatim scope confirmed against the acknowledgment: deployment, post-assignment, or after-action records for rooftop/overwatch/counter-sniper positions, by building and agency). 10-business-day clock, Pioneer Day skipped — response due ~Aug 5. Do not re-file from this card.",
-          ask_no_records: true
-        }
-      ]
-    },
-    {
-      id: "noble-report",
-      challenge: "Officer omitted that the doorbell witness saw a bald driver and three passengers.",
-      short: "Omitted doorbell report",
-      categories: ["Witness statements", "Video evidence"],
-      entities: ["robinson", "sbi"],
-      investigator: "Baron Coleman · Ian Carroll",
-      investigatorLinks: [
-        { label: "Coleman Ep. 141", url: "https://www.youtube.com/watch?v=FT8kJN3n_cA" },
-        { label: "Carroll on day two", url: "https://www.youtube.com/watch?v=r8JjODn8-dY" }
-      ],
-      status: "confirmed",
-      finding: "On cross, the officer who presented the Nest doorbell footage admitted the homeowners' report describes the driver of Robinson's car as bald, with three other people in the car — and that he omitted both facts on direct while presenting the clip as Robinson returning alone.",
-      implication: "The interview report provably exists — the witness confirmed its contents under oath. It will draw a protected-records claim while the prosecution is pending, but the written denial must say so and cite the provision, and the request puts the report's existence and custodian on paper.",
-      sources: [
-        { label: "Day 2 cross-examination (played on both streams)", url: "" }
-      ],
-      requests: [
-        {
-          agencyId: "dps",
-          summary: "DPS/SBI — the interview report described under oath (expect a written 305 denial)",
-          subject: "GRAMA Request: report of witness interview concerning residential doorbell video, September 2025",
-          records: "I request the investigative report, or interview summary, documenting the interview of the homeowners whose Nest doorbell camera captured a vehicle associated with the Utah Valley University homicide investigation parked on their street overnight September 10–11, 2025 — the report whose contents (including the description of the vehicle's driver and occupants) were confirmed by a testifying officer during the preliminary hearing in State v. Robinson. Witness personal identifiers may be redacted; the substance of the recorded descriptions is the request. Please also retain this correspondence and all records related to the processing of this request.",
-          parties: "Tyler James Robinson (defendant); Charlie Kirk (victim); the interviewed homeowners (identifiers may be redacted); the interviewing officer or agent (name unknown — the testifying officer confirmed the report's contents at the preliminary hearing).",
-          formAnswers: [
-            { label: "Date of occurrence", value: "09/10/2025" },
-            { label: "Time of occurrence", value: "overnight September 10–11, 2025 (the vehicle was parked on the street overnight; the interview followed)" }
-          ],
-          ask_no_records: true
-        },
-        {
-          agencyId: "dps",
-          summary: "DPS/SBI — the ORIGINAL Nest export and its metadata (the courtroom copy was cut and degraded)",
-          subject: "GRAMA Request: original doorbell-video files and export metadata, September 2025 investigation",
-          records: "Concerning the residential Nest doorbell video of a vehicle parked overnight September 10–11, 2025, portions of which were played at the July 2026 preliminary hearing in State v. Robinson: I request (1) records sufficient to show the acquisition of the video from the homeowners or from the camera vendor's cloud service — the date acquired, the file count, and the acquiring officer or agency; (2) the technical metadata of the files as acquired (native resolution, duration, timestamps, and any export or processing history); and (3) records documenting any editing, clipping, or re-encoding of the video between acquisition and its courtroom presentation, including who prepared the version played in court. I am requesting acquisition and processing records, not the video content itself, so no protected-content withholding should be necessary; the courtroom copy contained visible cuts and was materially degraded relative to the camera's native quality, and the processing chain is the question. (Verbatim basis: Ep 141 [20:43–22:15], re-verified Jul 20 2026.) Please also retain this correspondence and all records related to the processing of this request.",
-          parties: "Tyler James Robinson (defendant); Charlie Kirk (victim); the acquiring officer or evidence technician (name unknown — identification is part of the request).",
-          formAnswers: [
-            { label: "Date of occurrence", value: "09/10/2025" },
-            { label: "Time of occurrence", value: "overnight September 10–11, 2025 (the recording window; acquisition followed)" }
-          ],
           ask_no_records: true
         }
       ]
@@ -1621,97 +1712,6 @@ const FOIA = {
           records: "I request, concerning the Utah Valley University homicide investigation (victim Charlie Kirk; defendant Tyler James Robinson, State v. Robinson): (1) the SBI latent-print examination report (examiner Elisa Farmer) covering the latent prints designated 11B, 11C, and 11D recovered from the window glass below the roof descent point, whose conclusions — including the exclusion of the defendant as the source — were stipulated on the public record at the July 9, 2026 preliminary hearing; and (2) any record of database searches (AFIS/NGI) or comparisons run to identify the actual source of those three prints, including the result or a record that no such search was run.",
           ask_no_records: true,
           filed: "TWO OF THE BATCH DENIED — P012986 and P012989 denied Aug 1, 2026 by SBI Records Manager Tina Rodriguez as \"exempt from disclosure\"; the email notice’s \"for the following reasons:\" is followed by nothing — the actual grounds are visible only inside the GovQA portal, and which two of the five asks those numbers map to is pending a portal login. Original batch: filed Jul 16, 2026 via GovQA — P012986/87/89/92/95 (exhibit 12.1/12.4 tasking records, Panguitch tip log, Discord evidence intake, ballistics + GSR reports, latent prints 11B–11D)."
-        }
-      ]
-    },
-    {
-      id: "dna-elimination",
-      challenge: "The roommate's DNA was on the evidence too — labeled only an “elimination sample.”",
-      short: "Roommate DNA, “elimination”",
-      categories: ["Physical evidence"],
-      entities: ["robinson", "twiggs", "sbi"],
-      investigator: "Ian Carroll",
-      investigatorLinks: [
-        { label: "Final recap — the DNA day, summarized", url: "https://www.youtube.com/watch?v=R7mdXcBfQTw" }
-      ],
-      status: "confirmed",
-      finding: "Wednesday's DNA testimony put Robinson's DNA on the rifle, the cartridges, the screwdriver, and the towel — and Lance Twiggs's DNA on the towel and the screwdriver too. Twiggs was presented as an “elimination sample”: his DNA was expected on household items and should be disregarded when found. Every one of those items traces to the residence the two shared.",
-      implication: "An elimination designation is a decision, and decisions leave records. The lab reports showing all contributors on each item, and the case record designating whose reference samples were treated as elimination standards (versus investigated as alternative access), are discrete, numbered lab documents. Expect a § 63G-2-305(10) denial while the prosecution is pending — the written denial still puts what the lab holds on paper.",
-      sources: [
-        { label: "DNA-day testimony (day 3 afternoon), incl. the elimination-sample characterization", url: "" },
-        { label: "Coleman Ep 146 context on this card's item: only the screwdriver DISASSEMBLY theory was abandoned (\"that wasn't the feds, that was Governor Cox\") — the assembled-on-the-roof account stands [2:38:17–2:38:36] — and the screwdriver itself, \"the only thing that places him on the roof,\" has never been shown [3:17:52–3:18:00]", url: "https://www.youtube.com/watch?v=jTCL1rt-52Q" }
-      ],
-      requests: [
-        {
-          agencyId: "dps",
-          summary: "DPS/crime lab — the full-contributor DNA reports and the elimination-standard designation",
-          subject: "GRAMA Request: DNA analysis reports and reference-standard designations, State v. Robinson evidence",
-          records: "I request, concerning laboratory DNA analyses in the Utah Valley University homicide investigation: (1) the DNA examination report(s) for the towel and the screwdriver referenced in July 2026 preliminary-hearing testimony, including all contributor findings for each item; and (2) the case record designating which individuals' reference samples were treated as elimination standards in those analyses, and the basis recorded for each designation. Both items were the subject of public preliminary-hearing testimony. Please also retain this correspondence and all records related to the processing of this request.",
-          parties: "Tyler James Robinson (defendant); Charlie Kirk (victim); the crime-lab DNA examiner(s) of record for the towel and screwdriver analyses, including any examiner whose verification results differed (names unknown — identification is part of the request).",
-          formAnswers: [
-            { label: "Date of occurrence", value: "09/10/2025" },
-            { label: "Time of occurrence", value: "full day — evidence collected September 10–11, 2025; laboratory analyses followed" }
-          ],
-          ask_no_records: true
-        }
-      ]
-    },
-    {
-      id: "state-plane",
-      challenge: "Investigators landed south hours after the earliest claimed custody time.",
-      short: "The night flight south",
-      categories: ["Timeline contradictions"],
-      entities: ["davis", "sbi"],
-      investigator: "Baron Coleman",
-      investigatorLinks: [
-        { label: "Ep. 141", url: "https://www.youtube.com/watch?v=FT8kJN3n_cA" }
-      ],
-      status: "confirmed",
-      finding: "Agent Davis testified he flew to St. George the night of September 11 — a state aircraft landed there at ~11:37 p.m. — putting lead investigators in Washington County hours after the earliest claimed custody time.",
-      implication: "State aircraft generate flight logs and passenger manifests. Who flew south that night, and when the flight was tasked, is a hard timestamp against the shifting custody timeline.",
-      sources: [
-        { label: "Day 3 testimony; public flight tracking", url: "" },
-        { label: "Sam Parker — WCSO Attorney confirmed a Sept 11 Washington County arrest; Robinson Mirandized 6:25 PM (1.5 hrs before the 7:57 PM Discord message); Parker poses Davis's ~10 PM WCSO arrival as unaccounted-for given the 3+ hr drive — connecting that gap to this card's night flight is our inference, not Parker's claim", url: "https://x.com/BasedSamParker/status/2055008839985135940" }
-      ],
-      requests: [
-        {
-          agencyId: "dps",
-          summary: "DPS Aero Bureau — flight log and manifest for the Sept 11 flight south",
-          subject: "GRAMA Request: DPS aircraft flight records, September 11–12, 2025",
-          records: "I request the flight log, tasking record, and passenger manifest for any Utah Department of Public Safety aircraft flight from the Salt Lake City area to St. George or Washington County on September 11, 2025 (including the flight arriving at approximately 11:37 p.m.), and any return flight through September 12, 2025 — including the time the flight was requested and by whom. Please also retain this correspondence and all records related to the processing of this request.",
-          parties: "Tyler James Robinson (defendant, reported transported subject); the requesting official and flight crew (names unknown — identification is part of the request).",
-          formAnswers: [
-            { label: "Date of occurrence", value: "09/11/2025" },
-            { label: "Time of occurrence", value: "evening — flight arriving approximately 11:37 p.m.; any return through September 12, 2025" }
-          ],
-          ask_no_records: true
-        }
-      ]
-    },
-    {
-      id: "sept11-rifle-removal",
-      short: "The Sept 11 morning rifle walk-out",
-      challenge: "An eyewitness filmed a handcuffed man walked off UVU grounds at ~10:30 a.m. September 11 while an officer separately carried a tagged rifle to a vehicle — before Robinson’s surrender, after media were cleared from the area. Whose rifle, whose arrest, and where’s the paper?",
-      categories: ["Crime scene handling", "Witness statements"],
-      entities: ["uvu-ent"],
-      investigator: "Elizabeth Lane TV (eyewitness \"Chelsea,\" SLC, on stream with her video)",
-      investigatorLinks: [
-        { label: "The War on X stream, Aug 2026 — the eyewitness segment (transcript banked in the library)", url: "https://www.youtube.com/watch?v=3DMcnAcaIHA" }
-      ],
-      status: "reported",
-      finding: "An in-studio eyewitness (\"Chelsea,\" Salt Lake City) describes and shows video: at roughly 10:30 a.m. on September 11, 2025 — less than 24 hours after the shooting, before Tyler Robinson’s surrender, while the suspect was officially still at large — a man identified on the stream as Russell Kennington was walked off the UVU grounds in handcuffs while a bald officer separately carried a rifle bearing an evidence tag to a vehicle, staged so the man and the rifle were never in frame together. She says police first cleared all media across the street and ordered her out of the area, making hers the only camera on it (\"a million% sure\" the rifle carried an evidence tag); she has not appeared on any witness list. The stream adds that Kennington posted his own video walking UVU on September 10. Rides as attributed discourse until the records land.",
-      implication: "If a person was detained and a tagged rifle recovered on campus the morning of September 11, ordinary policing generated paper: an incident or arrest report, a property/evidence log entry for the rifle, a scene log, and whatever order cleared the media. Either that paper exists — identifying a second detained person and a second rifle the public record never mentions — or no responsive records exist in writing, which is its own finding for an armed detention filmed on video. The found-rifle timeline in the K9 card (Freya’s clean search, the ordered re-search) runs through the same morning.",
-      sources: [
-        { label: "The War on X — eyewitness account + video, and the Kennington self-posted Sept 10 video claim", url: "https://www.youtube.com/watch?v=3DMcnAcaIHA" }
-      ],
-      requests: [
-        {
-          agencyId: "uvupd",
-          summary: "UVU PD — Sept 11 morning incident/detention records, the tagged-rifle property entry, scene log, and the media-clearance order",
-          subject: "GRAMA Request: incident, detention, and property records — UVU campus, morning of September 11, 2025",
-          records: "I request, for September 11, 2025, 8:00 a.m. to 1:00 p.m., concerning the UVU campus: (1) any incident report, detention or arrest record, or field-interview record for any individual detained on or escorted from the campus grounds; (2) the property or evidence log entry for any firearm recovered from or transported off the campus grounds in that window, including the recovering officer and receiving custody; (3) the crime-scene or perimeter log for the areas under control that morning; and (4) any order, instruction, or radio-traffic record directing media or the public to leave the area adjacent to the scene during that window. Each item names a discrete, routinely generated record; this is not a broad search. If no responsive record exists for any numbered item, I request written confirmation of that fact for that item, including a description of the search conducted.",
-          ask_no_records: true,
-          filed: "NOT FILED — DRAFTED Aug 3, 2026, ready to file to uvpdrecords@uvu.edu. Item (2) is the sharp end: a tagged rifle on video either has a property entry or it does not."
         }
       ]
     }
