@@ -633,6 +633,7 @@
       // short answers get the one-line box; long ones a proper multi-line box —
       // both read-only, both click-to-copy
       const t = document.createElement(m.value.length > 70 ? "textarea" : "input");
+      if(t.tagName === "INPUT") t.type = "text";  // untyped inputs miss the input[type=text] styling
       t.className = "snip"; t.value = m.value; t.readOnly = true;
       if(t.tagName === "TEXTAREA"){ t.rows = 2; t.style.minHeight = "0"; }
       t.addEventListener("click", () => { t.select(); document.execCommand && document.execCommand("copy"); });
