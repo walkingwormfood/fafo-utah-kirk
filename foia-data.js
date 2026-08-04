@@ -283,7 +283,7 @@ const FOIA = {
           ],
           refined: true,
           ask_no_records: true,
-          filed: "ON APPEAL + ROUND-TWO REFILE — narrowed K9 deployment/utilization request (handler logs, certification/discipline, tasking, outcome) emailed Aug 2, 2026 to records@orem.gov. Original round: DENIED — twice in one day — and ON APPEAL. Jul 21, 2026, 11:43 a.m.: Orem issued its formal written denial — the Utah County Attorney's Office 'has requested that these records be classified as Protected under Utah Code § 63G-2-305(10)'; 'the City is compelled to classify... As such, your request is herein formally denied.' A formal cure was sent at 12:45 p.m. the same day; Orem re-denied at 1:50 p.m. — 65 minutes later — on a denial form listing the record as 'K9 inquiry' and the ground as 'Active Case,' citing no subsection of § 305(10) and making no interference finding. GRAMA appeal filed with City Manager (CAO) Brenn Bybee the same evening under § 63G-2-401; determination due ~Aug 5, 2026 (Pioneer Day-adjusted). All further questions were pointed at the Utah State Bureau of Investigation."
+          filed: "ON APPEAL + ROUND-TWO REFILE — narrowed K9 deployment/utilization request (handler logs, certification/discipline, tasking, outcome) emailed Aug 2, 2026 and re-sent Aug 4, 2026 (10:56 and 11:31 a.m.) to records@orem.gov. Original round: DENIED — twice in one day — and ON APPEAL. Jul 21, 2026, 11:43 a.m.: Orem issued its formal written denial — the Utah County Attorney's Office 'has requested that these records be classified as Protected under Utah Code § 63G-2-305(10)'; 'the City is compelled to classify... As such, your request is herein formally denied.' A formal cure was sent at 12:45 p.m. the same day; Orem re-denied at 1:50 p.m. — 65 minutes later — on a denial form listing the record as 'K9 inquiry' and the ground as 'Active Case,' citing no subsection of § 305(10) and making no interference finding. GRAMA appeal filed with City Manager (CAO) Brenn Bybee the same evening under § 63G-2-401; determination due ~Aug 5, 2026 (Pioneer Day-adjusted). All further questions were pointed at the Utah State Bureau of Investigation."
         },
         {
           agencyId: "pgpd",
@@ -367,7 +367,8 @@ const FOIA = {
             { label: "Date range of records", value: "09/10/2025 to present" }
           ],
           records: "I request, concerning the Office of the Medical Examiner case arising from the September 10, 2025 death at Utah Valley University: (1) the evidence transmittal or release forms documenting transfers of physical evidence (including bullet or projectile fragments, fingerprint records, and photographic media) to any law-enforcement agency; and (2) the log identifying the agencies or officials who provided investigative information incorporated into the case file's administrative cover documentation. I am NOT requesting the autopsy report, photographs, or any medical findings — administrative transfer records only.",
-          ask_no_records: true
+          ask_no_records: true,
+          filed: "PENDING — FILED Aug 4, 2026, 1:28 p.m. via the Open Records Portal (ut.accessgov.com form; title \"Evidence chain-of-custody, Sept 2025\"); submission-confirmation PDF banked in foia-mail. NOTE: the portal recorded the mailing address state as Utah instead of Texas (dropdown default) — correct it if the portal allows, or note it in any follow-up. 10-business-day clock from receipt."
         }
       ]
     },
@@ -477,14 +478,16 @@ const FOIA = {
           summary: "Washington County — the separation agreement and severance terms",
           subject: "GRAMA Request: separation/severance agreement for former Sheriff Nate Brooksby",
           records: "I request the separation agreement, severance agreement, or settlement agreement between Washington County and former Sheriff Nate Brooksby executed on or about March 2026, including the monetary terms and any confidentiality or non-disparagement provisions. Finalized settlement and severance agreements of public employees are public records under GRAMA.",
-          ask_no_records: true
+          ask_no_records: true,
+          filed: "PENDING — FILED Aug 4, 2026, 2:29 p.m. by email to grama@washco.utah.gov — the separation/severance agreement for former Sheriff Nate Brooksby. 10-business-day clock."
         },
         {
           agencyId: "washco",
           summary: "Washington County — the outcome record of the internal investigation",
           subject: "GRAMA Request: disposition of internal investigation concerning the former sheriff",
           records: "I request the record of final disposition or outcome of any internal or independent investigation of former Sheriff Nate Brooksby that concluded, was closed, or was pending at his March 2026 resignation — including the categories of allegations examined (as characterized in the disposition record) and the finding, if any. I am not requesting witness statements or the investigative file itself, only the disposition record.",
-          ask_no_records: true
+          ask_no_records: true,
+          filed: "PENDING — FILED Aug 4, 2026, 2:29 p.m. by email to grama@washco.utah.gov — the disposition/outcome record of the internal investigation. 10-business-day clock."
         }
       ]
     },
@@ -937,7 +940,8 @@ const FOIA = {
           summary: "Orem PD — dispatch/incident records for the hospital lockdown, Sept 10",
           subject: "GRAMA Request: dispatch and incident records concerning a hospital lockdown, September 10, 2025",
           records: "I request the dispatch/CAD and any incident report records held by the Orem Police Department concerning the lockdown of, or law-enforcement response to, Timpanogos Regional Hospital (and any other Orem-area hospital) on September 10, 2025 in connection with reports of an individual searching for Charlie Kirk — including the reason for the lockdown, the agency that requested it, and any record identifying the individual whose conduct prompted it. If no responsive records exist, I request written confirmation of that fact.",
-          ask_no_records: true
+          ask_no_records: true,
+          filed: "PENDING — FILED Aug 4, 2026, 2:30 p.m. by email to records@orem.gov — dispatch and incident records concerning the hospital lockdown, September 10, 2025. Same office that stonewalled the K9 ask — but a lockdown incident record is administrative dispatch paper. 10-business-day clock."
         }
       ]
     },
@@ -1180,7 +1184,7 @@ const FOIA = {
           subject: "GRAMA Request: interview room and visitor logs, night of September 11–12, 2025",
           records: "I request the interview-room usage log, visitor log, and lobby/desk log for the St. George Police Department for September 11, 2025, 10:00 p.m. through September 12, 2025, 8:00 a.m., including any record of use of department facilities by another agency (FBI, Utah DPS/SBI, or Washington County Sheriff's Office) during that window. Names of uninvolved members of the public may be redacted.",
           ask_no_records: true,
-          filed: "FILED Aug 3, 2026 via NextRequest as St. George #26-4511 / #26-4512 (the joint facility-records pair; assigned to Julie Clegg, Police Records). Filed with the public-portion legal-authority statement (§ 63G-2-201/308), the $25-capped fee waiver, and the § 204(4)(b) expedite — acknowledged same day."
+          filed: "PENDING — EXPEDITE DENIED Aug 4, 2026 on both #26-4511 and #26-4512 (§ 63G-2-204(4) \"personal interests\" boilerplate — against a request whose text states the records will be published to the general public); the denial letter also promises a response \"as promptly as possible\" within the 10-business-day clock, and is appealable to the City Manager (61 South Main St., St. George) within 30 days. Originally: FILED Aug 3, 2026 via NextRequest as St. George #26-4511 / #26-4512 (the joint facility-records pair; assigned to Julie Clegg, Police Records). Filed with the public-portion legal-authority statement (§ 63G-2-201/308), the $25-capped fee waiver, and the § 204(4)(b) expedite — acknowledged same day."
         },
         {
           agencyId: "wcso",
@@ -1215,7 +1219,7 @@ const FOIA = {
           subject: "GRAMA Request: facility and interview-room records, early morning September 12, 2025",
           records: "I request, for the period September 11, 2025, 9:00 p.m. through September 12, 2025, 6:00 a.m.: (1) any visitor log, lobby log, or facility sign-in record for the St. George Police Department; (2) any interview-room schedule, booking-area log, or officer-assist record reflecting an interview conducted at the facility during that window, including any interview conducted by or with the assistance of a federal agency; and (3) any record reflecting the presence of Lance Twiggs at the facility during that window. I am requesting administrative facility records only — not the content of any interview. If no responsive records exist, I request written confirmation of that fact; sworn testimony in State v. Robinson places an interview at your facility during this window, so the absence of any record would itself be significant.",
           ask_no_records: true,
-          filed: "FILED Aug 3, 2026 via NextRequest as St. George #26-4511 / #26-4512 (the joint facility-records pair; assigned to Julie Clegg, Police Records). Filed with the public-portion legal-authority statement (§ 63G-2-201/308), the $25-capped fee waiver, and the § 204(4)(b) expedite — acknowledged same day."
+          filed: "PENDING — EXPEDITE DENIED Aug 4, 2026 on both #26-4511 and #26-4512 (§ 63G-2-204(4) \"personal interests\" boilerplate — against a request whose text states the records will be published to the general public); the denial letter also promises a response \"as promptly as possible\" within the 10-business-day clock, and is appealable to the City Manager (61 South Main St., St. George) within 30 days. Originally: FILED Aug 3, 2026 via NextRequest as St. George #26-4511 / #26-4512 (the joint facility-records pair; assigned to Julie Clegg, Police Records). Filed with the public-portion legal-authority statement (§ 63G-2-201/308), the $25-capped fee waiver, and the § 204(4)(b) expedite — acknowledged same day."
         },
         {
           agencyId: "wcso",
