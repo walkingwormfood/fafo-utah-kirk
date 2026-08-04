@@ -116,8 +116,6 @@
   details.adv[open]{padding-bottom:14px}
   footer{border-top:1px solid var(--line);margin-top:30px;padding:18px 0 50px;color:var(--faint);font-size:12px}
   footer code{font-family:var(--mono);background:var(--panel);border:1px solid var(--line);border-radius:5px;padding:1px 6px;color:var(--ink2)}
-  .facet{margin:10px 0 2px}
-  .facet-lbl{display:block;font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--faint);margin:0 0 6px}
   .chip.ent.active{background:rgba(255,59,59,.12);border-color:var(--accent);color:var(--accent);text-shadow:0 0 6px rgba(255,59,59,.4)}
   .ents{margin-top:12px;border-top:1px dashed var(--line);padding-top:10px}
   .ents .lbl{font-family:var(--mono);font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:var(--faint);margin-right:6px}
@@ -126,12 +124,25 @@
   .epill.active{background:rgba(255,59,59,.12);border-color:var(--accent);color:var(--accent);text-shadow:0 0 6px rgba(255,59,59,.4)}
   .ecallout{font-size:13px;border-left-color:var(--ok)}
   .ecallout b{color:var(--ink)}
-  .catfacet summary{cursor:pointer;list-style:none;outline:none}
-  .catfacet summary::-webkit-details-marker{display:none}
-  .catfacet summary .facet-lbl{display:inline}
-  .catfacet summary::before{content:"▸ ";color:var(--faint);font-family:var(--mono)}
-  .catfacet[open] summary::before{content:"▾ "}
-  .catfacet[open] .filters{margin-top:8px}
+
+  /* control-panel filter drawer — every facet a collapsible, default collapsed */
+  .pfacet{border-top:1px solid var(--line);padding:9px 0 5px;margin:0}
+  .pfacet:first-of-type{border-top:none}
+  .pfacet summary{cursor:pointer;list-style:none;outline:none;font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--faint)}
+  .pfacet summary::-webkit-details-marker{display:none}
+  .pfacet summary::before{content:"▸ ";font-family:var(--mono)}
+  .pfacet[open] summary::before{content:"▾ "}
+  .pfacet .filters,.pfacet .jbar{margin-top:8px}
+
+  /* the full story — long finding/implication prose, collapsed by default */
+  details.fullstory{margin:8px 0 4px;border-left:2px solid var(--line);padding-left:10px}
+  details.fullstory summary{cursor:pointer;list-style:none;outline:none;font-family:var(--mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--faint)}
+  details.fullstory summary::-webkit-details-marker{display:none}
+  details.fullstory summary::before{content:"▸ "}
+  details.fullstory[open] summary::before{content:"▾ "}
+  details.fullstory summary:hover{color:var(--ink2)}
+  .fs-txt{font-size:13.5px;color:var(--ink);margin:8px 0}
+  .fs-txt.dim{color:var(--ink2)}
 
   /* ——— the evidence chart ——— */
   .viewbar{position:fixed;top:10px;left:50%;transform:translateX(-50%);z-index:100}
@@ -143,7 +154,7 @@
   }
   .panelbox{display:flex;flex-direction:column;align-items:center;border:2px solid #7d84a0;border-radius:20px;background:#0b0b0e;box-shadow:0 0 0 4px #0b0b0e,0 0 0 5px #3a3f52,0 10px 30px rgba(0,0,0,.9);padding:2px 6px 4px}
   .viewtoggle{display:flex;align-items:center}
-  .statusrow{display:none;gap:4px;align-items:center;justify-content:center;border-top:1px solid var(--line);width:100%;padding:5px 2px 3px}
+  .statusrow{display:flex;gap:4px;align-items:center;justify-content:center;border-top:1px solid var(--line);width:100%;padding:5px 2px 3px}
   .statusrow .modechip{margin:0}
   .panelrow{display:flex;gap:2px;border-top:1px solid var(--line);width:100%;justify-content:center;padding:3px 2px 0}
   .pbtn{font-family:var(--mono);font-size:9.5px;letter-spacing:.1em;text-transform:uppercase;background:transparent;border:none;color:var(--faint);cursor:pointer;padding:3px 10px}
@@ -261,8 +272,9 @@
         <button class="vbtn active" id="viewCards">Findings</button>
         <button class="vbtn" id="viewGraph">Evidence chart</button>
       </div>
-      <div class="statusrow" id="statusRow" style="display:none"></div>
+      <div class="statusrow" id="statusRow"></div>
       <div class="panelrow">
+        <button class="pbtn" id="pbFilter">Filters</button>
         <button class="pbtn" id="pbHow">How to file</button>
         <button class="pbtn" id="pbWhy">Why so narrow</button>
       </div>
@@ -270,13 +282,15 @@
     <div class="paneldrop" id="panelDrop" hidden>
       <div class="note submit" id="submitNote"></div>
       <div class="note" id="narrowing"></div>
+      <div id="filterPanel" style="display:none">
+        <details class="pfacet"><summary>Biggest threads — who &amp; what the findings touch</summary><div class="filters" id="entityFilters"></div></details>
+        <details class="pfacet"><summary>Jurisdiction — which law reaches the records</summary><div class="jbar" id="jbar"><button class="jbtn active" data-j="All">All — the whole case</button><button class="jbtn" data-j="state">GRAMA (Utah state/local)</button><button class="jbtn" data-j="federal">FOIA (federal)</button></div></details>
+        <details class="pfacet"><summary>Category</summary><div class="filters" id="filters"></div></details>
+        <details class="pfacet"><summary>Who surfaced it — from the courtroom record via these streams</summary><div class="filters" id="voiceFilters"></div></details>
+      </div>
     </div>
   </div>
   <div id="cardsView">
-    <div class="facet"><span class="facet-lbl">Biggest threads — who &amp; what the findings touch · click any to connect the dots</span><div class="filters" id="entityFilters"></div></div>
-    <div class="facet"><span class="facet-lbl">This case spans state and federal records \u2014 filter by which law reaches them</span><div class="jbar" id="jbar"><button class="jbtn active" data-j="All">All \u2014 the whole case</button><button class="jbtn" data-j="state">GRAMA (Utah state/local)</button><button class="jbtn" data-j="federal">FOIA (federal)</button></div></div>
-    <details class="facet catfacet"><summary><span class="facet-lbl">Filter by category</span></summary><div class="filters" id="filters"></div></details>
-    <details class="facet catfacet"><summary><span class="facet-lbl">Filter by who surfaced it — from the courtroom record via these streams</span></summary><div class="filters" id="voiceFilters"></div></details>
     <div class="note" id="entityCallout" style="display:none"></div>
     <div id="findings"></div>
   </div>
@@ -391,11 +405,18 @@
          : "";
   }
 
+  // Where the records fight stands for a thread — shared by cards, chart, and the
+  // status chips on the control panel (one filter state across both views).
+  const rowStatus = inv => inv.requests.every(r => r.response) ? "posted" :
+                           inv.requests.some(r => r.filed && !r.response) ? "pending" : "unclaimed";
+  const showStatus = { unclaimed: true, pending: true, posted: true };
+
   const wrap = $("findings");
   FOIA.investigations.forEach(inv => {
     const card = document.createElement("div");
     card.className = "card";
     card.id = "card-" + inv.id;
+    card.dataset.rstatus = rowStatus(inv);
     card.dataset.cats = (inv.categories||[]).join("|");
     card.dataset.ents = (inv.entities||[]).join("|");
     card.dataset.voices = voicesFor(inv).join("|");
@@ -433,15 +454,22 @@
                : `<button class="btn gen" title="${esc(title)}" data-inv="${esc(inv.id)}" data-req="${i}">${icon} ${r.existing ? "Request existing" : "Generate this request"}</button>`)+
              `<button class="rep" data-inv="${esc(inv.id)}" data-req="${i}">⚑ filed? report your request #</button></div></div>`;
     }).join("");
+    // Spreadsheet-shaped card: the thread, the missing piece, who reported it.
+    // The long prose lives behind "the full story"; the full legal text is the
+    // request itself; the full narrative is the linked source content.
     card.innerHTML =
       `<div class="by">Surfaced by <span class="who">${esc(inv.investigator)}</span> · ${links}`+
       `<span class="badge ${esc(inv.status)}">${esc(inv.status)}</span></div>`+
-      `<div class="finding">${esc(inv.finding)}</div>`+
-      `<div class="implication">${esc(inv.implication)}</div>`+
+      `<div class="finding">${esc(inv.short || inv.finding)}</div>`+
+      (inv.challenge ? `<div class="implication">${esc(inv.challenge)}</div>` : "")+
       ((inv.categories||[]).length ? `<div class="cats">${inv.categories.map(c=>`<span class="cat">${esc(c)}</span>`).join("")}</div>` : "")+
-      (sources ? `<div class="meta-row"><span class="lbl">Sources</span>${sources}</div>` : "")+
+      `<details class="fullstory"><summary>The full story — what the record shows &amp; why it matters</summary>`+
+        `<div class="fs-txt">${esc(inv.finding)}</div>`+
+        (inv.implication ? `<div class="fs-txt dim">${esc(inv.implication)}</div>` : "")+
+      `</details>`+
+      (sources ? `<div class="meta-row"><span class="lbl">Watch the source</span>${sources}</div>` : "")+
       ((inv.entities||[]).length ? `<div class="ents"><span class="lbl">Touches</span>${inv.entities.map(id=>`<button class="epill" data-ent="${esc(id)}">${esc(entName(id))}</button>`).join("")}</div>` : "")+
-      `<div class="pry"><span class="lbl">What you can pry loose</span>${reqs}</div>`;
+      `<div class="pry"><span class="lbl">The asks — Generate shows the full legal text</span>${reqs}</div>`;
     wrap.appendChild(card);
   });
 
@@ -455,7 +483,7 @@
       const chip = document.createElement("button");
       chip.className = "chip" + (c === activeCat ? " active" : "");
       chip.textContent = c;
-      chip.addEventListener("click", () => { activeCat = c; applyFilter(); renderChips(); });
+      chip.addEventListener("click", () => { activeCat = c; refresh(); renderChips(); });
       box.appendChild(chip);
     });
   }
@@ -467,10 +495,10 @@
   function renderVoiceChips(){
     const box = $("voiceFilters"); box.innerHTML = "";
     const mk = (label, on, fn) => { const b=document.createElement("button"); b.className="chip"+(on?" active":""); b.innerHTML=label; b.addEventListener("click",fn); return b; };
-    box.appendChild(mk("All", activeVoice===null, () => { activeVoice=null; applyFilter(); renderVoiceChips(); }));
+    box.appendChild(mk("All", activeVoice===null, () => { activeVoice=null; refresh(); renderVoiceChips(); }));
     voiceNames.forEach(v => {
       box.appendChild(mk(esc(v)+" <span style='opacity:.55'>"+voiceCount[v]+"</span>", activeVoice===v,
-        () => { activeVoice = (activeVoice===v ? null : v); applyFilter(); renderVoiceChips(); }));
+        () => { activeVoice = (activeVoice===v ? null : v); refresh(); renderVoiceChips(); }));
     });
   }
 
@@ -490,19 +518,32 @@
       const entOk = !activeEnt || ents.includes(activeEnt);
       const voiceOk = !activeVoice || voices.includes(activeVoice);
       const jOk = activeJuris === "All" || juris.includes(activeJuris);
-      card.classList.toggle("hide", !(catOk && entOk && voiceOk && jOk));
+      const stOk = showStatus[card.dataset.rstatus];
+      card.classList.toggle("hide", !(catOk && entOk && voiceOk && jOk && stOk));
     });
     document.querySelectorAll(".epill").forEach(p => p.classList.toggle("active", !!activeEnt && p.dataset.ent === activeEnt));
     updateCallout();
   }
 
+  // one filter predicate for the chart — same state the cards use
+  function invFilterOk(inv){
+    const catOk = activeCat === "All" || (inv.categories||[]).includes(activeCat);
+    const entOk = !activeEnt || (inv.entities||[]).includes(activeEnt);
+    const voiceOk = !activeVoice || voicesFor(inv).includes(activeVoice);
+    const jset = (inv.requests||[]).map(r => { const ag = agencyById(r.agencyId); return ag && ag.fed ? "federal" : "state"; });
+    const jOk = activeJuris === "All" || jset.includes(activeJuris);
+    return catOk && entOk && voiceOk && jOk;
+  }
+  // every filter change re-renders whichever views are live
+  function refresh(){ applyFilter(); if(chartBuilt) buildChart(); }
+
   function renderEntityChips(){
     const box = $("entityFilters"); box.innerHTML = "";
     const mk = (label, on, fn) => { const b=document.createElement("button"); b.className="chip ent"+(on?" active":""); b.innerHTML=label; b.addEventListener("click",fn); return b; };
-    box.appendChild(mk("All entities", activeEnt===null, () => { activeEnt=null; applyFilter(); renderEntityChips(); }));
+    box.appendChild(mk("All entities", activeEnt===null, () => { activeEnt=null; refresh(); renderEntityChips(); }));
     connectors.forEach(id => {
       const b = mk(esc(entName(id))+" <span style='opacity:.55'>"+entCount[id]+"</span>", activeEnt===id,
-        () => { activeEnt = (activeEnt===id ? null : id); applyFilter(); renderEntityChips(); });
+        () => { activeEnt = (activeEnt===id ? null : id); refresh(); renderEntityChips(); });
       b.style.fontSize = (11 + Math.min(entCount[id], 8)) + "px";  // bigger thread = bigger chip = the shape
       box.appendChild(b);
     });
@@ -525,14 +566,14 @@
     if(!pill) return;
     const id = pill.dataset.ent;
     activeEnt = (activeEnt===id ? null : id);
-    applyFilter(); renderEntityChips();
+    refresh(); renderEntityChips();
     $("entityFilters").scrollIntoView({behavior:"smooth", block:"nearest"});
   });
 
   document.querySelectorAll("#jbar .jbtn").forEach(btn => btn.addEventListener("click", () => {
     activeJuris = btn.dataset.j;
     document.querySelectorAll("#jbar .jbtn").forEach(b => b.classList.toggle("active", b === btn));
-    applyFilter();
+    refresh();
   }));
   renderChips();
   renderVoiceChips();
@@ -812,13 +853,9 @@
    * then results pending, results posted at the bottom. The mode chip flips the
    * order for a results-first read. Same single data file, zero dependencies. */
   let chartBuilt = false;
-  const chartShow = { unclaimed: true, pending: true, posted: true };
   const AG_SHORT = { uvu: "UVU", uvupd: "UVU PD", dps: "DPS/SBI", ucso: "Utah County SO", ucao: "Utah County Atty",
                      wcso: "WCSO", washco: "Washington Co.", sgpd: "St. George PD", orem: "Orem PD",
                      gov: "Governor's Ofc", ome: "Medical Examiner" };
-  const rowStatus = inv => inv.requests.every(r => r.response) ? "posted" :
-                           inv.requests.some(r => r.filed && !r.response) ? "pending" : "unclaimed";
-
   function chartRow(inv, gaps){
     const holes = gaps.filter(g => (g.findings || []).includes(inv.id));
     const st = rowStatus(inv);
@@ -868,37 +905,46 @@
     const postedN = allReqs.filter(r => r.response).length;
     const unclaimedN = allReqs.length - pendingN - postedN;
     const groups = { unclaimed: [], pending: [], posted: [] };
-    FOIA.investigations.forEach(inv => groups[rowStatus(inv)].push(inv));
-    const chipFor = (k, label) =>
-      `<button class="chip modechip${chartShow[k] ? " on-" + k : ""}" data-show="${k}" title="show or hide these rows">${label} · ${groups[k].length}</button>`;
+    FOIA.investigations.filter(invFilterOk).forEach(inv => groups[rowStatus(inv)].push(inv));
     $("chartHead").innerHTML = FOIA.investigations.length + " threads · " + gaps.length + " holes · " +
       allReqs.length + " inquiries: <b style=\"color:var(--accent)\">" + unclaimedN + " unclaimed</b> · <b>" +
       pendingN + " pending</b> · <b style=\"color:var(--ok);text-shadow:none\">" + postedN + " posted</b>";
-    $("statusRow").innerHTML = chipFor("unclaimed", "unclaimed") + chipFor("pending", "pending") + chipFor("posted", "complete");
     const order = ["unclaimed", "pending", "posted"];
     const LABELS = { unclaimed: "Unclaimed inquiries — nobody has filed these yet; pick one",
                      pending: "Results pending — requests in flight",
                      posted: "Results posted — answers on the record" };
     let html = `<div class="ehead"><span>Thread</span><span>The challenge to the official story</span><span>Status</span><span></span></div>`;
     order.forEach(k => {
-      if(!groups[k].length || !chartShow[k]) return;
+      if(!groups[k].length || !showStatus[k]) return;
       html += `<div class="egroup ${k}">${LABELS[k]} · ${groups[k].length}</div>`;
       html += groups[k].map(inv => chartRow(inv, gaps)).join("");
     });
     $("evGrid").innerHTML = html;
   }
 
+  // Status chips live on the control panel face — one toggle set for BOTH views.
+  function buildStatusChips(){
+    const g = { unclaimed: 0, pending: 0, posted: 0 };
+    FOIA.investigations.forEach(inv => g[rowStatus(inv)]++);
+    const chipFor = (k, label) =>
+      `<button class="chip modechip${showStatus[k] ? " on-" + k : ""}" data-show="${k}" title="show or hide these threads in both views">${label} · ${g[k]}</button>`;
+    $("statusRow").innerHTML = chipFor("unclaimed", "unclaimed") + chipFor("pending", "pending") + chipFor("posted", "complete");
+  }
+
   $("statusRow").addEventListener("click", e => {
     const b = e.target.closest("[data-show]"); if(!b) return;
-    chartShow[b.dataset.show] = !chartShow[b.dataset.show]; buildChart();
+    showStatus[b.dataset.show] = !showStatus[b.dataset.show];
+    buildStatusChips(); refresh();
   });
+  buildStatusChips();
 
   $("graphWrap").addEventListener("click", e => {
     // "Open full card" button — jump to the card and open the drafter
     const jump = e.target.closest("[data-card]");
     if(jump && jump.dataset.card){
       activeCat = "All"; activeVoice = null; activeEnt = null;   // the target card must not be filtered away
-      applyFilter(); renderChips(); renderVoiceChips(); renderEntityChips();
+      showStatus.unclaimed = showStatus.pending = showStatus.posted = true;
+      buildStatusChips(); applyFilter(); renderChips(); renderVoiceChips(); renderEntityChips();
       setView("cards");
       const c = $("card-" + jump.dataset.card);
       if(c){
@@ -936,7 +982,6 @@
     $("graphWrap").classList.toggle("open", !cards);
     $("viewCards").classList.toggle("active", cards);
     $("viewGraph").classList.toggle("active", !cards);
-    $("statusRow").style.display = cards ? "none" : "flex";
     $("sectionHead").textContent = cards ? "Pick a finding" : "The evidence chart";
     if(!cards && !chartBuilt) buildChart();
     // deterministic landing: every switch opens at the top of the section (a card-jump
@@ -953,9 +998,12 @@
     $("panelDrop").hidden = !which;
     $("submitNote").style.display = which === "howto" ? "" : "none";
     $("narrowing").style.display = which === "narrow" ? "" : "none";
+    $("filterPanel").style.display = which === "filters" ? "block" : "none";
+    $("pbFilter").classList.toggle("active", which === "filters");
     $("pbHow").classList.toggle("active", which === "howto");
     $("pbWhy").classList.toggle("active", which === "narrow");
   }
+  $("pbFilter").addEventListener("click", () => setPanel(openPanel === "filters" ? null : "filters"));
   $("pbHow").addEventListener("click", () => setPanel(openPanel === "howto" ? null : "howto"));
   $("pbWhy").addEventListener("click", () => setPanel(openPanel === "narrow" ? null : "narrow"));
   document.addEventListener("click", e => { if(openPanel && !e.target.closest(".viewbar")) setPanel(null); });

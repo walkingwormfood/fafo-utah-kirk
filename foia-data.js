@@ -180,7 +180,21 @@ const FOIA = {
     { id: "ome", name: "Utah Office of the Medical Examiner (DHHS)", email: null,
       portal: "https://ome.utah.gov/",
       submitNote: "ME case records (autopsy, toxicology, investigative reports) are NOT ordinary GRAMA records — Utah Code § 26B-8-217 restricts them to next of kin, legal representatives, treating physicians, and law enforcement, and § 26B-8-217(8) bars other disclosure absent a court order. The request here deliberately targets administrative transmittal/chain-of-custody paperwork instead, and routes as a GRAMA request to DHHS; expect the office to test the 217 boundary in its response. OME: 4451 South 2700 West, Taylorsville; (801) 816-3850.",
-      portalNote: "If filing online, use Utah's Open Records Portal (openrecords.utah.gov) addressed to the Department of Health and Human Services, since ome.utah.gov's own request flow is built for next-of-kin report requests." }
+      portalNote: "If filing online, use Utah's Open Records Portal (openrecords.utah.gov) addressed to the Department of Health and Human Services, since ome.utah.gov's own request flow is built for next-of-kin report requests." },
+    { id: "provo", name: "Provo Police Department (City of Provo)", email: null,
+      portal: "https://www.provo.gov/697/Police-GRAMA-Request",
+      submitNote: "Provo takes police GRAMA requests through its own records page (provo.gov/697 — Police GRAMA Request); Records Office 801-852-6231. Route verified Aug 2, 2026." },
+    { id: "pgpd", name: "Pleasant Grove Police Department", email: null,
+      portal: "https://www.pgcityutah.gov/departments/police/index.php",
+      submitNote: "CONFIRM ADDRESS BEFORE SENDING — no dedicated records email surfaced in the Aug 2, 2026 verification pass. Check pgcityutah.gov for the records officer/city recorder or call 801-785-3506 (108 South 100 East, Pleasant Grove, UT 84062)." },
+    { id: "uvdispatch", name: "Utah Valley Dispatch Special Service District", email: null,
+      portal: "https://openrecords.utah.gov/",
+      submitNote: "File via the state Open Records portal (entity: Utah Valley Dispatch Special Service District). If the district is not listed on the portal, email its administrative office with the letter attached and ask for the records officer's direct contact — the email trail is the record." },
+    { id: "af89aw", name: "U.S. Air Force — 89th Airlift Wing (Joint Base Andrews)", email: null, fed: true,
+      portal: "https://www.foia.af.mil/",
+      submitNote: "Air Force eFOIA — address to the 89th Airlift Wing FOIA Office, Joint Base Andrews, MD, or file via FOIA.gov. Avoid any Login.gov-gated path — the email confirmation trail is the record." },
+    { id: "ncis", name: "Naval Criminal Investigative Service", email: "ncis_foia@ncis.navy.mil", fed: true,
+      submitNote: "Email is the record: ncis_foia@ncis.navy.mil, Attn: FOIA (Code 00LJF), 27130 Telegraph Road, Quantico, VA 22134; 571-305-9092." }
   ],
 
   entities: [
@@ -214,7 +228,12 @@ const FOIA = {
     { id: "tpusa", name: "TPUSA", type: "org" },
     { id: "flock", name: "Flock Safety (ALPR vendor)", type: "company" },
     { id: "mccoy", name: "Mikey McCoy (Kirk chief of staff)", type: "person" },
-    { id: "phillip", name: "Danny Phillip (Kirk's assistant)", type: "person" }
+    { id: "phillip", name: "Danny Phillip (Kirk's assistant)", type: "person" },
+    { id: "mitchell-curtis", name: "Officer Mitchell Curtis (Pleasant Grove PD)", type: "person" },
+    { id: "foster-curtis", name: "Foster Curtis (NCIS OIG → Richmond IG)", type: "person" },
+    { id: "amoroso", name: "Dr. Deidra Amoroso (Utah Chief ME)", type: "person" },
+    { id: "guardo", name: "Dr. Andrew Guardo (Deputy Chief ME)", type: "person" },
+    { id: "pag", name: "Presidential Airlift Group / WHMO", type: "org" }
   ],
 
   investigations: [
@@ -355,6 +374,14 @@ const FOIA = {
           records: "I request a copy of any entry, exit, visitor, or access records for Andrew Kolvet at the White House complex and the Eisenhower Executive Office Building on the date of, and the day before, the Department of Justice's public release of the Epstein files (please insert the specific calendar date before filing). I am not seeking general email correspondence.",
           ask_no_records: true,
           filed: "PENDING — filed Jul 25, 2026 via SecureRelease (DHS → U.S. Secret Service component); acknowledged the same day as FOIA File Number 2026-USSSFOIA-01640 ('reviewing your submission to determine appropriate next steps'). The card's caveat stands: WAVES/ACR-type entry records held by USSS have been held non-agency records under FOIA, so a denial on that ground is the expected first move — itself documentable, with the EEOB-tenant-agency lane (OMB et al.) as the follow-on."
+        },
+        {
+          agencyId: "usss",
+          summary: "Secret Service — the refile with real dates: WAVES/access records + appointment requests, Jul 26–Aug 1, 2026, for Kolvet, Minez, and TPUSA counsel",
+          subject: "FOIA Request: WAVES/access records and appointment requests, White House complex, July 26 – August 1, 2026",
+          records: "I request, for the period July 26 through August 1, 2026: (1) WAVES (Workers and Visitors Entry System) and ACR access records for the White House complex, including the Eisenhower Executive Office Building, for the following individuals: Andrew Kolvet (Turning Point USA), Marina Minez (Turning Point USA Chief Marketing Officer), and Turning Point USA’s in-house counsel; and (2) the visitor appointment request records submitted for those individuals for that period, including the requesting office and sponsoring official. This request is bounded to a single named week and three named individuals; it is not a broad search. If the Secret Service’s position is that responsive records are presidential records outside its custody, I request that determination in writing, identifying the system of records to which the request was applied. If no responsive records exist, please confirm that in writing, including a description of the search conducted. I request that all records potentially responsive to this request be preserved for the duration of processing and of any administrative appeal or review — expressly including WAVES records otherwise subject to periodic transfer or deletion.",
+          ask_no_records: true,
+          filed: "NOT FILED — DRAFTED Aug 2, 2026. The refile with real dates: the Jul 26–Aug 1 window is anchored to Candace’s Jul 27 tip (\"meeting tomorrow, maybe Wednesday\") and Netanyahu’s Jul 27 DC arrival — adjust if a firmer date surfaces. Email FOIA@usss.dhs.gov preferred over SecureRelease — email is the record."
         }
       ]
     },
@@ -540,6 +567,14 @@ const FOIA = {
           records: "I request: (1) the crime scene access/entry log maintained for the Losee Center rooftop and the courtyard scene at Utah Valley University on September 10–11, 2025; and (2) any roster, mutual-aid record, or deployment list identifying the law-enforcement agencies and personnel (including plainclothes personnel) present on the UVU campus on September 10, 2025 in connection with the incident response.",
           ask_no_records: true,
           filed: "PENDING, two rounds. Round one: UVU #26-214 — EXPEDITE DENIED Jul 16, 2026, on the § 63G-2-204(4)(a) 'failed to meet that burden' public-benefit finding; substantive response due ~Jul 27. Round two: filed via NextRequest as UVU #26-231, Jul 17, 2026; acknowledged Jul 17; EXPEDITE DENIED (same finding); 10-business-day clock, due ~Aug 1."
+        },
+        {
+          agencyId: "uvupd",
+          summary: "UVU PD — follow-on round: native parent file + Axon device audit trail + screwdriver property record",
+          subject: "GRAMA Request: body-worn camera recording, Axon device audit trail, and evidence record for rooftop recovery, September 10, 2025",
+          records: "I request: (1) the complete native body-worn camera recording from Officer Bagley’s Axon Body 4 camera for September 10, 2025, 12:00 p.m. to 1:30 p.m., with original metadata intact — expressly including the full parent file of the approximately 27-minute-35-second clip previously referenced in public proceedings; (2) the Axon Evidence (evidence.com) device audit trail for that camera for September 10, 2025 — including power-on/power-off events, recording start and stop events, battery and fault log entries, and docking/upload records — which will document the reported cessation of recording at approximately 12:44 p.m.; (3) any device malfunction, outage, or repair report filed for that camera unit for September 2025; and (4) the evidence or property record for the screwdriver recovered on the Losee Center rooftop on September 10, 2025 (referenced as prosecution exhibits 12.1 and 12.4), including the date, time, location, and recovering officer recorded in that entry. Each item names a discrete, catalogued record; this is not a broad search. If no responsive record exists for any numbered item — in particular, if no device audit trail or malfunction report exists for the camera — I request written confirmation of that fact for that item, including a description of the search conducted.",
+          ask_no_records: true,
+          filed: "NOT FILED — DRAFTED Aug 2, 2026, ready to file to uvpdrecords@uvu.edu. The audit-trail ask proves or kills the \"camera turned off right before the screwdriver find\" claim — the evidence.com log records every stop event with a timestamp."
         }
       ]
     },
@@ -585,7 +620,7 @@ const FOIA = {
       challenge: "Tracking dogs were run for whoever jumped from the roof and found nothing.",
       short: "K9s: no results",
       categories: ["Crime scene handling"],
-      entities: ["uvu-ent", "sbi"],
+      entities: ["uvu-ent", "sbi", "mitchell-curtis"],
       investigator: "Ian Carroll · Candace Owens",
       investigatorLinks: [
         { label: "Carroll on day two", url: "https://www.youtube.com/watch?v=r8JjODn8-dY" }
@@ -623,6 +658,14 @@ const FOIA = {
           refined: true,
           ask_no_records: true,
           filed: "DENIED — twice in one day — and ON APPEAL. Jul 21, 2026, 11:43 a.m.: Orem issued its formal written denial — the Utah County Attorney's Office 'has requested that these records be classified as Protected under Utah Code § 63G-2-305(10)'; 'the City is compelled to classify... As such, your request is herein formally denied.' A formal cure was sent at 12:45 p.m. the same day; Orem re-denied at 1:50 p.m. — 65 minutes later — on a denial form listing the record as 'K9 inquiry' and the ground as 'Active Case,' citing no subsection of § 305(10) and making no interference finding. GRAMA appeal filed with City Manager (CAO) Brenn Bybee the same evening under § 63G-2-401; determination due ~Aug 5, 2026 (Pioneer Day-adjusted). All further questions were pointed at the Utah State Bureau of Investigation."
+        },
+        {
+          agencyId: "pgpd",
+          summary: "Pleasant Grove PD — Freya/Loki K9 logs + certifications, Officer Curtis assignment records, firearm found-property log",
+          subject: "GRAMA Request: K9 deployment and certification records, officer assignment records, and found-property log, September 10–11, 2025",
+          records: "I request: (1) K9 deployment and search logs for the department’s K9s \"Freya\" and \"Loki\" for September 10–11, 2025, in connection with the response at or near the Utah Valley University campus — including the areas searched, search results, and the identity of any agency or official who requested a search or re-search; (2) current-as-of-September-2025 training and certification records for K9s Freya and Loki; (3) the hire date, position, and assignment records for Officer Mitchell Curtis (records that are public under Utah Code § 63G-2-301(2)(b), including name, title, and employment history within the department); and (4) the evidence or found-property log entry for the firearm recovered in the vicinity of the UVU campus on September 10–11, 2025, including the date, time, location, and recovering officer recorded in that entry. For context: the Utah County Sheriff’s Office, in its response to request #26-2812, indicated that K9 records should be sought from the individual deploying agencies. This request follows that direction. If no responsive records exist for any numbered item, I request written confirmation of that fact for that item, including a description of the search conducted.",
+          ask_no_records: true,
+          filed: "NOT FILED — DRAFTED Aug 2, 2026. CONFIRM ADDRESS FIRST: no dedicated records email surfaced in verification — check pgcityutah.gov for the records officer/city recorder or call 801-785-3506 before sending. Utah County’s K9 denial on #26-2812 explicitly invited this per-agency request."
         }
       ]
     },
@@ -656,10 +699,11 @@ const FOIA = {
         },
         {
           agencyId: "dfcm",
-          summary: "DFCM — the paver contract UVU swears it never held",
-          subject: "GRAMA Request: contracting and payment records for post-incident site work at Utah Valley University, September 2025",
-          records: "I request, for the period September 10 – November 1, 2025: (1) the contract, task order, or engagement record with the firm that performed paver installation and related site work in the courtyard adjacent to the Sorensen Center / Hall of Flags at Utah Valley University following the September 10, 2025 shooting; (2) all estimates, invoices, purchase orders, and payment records for that work; (3) communications between DFCM and Utah Valley University, the Office of the Governor, or any law-enforcement agency concerning the work — including DFCM's September 12, 2025 offer of assistance to UVU (\"getting a firm under contract\") and any direction received concerning the site; and (4) the record identifying who requested and who approved the work. Context: in State Records Committee case 2026-004, UVU swore it neither paid for nor performed this work and holds no estimates, invoices, or purchase orders, and UVU's records office formally directed requesters to DFCM under § 63G-2-204(4)(b)(iii). Please also retain this correspondence and all records related to the processing of this request. If no responsive records exist, I request written confirmation of that fact, including a description of the search conducted.",
-          ask_no_records: true
+          summary: "DFCM — courtyard work orders, authorizations, and contractor invoices (UVU’s own referral)",
+          subject: "GRAMA Request: work orders and authorizations for UVU courtyard surface work, September–October 2025",
+          records: "Utah Valley University, in response to a prior request, referred records concerning courtyard surface work to your division. I request, for the period September 10 through October 31, 2025: (1) work orders for paving, resurfacing, concrete work, or other surface alteration of the courtyard area at Utah Valley University adjacent to the Losee Center; (2) the authorization or approval records for that work, including the requesting office and stated justification; and (3) contractor invoices or purchase orders for that work. If no responsive records exist, I request written confirmation of that fact, including a description of the search conducted.",
+          ask_no_records: true,
+          filed: "NOT FILED — DRAFTED Aug 2, 2026, ready to file via openrecords.utah.gov (entity: Division of Facilities Construction and Management, Dept. of Government Operations). UVU itself referred the work-order question here."
         },
         {
           agencyId: "gov",
@@ -700,32 +744,40 @@ const FOIA = {
         },
         {
           agencyId: "orem",
-          summary: "Orem PD — Flock preservation hold + search/audit log + vendor contract",
-          subject: "GRAMA Request: Flock/ALPR preservation hold, search-audit log, and vendor contract — September 2025 UVU homicide investigation",
-          records: "I request three categories of records concerning the Orem Police Department's use of Flock Safety automated license-plate-reader (ALPR) data in connection with the September 10, 2025 Utah Valley University homicide investigation, within the City of Orem: (1) any preservation request, legal hold, or litigation-hold notice sent to Flock Safety (or any ALPR vendor) to prevent deletion of reads related to this investigation, including the date sent and the plates or date range covered; (2) the ALPR search/audit log for September 10 – October 15, 2025 showing queries run in connection with this investigation — querying user, plate or search term, timestamp, and stated reason/case number (unrelated third-party queries may be redacted); and (3) the city's current contract, service agreement, or data-processing agreement with Flock Safety, including data-retention settings and any data-sharing or network-access terms. The contract is a standing public record; if the investigation-related items are withheld under § 63G-2-305, I request the segregable public portions and a written denial citing the provision. If no preservation hold exists, I request written confirmation of that fact.",
+          summary: "Orem PD — Sept 10 ALPR detections + images + hotlist alerts + network audit + retention/hold",
+          subject: "GRAMA Request: Flock Safety ALPR detections, images, and network audit logs, September 10, 2025",
+          records: "I request: (1) automated license plate reader (ALPR) detection records — timestamp, camera identifier and location, plate read, and associated vehicle image — captured on September 10, 2025 between 11:00 a.m. and 3:00 p.m. by Flock Safety (or other ALPR) cameras operated by or accessible to the Orem Police Department and located on or adjacent to the road corridors connecting the Utah Valley University campus and Timpanogos Regional Hospital; (2) any hotlist alert or notification records generated from those detections; (3) the Flock Safety \"Network Audit\" report (or equivalent system audit log) for the period September 10, 2025 to the date of this request, showing every search or query run against September 10, 2025 detection data — including the querying user, that user’s agency or organization (including any federal agency), the date of the query, and the stated reason; and (4) the agency’s ALPR data retention policy and any preservation, evidence, or litigation hold applied to September 10, 2025 ALPR data. If no responsive records exist for any numbered item — in particular, if no hold was applied and the detection data has been purged under a rolling retention period — I request written confirmation of that fact for that item, including a description of the search conducted and the date the data was purged. Because ALPR data is subject to short rolling retention, I ask that all potentially responsive records — expressly including any surviving September 10, 2025 ALPR detection data and the complete network audit logs — be preserved immediately upon receipt of this request and for the duration of processing and of any administrative appeal or review.",
           ask_no_records: true,
-          filed: "NOT FILED — queued; the absence of a preservation hold is itself the finding."
+          filed: "NOT FILED — DRAFTED Aug 2, 2026, ready to file; TIME-CRITICAL (rolling retention). Supersedes the earlier hold-only queued variant: the Aug 2 draft adds the detection records, images, and hotlist alerts for the hospital-corridor window (11:00 a.m.–3:00 p.m.), per the Jul 31 lead brief — it catches both the shuttle and the SUV drive."
+        },
+        {
+          agencyId: "provo",
+          summary: "Provo PD — Sept 10 ALPR detections + images + hotlist alerts + network audit + retention/hold",
+          subject: "GRAMA Request: Flock Safety ALPR detections, images, and network audit logs, September 10, 2025",
+          records: "I request: (1) automated license plate reader (ALPR) detection records — timestamp, camera identifier and location, plate read, and associated vehicle image — captured on September 10, 2025 between 11:00 a.m. and 3:00 p.m. by Flock Safety (or other ALPR) cameras operated by or accessible to the Provo Police Department and located on or adjacent to the road corridors connecting the Utah Valley University campus and Timpanogos Regional Hospital; (2) any hotlist alert or notification records generated from those detections; (3) the Flock Safety \"Network Audit\" report (or equivalent system audit log) for the period September 10, 2025 to the date of this request, showing every search or query run against September 10, 2025 detection data — including the querying user, that user’s agency or organization (including any federal agency), the date of the query, and the stated reason; and (4) the agency’s ALPR data retention policy and any preservation, evidence, or litigation hold applied to September 10, 2025 ALPR data. If no responsive records exist for any numbered item — in particular, if no hold was applied and the detection data has been purged under a rolling retention period — I request written confirmation of that fact for that item, including a description of the search conducted and the date the data was purged. Because ALPR data is subject to short rolling retention, I ask that all potentially responsive records — expressly including any surviving September 10, 2025 ALPR detection data and the complete network audit logs — be preserved immediately upon receipt of this request and for the duration of processing and of any administrative appeal or review.",
+          ask_no_records: true,
+          filed: "NOT FILED — DRAFTED Aug 2, 2026, ready to file; TIME-CRITICAL (rolling retention). Supersedes the earlier hold-only queued variant: the Aug 2 draft adds the detection records, images, and hotlist alerts for the hospital-corridor window (11:00 a.m.–3:00 p.m.), per the Jul 31 lead brief — it catches both the shuttle and the SUV drive."
         },
         {
           agencyId: "ucso",
-          summary: "Utah County SO — Flock preservation hold + search/audit log + vendor contract",
-          subject: "GRAMA Request: Flock/ALPR preservation hold, search-audit log, and vendor contract — September 2025 UVU homicide investigation",
-          records: "I request three categories of records concerning the Utah County Sheriff's Office use of Flock Safety automated license-plate-reader (ALPR) data in connection with the September 10, 2025 Utah Valley University homicide investigation, in Utah County: (1) any preservation request, legal hold, or litigation-hold notice sent to Flock Safety (or any ALPR vendor) to prevent deletion of reads related to this investigation, including the date sent and the plates or date range covered; (2) the ALPR search/audit log for September 10 – October 15, 2025 showing queries run in connection with this investigation — querying user, plate or search term, timestamp, and stated reason/case number (unrelated third-party queries may be redacted); and (3) the office's current contract, service agreement, or data-processing agreement with Flock Safety, including data-retention settings and any data-sharing or network-access terms. The contract is a standing public record; if the investigation-related items are withheld under § 63G-2-305, I request the segregable public portions and a written denial citing the provision. If no preservation hold exists, I request written confirmation of that fact.",
+          summary: "Utah County SO — Sept 10 ALPR detections + images + hotlist alerts + network audit + retention/hold",
+          subject: "GRAMA Request: Flock Safety ALPR detections, images, and network audit logs, September 10, 2025",
+          records: "I request: (1) automated license plate reader (ALPR) detection records — timestamp, camera identifier and location, plate read, and associated vehicle image — captured on September 10, 2025 between 11:00 a.m. and 3:00 p.m. by Flock Safety (or other ALPR) cameras operated by or accessible to the Utah County Sheriff’s Office and located on or adjacent to the road corridors connecting the Utah Valley University campus and Timpanogos Regional Hospital; (2) any hotlist alert or notification records generated from those detections; (3) the Flock Safety \"Network Audit\" report (or equivalent system audit log) for the period September 10, 2025 to the date of this request, showing every search or query run against September 10, 2025 detection data — including the querying user, that user’s agency or organization (including any federal agency), the date of the query, and the stated reason; and (4) the agency’s ALPR data retention policy and any preservation, evidence, or litigation hold applied to September 10, 2025 ALPR data. If no responsive records exist for any numbered item — in particular, if no hold was applied and the detection data has been purged under a rolling retention period — I request written confirmation of that fact for that item, including a description of the search conducted and the date the data was purged. Because ALPR data is subject to short rolling retention, I ask that all potentially responsive records — expressly including any surviving September 10, 2025 ALPR detection data and the complete network audit logs — be preserved immediately upon receipt of this request and for the duration of processing and of any administrative appeal or review.",
           ask_no_records: true,
-          filed: "NOT FILED — queued; the absence of a preservation hold is itself the finding."
+          filed: "NOT FILED — DRAFTED Aug 2, 2026, ready to file; TIME-CRITICAL (rolling retention). Supersedes the earlier hold-only queued variant: the Aug 2 draft adds the detection records, images, and hotlist alerts for the hospital-corridor window (11:00 a.m.–3:00 p.m.), per the Jul 31 lead brief — it catches both the shuttle and the SUV drive."
         },
         {
           agencyId: "dps",
-          summary: "DPS/SBI — Flock preservation hold + search/audit log + statewide-network access",
-          subject: "GRAMA Request: Flock/ALPR preservation hold, search-audit log, and vendor contract — September 2025 UVU homicide investigation",
-          records: "I request three categories of records concerning the Utah Department of Public Safety / State Bureau of Investigation use of Flock Safety automated license-plate-reader (ALPR) data in connection with the September 10, 2025 Utah Valley University homicide investigation, including any access to a statewide or shared ALPR network: (1) any preservation request, legal hold, or litigation-hold notice sent to Flock Safety (or any ALPR vendor) to prevent deletion of reads related to this investigation, including the date sent and the plates or date range covered; (2) the ALPR search/audit log for September 10 – October 15, 2025 showing queries run by DPS/SBI personnel in connection with this investigation — querying user, plate or search term, timestamp, and stated reason/case number (unrelated third-party queries may be redacted); and (3) the department's current contract, service agreement, data-processing agreement, or network-sharing agreement with Flock Safety, including data-retention settings and data-sharing terms. The contract is a standing public record; if the investigation-related items are withheld under § 63G-2-305, I request the segregable public portions and a written denial citing the provision. If no preservation hold exists, I request written confirmation of that fact. Please also retain this correspondence and all records related to the processing of this request.",
-          parties: "Tyler James Robinson (defendant); Charlie Kirk (victim); the records custodian of SBI's ALPR/Flock account (identification is part of the request).",
+          summary: "DPS/UHP — Sept 10 ALPR detections + images + hotlist alerts + network audit + statewide-network access",
+          subject: "GRAMA Request: Flock Safety ALPR detections, images, and network audit logs, September 10, 2025",
+          records: "I request: (1) automated license plate reader (ALPR) detection records — timestamp, camera identifier and location, plate read, and associated vehicle image — captured on September 10, 2025 between 11:00 a.m. and 3:00 p.m. by Flock Safety (or other ALPR) cameras operated by or accessible to the Utah Department of Public Safety / Utah Highway Patrol and located on or adjacent to the road corridors connecting the Utah Valley University campus and Timpanogos Regional Hospital, including I-15 mainline and interchange cameras between the Orem and Provo exits; (2) any hotlist alert or notification records generated from those detections; (3) the Flock Safety \"Network Audit\" report (or equivalent system audit log) for the period September 10, 2025 to the date of this request, showing every search or query run against September 10, 2025 detection data — including the querying user, that user’s agency or organization (including any federal agency), the date of the query, and the stated reason; and (4) the agency’s ALPR data retention policy and any preservation, evidence, or litigation hold applied to September 10, 2025 ALPR data. If no responsive records exist for any numbered item — in particular, if no hold was applied and the detection data has been purged under a rolling retention period — I request written confirmation of that fact for that item, including a description of the search conducted and the date the data was purged. Because ALPR data is subject to short rolling retention, I ask that all potentially responsive records — expressly including any surviving September 10, 2025 ALPR detection data and the complete network audit logs — be preserved immediately upon receipt of this request and for the duration of processing and of any administrative appeal or review.",
+          parties: "Tyler James Robinson (defendant); Charlie Kirk (victim); the records custodian of SBI’s ALPR/Flock account (identification is part of the request).",
           formAnswers: [
             { label: "Date of occurrence", value: "09/10/2025" },
             { label: "Time of occurrence", value: "full day — September 10, 2025, with the retention/audit window running through October 15, 2025" }
           ],
           ask_no_records: true,
-          filed: "NOT FILED — queued; the absence of a preservation hold is itself the finding."
+          filed: "NOT FILED — DRAFTED Aug 2, 2026, ready to file; TIME-CRITICAL (rolling retention). Supersedes the earlier hold-only queued variant: the Aug 2 draft adds the detection records, images, and hotlist alerts for the hospital-corridor window (11:00 a.m.–3:00 p.m.), per the Jul 31 lead brief — it catches both the shuttle and the SUV drive."
         },
         {
           agencyId: "wcso",
@@ -890,6 +942,23 @@ const FOIA = {
           subject: "GRAMA Request: quad/amphitheater camera footage, morning of September 10, 2025",
           records: "I request unedited exports of Utah Valley University camera footage covering the quad/amphitheater area where the September 10, 2025 event was being set up, for 8:15 a.m. – 10:30 a.m. that morning — the window in which preliminary-hearing testimony placed the defendant making contact with event representatives. If this footage has been provided to or seized by an investigating agency, I request the transfer record identifying that agency.",
           ask_no_records: true
+        },
+        {
+          agencyId: "uvu",
+          existing: true,
+          summary: "UVU — the event paper set named in its own #26-221 release: fountain work order, MEAC assessment, film request + 25Live record, amplified-sound approval",
+          subject: "GRAMA Request: fountain work order, MEAC assessment, film request form and 25Live record, and amplified-sound approval — September 10, 2025 event",
+          records: "Each of the following records is identified in, or directly referenced by, the records UVU released on July 31, 2026 in response to request #26-221. I request: (1) the grounds or facilities work order for the courtyard fountain referenced in the event-coordination correspondence for the September 10, 2025 event; (2) the Major Event Assessment Committee (MEAC) risk assessment or review record for that event, conducted on or about August 25, 2025; (3) the film request form and the 25Live reservation record for that event, including any attachments describing the \"total footprint of the set\" and camera placement; and (4) the written amplified-sound approval issued on or about September 8, 2025 for that event. Each item names a discrete, catalogued document already identified in UVU’s own production; this is not a broad search. If no responsive record exists for any numbered item, I request written confirmation of that fact for that item, including a description of the search conducted.",
+          ask_no_records: true,
+          filed: "NOT FILED — DRAFTED Aug 2, 2026, ready to file via NextRequest (or grama@uvu.edu). Every item is named in UVU’s own Jul 31, 2026 release on #26-221 — already located, already catalogued."
+        },
+        {
+          agencyId: "uvupd",
+          summary: "UVU PD — the \"all approved\" paper: event sign-off, security/operations plan, staffing assignments",
+          subject: "GRAMA Request: pre-event coordination and approval records for the September 10, 2025 event",
+          records: "The event-coordination correspondence released by UVU on July 31, 2026 in response to request #26-221 states that the September 10, 2025 event organizers were \"connecting with our campus police\" and that the arrangement \"was all approved.\" I request, for the period August 15 through September 10, 2025: (1) the UVU Police Department’s written approval or sign-off record for the September 10, 2025 event; (2) the event security plan or operations plan prepared by or for the department for that event; and (3) the department’s staffing or post assignment record for that event. Each item names a discrete record generated in ordinary pre-event planning; this is not a broad search. If no responsive record exists for any numbered item — in particular, if no written approval or security plan exists — I request written confirmation of that fact for that item, including a description of the search conducted.",
+          ask_no_records: true,
+          filed: "NOT FILED — DRAFTED Aug 2, 2026, ready to file to uvpdrecords@uvu.edu. Either the approval paper exists, or \"it was all approved\" was said without any."
         }
       ]
     },
@@ -1389,6 +1458,14 @@ const FOIA = {
           subject: "GRAMA Request: personal-effects and clothing inventory records, September 2025 case",
           records: "I request, concerning the Office of the Medical Examiner case arising from the September 10, 2025 death at Utah Valley University: the personal-effects or clothing inventory documenting what clothing or clothing remnants accompanied the decedent or were subsequently received, and the transmittal or release records for any clothing item transferred to a law-enforcement agency or laboratory. I am NOT requesting the autopsy report, photographs, or any medical findings — administrative inventory and transfer records only. (This complements the evidence-transmittal request already drafted to this office concerning bullet fragments; this request concerns clothing and personal effects specifically.) Please also retain this correspondence and all records related to the processing of this request.",
           ask_no_records: true
+        },
+        {
+          agencyId: "fbi",
+          summary: "FBI — the custody paper: FD-597 receipts for hospital footage and security-team clothing, and the SUV disposition record",
+          subject: "FOIA Request: property receipts and disposition records, September 10, 2025 Utah Valley University investigation",
+          records: "In connection with the FBI’s investigation of the September 10, 2025 shooting at Utah Valley University, I request: (1) the property receipt(s) (FD-597) or equivalent chain-of-custody records for surveillance footage obtained from Timpanogos Regional Hospital in Orem, Utah on or after September 10, 2025; (2) the property receipt(s) (FD-597) or equivalent records for clothing collected from members of the event security team; and (3) the disposition records for the sport utility vehicle used to transport the victim — including any release, return, cleaning authorization, or transfer-of-custody record. Each item names a discrete, routinely generated custody record; this is not a broad search for investigative files. I am not seeking general email correspondence, interview records, or the investigative file. If no responsive record exists for any numbered item, please confirm that in writing for that item, including a description of the search conducted.",
+          ask_no_records: true,
+          filed: "NOT FILED — DRAFTED Aug 2, 2026 — file via eFOIPA (existing account), one subject per submission. Expect Exemption 7(A); the denial itself becomes citable — a written refusal to produce even the custody receipts for a \"cleaned and resold\" vehicle is its own exhibit."
         }
       ]
     },
@@ -1462,6 +1539,116 @@ const FOIA = {
           subject: "GRAMA Request: facility and interview-room records, early morning September 12, 2025",
           records: "I request, for the period September 11, 2025, 9:00 p.m. through September 12, 2025, 6:00 a.m.: (1) any visitor log, lobby log, or facility sign-in record for the Washington County Sheriff's Office; (2) any interview-room schedule or officer-assist record reflecting an interview conducted at the facility during that window by or with the assistance of the Federal Bureau of Investigation (sworn statements in State v. Robinson identify FBI Special Agent Lang conducting an interview at approximately 0100 hours); and (3) any record reflecting the presence of Lance Twiggs at the facility during that window. I am requesting administrative facility records only — not the content of any interview. If no responsive records exist, I request written confirmation of that fact.",
           ask_no_records: true
+        }
+      ]
+    },
+    {
+      id: "purged-911-call",
+      short: "The purged 911 call — open-line records",
+      challenge: "A 3–5 minute open-line 911 call from the transport vehicle — \"get that off of him\" — is allegedly absent from every released call batch. Open-line calls are logged differently from engaged calls; that seam is exactly where a call escapes a records search.",
+      categories: ["Missing & deleted footage", "Timeline contradictions"],
+      entities: ["mccoy", "phillip"],
+      investigator: "Candace Owens (Ep 366 tip) · Coleman/Owens (hospital window, independently)",
+      investigatorLinks: [
+        { label: "Owens Ep 366, Jul 27 2026 — the 911-call tip (transcript banked in the library)", url: "https://www.youtube.com/watch?v=HZvwbfePe7o" }
+      ],
+      status: "reported",
+      finding: "Candace Owens’s July 27, 2026 tip: a 3–5 minute open-line 911 call was placed from the vehicle carrying Kirk to Timpanogos Regional Hospital — voices saying \"We got him, we are taking him to the hospital,\" then \"get that off of him\" — and that call is absent from every released 911 batch. Open-line and abandoned calls are logged and retained differently from engaged calls, which is precisely how such a call could escape productions built from engaged-call queries. Separately, two independent sources (Coleman and Owens threads) describe activity at Timpanogos Regional Hospital in the 10:00–11:30 a.m. window — before the shooting — whose GRAMA-able surface is the dispatch record: inter-facility transfer runs and any hospital diversion or status-change notifications. The tip rides as attributed discourse until records land.",
+      implication: "The dispatch district’s own systems answer this without anyone’s testimony: the CAD event log for the transport window, an open-line/abandoned-call category search run as its own record type, the 10:00–11:30 a.m. transfer and diversion records, and — decisive either way — the retention schedule and deletion/purge audit trail. If the call existed and was purged, the purge trail is itself the record. The standing preservation language matters most on this card.",
+      sources: [
+        { label: "Owens Ep 366, Jul 27 2026 — the open-line call tip", url: "https://www.youtube.com/watch?v=HZvwbfePe7o" },
+        { label: "Owens Ep 369, Jul 31 2026 — the Timpanogos eyewitness (hospital window)", url: "https://www.youtube.com/watch?v=iB-YtO3UZOg" }
+      ],
+      requests: [
+        {
+          agencyId: "uvdispatch",
+          summary: "UV Dispatch SSD — CAD logs, open-line/abandoned 911 records, hospital transfer/diversion records, retention + purge audit trail",
+          subject: "GRAMA Request: open-line and abandoned 911 call records, CAD event logs, and retention audit trail, September 10, 2025",
+          records: "I request: (1) the CAD (computer-aided dispatch) event log and incident history for the transport of the shooting victim from the Utah Valley University campus to Timpanogos Regional Hospital on September 10, 2025, for the window 12:00 p.m. to 2:00 p.m.; (2) all abandoned-call and open-line call records — including audio and call-detail records — received between 12:00 p.m. and 2:00 p.m. on September 10, 2025 and associated with, or geolocated along, the route between the UVU campus and Timpanogos Regional Hospital. I specifically request that open-line and abandoned calls be searched as their own record category, since these are logged differently from engaged calls and may not have been captured by prior productions; (3) CAD records of inter-facility transfer runs dispatched between 10:00 a.m. and 11:30 a.m. on September 10, 2025 involving Timpanogos Regional Hospital, and any hospital diversion notification or status-change records for Timpanogos Regional Hospital for the same window; and (4) the district’s retention schedule for 911 audio and CAD records, and any deletion or purge audit trail showing whether any September 10, 2025 call or CAD records have been deleted, overwritten, or purged, and if so when and under what authority. If no responsive records exist for any numbered item — in particular, if no open-line or abandoned call exists for the transport window — I request written confirmation of that fact for that item, including a description of the search conducted. I ask that all potentially responsive records — expressly including all September 10, 2025 911 audio, call-detail records, and CAD data, and the deletion/purge audit trail itself — be preserved immediately upon receipt of this request and for the duration of processing and of any administrative appeal or review.",
+          ask_no_records: true,
+          filed: "NOT FILED — DRAFTED Aug 2, 2026, ready to file; retention clocks are the enemy on this one. Route: openrecords.utah.gov (entity: Utah Valley Dispatch Special Service District); if the district is not listed, email its administrative office with the letter attached."
+        }
+      ]
+    },
+    {
+      id: "me-departures",
+      short: "Two ME departures + the autopsy authorization",
+      challenge: "The chief medical examiner who signed off on the autopsy resigned with no stated reason; her deputy left for a New York county post. And did any county attorney or the AG formally request the autopsy at all?",
+      categories: ["Personnel & credibility"],
+      entities: ["amoroso", "guardo"],
+      investigator: "Candace Owens (Ep 366/369) · Baron Coleman (the statute point)",
+      investigatorLinks: [
+        { label: "Owens Ep 369, Jul 31 2026 — the medical-examiner discovery (transcript banked in the library)", url: "https://www.youtube.com/watch?v=iB-YtO3UZOg" }
+      ],
+      status: "reported",
+      finding: "Dr. Deidra Amoroso, Utah’s Chief Medical Examiner (tenure beginning July 1, 2024), who signed off on the Kirk autopsy, has resigned with no stated reason. Dr. Andrew Guardo, promoted to Deputy Chief Medical Examiner in 2024, has also departed — his appointment as Dutchess County, New York Medical Examiner was announced on or about March 11, 2026. Coleman’s statute point sharpens the third ask: whether a county attorney or the Attorney General ever submitted a written request for this autopsy is itself a discrete record — and so is its documented absence. The claimed \"fed overseeing the autopsy\" makes the chief’s separation file doubly relevant. Rides as attributed discourse until the paper lands.",
+      implication: "Five pieces of administrative and personnel paper test the claims without touching the § 26B-8-217-restricted autopsy file: the separation records for both doctors, the written autopsy authorization or written confirmation none exists, the body custody and transport log from Timpanogos to the ME facility, and the burial-transit/disposition permit — the paper answer to the cremation question, since permits state the disposition and name the receiving jurisdiction. Separation records are generally more reachable than anything in the case file.",
+      sources: [
+        { label: "Owens Ep 366, Jul 27 2026 — the Amoroso resignation", url: "https://www.youtube.com/watch?v=HZvwbfePe7o" },
+        { label: "Owens Ep 369, Jul 31 2026 — the ME thread continued", url: "https://www.youtube.com/watch?v=iB-YtO3UZOg" }
+      ],
+      requests: [
+        {
+          agencyId: "ome",
+          summary: "DHHS/OME — Amoroso + Guardo separation records, the autopsy authorization (or its absence), body custody log, disposition permit",
+          subject: "GRAMA Request: separation records for Dr. Deidra Amoroso and Dr. Andrew Guardo, autopsy authorization record, body custody log, and disposition permit — September 10, 2025 decedent",
+          records: "I request: (1) the resignation letter, any separation agreement, and personnel action forms documenting the departure of Dr. Deidra Amoroso, Chief Medical Examiner (tenure beginning July 1, 2024); (2) the personnel action forms documenting the 2024 promotion of Dr. Andrew Guardo to Deputy Chief Medical Examiner and the personnel action forms and separation records documenting his subsequent departure from the Office of the Medical Examiner (Dr. Guardo’s appointment as Dutchess County, New York Medical Examiner was announced on or about March 11, 2026); (3) the written request or authorization from a county attorney, district attorney, or the Attorney General for the autopsy of the decedent in the September 10, 2025 Utah Valley University shooting — if no such written request exists, I request written confirmation of that fact; (4) the body custody and transport log for that decedent from Timpanogos Regional Hospital to the Office of the Medical Examiner facility, September 10, 2025; and (5) the burial-transit or disposition permit issued for that decedent, including the disposition stated on the permit and the receiving jurisdiction. Each item names a discrete, catalogued document; this is not a broad search. I am not requesting the autopsy report itself or any medical-examiner case file material restricted by statute. If no responsive record exists for any numbered item, I request written confirmation of that fact for that item, including a description of the search conducted.",
+          ask_no_records: true,
+          filed: "NOT FILED — DRAFTED Aug 2, 2026, ready to file via openrecords.utah.gov (entity: Department of Health and Human Services). Every item is administrative or personnel paper — deliberately outside the § 26B-8-217 restriction on ME case records."
+        }
+      ]
+    },
+    {
+      id: "c37-pag-denial",
+      short: "C-37 99-0404 — the Presidential Airlift Group denial",
+      challenge: "A routine flight-records FOIA came back denied at the discretion of the Presidential Airlift Group. A second request either corroborates the anomaly or produces a second appealable denial citing the same irregular authority.",
+      categories: ["Kirk assassination & coverup"],
+      entities: ["pag", "eop"],
+      investigator: "Baron Coleman (the FOIA) · Danks (the report)",
+      investigatorLinks: [
+        { label: "Danks, Jul 27 2026 — Coleman’s Fort Huachuca FOIA and the PAG denial (transcript banked in the library)", url: "https://www.youtube.com/watch?v=InWAoVUD1PA" }
+      ],
+      status: "reported",
+      finding: "Baron Coleman’s FOIA for flight records of C-37 tail 99-0404 — operations at or involving Fort Huachuca, Arizona on September 8–9, 2025, normally a routine ask through the 89th Airlift Wing’s squadrons — came back denied at the discretion of the Presidential Airlift Group. By Coleman’s elimination logic, PAG discretion over the records means White House Military Office tasking. The thread pairs with the WHMO misdirected-email anomaly (the \"Erika Kirk video trending\" email Candace Owens says she received within an hour of the Hilton event). Rides as attributed discourse until the paper lands.",
+      implication: "A parallel request from a second requester is the cheapest possible test: either the 89th produces the schedule, manifests, and tasking records — or it issues a second written denial citing the same irregular authority, which corroborates the anomaly on paper and is appealable. The tasking/authorization item names the record that identifies which office directed the missions; the request asks that any PAG/WHMO-directed withholding be stated in writing in the determination.",
+      sources: [
+        { label: "Danks, Jul 27 2026 — the Coleman FOIA read-through", url: "https://www.youtube.com/watch?v=InWAoVUD1PA" }
+      ],
+      requests: [
+        {
+          agencyId: "af89aw",
+          summary: "89th AW — flight schedule, manifests, and tasking authority for C-37 99-0404, Sept 8–9, 2025 (the parallel to Coleman’s denied request)",
+          subject: "FOIA Request: flight schedule, manifests, and tasking authority for C-37 tail 99-0404, September 8–9, 2025",
+          records: "I request, for the aircraft with tail number 99-0404 for September 8–9, 2025: (1) the flight schedule and mission records for its operations at or involving Fort Huachuca, Arizona; (2) the passenger manifests for those flights; and (3) the tasking or authorization record identifying the office that requested or directed those missions. Each item names a discrete, routinely generated record; this is not a broad search. If any item is withheld at the direction or discretion of the Presidential Airlift Group or the White House Military Office, I request that the withholding authority be stated in writing in the determination. If no responsive records exist for any item, please confirm that in writing, including a description of the search conducted.",
+          ask_no_records: true,
+          filed: "NOT FILED — DRAFTED Aug 2, 2026 — file via Air Force eFOIA or FOIA.gov to the 89th AW FOIA Office, Joint Base Andrews; avoid any Login.gov-gated path — the email trail is the record."
+        }
+      ]
+    },
+    {
+      id: "curtis-ncis",
+      short: "The rookie’s father: 21 years NCIS, then Richmond IG",
+      challenge: "The officer who found the gun is a 2025 rookie. His father left NCIS’s Inspector General office as a division chief three months before the shooting to become Richmond, Virginia’s interim IG. Federal service histories are routinely releasable.",
+      categories: ["Personnel & credibility"],
+      entities: ["foster-curtis", "mitchell-curtis"],
+      investigator: "Candace Owens (Ep 367)",
+      investigatorLinks: [
+        { label: "Owens Ep 367, Jul 29 2026 — the rookie cop who found the gun (transcript banked in the library)", url: "https://www.youtube.com/watch?v=Vu6Y24pqhZs" }
+      ],
+      status: "reported",
+      finding: "Ep 367: Mitchell Curtis, Pleasant Grove PD — a 2025 UVU graduate — found the rifle after bomb-dog Freya had already searched that field clean and a federal official ordered a re-search. His father, Foster Curtis, served approximately 21 years with NCIS, ending as a division chief within the NCIS Office of the Inspector General, and separated on or about June 2, 2025 — three months before the shooting — to become Richmond, Virginia’s interim Inspector General after incumbent James Osuna was abruptly fired (\"NDAs were signed\"). Rides as attributed discourse until the service records land.",
+      implication: "The federal end is cheap paper: positions, titles, grades, duty stations, dates of service, and the nature and date of separation are releasable for federal employees under FOIA and 5 C.F.R. § 293.311 — no investigative file required. The Richmond end is Virginia FOIA, a citizens-only statute — parked until a Virginia-resident requester or collaborator exists. The Pleasant Grove side of the same thread — Freya’s logs, Curtis’s hire and assignment records, the found-property log — runs on the K9 card, where the county’s own denial invited the per-agency ask.",
+      sources: [
+        { label: "Owens Ep 367, Jul 29 2026 — the Curtis family thread", url: "https://www.youtube.com/watch?v=Vu6Y24pqhZs" }
+      ],
+      requests: [
+        {
+          agencyId: "ncis",
+          summary: "NCIS — Foster Curtis: positions, grades, duty stations, dates of service, and separation record",
+          subject: "FOIA Request: position, grade, and separation history for former NCIS employee Foster Curtis",
+          records: "I request the publicly releasable federal employment information for former NCIS employee Foster Curtis, who served approximately 21 years with NCIS and separated on or about June 2, 2025 from a position as a division chief within the NCIS Office of the Inspector General: (1) his positions and titles held, grades, duty stations, and dates of service (information releasable for federal employees under FOIA and 5 C.F.R. § 293.311); and (2) the effective date and nature of his separation. This is a request for the discrete, routinely releasable employment-data record of a single named former employee; it is not a broad search. If no responsive records exist, please confirm that in writing, including a description of the search conducted.",
+          ask_no_records: true,
+          filed: "NOT FILED — DRAFTED Aug 2, 2026 — email ncis_foia@ncis.navy.mil (Attn: FOIA, Code 00LJF, Quantico). The Richmond IG records are Virginia FOIA — citizens-only — and stay parked until a Virginia-resident requester exists."
         }
       ]
     }

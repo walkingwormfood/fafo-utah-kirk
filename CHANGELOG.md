@@ -2,6 +2,30 @@
 
 What's new in FAFO Utah — Charlie Kirk Edition. Newest first.
 
+## 2026-08-03 — The cards stop reading like affidavits: spreadsheet-shaped findings, one filter panel for both views
+
+- **Cards are now the thread, the missing piece, and who reported it** — headline is the short thread name, the one-line challenge sits under it, and the by-line carries the reporter and source links. The long finding/implication prose is still there, collapsed behind "The full story"; the full legal text is the request itself (Generate); the full narrative is the linked source content. Nothing was cut — it just stopped being mandatory reading.
+- **Status filters work on both views**: the unclaimed / pending / complete chips moved onto the control panel face and now hide/show threads in the findings view and the evidence chart alike.
+- **Every filter facet moved into the control panel** under a new Filters drawer — biggest threads, jurisdiction, category, who surfaced it — each a collapsible, default collapsed. The panel is identical on both screens, and category/entity/voice/jurisdiction filters now apply to the evidence chart too, not just the cards.
+
+## 2026-08-02 — The Aug 2 drafting wave: fifteen requests from the Jul 31 lead brief and UVU's own #26-221 release, four new cards, five new agencies
+
+Every target from the Jul 31 master lead brief is now drafted and carded — fifteen requests, all marked DRAFTED Aug 2, 2026, filing order = priority order:
+
+- **Flock/ALPR goes from hold-only to the full ask** (TIME-CRITICAL — file first): the Orem, Utah County, and DPS/UHP queued requests are superseded by broader drafts — Sept 10 detection records with images for the UVU–Timpanogos hospital corridors (11:00 a.m.–3:00 p.m., catching both the shuttle and the SUV drive), hotlist alerts, the Flock "Network Audit" log of every query run against that day's data (including federal users), and the retention/hold paper. **Provo PD joins the docket** as a fourth Flock agency (I-15 and University Ave/Parkway footprint).
+- **New card: The purged 911 call** (`purged-911-call`) — Owens's Jul 27 tip of a 3–5 minute open-line call from the transport vehicle ("get that off of him"), absent from every released batch. The draft to the **Utah Valley Dispatch Special Service District** (new agency) asks for open-line/abandoned calls searched as their own record category — the seam such a call escapes through — plus transport-window CAD, the 10:00–11:30 a.m. hospital transfer/diversion records, and the purge audit trail itself.
+- **New card: Two ME departures + the autopsy authorization** (`me-departures`) — Amoroso's unexplained resignation, Guardo's exit to Dutchess County NY, the written autopsy request or its documented absence (Coleman's statute point), the body custody log, and the burial-transit/disposition permit — all administrative paper, deliberately outside § 26B-8-217.
+- **New card: the C-37 99-0404 / Presidential Airlift Group denial** (`c37-pag-denial`) — replicating Coleman's denied Fort Huachuca flight-records FOIA at the **89th Airlift Wing** (new agency): corroboration or a second appealable denial citing the same irregular authority.
+- **New card: the rookie's father** (`curtis-ncis`) — Foster Curtis's 21-year NCIS service and Jun 2, 2025 separation from the OIG, via **NCIS** (new agency) — routinely releasable employment data. The Richmond IG end is Virginia FOIA, citizens-only, parked.
+- **Pleasant Grove PD joins the K9 card** (new agency): Freya/Loki deployment and certification logs, Officer Mitchell Curtis's hire/assignment records, and the firearm found-property log — the per-agency request Utah County's own #26-2812 denial invited. Address needs confirming before sending (no verified records email; 801-785-3506).
+- **Bagley bodycam gets its follow-on round**: the native parent file of the 27:35 clip, the Axon evidence.com device audit trail (documenting the reported ~12:44 p.m. recording stop), any malfunction report, and the screwdriver property record (exhibits 12.1/12.4).
+- **The #26-221 release feeds two requests back at UVU**: the event paper set named in its own production (fountain work order, Aug 25 MEAC assessment, film request + 25Live record, amplified-sound approval) and the UVU PD "it was all approved" paper (written sign-off, security plan, staffing assignments).
+- **DFCM draft hardened** on the paved-scene card: work orders, authorizations, and contractor invoices for the Sept 10–Oct 31 courtyard work — UVU's own referral.
+- **USSS refile with real dates** on the Kolvet card: WAVES/ACR records and appointment requests for Kolvet, Minez, and TPUSA counsel, Jul 26–Aug 1, 2026 — anchored to the Jul 27 tip and the Netanyahu arrival.
+- **FBI custody paper** on the transport-SUV card: FD-597 receipts for the hospital surveillance footage and security-team clothing, and the SUV disposition record — expect 7(A); the denial becomes citable.
+
+Five new entities wire the connective tissue: Mitchell Curtis, Foster Curtis, Amoroso, Guardo, and the Presidential Airlift Group/WHMO. All fifteen drafts carry the standing preservation ask; the no-FOIA-needed checklist (SAM.gov/USAspending on the Qureshi company, the court-docket pulls, the parked Richmond ask) stays in the drafts file.
+
 ## 2026-07-26 — The cleanup paper arrives: Judicial Watch pries loose UVU's own texts, and the chain-of-custody lane gets its documents
 
 The **Scene paved over** card graduates from testimony to production. Judicial Watch's GRAMA appeal (State Records Committee case 2026-004) produced UVU's cleanup file — Bates UVU 25-326 — and the card now carries it verbatim, with both JW PDFs linked as sources (local copies banked in the library's legal-artifacts):
