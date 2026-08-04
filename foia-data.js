@@ -123,8 +123,11 @@ const FOIA = {
       portal: "https://www.securerelease.us",
       submitNote: "NAVSEA — the parent command of NSWC Crane — accepts FOIA by email (NAVSEAFOIA@navy.mil), the SecureRelease portal (securerelease.us), FOIA.gov, or mail (Commander, NAVSEA, SEA 00A5, FOIA/Privacy Program Division, 1333 Isaac Hull Ave SE, Washington Navy Yard, DC 20376-2101). Requester Service Center: 202-781-4124." },
     { id: "usss", name: "U.S. Secret Service", email: null, fed: true,
-      portal: "https://www.securerelease.us",
-      submitNote: "As of Oct 2025, USSS takes FOIA only through its SecureRelease portal (securerelease.us) or by mail — no email." },
+      portal: "https://www.securerelease.us/create-request",
+      formAnswers: [
+        { label: "Agency (SecureRelease step 1 — USSS is not a top-level option; pick this, then United States Secret Service as the component)", value: "Department of Homeland Security" }
+      ],
+      submitNote: "As of Oct 2025, USSS takes FOIA only through its SecureRelease portal (securerelease.us) or by mail — no email. The portal is DHS-wide: step 1 asks for Agency (Department of Homeland Security) then Component (United States Secret Service) — the same path the Jul 25, 2026 filing took." },
     { id: "uvu", name: "Utah Valley University (records office)", email: null,
       portal: "https://uvu.nextrequest.com/",
       submitNote: "UVU takes GRAMA requests through its NextRequest portal (uvu.nextrequest.com); UVU Policy 133 also accepts written requests to the GRAMA officer (grama@uvu.edu). Fees per Policy 133: $25/hr compiling and redaction, copy charges, prepayment possible over $50; ~10 business days; denials appeal to the VP of Finance and Administration within 30 days.",
