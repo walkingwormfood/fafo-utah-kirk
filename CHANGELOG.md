@@ -2,6 +2,10 @@
 
 What's new in FAFO Utah — Charlie Kirk Edition. Newest first.
 
+## 2026-08-04 (later) — The deck reorders around the walls: most-likely-to-produce doors first
+
+Card order now runs from most to least likely to respond favorably, ranked by each card's best remaining door. Administrative custodians and fresh out-of-county doors lead — Utah Valley Dispatch (the purged-911 draft), Pleasant Grove PD (the K9 package the county invited), DFCM, DHHS/OME, Washington County Clerk, NCIS — followed by the half-open offices (UVU records-office paper asks, the Governor's invoices, WCSO's paid-and-in-redaction thread), then the federal coin-flips, and finally the § 305(10)/§ 106 walls (Utah County, Orem, DPS, UVU PD), where every next answer is expected to be a denial and the value is the paper trail. Same data, same cards — the deck now opens on the doors that still open.
+
 ## 2026-08-04 — The blanket-hold letter surfaces: UCAO is directing another county's withholding, and UVU declares its cameras outside GRAMA entirely
 
 The Aug 1–4 mail wave, carded:
