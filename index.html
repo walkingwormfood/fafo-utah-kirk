@@ -630,7 +630,11 @@
     merged.forEach(m => {
       const d = document.createElement("div"); d.className = "field";
       const l = document.createElement("label"); l.textContent = m.label + " — if the form asks";
-      const t = document.createElement("input"); t.className = "snip"; t.value = m.value; t.readOnly = true;
+      // short answers get the one-line box; long ones a proper multi-line box —
+      // both read-only, both click-to-copy
+      const t = document.createElement(m.value.length > 70 ? "textarea" : "input");
+      t.className = "snip"; t.value = m.value; t.readOnly = true;
+      if(t.tagName === "TEXTAREA"){ t.rows = 2; t.style.minHeight = "0"; }
       t.addEventListener("click", () => { t.select(); document.execCommand && document.execCommand("copy"); });
       d.appendChild(l); d.appendChild(t); box.appendChild(d);
     });

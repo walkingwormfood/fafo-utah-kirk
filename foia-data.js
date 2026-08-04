@@ -180,8 +180,7 @@ const FOIA = {
     { id: "ome", name: "Utah Office of the Medical Examiner (DHHS)", email: null,
       portal: "https://secured.utah.gov/ut-archives/Forms/Page/ut-archives/orp/0",
       formAnswers: [
-        { label: "Government entity / department (the portal picker)", value: "Department of Health and Human Services — the Office of the Medical Examiner is a DHHS office. If the picker offers sub-entities, choose Office of the Medical Examiner under DHHS; if it only lists departments, Department of Health and Human Services is correct." },
-        { label: "Request title (the form requires one)", value: "Use the Subject line of the drafted letter — e.g. GRAMA Request: evidence transmittal and chain-of-custody records, September 2025 case" }
+        { label: "Government entity / department — if sub-entities are offered, pick Office of the Medical Examiner under DHHS", value: "Department of Health and Human Services" }
       ],
       submitNote: "ME case records (autopsy, toxicology, investigative reports) are NOT ordinary GRAMA records — Utah Code § 26B-8-217 restricts them to next of kin, legal representatives, treating physicians, and law enforcement, and § 26B-8-217(8) bars other disclosure absent a court order. The requests here deliberately target administrative paper (transmittal, chain-of-custody, personnel, permits) instead. ROUTE (per OME’s own Families page, verified Aug 4, 2026): mail the letter — notarized, or with their record-request form — to Utah Office of the Medical Examiner, 4451 South 2700 West, Taylorsville, UT 84129; the office commits to responding within 3 business days of receipt for reports. In person: same address, Mon–Fri 8–5 with photo ID. The my.utah.gov e-ordering lane is only for § 26B-8-2 authorized requesters (next-of-kin, guardians, attorneys with a signed release or court order) ordering case reports — not the lane for these administrative GRAMA asks. Phone: (801) 816-3850. Expect the office to test the 217 boundary in its response.",
       portalNote: "FILE HERE: the button opens the Open Records Portal request form directly (openrecords.utah.gov redirects here) — choose entity: Department of Health and Human Services (the OME is a DHHS office; DHHS’s records officer is the GRAMA intake). Paste the request text into the description box. Reference material, not a filing lane: OME’s own Families page (ome.utah.gov/for-families/) documents its report-request process for next-of-kin — its Record Request Form (ome.utah.gov/wp-content/uploads/Record-Request-Form-2026.pdf) and mailing address (4451 South 2700 West, Taylorsville, UT 84129) work as a parallel paper channel if the portal stalls, and the page’s 3-business-day response commitment is quotable." },
@@ -363,6 +362,9 @@ const FOIA = {
           agencyId: "ome",
           summary: "Medical Examiner — the transmittal and chain-of-custody paperwork (not the autopsy)",
           subject: "GRAMA Request: evidence transmittal and chain-of-custody records, September 2025 case",
+          formAnswers: [
+            { label: "Request title (the form requires one)", value: "GRAMA Request: evidence transmittal and chain-of-custody records, September 2025 case" }
+          ],
           records: "I request, concerning the Office of the Medical Examiner case arising from the September 10, 2025 death at Utah Valley University: (1) the evidence transmittal or release forms documenting transfers of physical evidence (including bullet or projectile fragments, fingerprint records, and photographic media) to any law-enforcement agency; and (2) the log identifying the agencies or officials who provided investigative information incorporated into the case file's administrative cover documentation. I am NOT requesting the autopsy report, photographs, or any medical findings — administrative transfer records only.",
           ask_no_records: true
         }
@@ -402,6 +404,9 @@ const FOIA = {
           agencyId: "ome",
           summary: "Medical Examiner — the personal-effects/clothing inventory (not the autopsy)",
           subject: "GRAMA Request: personal-effects and clothing inventory records, September 2025 case",
+          formAnswers: [
+            { label: "Request title (the form requires one)", value: "GRAMA Request: personal-effects and clothing inventory records, September 2025 case" }
+          ],
           records: "I request, concerning the Office of the Medical Examiner case arising from the September 10, 2025 death at Utah Valley University: the personal-effects or clothing inventory documenting what clothing or clothing remnants accompanied the decedent or were subsequently received, and the transmittal or release records for any clothing item transferred to a law-enforcement agency or laboratory. I am NOT requesting the autopsy report, photographs, or any medical findings — administrative inventory and transfer records only. (This complements the evidence-transmittal request already drafted to this office concerning bullet fragments; this request concerns clothing and personal effects specifically.) Please also retain this correspondence and all records related to the processing of this request.",
           ask_no_records: true
         },
@@ -438,6 +443,9 @@ const FOIA = {
           agencyId: "ome",
           summary: "DHHS/OME — Amoroso + Guardo separation records, the autopsy authorization (or its absence), body custody log, disposition permit",
           subject: "GRAMA Request: separation records for Dr. Deidra Amoroso and Dr. Andrew Guardo, autopsy authorization record, body custody log, and disposition permit — September 10, 2025 decedent",
+          formAnswers: [
+            { label: "Request title (the form requires one)", value: "GRAMA Request: separation records for Dr. Deidra Amoroso and Dr. Andrew Guardo, autopsy authorization record, body custody log, and disposition permit — September 10, 2025 decedent" }
+          ],
           records: "I request: (1) the resignation letter, any separation agreement, and personnel action forms documenting the departure of Dr. Deidra Amoroso, Chief Medical Examiner (tenure beginning July 1, 2024); (2) the personnel action forms documenting the 2024 promotion of Dr. Andrew Guardo to Deputy Chief Medical Examiner and the personnel action forms and separation records documenting his subsequent departure from the Office of the Medical Examiner (Dr. Guardo’s appointment as Dutchess County, New York Medical Examiner was announced on or about March 11, 2026); (3) the written request or authorization from a county attorney, district attorney, or the Attorney General for the autopsy of the decedent in the September 10, 2025 Utah Valley University shooting — if no such written request exists, I request written confirmation of that fact; (4) the body custody and transport log for that decedent from Timpanogos Regional Hospital to the Office of the Medical Examiner facility, September 10, 2025; and (5) the burial-transit or disposition permit issued for that decedent, including the disposition stated on the permit and the receiving jurisdiction. Each item names a discrete, catalogued document; this is not a broad search. I am not requesting the autopsy report itself or any medical-examiner case file material restricted by statute. If no responsive record exists for any numbered item, I request written confirmation of that fact for that item, including a description of the search conducted.",
           ask_no_records: true,
           filed: "NOT FILED — DRAFTED Aug 2, 2026, ready to file via openrecords.utah.gov (entity: Department of Health and Human Services). Every item is administrative or personnel paper — deliberately outside the § 26B-8-217 restriction on ME case records."
