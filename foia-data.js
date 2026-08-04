@@ -233,6 +233,7 @@ const FOIA = {
     { id: "foster-curtis", name: "Foster Curtis (NCIS OIG → Richmond IG)", type: "person" },
     { id: "amoroso", name: "Dr. Deidra Amoroso (Utah Chief ME)", type: "person" },
     { id: "guardo", name: "Dr. Andrew Guardo (Deputy Chief ME)", type: "person" },
+    { id: "ucao-ent", name: "Utah County Attorney’s Office", type: "org" },
     { id: "pag", name: "Presidential Airlift Group / WHMO", type: "org" }
   ],
 
@@ -480,14 +481,15 @@ const FOIA = {
           subject: "GRAMA Request: lobby/intake video of September 11, 2025 and its retention/deletion records",
           records: "I request: (1) all video recorded by lobby, intake, sally-port, or booking-area cameras at the Washington County Sheriff's Office facility in Hurricane, Utah between 8:00 p.m. September 11, 2025 and 5:00 a.m. September 12, 2025; (2) the records retention schedule applicable to facility video during that period; and (3) any record documenting the deletion, overwriting, or non-retention of video from that period — including the date of deletion, the system or person that performed it, and any authorization, litigation-hold notice, or preservation request in effect at the time; and (4) all correspondence concerning any prior records request for this video — the request, the response, and any internal discussion of it. If the video no longer exists, items (2) through (4) are the request.",
           ask_no_records: true,
-          filed: "ANSWERED IN PART Jul 22, 2026 — REDACTION UNDERWAY on the surviving item. Filed Jul 9, 2026, 1:11 p.m. via WCSO's web form (re-filed identically Jul 12; Jul 9 operative). The written response (Records Officer Sherrie Maxwell) disposed of items (1)–(3) on their face: no video (never clipped or exported; deleted 14–30 days after recording), no county-own retention schedule (state GRS-2021 attached instead), and no records documenting the deletion, overwriting, or non-retention. Item (4) survives: every email request and reply \"with the words, 'Tyler Robinson and Video'\" — with only narrow PII redactions pre-announced (home addresses, § 63G-2-305(51); personal email addresses, § 63G-2-302(2)(d)) — notably NOT the § 63G-2-305(10) active-case wall Orem and Utah County have used. Fee waiver DENIED (\"extensive search... significant use of staff time\"); terms: hourly rate of the lowest-paid employee able to do the work, first 15 minutes free, \"It will exceed $25,\" over 4 hours of redaction anticipated, exact cost to be advised by Jul 30; completion anticipated Jul 30; records released on receipt of fee. Maxwell would not begin redacting without a go-ahead — \"proceed\" sent Jul 25, 2026, in-thread, with an explicit preservation ask covering the processing correspondence and all records concerning the video, its deletion, retention settings, and related inquiries; fee amount due ~Jul 30. The reply is \"valid and on file for 30 days\"; any portion is appealable to Sheriff Barry Golding as CAO within 30 days (§ 63G-2-205) — the fee appeal stays live until the amount is known. DO NOT PREPAY beyond the advised amount."
+          filed: "ANSWERED IN PART Jul 22, 2026 — REDACTION UNDERWAY; the $65.22 fee is PAID (payment form returned Aug 1, CORE processed Aug 3) — the \"Tyler Robinson and Video\" thread is due on completion of redaction, unless the UCAO blanket notice is now raised against it. Filed Jul 9, 2026, 1:11 p.m. via WCSO's web form (re-filed identically Jul 12; Jul 9 operative). The written response (Records Officer Sherrie Maxwell) disposed of items (1)–(3) on their face: no video (never clipped or exported; deleted 14–30 days after recording), no county-own retention schedule (state GRS-2021 attached instead), and no records documenting the deletion, overwriting, or non-retention. Item (4) survives: every email request and reply \"with the words, 'Tyler Robinson and Video'\" — with only narrow PII redactions pre-announced (home addresses, § 63G-2-305(51); personal email addresses, § 63G-2-302(2)(d)) — notably NOT the § 63G-2-305(10) active-case wall Orem and Utah County have used. Fee waiver DENIED (\"extensive search... significant use of staff time\"); terms: hourly rate of the lowest-paid employee able to do the work, first 15 minutes free, \"It will exceed $25,\" over 4 hours of redaction anticipated, exact cost to be advised by Jul 30; completion anticipated Jul 30; records released on receipt of fee. Maxwell would not begin redacting without a go-ahead — \"proceed\" sent Jul 25, 2026, in-thread, with an explicit preservation ask covering the processing correspondence and all records concerning the video, its deletion, retention settings, and related inquiries; fee amount due ~Jul 30. The reply is \"valid and on file for 30 days\"; any portion is appealable to Sheriff Barry Golding as CAO within 30 days (§ 63G-2-205) — the fee appeal stays live until the amount is known. DO NOT PREPAY beyond the advised amount."
         },
         {
           agencyId: "wcso",
           summary: "WCSO — the retention setting that actually erased the video, and any schedule authority for it (the gap the Jul 22 letter opened)",
           subject: "GRAMA Request: video-management-system retention configuration and schedule-appraisal records, Patrol Building cameras",
           records: "I request: (1) the record of the retention or auto-purge configuration of the video-management system serving the Patrol Building lobby and hallway cameras as in effect September 11 – October 11, 2025 — the setting that produced the 14–30-day deletion described in the office's July 22, 2026 GRAMA response — including any configuration page, vendor documentation of the deployed setting, or configuration-change log; (2) any record designating, classifying, or appraising Patrol-building video under Utah General Retention Schedule GRS-2021 — whose disposition is \"retain until resolution of issue, and then destroy records\" and whose description excludes incidents requiring further evaluation — or under any other schedule, including GRS-2027; and (3) any preservation request, litigation-hold notice, or clip/export request received or generated between September 11, 2025 and October 11, 2025 concerning Patrol-building video. If no responsive record exists for any item, I request written confirmation of that fact.",
-          ask_no_records: true
+          ask_no_records: true,
+          filed: "PENDING — filed Jul 26, 2026 by email; receipt acknowledged Aug 3 with the request text quoted back. A belt-and-suspenders web-form copy (Aug 2, 5:48 p.m.) was flagged \"duplicate request\" by Records on Aug 3 — the email version is the live one. Watch for the UCAO blanket-notice denial landing here too: a retention-configuration record is administrative, not investigative — if § 305(10) is claimed on a VMS settings page, that is its own exhibit."
         }
       ]
     },
@@ -522,7 +524,7 @@ const FOIA = {
           subject: "GRAMA Request: CAD/dispatch records, evening of September 11, 2025",
           records: "I request the computer-aided dispatch (CAD) log entries and radio log records for the Washington County Sheriff's Office for September 11, 2025, 6:00 p.m. through September 12, 2025, 6:00 a.m., concerning the arrival, custody, or processing of any individual in connection with the Utah Valley University homicide investigation. Redaction of unrelated calls for service is acceptable.",
           ask_no_records: true,
-          filed: "PENDING — filed Jul 15, 2026, 12:26 p.m. via WCSO's web form (copy requested; fee waiver and expedited asserted; § 204 profile complete). Confirmation received same hour. Response due within 10 working days (~Jul 29). DO NOT PREPAY."
+          filed: "DENIED Aug 3, 2026 — WCSO now cites the UCAO blanket restriction notice: records \"classified as Protected Records under UCA § 63G-2-305(10)\" because release \"would create a danger of depriving a person of a right to a fair trial,\" pending \"until the trial is complete.\" A prosecutor’s office in another county pre-classifying these records category-wide, with no record-by-record determination — see the UCAO blanket-hold card. Appeal to the CAO (Sheriff) within 30 days. Originally: filed Jul 15, 2026, 12:26 p.m. via WCSO's web form (copy requested; fee waiver and expedited asserted; § 204 profile complete). Confirmation received same hour. Response due within 10 working days (~Jul 29). DO NOT PREPAY."
         }
       ]
     },
@@ -657,7 +659,7 @@ const FOIA = {
           ],
           refined: true,
           ask_no_records: true,
-          filed: "DENIED — twice in one day — and ON APPEAL. Jul 21, 2026, 11:43 a.m.: Orem issued its formal written denial — the Utah County Attorney's Office 'has requested that these records be classified as Protected under Utah Code § 63G-2-305(10)'; 'the City is compelled to classify... As such, your request is herein formally denied.' A formal cure was sent at 12:45 p.m. the same day; Orem re-denied at 1:50 p.m. — 65 minutes later — on a denial form listing the record as 'K9 inquiry' and the ground as 'Active Case,' citing no subsection of § 305(10) and making no interference finding. GRAMA appeal filed with City Manager (CAO) Brenn Bybee the same evening under § 63G-2-401; determination due ~Aug 5, 2026 (Pioneer Day-adjusted). All further questions were pointed at the Utah State Bureau of Investigation."
+          filed: "ON APPEAL + ROUND-TWO REFILE — narrowed K9 deployment/utilization request (handler logs, certification/discipline, tasking, outcome) emailed Aug 2, 2026 to records@orem.gov. Original round: DENIED — twice in one day — and ON APPEAL. Jul 21, 2026, 11:43 a.m.: Orem issued its formal written denial — the Utah County Attorney's Office 'has requested that these records be classified as Protected under Utah Code § 63G-2-305(10)'; 'the City is compelled to classify... As such, your request is herein formally denied.' A formal cure was sent at 12:45 p.m. the same day; Orem re-denied at 1:50 p.m. — 65 minutes later — on a denial form listing the record as 'K9 inquiry' and the ground as 'Active Case,' citing no subsection of § 305(10) and making no interference finding. GRAMA appeal filed with City Manager (CAO) Brenn Bybee the same evening under § 63G-2-401; determination due ~Aug 5, 2026 (Pioneer Day-adjusted). All further questions were pointed at the Utah State Bureau of Investigation."
         },
         {
           agencyId: "pgpd",
@@ -731,7 +733,9 @@ const FOIA = {
       sources: [
         { label: "Tucker Carlson Network — Flock monologue (Harris County: ~3,700 LPRs, 500+ murders in 2025)", url: "https://www.youtube.com/watch?v=r8WiovU29MM" },
         { label: "Flock Safety — LPR data hard-deleted on a rolling ~30-day default (AWS S3 lifecycle); customer owns the data; purged reads unrecoverable", url: "https://www.flocksafety.com/blog/how-does-flock-handle-license-plate-data-deletion" },
-        { label: "Flock Safety — LPR Policy (retention default + agency configuration)", url: "https://www.flocksafety.com/legal/lpr-policy" }
+        { label: "Flock Safety — LPR Policy (retention default + agency configuration)", url: "https://www.flocksafety.com/legal/lpr-policy" },
+        { label: "Have I Been Flocked? — privacy activists mass-FOIAing Flock audit-log data (methodology ally)", url: "https://haveibeenflocked.com" },
+        { label: "Elizabeth Lane TV, Aug 2026 — the Flock/Axon surveillance-stack walkthrough (transcript banked)", url: "https://www.youtube.com/watch?v=yZQYxAkU9VY" }
       ],
       requests: [
         {
@@ -856,7 +860,7 @@ const FOIA = {
           subject: "GRAMA Request: unedited surveillance video exports, specified cameras and times, September 10, 2025",
           records: "I request unedited, native-format exports (with original metadata intact) of Utah Valley University surveillance video for September 10, 2025 from: (1) the camera covering the campus approach shown in court with timestamps 11:53:00 a.m. – 11:56:00 a.m.; (2) the parking-structure stairwell camera shown with timestamps 11:55:00 a.m. – 11:58:00 a.m.; and (3) the parking-structure camera covering the vehicle that arrived at 8:29 a.m., for 8:29 a.m. – 9:35 a.m. These segments were exhibited publicly at the preliminary hearing in State v. Robinson; I request the unedited sources of the same segments.",
           ask_no_records: true,
-          filed: "PENDING — filed via NextRequest as UVU #26-230, Jul 17, 2026; acknowledged Jul 17. EXPEDITE DENIED (same public-benefit finding as #26-229). 10-business-day clock, due ~Aug 1."
+          filed: "DENIED — CLOSED Aug 3, 2026, on a triple wall: \"not reasonably specific\" (UVU says the courtroom exhibit \"is not a UVU record\" so it cannot tell what video is meant — for segments played with visible timestamps in open court), § 63G-2-106 (the entire campus camera system declared \"security measures\" not subject to GRAMA at all), and in the alternative § 63G-2-305(12) and § 305(10). The § 106 move is categorical — it would exempt every frame of campus video ever recorded; that is the appealable overreach. Appeal: 30 days to UVU’s CAO, VP Val Peterson (petersva@uvu.edu, CC ccollings@uvu.edu). Originally: filed via NextRequest as UVU #26-230, Jul 17, 2026; acknowledged Jul 17. EXPEDITE DENIED (same public-benefit finding as #26-229). 10-business-day clock, due ~Aug 1."
         },
         {
           agencyId: "uvu",
@@ -897,7 +901,7 @@ const FOIA = {
           subject: "GRAMA Request: unedited surveillance exports, Losee Center roof and courtyard cameras, midday September 10, 2025",
           records: "I request unedited, native-format exports (original resolution and metadata intact) of Utah Valley University surveillance video for September 10, 2025, 12:10 p.m. – 12:35 p.m., from the camera or cameras whose footage was used to create the video exhibits designated 12.1 and 12.4 at the public preliminary hearing in State v. Robinson — the footage covering the Losee Center roofline and descent point. If the original recordings have been provided to or seized by an investigating agency, I request the transfer or evidence-receipt record identifying that agency and the date of transfer.",
           ask_no_records: true,
-          filed: "PENDING — filed via NextRequest as UVU #26-229, Jul 17, 2026; acknowledged Jul 17. EXPEDITE DENIED — UVU: request 'failed to meet that burden' of demonstrating public benefit under § 63G-2-204(4a); the standard 10-business-day clock still applies, due ~Aug 1 (Pioneer Day)."
+          filed: "DENIED — CLOSED Aug 3, 2026 under § 63G-2-106: all records \"relating to\" UVU’s camera system are \"security measures\" and \"not subject to GRAMA\" — categorically; § 305(12) and § 305(10) claimed in the alternative. No segregability finding, and the transfer/evidence-receipt fallback item (who holds the originals) was never addressed. Appeal: 30 days to UVU’s CAO, VP Val Peterson (petersva@uvu.edu, CC ccollings@uvu.edu). Originally: filed via NextRequest as UVU #26-229, Jul 17, 2026; acknowledged Jul 17. EXPEDITE DENIED — UVU: request 'failed to meet that burden' of demonstrating public benefit under § 63G-2-204(4a); the standard 10-business-day clock still applies, due ~Aug 1 (Pioneer Day)."
         },
         {
           agencyId: "dps",
@@ -905,7 +909,7 @@ const FOIA = {
           records: "I request, concerning the video exhibits designated 12.1 and 12.4 at the July 2026 preliminary hearing in State v. Robinson: (1) the work request, lab request, or tasking record for the creation, enhancement, magnification, or editing of those exhibits, identifying the person, unit, or vendor that performed the work and the software used; (2) the record identifying the source video files used (camera, export date, and file hash or comparable integrity record, if maintained); and (3) any record documenting the revision of the exhibit after July 7, 2026 — the overnight remake ordered when the original version was ruled edited. I am not requesting the video content itself in this item — the records documenting how the exhibits were made.",
           subject: "GRAMA Request: records documenting the creation of video exhibits 12.1 and 12.4, State v. Robinson",
           ask_no_records: true,
-          filed: "PENDING — filed Jul 16, 2026 via the DPS GovQA Records Center and acknowledged: one of the five-request P-series batch P012986/87/89/92/95 (exhibit 12.1/12.4 tasking records, Panguitch tip log, Discord evidence intake, ballistics + GSR reports, latent prints 11B–11D). 10-business-day clock, due ~Jul 31."
+          filed: "TWO OF THE BATCH DENIED — P012986 and P012989 denied Aug 1, 2026 by SBI Records Manager Tina Rodriguez as \"exempt from disclosure\"; the email notice’s \"for the following reasons:\" is followed by nothing — the actual grounds are visible only inside the GovQA portal, and which two of the five asks those numbers map to is pending a portal login. Original batch: filed Jul 16, 2026 via GovQA — P012986/87/89/92/95 (exhibit 12.1/12.4 tasking records, Panguitch tip log, Discord evidence intake, ballistics + GSR reports, latent prints 11B–11D)."
         }
       ]
     },
@@ -941,7 +945,8 @@ const FOIA = {
           summary: "UVU PD — quad-area camera footage covering the morning contact window",
           subject: "GRAMA Request: quad/amphitheater camera footage, morning of September 10, 2025",
           records: "I request unedited exports of Utah Valley University camera footage covering the quad/amphitheater area where the September 10, 2025 event was being set up, for 8:15 a.m. – 10:30 a.m. that morning — the window in which preliminary-hearing testimony placed the defendant making contact with event representatives. If this footage has been provided to or seized by an investigating agency, I request the transfer record identifying that agency.",
-          ask_no_records: true
+          ask_no_records: true,
+          filed: "FILED Aug 3, 2026 by email to uvpdrecords@uvu.edu — unedited quad/amphitheater exports, 8:15–10:30 a.m. Sept 10 (the window testimony places the defendant contacting event reps), with the transfer-record fallback if seized. Expect the § 63G-2-106 \"security measures\" wall UVU raised Aug 3 on #26-229/#26-230 — the appeal will target § 106’s categorical use."
         },
         {
           agencyId: "uvu",
@@ -984,14 +989,16 @@ const FOIA = {
           summary: "St. George PD — facility records for the night of Sept 11–12 (JOINT: one SGPD filing covers this and the Twiggs-first-interview card — do not double-file)",
           subject: "GRAMA Request: interview room and visitor logs, night of September 11–12, 2025",
           records: "I request the interview-room usage log, visitor log, and lobby/desk log for the St. George Police Department for September 11, 2025, 10:00 p.m. through September 12, 2025, 8:00 a.m., including any record of use of department facilities by another agency (FBI, Utah DPS/SBI, or Washington County Sheriff's Office) during that window. Names of uninvolved members of the public may be redacted.",
-          ask_no_records: true
+          ask_no_records: true,
+          filed: "FILED Aug 3, 2026 via NextRequest as St. George #26-4511 / #26-4512 (the joint facility-records pair; assigned to Julie Clegg, Police Records). Filed with the public-portion legal-authority statement (§ 63G-2-201/308), the $25-capped fee waiver, and the § 204(4)(b) expedite — acknowledged same day."
         },
         {
           agencyId: "wcso",
           summary: "WCSO — the same facility records for the same window (JOINT: one WCSO filing covers this and the Twiggs-first-interview card — do not double-file)",
           subject: "GRAMA Request: interview room and visitor logs, night of September 11–12, 2025",
           records: "I request the interview-room usage log, visitor log, and any facility-use record for the Washington County Sheriff's Office for September 11, 2025, 10:00 p.m. through September 12, 2025, 8:00 a.m., including any record of facility use by another agency (FBI or Utah DPS/SBI) during that window. Names of uninvolved members of the public may be redacted.",
-          ask_no_records: true
+          ask_no_records: true,
+          filed: "FILED Aug 3, 2026, 4:02 p.m. via WCSO’s web form — administrative facility records only (visitor/lobby log, interview-room schedule or officer-assist record incl. the FBI Special Agent Lang ~0100 interview, and any record of Lance Twiggs’ presence), Sept 11 9:00 p.m. – Sept 12 6:00 a.m. Expressly not interview content. JOINT — one WCSO filing covers this card and its twin."
         },
       ]
     },
@@ -1026,7 +1033,7 @@ const FOIA = {
           subject: "GRAMA Request: lead or tip records concerning a reported September 10, 2025 sighting in Panguitch, Utah",
           records: "I request, concerning the Utah Valley University homicide investigation: (1) the lead, tip, or information-report log entry documenting receipt of information that the suspect was seen at a restaurant in Panguitch, Utah on the evening of September 10, 2025 — whether received directly, from the FBI, or from any other agency; and (2) any record documenting investigative follow-up on that information, including any interview of the reporting witnesses or any records request to the business, or a record of the decision not to follow up. Witness personal identifiers may be redacted. If no responsive records exist, I request written confirmation of that fact, including a description of the search conducted.",
           ask_no_records: true,
-          filed: "PENDING — filed Jul 16, 2026 via the DPS GovQA Records Center and acknowledged: one of the five-request P-series batch P012986/87/89/92/95 (exhibit 12.1/12.4 tasking records, Panguitch tip log, Discord evidence intake, ballistics + GSR reports, latent prints 11B–11D). 10-business-day clock, due ~Jul 31."
+          filed: "TWO OF THE BATCH DENIED — P012986 and P012989 denied Aug 1, 2026 by SBI Records Manager Tina Rodriguez as \"exempt from disclosure\"; the email notice’s \"for the following reasons:\" is followed by nothing — the actual grounds are visible only inside the GovQA portal, and which two of the five asks those numbers map to is pending a portal login. Original batch: filed Jul 16, 2026 via GovQA — P012986/87/89/92/95 (exhibit 12.1/12.4 tasking records, Panguitch tip log, Discord evidence intake, ballistics + GSR reports, latent prints 11B–11D)."
         },
         {
           agencyId: "ucao",
@@ -1127,7 +1134,7 @@ const FOIA = {
           subject: "GRAMA Request: records documenting acquisition of Discord records, UVU homicide investigation",
           records: "I request, concerning the Utah Valley University homicide investigation of September 10, 2025: (1) the evidence-intake or property log entry documenting receipt of records from Discord Inc. (or from a federal agency relaying them), including the date of receipt; and (2) the transmittal or cover record accompanying that production, identifying the date of the preservation request or legal process and the date range of the records produced. I am NOT requesting the content of any message — only the log and transmittal records documenting when the records were sought and received.",
           ask_no_records: true,
-          filed: "PENDING — filed Jul 16, 2026 via the DPS GovQA Records Center and acknowledged: one of the five-request P-series batch P012986/87/89/92/95 (exhibit 12.1/12.4 tasking records, Panguitch tip log, Discord evidence intake, ballistics + GSR reports, latent prints 11B–11D). 10-business-day clock, due ~Jul 31."
+          filed: "TWO OF THE BATCH DENIED — P012986 and P012989 denied Aug 1, 2026 by SBI Records Manager Tina Rodriguez as \"exempt from disclosure\"; the email notice’s \"for the following reasons:\" is followed by nothing — the actual grounds are visible only inside the GovQA portal, and which two of the five asks those numbers map to is pending a portal login. Original batch: filed Jul 16, 2026 via GovQA — P012986/87/89/92/95 (exhibit 12.1/12.4 tasking records, Panguitch tip log, Discord evidence intake, ballistics + GSR reports, latent prints 11B–11D)."
         }
       ]
     },
@@ -1153,7 +1160,7 @@ const FOIA = {
           summary: "WCSO — the original September 12 Mitchell interview records",
           subject: "GRAMA Request: records of witness interview conducted September 12, 2025",
           records: "I request the report, recording log entry, or interview summary documenting the interview of the individual who facilitated Tyler Robinson's arrival at the Washington County Sheriff's Office, conducted in the early morning hours of September 12, 2025. The individual is publicly identified in Day 3 preliminary-hearing testimony in State v. Robinson as Mike Mitchell, a retired law-enforcement officer; the interview concerns the Utah Valley University homicide investigation, and the interviewing deputy’s or detective’s name — unknown — is part of the records requested. Personal identifiers other than the interviewers' names and the date, time, location, and duration of the interview may be redacted — the existence, custodian, and metadata of the original interview record are the core of this request.",
-          filed: "PENDING — filed Jul 16, 2026, 1:19 p.m. via WCSO's web form (§ 204 block in the body; fee waiver and expedited asserted; OTHER entitlement). Confirmation received same hour; request number pending. Response due within 10 working days (~Jul 31, Pioneer Day-adjusted).",
+          filed: "DENIED Aug 3, 2026 — WCSO now cites the UCAO blanket restriction notice: records \"classified as Protected Records under UCA § 63G-2-305(10)\" because release \"would create a danger of depriving a person of a right to a fair trial,\" pending \"until the trial is complete.\" A prosecutor’s office in another county pre-classifying these records category-wide, with no record-by-record determination — see the UCAO blanket-hold card. Appeal to the CAO (Sheriff) within 30 days. Originally: filed Jul 16, 2026, 1:19 p.m. via WCSO's web form (§ 204 block in the body; fee waiver and expedited asserted; OTHER entitlement). Confirmation received same hour; request number pending. Response due within 10 working days (~Jul 31, Pioneer Day-adjusted).",
           ask_no_records: true
         }
       ]
@@ -1214,7 +1221,7 @@ const FOIA = {
           subject: "GRAMA Request: correspondence from the Utah County prosecutor concerning statements by sheriff's office personnel",
           records: "I request the letter sent by or on behalf of prosecutor Ryan McBride (Utah County) to the Washington County Sheriff or Sheriff's Office concerning statements by sheriff's office personnel about Tyler Robinson's invocation of his Fifth Amendment rights, together with any written response or internal distribution memo. A version of this letter has already been publicly displayed; I request the office's copy as held.",
           ask_no_records: true,
-          filed: "PENDING — filed Jul 16, 2026, 1:21 p.m. via WCSO's web form (§ 204 block in the body; fee waiver and expedited asserted; OTHER entitlement). Confirmation received same hour; request number pending. Response due within 10 working days (~Jul 31, Pioneer Day-adjusted)."
+          filed: "ANSWERED — WITH A DIFFERENT LETTER, Aug 3, 2026, and the answer is bigger than the ask: Records produced not the McBride letter but a Utah County Attorney \"Notice of Records Restriction\" (Deputy Attorney Katrina Cole, undated) directing WCSO to withhold ALL records \"related to the shooting of Charlie Kirk\" under § 63G-2-305(10) \"until further written notice,\" and to notify UCAO before acting on any request. The temporary records clerk, in writing: \"I did not know this letter existed... I will not be releasing anymore records related to Tyler Robinson until the trial is completed.\" The notice itself is now in hand (banked in foia-mail) — see the UCAO blanket-hold card. Originally: filed Jul 16, 2026, 1:21 p.m. via WCSO's web form (§ 204 block in the body; fee waiver and expedited asserted; OTHER entitlement). Confirmation received same hour; request number pending. Response due within 10 working days (~Jul 31, Pioneer Day-adjusted)."
         }
       ]
     },
@@ -1242,7 +1249,7 @@ const FOIA = {
           subject: "GRAMA Request: firearms comparison report and gunshot-residue analysis, State v. Robinson evidence",
           records: "I request, concerning laboratory analyses in the Utah Valley University homicide investigation of September 10, 2025: (1) the firearms examination report documenting the measurement of the recovered bullet-jacket fragment (lab item referenced in preliminary-hearing testimony as 25 W41 / Exhibit 6) and the comparison of that fragment to the recovered rifle, including the reported result; and (2) the gunshot-residue (GSR) analysis performed on the Dodge Challenger associated with the case, including the result. Both analyses were referenced in public preliminary-hearing testimony on July 9, 2026.",
           ask_no_records: true,
-          filed: "PENDING — filed Jul 16, 2026 via the DPS GovQA Records Center and acknowledged: one of the five-request P-series batch P012986/87/89/92/95 (exhibit 12.1/12.4 tasking records, Panguitch tip log, Discord evidence intake, ballistics + GSR reports, latent prints 11B–11D). 10-business-day clock, due ~Jul 31."
+          filed: "TWO OF THE BATCH DENIED — P012986 and P012989 denied Aug 1, 2026 by SBI Records Manager Tina Rodriguez as \"exempt from disclosure\"; the email notice’s \"for the following reasons:\" is followed by nothing — the actual grounds are visible only inside the GovQA portal, and which two of the five asks those numbers map to is pending a portal login. Original batch: filed Jul 16, 2026 via GovQA — P012986/87/89/92/95 (exhibit 12.1/12.4 tasking records, Panguitch tip log, Discord evidence intake, ballistics + GSR reports, latent prints 11B–11D)."
         }
       ]
     },
@@ -1269,7 +1276,7 @@ const FOIA = {
           subject: "GRAMA Request: latent print examination report, State v. Robinson evidence",
           records: "I request, concerning the Utah Valley University homicide investigation (victim Charlie Kirk; defendant Tyler James Robinson, State v. Robinson): (1) the SBI latent-print examination report (examiner Elisa Farmer) covering the latent prints designated 11B, 11C, and 11D recovered from the window glass below the roof descent point, whose conclusions — including the exclusion of the defendant as the source — were stipulated on the public record at the July 9, 2026 preliminary hearing; and (2) any record of database searches (AFIS/NGI) or comparisons run to identify the actual source of those three prints, including the result or a record that no such search was run.",
           ask_no_records: true,
-          filed: "PENDING — filed Jul 16, 2026 via the DPS GovQA Records Center and acknowledged: one of the five-request P-series batch P012986/87/89/92/95 (exhibit 12.1/12.4 tasking records, Panguitch tip log, Discord evidence intake, ballistics + GSR reports, latent prints 11B–11D). 10-business-day clock, due ~Jul 31."
+          filed: "TWO OF THE BATCH DENIED — P012986 and P012989 denied Aug 1, 2026 by SBI Records Manager Tina Rodriguez as \"exempt from disclosure\"; the email notice’s \"for the following reasons:\" is followed by nothing — the actual grounds are visible only inside the GovQA portal, and which two of the five asks those numbers map to is pending a portal login. Original batch: filed Jul 16, 2026 via GovQA — P012986/87/89/92/95 (exhibit 12.1/12.4 tasking records, Panguitch tip log, Discord evidence intake, ballistics + GSR reports, latent prints 11B–11D)."
         }
       ]
     },
@@ -1531,14 +1538,16 @@ const FOIA = {
           summary: "St. George PD — did the first Twiggs interview happen in your building? (JOINT: file once with the Twiggs-location card — one SGPD request covers both)",
           subject: "GRAMA Request: facility and interview-room records, early morning September 12, 2025",
           records: "I request, for the period September 11, 2025, 9:00 p.m. through September 12, 2025, 6:00 a.m.: (1) any visitor log, lobby log, or facility sign-in record for the St. George Police Department; (2) any interview-room schedule, booking-area log, or officer-assist record reflecting an interview conducted at the facility during that window, including any interview conducted by or with the assistance of a federal agency; and (3) any record reflecting the presence of Lance Twiggs at the facility during that window. I am requesting administrative facility records only — not the content of any interview. If no responsive records exist, I request written confirmation of that fact; sworn testimony in State v. Robinson places an interview at your facility during this window, so the absence of any record would itself be significant.",
-          ask_no_records: true
+          ask_no_records: true,
+          filed: "FILED Aug 3, 2026 via NextRequest as St. George #26-4511 / #26-4512 (the joint facility-records pair; assigned to Julie Clegg, Police Records). Filed with the public-portion legal-authority statement (§ 63G-2-201/308), the $25-capped fee waiver, and the § 204(4)(b) expedite — acknowledged same day."
         },
         {
           agencyId: "wcso",
           summary: "WCSO — or did it happen in yours, with FBI Special Agent Lang? (JOINT: file once with the Twiggs-location card — one WCSO request covers both)",
           subject: "GRAMA Request: facility and interview-room records, early morning September 12, 2025",
           records: "I request, for the period September 11, 2025, 9:00 p.m. through September 12, 2025, 6:00 a.m.: (1) any visitor log, lobby log, or facility sign-in record for the Washington County Sheriff's Office; (2) any interview-room schedule or officer-assist record reflecting an interview conducted at the facility during that window by or with the assistance of the Federal Bureau of Investigation (sworn statements in State v. Robinson identify FBI Special Agent Lang conducting an interview at approximately 0100 hours); and (3) any record reflecting the presence of Lance Twiggs at the facility during that window. I am requesting administrative facility records only — not the content of any interview. If no responsive records exist, I request written confirmation of that fact.",
-          ask_no_records: true
+          ask_no_records: true,
+          filed: "FILED Aug 3, 2026, 4:02 p.m. via WCSO’s web form — administrative facility records only (visitor/lobby log, interview-room schedule or officer-assist record incl. the FBI Special Agent Lang ~0100 interview, and any record of Lance Twiggs’ presence), Sept 11 9:00 p.m. – Sept 12 6:00 a.m. Expressly not interview content. JOINT — one WCSO filing covers this card and its twin."
         }
       ]
     },
@@ -1557,14 +1566,15 @@ const FOIA = {
       implication: "The dispatch district’s own systems answer this without anyone’s testimony: the CAD event log for the transport window, an open-line/abandoned-call category search run as its own record type, the 10:00–11:30 a.m. transfer and diversion records, and — decisive either way — the retention schedule and deletion/purge audit trail. If the call existed and was purged, the purge trail is itself the record. The standing preservation language matters most on this card.",
       sources: [
         { label: "Owens Ep 366, Jul 27 2026 — the open-line call tip", url: "https://www.youtube.com/watch?v=HZvwbfePe7o" },
-        { label: "Owens Ep 369, Jul 31 2026 — the Timpanogos eyewitness (hospital window)", url: "https://www.youtube.com/watch?v=iB-YtO3UZOg" }
+        { label: "Owens Ep 369, Jul 31 2026 — the Timpanogos eyewitness (hospital window)", url: "https://www.youtube.com/watch?v=iB-YtO3UZOg" },
+        { label: "Coleman Ep 153, Aug 2 2026 — the diversion-radio-traffic point and the L3 trauma-routing problem (transcript banked)", url: "https://www.youtube.com/watch?v=RjJPLB5e82w" }
       ],
       requests: [
         {
           agencyId: "uvdispatch",
           summary: "UV Dispatch SSD — CAD logs, open-line/abandoned 911 records, hospital transfer/diversion records, retention + purge audit trail",
           subject: "GRAMA Request: open-line and abandoned 911 call records, CAD event logs, and retention audit trail, September 10, 2025",
-          records: "I request: (1) the CAD (computer-aided dispatch) event log and incident history for the transport of the shooting victim from the Utah Valley University campus to Timpanogos Regional Hospital on September 10, 2025, for the window 12:00 p.m. to 2:00 p.m.; (2) all abandoned-call and open-line call records — including audio and call-detail records — received between 12:00 p.m. and 2:00 p.m. on September 10, 2025 and associated with, or geolocated along, the route between the UVU campus and Timpanogos Regional Hospital. I specifically request that open-line and abandoned calls be searched as their own record category, since these are logged differently from engaged calls and may not have been captured by prior productions; (3) CAD records of inter-facility transfer runs dispatched between 10:00 a.m. and 11:30 a.m. on September 10, 2025 involving Timpanogos Regional Hospital, and any hospital diversion notification or status-change records for Timpanogos Regional Hospital for the same window; and (4) the district’s retention schedule for 911 audio and CAD records, and any deletion or purge audit trail showing whether any September 10, 2025 call or CAD records have been deleted, overwritten, or purged, and if so when and under what authority. If no responsive records exist for any numbered item — in particular, if no open-line or abandoned call exists for the transport window — I request written confirmation of that fact for that item, including a description of the search conducted. I ask that all potentially responsive records — expressly including all September 10, 2025 911 audio, call-detail records, and CAD data, and the deletion/purge audit trail itself — be preserved immediately upon receipt of this request and for the duration of processing and of any administrative appeal or review.",
+          records: "I request: (1) the CAD (computer-aided dispatch) event log and incident history for the transport of the shooting victim from the Utah Valley University campus to Timpanogos Regional Hospital on September 10, 2025, for the window 12:00 p.m. to 2:00 p.m.; (2) all abandoned-call and open-line call records — including audio and call-detail records — received between 12:00 p.m. and 2:00 p.m. on September 10, 2025 and associated with, or geolocated along, the route between the UVU campus and Timpanogos Regional Hospital. I specifically request that open-line and abandoned calls be searched as their own record category, since these are logged differently from engaged calls and may not have been captured by prior productions; (3) CAD records of inter-facility transfer runs dispatched between 10:00 a.m. and 11:30 a.m. on September 10, 2025 involving Timpanogos Regional Hospital, and any hospital diversion notification or status-change records for Timpanogos Regional Hospital for the same window; and (4) the district’s retention schedule for 911 audio and CAD records, and any deletion or purge audit trail showing whether any September 10, 2025 call or CAD records have been deleted, overwritten, or purged, and if so when and under what authority; and (5) dispatch radio traffic recordings and radio log entries for the 12:00 p.m.–2:00 p.m. transport window and the 10:00–11:30 a.m. transfer window, including any hospital diversion or status-change announcements — if a hospital is on diversion, dispatch radio traffic states it. If no responsive records exist for any numbered item — in particular, if no open-line or abandoned call exists for the transport window — I request written confirmation of that fact for that item, including a description of the search conducted. I ask that all potentially responsive records — expressly including all September 10, 2025 911 audio, call-detail records, and CAD data, and the deletion/purge audit trail itself — be preserved immediately upon receipt of this request and for the duration of processing and of any administrative appeal or review.",
           ask_no_records: true,
           filed: "NOT FILED — DRAFTED Aug 2, 2026, ready to file; retention clocks are the enemy on this one. Route: openrecords.utah.gov (entity: Utah Valley Dispatch Special Service District); if the district is not listed, email its administrative office with the letter attached."
         }
@@ -1581,11 +1591,12 @@ const FOIA = {
         { label: "Owens Ep 369, Jul 31 2026 — the medical-examiner discovery (transcript banked in the library)", url: "https://www.youtube.com/watch?v=iB-YtO3UZOg" }
       ],
       status: "reported",
-      finding: "Dr. Deidra Amoroso, Utah’s Chief Medical Examiner (tenure beginning July 1, 2024), who signed off on the Kirk autopsy, has resigned with no stated reason. Dr. Andrew Guardo, promoted to Deputy Chief Medical Examiner in 2024, has also departed — his appointment as Dutchess County, New York Medical Examiner was announced on or about March 11, 2026. Coleman’s statute point sharpens the third ask: whether a county attorney or the Attorney General ever submitted a written request for this autopsy is itself a discrete record — and so is its documented absence. The claimed \"fed overseeing the autopsy\" makes the chief’s separation file doubly relevant. Rides as attributed discourse until the paper lands.",
+      finding: "Dr. Deidra Amoroso, Utah’s Chief Medical Examiner (tenure beginning July 1, 2024), who signed off on the Kirk autopsy, has resigned with no stated reason. Dr. Andrew Guardo, promoted to Deputy Chief Medical Examiner in 2024, has also departed — his appointment as Dutchess County, New York Medical Examiner was announced on or about March 11, 2026. Coleman’s statute point sharpens the third ask: whether a county attorney or the Attorney General ever submitted a written request for this autopsy is itself a discrete record — and so is its documented absence. The claimed \"fed overseeing the autopsy\" makes the chief’s separation file doubly relevant. New (Aug 3, via Danks): Brian Harpole — head of event security that day, on the Shawn Ryan Show — says he pressed a Timpanogos doctor on autopsy timing (\"a day, a day and a half\"), was beside Kirk’s chief of staff when the Vice President called asking \"what do you need\" and answered \"we need an autopsy now,\" and insists \"it was done — get the report when it comes out\" — an on-record claim that an autopsy and a report exist, sitting against TPUSA’s own earlier no-autopsy signals. It lands exactly on the paper this card requests. Rides as attributed discourse until the paper lands.",
       implication: "Five pieces of administrative and personnel paper test the claims without touching the § 26B-8-217-restricted autopsy file: the separation records for both doctors, the written autopsy authorization or written confirmation none exists, the body custody and transport log from Timpanogos to the ME facility, and the burial-transit/disposition permit — the paper answer to the cremation question, since permits state the disposition and name the receiving jurisdiction. Separation records are generally more reachable than anything in the case file.",
       sources: [
         { label: "Owens Ep 366, Jul 27 2026 — the Amoroso resignation", url: "https://www.youtube.com/watch?v=HZvwbfePe7o" },
-        { label: "Owens Ep 369, Jul 31 2026 — the ME thread continued", url: "https://www.youtube.com/watch?v=iB-YtO3UZOg" }
+        { label: "Owens Ep 369, Jul 31 2026 — the ME thread continued", url: "https://www.youtube.com/watch?v=iB-YtO3UZOg" },
+        { label: "Danks, Aug 3 2026 — Harpole on Shawn Ryan: \"we need an autopsy now... it was done\" (transcript banked)", url: "https://www.youtube.com/watch?v=JkDwK0ND0Kc" }
       ],
       requests: [
         {
@@ -1649,6 +1660,58 @@ const FOIA = {
           records: "I request the publicly releasable federal employment information for former NCIS employee Foster Curtis, who served approximately 21 years with NCIS and separated on or about June 2, 2025 from a position as a division chief within the NCIS Office of the Inspector General: (1) his positions and titles held, grades, duty stations, and dates of service (information releasable for federal employees under FOIA and 5 C.F.R. § 293.311); and (2) the effective date and nature of his separation. This is a request for the discrete, routinely releasable employment-data record of a single named former employee; it is not a broad search. If no responsive records exist, please confirm that in writing, including a description of the search conducted.",
           ask_no_records: true,
           filed: "NOT FILED — DRAFTED Aug 2, 2026 — email ncis_foia@ncis.navy.mil (Attn: FOIA, Code 00LJF, Quantico). The Richmond IG records are Virginia FOIA — citizens-only — and stay parked until a Virginia-resident requester exists."
+        }
+      ]
+    },
+    {
+      id: "ucao-blanket-hold",
+      short: "The UCAO blanket hold — one letter to rule them all",
+      challenge: "A Utah County deputy attorney sent another county’s sheriff a notice pre-classifying ALL Kirk-shooting records as protected — category-wide, no record-by-record determination, \"until further written notice.\" How many entities got one?",
+      categories: ["Kirk assassination & coverup"],
+      entities: ["ucao-ent", "wcso-ent"],
+      investigator: "Produced by WCSO itself, Aug 3 2026, in response to this docket’s McBride-letter request",
+      investigatorLinks: [],
+      status: "confirmed",
+      finding: "In hand: a \"Notice of Records Restriction Due to Ongoing Investigation\" from the Utah County Attorney’s office (Deputy Attorney Katrina Cole, on letterhead listing County Attorney Jeffrey S. Gray and division chiefs including Ryan McBride), sent to the Washington County Sheriff’s Office: under § 63G-2-305(10), ALL \"printed and electronic correspondence, arrest records, witness statements, reports, notes, recordings, internal communications, interviews, body camera footage, or other records related to the shooting of Charlie Kirk on September 10, 2025\" are to be withheld \"until further written notice from this office,\" with staff told to \"notify our office immediately before taking any action\" on any request. WCSO’s temporary records clerk produced it Aug 3, 2026 with the note that she \"did not know this letter existed,\" called to confirm it is \"still active,\" and will release nothing Robinson-related until trial ends. The same notice was cited the same day to deny this docket’s WCSO CAD-log and Mitchell-interview requests.",
+      implication: "GRAMA classification is record-by-record and belongs to the record’s custodian — § 305(10) protects records whose release would actually interfere, not every record an outside prosecutor labels in advance, and segregability (§ 63G-2-308) survives any classification. A standing instruction from one county’s prosecutor to another county’s sheriff — \"notify our office before taking any action\" — is itself a records-suppression paper trail, and it is now in hand. The follow-on ask writes itself: every such notice UCAO has issued, the full recipient list, and the authorization behind the campaign. Each additional recipient is another denial letter that traces back to one desk.",
+      sources: [
+        { label: "The notice itself — produced by WCSO Aug 3, 2026 (banked in the library’s foia-mail archive)", url: "" }
+      ],
+      requests: [
+        {
+          agencyId: "ucao",
+          summary: "UCAO — every Notice of Records Restriction issued on this case, the recipient list, and the authorization behind them",
+          subject: "GRAMA Request: notices of records restriction issued concerning the September 10, 2025 UVU shooting",
+          records: "I request: (1) each \"Notice of Records Restriction\" or similar letter issued by or on behalf of the Utah County Attorney’s office concerning records related to the September 10, 2025 shooting at Utah Valley University — including the notice signed by Deputy Attorney Katrina Cole and sent to the Washington County Sheriff’s Office, a copy of which I hold; (2) the distribution or recipient list for such notices — each governmental entity to which one was sent, with dates; (3) any written responses or notifications received from recipient entities under the notices’ instruction to \"notify our office immediately\" upon receiving a records request; and (4) the record documenting the decision to issue the notices — the requesting official, authorization, and date. Each item names discrete administrative correspondence of the office; this is not a request for investigative files. If no responsive record exists for any numbered item, I request written confirmation of that fact for that item, including a description of the search conducted.",
+          ask_no_records: true,
+          filed: "NOT FILED — DRAFTED Aug 3, 2026, ready to file to ucao@utahcounty.gov / UCAOrecords@utahcounty.gov. The office’s own notice invites the ask: correspondence ABOUT restricting records is not itself a restricted investigative record."
+        }
+      ]
+    },
+    {
+      id: "sept11-rifle-removal",
+      short: "The Sept 11 morning rifle walk-out",
+      challenge: "An eyewitness filmed a handcuffed man walked off UVU grounds at ~10:30 a.m. September 11 while an officer separately carried a tagged rifle to a vehicle — before Robinson’s surrender, after media were cleared from the area. Whose rifle, whose arrest, and where’s the paper?",
+      categories: ["Crime scene handling", "Witness statements"],
+      entities: ["uvu-ent"],
+      investigator: "Elizabeth Lane TV (eyewitness \"Chelsea,\" SLC, on stream with her video)",
+      investigatorLinks: [
+        { label: "The War on X stream, Aug 2026 — the eyewitness segment (transcript banked in the library)", url: "https://www.youtube.com/watch?v=3DMcnAcaIHA" }
+      ],
+      status: "reported",
+      finding: "An in-studio eyewitness (\"Chelsea,\" Salt Lake City) describes and shows video: at roughly 10:30 a.m. on September 11, 2025 — less than 24 hours after the shooting, before Tyler Robinson’s surrender, while the suspect was officially still at large — a man identified on the stream as Russell Kennington was walked off the UVU grounds in handcuffs while a bald officer separately carried a rifle bearing an evidence tag to a vehicle, staged so the man and the rifle were never in frame together. She says police first cleared all media across the street and ordered her out of the area, making hers the only camera on it (\"a million% sure\" the rifle carried an evidence tag); she has not appeared on any witness list. The stream adds that Kennington posted his own video walking UVU on September 10. Rides as attributed discourse until the records land.",
+      implication: "If a person was detained and a tagged rifle recovered on campus the morning of September 11, ordinary policing generated paper: an incident or arrest report, a property/evidence log entry for the rifle, a scene log, and whatever order cleared the media. Either that paper exists — identifying a second detained person and a second rifle the public record never mentions — or no responsive records exist in writing, which is its own finding for an armed detention filmed on video. The found-rifle timeline in the K9 card (Freya’s clean search, the ordered re-search) runs through the same morning.",
+      sources: [
+        { label: "The War on X — eyewitness account + video, and the Kennington self-posted Sept 10 video claim", url: "https://www.youtube.com/watch?v=3DMcnAcaIHA" }
+      ],
+      requests: [
+        {
+          agencyId: "uvupd",
+          summary: "UVU PD — Sept 11 morning incident/detention records, the tagged-rifle property entry, scene log, and the media-clearance order",
+          subject: "GRAMA Request: incident, detention, and property records — UVU campus, morning of September 11, 2025",
+          records: "I request, for September 11, 2025, 8:00 a.m. to 1:00 p.m., concerning the UVU campus: (1) any incident report, detention or arrest record, or field-interview record for any individual detained on or escorted from the campus grounds; (2) the property or evidence log entry for any firearm recovered from or transported off the campus grounds in that window, including the recovering officer and receiving custody; (3) the crime-scene or perimeter log for the areas under control that morning; and (4) any order, instruction, or radio-traffic record directing media or the public to leave the area adjacent to the scene during that window. Each item names a discrete, routinely generated record; this is not a broad search. If no responsive record exists for any numbered item, I request written confirmation of that fact for that item, including a description of the search conducted.",
+          ask_no_records: true,
+          filed: "NOT FILED — DRAFTED Aug 3, 2026, ready to file to uvpdrecords@uvu.edu. Item (2) is the sharp end: a tagged rifle on video either has a property entry or it does not."
         }
       ]
     }
