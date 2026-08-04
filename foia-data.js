@@ -585,7 +585,7 @@ const FOIA = {
             { label: "Time of occurrence", value: "full day — September 10, 2025, with the retention/audit window running through October 15, 2025" }
           ],
           ask_no_records: true,
-          filed: "PENDING — FILED Aug 4, 2026 via the DPS GovQA Records Center as P014173-080426 (Records Center status: Assigned / In Progress). The Aug 2 draft as filed: Sept 10 ALPR detections + images + hotlist alerts for the hospital corridors including I-15 mainline/interchange cameras between the Orem and Provo exits (11:00 a.m.–3:00 p.m.), the Flock Network Audit log of every query against that day’s data, and the retention/hold paper. TIME-CRITICAL preservation language rode with it."
+          filed: "NOT FILED — DRAFTED Aug 2, 2026, ready to file; TIME-CRITICAL (rolling retention). CORRECTION Aug 4: P014173 was briefly carded here, but its GovQA acknowledgment quotes the backpack-seizure request — P014173 belongs to the backpack card. This Flock/UHP draft has no acknowledgment on record and is still unfiled."
         },
         {
           agencyId: "wcso",
@@ -796,7 +796,8 @@ const FOIA = {
           summary: "Secret Service — NSSE/SEAR designation and security-lead records for the Glendale memorial",
           subject: "FOIA Request: NSSE or SEAR designation and operational security-lead records for the September 2025 Charlie Kirk memorial, Glendale, Arizona",
           records: "I request records sufficient to show whether the memorial service for Charlie Kirk held on or about September 21, 2025 at State Farm Stadium in Glendale, Arizona was designated a National Special Security Event (NSSE) or assigned a Special Event Assessment Rating (SEAR) level, including the designation determination, request, or notification, and any record identifying the federal agency assigned operational security lead for the event. I am requesting the designation and lead-agency records only, not tactical operational details whose release could reasonably endanger safety. To keep this request narrow and minimize search burden, I am not seeking general email correspondence.",
-          ask_no_records: true
+          ask_no_records: true,
+          filed: "PENDING — FILED Aug 4, 2026 via SecureRelease (DHS → United States Secret Service); acknowledged same day as FOIA File Number 2026-USSSFOIA-01703. Fee-waiver and expedite determinations to come separately per the ack. FOIA Public Liaison: Kevin Tyrrell, (202) 220-1819; FOIA@usss.dhs.gov."
         }
       ]
     },
@@ -829,7 +830,8 @@ const FOIA = {
             { label: "Date of occurrence", value: "09/10/2025" },
             { label: "Time of occurrence", value: "midday, in the hours after the shooting (bus-stop items collected during the response)" }
           ],
-          ask_no_records: true
+          ask_no_records: true,
+          filed: "PENDING — FILED Aug 4, 2026 via the DPS GovQA Records Center as P014173-080426; acknowledged same day with the request text quoted back (property/evidence seizure records for the unattended items at the Fulton Library bus stops — backpack, jacket, gloves). Records Center status: Assigned / In Progress."
         },
         {
           agencyId: "fbi",
@@ -1052,7 +1054,8 @@ const FOIA = {
             { label: "Date of occurrence", value: "09/11/2025" },
             { label: "Time of occurrence", value: "evening — flight arriving approximately 11:37 p.m.; any return through September 12, 2025" }
           ],
-          ask_no_records: true
+          ask_no_records: true,
+          filed: "PENDING — FILED Aug 4, 2026 via the DPS GovQA Records Center as P014180-080426; acknowledged same day with the request text quoted back (flight log, tasking record, and passenger manifest for the Sept 11, 2025 SLC’-to-St. George flight arriving ~11:37 p.m., any return through Sept 12, who requested it and when). Preservation ask rode with it."
         }
       ]
     },
