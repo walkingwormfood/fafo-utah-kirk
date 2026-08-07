@@ -119,6 +119,12 @@ const FOIA = {
     { id: "epa", name: "U.S. Environmental Protection Agency", email: null, fed: true,
       portal: "https://www.epa.gov/foia",
       submitNote: "EPA takes FOIA electronically — via its FOIAXpress public access link (epa.gov/foia) or FOIA.gov — or by mail to the National FOIA Office. FOIAonline is retired; email submission is not offered." },
+    { id: "faa", name: "Federal Aviation Administration", email: null, fed: true,
+      portal: "https://www.faa.gov/foia",
+      submitNote: "FAA FOIA goes through faa.gov/foia (verified Aug 7, 2026) — requests route to the applicable Service Center FOIA office (Air Traffic records vs. Aircraft Registry are separate centers; name the facility and records explicitly so routing is right). ATC voice recordings are answered by the facility's Service Center — standard retention is short (~45 days), so preservation language and the hold-record ask carry the weight for anything from September 2025. The complete aircraft record for a tail number can ALSO be ordered without FOIA from the Aircraft Registry copy service (aircraft.faa.gov/e.gov/nd — paper or CD, small fee) — the faster lane for registry files." },
+    { id: "army", name: "U.S. Department of the Army", email: null, fed: true,
+      portal: "https://www.foia.gov/",
+      submitNote: "File via FOIA.gov selecting Department of the Army; the Army FOIA program runs through RMDA (foia.army.mil). For contractor-operated aviation records, name the program (ARES/HADES), the operating unit/location (Biggs Army Airfield, Fort Bliss), and the tail numbers so RMDA can route to the holding command; expect referral hops." },
     { id: "navsea", name: "U.S. Navy — Naval Sea Systems Command (NAVSEA)", email: "NAVSEAFOIA@navy.mil", fed: true,
       portal: "https://www.securerelease.us",
       submitNote: "NAVSEA — the parent command of NSWC Crane — accepts FOIA by email (NAVSEAFOIA@navy.mil), the SecureRelease portal (securerelease.us), FOIA.gov, or mail (Commander, NAVSEA, SEA 00A5, FOIA/Privacy Program Division, 1333 Isaac Hull Ave SE, Washington Navy Yard, DC 20376-2101). Requester Service Center: 202-781-4124." },
@@ -193,6 +199,9 @@ const FOIA = {
     { id: "provo", name: "Provo Police Department (City of Provo)", email: null,
       portal: "https://www.provo.gov/697/Police-GRAMA-Request",
       submitNote: "Provo takes police GRAMA requests through its own records page (provo.gov/697 — Police GRAMA Request); Records Office 801-852-6231. Route verified Aug 2, 2026." },
+    { id: "provocity", name: "City of Provo (City Recorder — non-police records, incl. airport)", email: "recorder@provo.org",
+      portal: "https://www.provo.gov/694/GRAMA-Request",
+      submitNote: "Non-police Provo City records (the city owns Provo Municipal Airport) go through the City Recorder: GRAMA form to recorder@provo.org, office 801-852-6524 (route verified Aug 7, 2026 against provo.gov/694). Denials appeal to the Mayor via the Record Appeals Board." },
     { id: "pgpd", name: "Pleasant Grove Police Department", email: null,
       portal: "https://www.pgcityutah.gov/departments/police/index.php",
       submitNote: "CONFIRM ADDRESS BEFORE SENDING — no dedicated records email surfaced in the Aug 2, 2026 verification pass. Check pgcityutah.gov for the records officer/city recorder or call 801-785-3506 (108 South 100 East, Pleasant Grove, UT 84062)." },
@@ -245,7 +254,8 @@ const FOIA = {
     { id: "amoroso", name: "Dr. Deidra Amoroso (Utah Chief ME)", type: "person" },
     { id: "guardo", name: "Dr. Andrew Guardo (Deputy Chief ME)", type: "person" },
     { id: "ucao-ent", name: "Utah County Attorney’s Office", type: "org" },
-    { id: "pag", name: "Presidential Airlift Group / WHMO", type: "org" }
+    { id: "pag", name: "Presidential Airlift Group / WHMO", type: "org" },
+    { id: "leidos", name: "Leidos (ARES/HADES contractor-operator)", type: "org" }
   ],
 
   investigations: [
@@ -1609,10 +1619,11 @@ const FOIA = {
         { label: "Coleman Ep. 141", url: "https://www.youtube.com/watch?v=FT8kJN3n_cA" }
       ],
       status: "contested",
-      finding: "A .223 round was found September 10 on the computer science building roof — a different caliber than the charged rifle — documented by SBI Agent Ben Schneider, written off as an officer cycling his rifle, with testimony that there was \"no line of sight\" to the tent. A drone-photogrammetry rendering (Paramount Tactical) shows a direct line of sight at ~320–350 yards. Friday's testimony pinned the location — \"the far east side\" of the computer science building roof — and left the underlying question standing: why an officer with a loaded rifle was on that roof at all, after George Zinn was already in custody and the campus response had moved on.",
+      finding: "A .223 round was found September 10 on the computer science building roof — a different caliber than the charged rifle — documented by SBI Agent Ben Schneider, written off as an officer cycling his rifle, with testimony that there was \"no line of sight\" to the tent. A drone-photogrammetry rendering (Paramount Tactical) shows a direct line of sight at ~320–350 yards. Friday's testimony pinned the location — \"the far east side\" of the computer science building roof — and left the underlying question standing: why an officer with a loaded rifle was on that roof at all, after George Zinn was already in custody and the campus response had moved on. New salience (John Cullen, Aug 2026): his acoustics argument (see the acoustics card) has him extending the state's own claimed trajectory 350–600 yards past the courtyard — a line that passes over this roof; he closes his UAV episode asking whether the unpreserved round on the science building is \"the spent round from the unit that took the shot.\" His platform hypothesis rides as hypothesis; the pull on this card is unchanged: the round's paper, or the absence of it.",
       implication: "Either an officer left a live round on a rooftop and the scene wasn't preserved, or the round mattered and wasn't treated as evidence. Schneider's report, the evidence log, and any overwatch deployment records are all discrete named documents. (Status contested: the round and its official accounting are testimony; the line-of-sight dispute is outside analysis.)",
       sources: [
         { label: "Day 2 + Day 3 testimony; Friday testimony (roof location); Paramount Tactical 3D rendering", url: "" },
+        { label: "Cullen — Hypothetically Speaking, Aug 2026: the trajectory-extension argument and the closing question about this round (transcript banked in the library)", url: "https://youtu.be/t7y7OxNs7rA" },
         { label: "Source-relationship note (Jul 19, receipted: andrewkolvet-karen-faceplant-2078678266853064733 fxtwitter + syndication; trend grab: X trend 2026-07-20 - Acting-alone debate reignites - POSTS.md): TPUSA spokesman Andrew Kolvet, on the record — \"Paramount Tactical is not an 'affiliate.' He's not paid. We don't coordinate. He's his own man.\" No card on this deck carries the circulating paid-operatives claim, so the denial is logged here, where Paramount Tactical's rendering is a named source: TPUSA's own account of that source's relationship to it. Whatever the truth, both sides are now on the record", url: "https://x.com/AndrewKolvet/status/2078678266853064733" }
       ],
       requests: [
@@ -1851,6 +1862,90 @@ const FOIA = {
           ],
           ask_no_records: true,
           filed: "NOT FILED — DRAFTED Aug 7, 2026, ready to file via the DPS GovQA Records Center. A no-records answer narrows the truck to the contractor or another agency; a responsive record names who staged what where."
+        }
+      ]
+    },
+    {
+      id: "n1098l-ares-overflight",
+      challenge: "An Army spy-plane fleet flew low-approach \"rehearsals\" across the West all week — and made one over Provo at the shooting hour.",
+      short: "AXL10 over Provo",
+      categories: ["Timeline contradictions", "Kirk assassination & coverup"],
+      entities: ["dod", "leidos"],
+      investigator: "Andy Lou (Substack, Apr 7 2026) · read on air by John Cullen",
+      investigatorLinks: [
+        { label: "Cullen — Bedtime Stories, Aug 2026: the Substack read in full", url: "https://youtu.be/FPbXuDzxMNY" },
+        { label: "Joe Kent + Cullen — the N1098L discussion", url: "https://youtu.be/riIZFzLBYSc" }
+      ],
+      status: "reported",
+      finding: "The Substack's core claims, sourced to ADS-B Exchange flight data: N1098L is a Bombardier Global 6500 (s/n 60098, call sign AXL10), part of the U.S. Army's ARES airborne-reconnaissance/electronic-warfare program operated by Leidos, flying with the HADES training fleet based at Biggs Army Airfield (Fort Bliss, El Paso) — near-daily western-U.S. training missions under AXL call signs. In the days before September 10 it flew a series of low-altitude passes at western airports (Amarillo 268 ft AGL; a Fort Bliss–Boise run via a ~430 ft AGL low pass around 8:30 a.m.; Casper, Wyoming at 226 ft AGL — read by the author as dress rehearsals), then made a low approach over Provo at the shooting hour — the one airport in the series with an active public ATC feed, used \"only on the operational day.\" That afternoon three ARES aircraft converged at Fort Bliss (N9PS/AXL90 in from Midland; N1098L at 2:34 p.m. from Casper; N21000L/AXL21 already on the ground) alongside a SAM-call-sign VIP transport that had flown Fort Huachuca–Fort Bliss and departed for Washington at 5:13 p.m. The flight tracks are open-source-checkable; the rehearsal/demonstration reading and any connection to the shooting are the author's inferences, and the piece carries its own epistemic-status disclaimer. Joe Kent, ex-Army and on the record with Cullen, treats the aircraft's presence as established and unexplained.",
+      implication: "Every load-bearing claim terminates in a record nobody has requested. FAA's daily facility log for Provo tower fixes whether a low approach happened and when; radar/automation data fixes the track; the Army's flight schedule for a contractor-operated training fleet is administrative paper, not an intelligence product; and ATC voice retention is short — whether anything from September 10 was ever placed under hold is itself a record. Either the paper shows a training fleet doing training, or it shows something that needs explaining. Both outcomes are findings.",
+      sources: [
+        { label: "Andy Lou, \"The Solution to the Charlie Kirk Assassination...\" (Substack, Apr 7 2026), as read in full on Bedtime Stories (transcript banked in the library)", url: "https://youtu.be/FPbXuDzxMNY" },
+        { label: "ADS-B Exchange — the cited open-source flight data (checkable independently)", url: "https://www.adsbexchange.com/" }
+      ],
+      requests: [
+        {
+          agencyId: "faa",
+          summary: "FAA — Provo tower daily facility log, radar track data, retained ATC records + any preservation hold, and the N1098L registry file",
+          subject: "FOIA Request: Provo (PVU) ATCT facility records and radar data, September 10, 2025; aircraft registry file N1098L",
+          records: "Under the Freedom of Information Act, I request: (1) the daily record of facility operation (FAA Form 7230-4 or equivalent) for the Provo, Utah (PVU) airport traffic control tower for September 10, 2025; (2) any retained air traffic control voice recordings and any radar/automation track data covering the Provo Class D airspace for September 10, 2025, 11:30 a.m.–1:30 p.m. Mountain Time — including data reflecting any low approach or go-around by a transient turbojet aircraft in that window; (3) any litigation-hold, preservation, or retention-extension record concerning September 10, 2025 Provo air traffic records; and (4) the complete aircraft registry file for registration N1098L, including registration, airworthiness, and recorded ownership documents. If voice recordings from that date no longer exist, I request written confirmation of that fact and the record documenting their disposition. Please also retain this correspondence and all records related to the processing of this request, including the records described above.",
+          ask_no_records: true,
+          filed: "NOT FILED — DRAFTED Aug 7, 2026, ready to file via faa.gov/foia (name the Air Traffic and Aircraft Registry service centers so routing splits correctly). Standard ATC voice retention (~45 days) means item (3) — the hold record — is the live question for the recordings; the 7230-4 facility log and the registry file are routine retained records. The registry file can also be ordered without FOIA from aircraft.faa.gov/e.gov/nd."
+        },
+        {
+          agencyId: "provocity",
+          summary: "City of Provo — airport operations records for Sept 10 (the city owns the field)",
+          subject: "GRAMA Request: Provo Municipal Airport operations records, September 10, 2025",
+          records: "I request, for Provo Municipal Airport for September 10, 2025: (1) the airfield operations log, daily operations report, or airport manager's log; (2) any record of a low approach, go-around, overflight complaint, or unusual operation noted that day; (3) transient or itinerant aircraft records, landing or fuel records, and any FBO-reported activity records held by the city for that day; and (4) any correspondence between airport or city staff and any federal agency concerning September 10, 2025 airport operations. Please also retain this correspondence and all records related to the processing of this request. If no responsive record exists for any numbered item, I request written confirmation of that fact for that item, including a description of the search conducted.",
+          ask_no_records: true,
+          filed: "NOT FILED — DRAFTED Aug 7, 2026, ready to file to recorder@provo.org (City Recorder, 801-852-6524 — the non-police GRAMA lane; verified Aug 7). Small, dated, single-facility ask."
+        },
+        {
+          agencyId: "army",
+          summary: "Army — ARES flight schedules for the three tails, Sept 5–12, and the Leidos operating contract",
+          subject: "FOIA Request: flight schedules and operating contract, ARES/HADES contractor-operated aircraft, September 2025",
+          records: "Under the Freedom of Information Act, I request: (1) the flight schedules, training schedules, or mission logs for the contractor-operated ARES aircraft bearing civil registrations N1098L, N9PS, and N21000L for September 5–12, 2025, including departure/destination airfields — I am not requesting sensor products, collection records, or intelligence information; (2) the contract or task order (number and statement of work) under which Leidos operates the ARES/HADES training fleet based at Biggs Army Airfield, Fort Bliss; and (3) any record of a September 10, 2025 flight by any of those aircraft to, from, or over Provo or Orem, Utah. If no responsive record exists for any numbered item, I request written confirmation of that fact for that item, including a description of the search conducted. Please also retain this correspondence and all records related to the processing of this request.",
+          ask_no_records: true,
+          filed: "NOT FILED — DRAFTED Aug 7, 2026, ready to file via FOIA.gov (Department of the Army; RMDA routes to the holding command — expect referral hops). The schedule-and-contract framing keeps the ask administrative: where the planes flew is not an intelligence product, and the Leidos contract is FAR-routine paper."
+        }
+      ]
+    },
+    {
+      id: "acoustics-dont-triangulate",
+      challenge: "Crack-thump timing from different spectator mics points at different origins — recordings of one shot should all agree.",
+      short: "Acoustics don't triangulate",
+      categories: ["Physical evidence", "Video evidence"],
+      entities: ["robinson", "sbi", "fbi-ent"],
+      investigator: "John Cullen (Hypothetically Speaking)",
+      investigatorLinks: [
+        { label: "Cullen — the crack-thump walk-through and the echo hypothesis", url: "https://youtu.be/t7y7OxNs7rA" }
+      ],
+      status: "reported",
+      finding: "Cullen ran crack-thump analysis — timing the gap between a bullet's supersonic crack and the muzzle report — across multiple spectator recordings of the shot. His stated control: the same method on the Las Vegas shooting recordings converged cleanly on one origin. Here it doesn't: early calculations clustered at 78–85 yards (against the narrative's ~142), other recordings produced different numbers, and no set of recordings intersected at a single point — \"the science wasn't sciencing.\" His resolution: the courtyard is a stadium of vertical walls, and what he timed as the muzzle report was actually the echo of the crack — meaning no true muzzle report may exist in any recording, which is the signature of a shot from well beyond the courtyard, a suppressed weapon, or both. Extending the state's claimed trajectory 350–600 yards on the same bearing crosses the computer science building roof (where the unpreserved unfired round was found — see the second-roof card) and reaches a junior-high parking lot at ~600 yards. From there his identification of a specific platform — a Barrett REC10 carried on an Elbit Lanius-type UAV, tied to the day's drone sightings — is his explicitly-labeled hypothesis, disclaimed on air.",
+      implication: "The theory is testable against the state's own paper without adopting any of it. A rifle homicide with a contested origin generates a shooting-reconstruction or trajectory analysis — a discrete report with an author and a date — and event recordings either were or were not submitted for forensic audio analysis. If the file contains a trajectory analysis, it either survives contact with the acoustics or it doesn't; if the file contains no acoustic analysis and no reconstruction, the state built a 142-yard narrative without testing its own recordings — and that absence is the finding.",
+      sources: [
+        { label: "Cullen — Hypothetically Speaking, Aug 2026 [5:30–17:00]: the method, the Vegas control, the non-convergence, the echo hypothesis; [16:45–18:45]: the trajectory extension (transcript banked in the library)", url: "https://youtu.be/t7y7OxNs7rA" }
+      ],
+      requests: [
+        {
+          agencyId: "dps",
+          summary: "DPS/SBI — the shooting-reconstruction/trajectory analysis and any acoustic analysis of event recordings",
+          subject: "GRAMA Request: trajectory reconstruction and audio analysis records, September 10, 2025 UVU homicide",
+          records: "I request, concerning the September 10, 2025 Utah Valley University homicide investigation: (1) the shooting-reconstruction, trajectory, or shot-origin analysis report(s) prepared in the investigation — including any bullet-path documentation (rod, laser, or photogrammetric), the stated origin or origin range, and the identity of the preparing examiner or unit; (2) any acoustic, audio, or gunshot-sound analysis performed on event recordings, including any report of such analysis and any referral of recordings to an outside laboratory for that purpose, with the transmittal record; and (3) if no trajectory reconstruction or acoustic analysis exists in the file, written confirmation of that fact for each, including a description of the search conducted. Each item names a discrete, routinely generated forensic record; I am not requesting the investigative file. Please also retain this correspondence and all records related to the processing of this request, including the records described above.",
+          parties: "Tyler James Robinson (defendant); Charlie Kirk (victim); preparing examiner or unit, name unknown — identification is part of the request.",
+          formAnswers: [
+            { label: "Date of occurrence", value: "09/10/2025" }
+          ],
+          ask_no_records: true,
+          filed: "NOT FILED — DRAFTED Aug 7, 2026, ready to file via the DPS GovQA Records Center. Either the reconstruction exists and can be graded against the recordings, or the 142-yard narrative was never tested against its own audio."
+        },
+        {
+          agencyId: "fbi",
+          summary: "FBI — forensic audio/gunshot-acoustic analysis records and any trajectory analysis contribution",
+          subject: "FOIA Request: forensic audio and trajectory analysis records, September 10, 2025 Utah Valley University investigation",
+          records: "In connection with the FBI's investigation of the September 10, 2025 shooting at Utah Valley University, I request: (1) any forensic audio, gunshot-acoustic, or signal-analysis examination records concerning recordings of the shot — including the laboratory report, the submitting agency, and the evidence transmittal record; and (2) any trajectory, shot-origin, or shooting-reconstruction analysis prepared by or for the FBI in that investigation, including the report and its transmittal to any state agency. Each item names a discrete laboratory or examination record; this is not a broad search for investigative files, and I am not requesting the recordings' evidentiary content. If no responsive record exists for either item, please confirm that in writing for that item, including a description of the search conducted. Please also retain this correspondence and all records related to the processing of this request.",
+          ask_no_records: true,
+          filed: "NOT FILED — DRAFTED Aug 7, 2026 — file via eFOIPA (existing account), one subject per submission. Expect Exemption 7(A); a written refusal to confirm whether the shot's audio was ever analyzed is itself citable."
         }
       ]
     }
