@@ -407,8 +407,11 @@
 
   // Where the records fight stands for a thread — shared by cards, chart, and the
   // status chips on the control panel (one filter state across both views).
+  // A filed-string beginning "NOT FILED" is a draft note, not a filing — those
+  // requests are still unclaimed.
+  const isFiled = r => !!(r.filed && !/^NOT FILED/i.test(r.filed));
   const rowStatus = inv => inv.requests.every(r => r.response) ? "posted" :
-                           inv.requests.some(r => r.filed && !r.response) ? "pending" : "unclaimed";
+                           inv.requests.some(r => isFiled(r) && !r.response) ? "pending" : "unclaimed";
   const showStatus = { unclaimed: true, pending: true, posted: true };
 
   const wrap = $("findings");
@@ -444,7 +447,7 @@
                      : `<button class="btn viewpending" title="Click for the full request-refinement history">⏳ ${r.history ? "View progression" : "View status"}</button>`) : "")
                : r.response
                ? `<button class="btn viewpending" title="This request has been answered — click for the response">📬 View answer</button>`
-               : r.filed
+               : isFiled(r)
                ? (f => f.startsWith("DENIED")
                    ? `<button class="btn viewpending denial" title="Denied — click for the determination and where the appeal stands">⛔ View denial${f.includes("ON APPEAL") ? " — on appeal" : ""}</button>`
                    : f.startsWith("ANSWERED")
@@ -880,8 +883,8 @@
       const agShort = AG_SHORT[r.agencyId] || (a ? a.name : r.agencyId);
       let cls, word, txt;
       if(r.response){ cls = "got"; word = "📬 posted"; txt = r.response; }
-      else if(r.filed){ cls = "flight"; word = "⏳ pending"; txt = r.filed; }
-      else { cls = "unclaimed"; word = "✎ unclaimed"; txt = "Drafted and ready — nobody has filed this yet."; }
+      else if(isFiled(r)){ cls = "flight"; word = "⏳ pending"; txt = r.filed; }
+      else { cls = "unclaimed"; word = "✎ unclaimed"; txt = r.filed || "Drafted and ready — nobody has filed this yet."; }
       const hasFull = !!(r.response || r.filed || r.history);
       const key = esc(inv.id) + "::" + ri;
       return `<div class="ereply ${cls}"${hasFull ? ` data-rexp="${key}"` : ""}>` +
@@ -906,7 +909,7 @@
     chartBuilt = true;
     const gaps = FOIA.gaps || [];
     const allReqs = FOIA.investigations.flatMap(i => i.requests);
-    const pendingN = allReqs.filter(r => r.filed && !r.response).length;
+    const pendingN = allReqs.filter(r => isFiled(r) && !r.response).length;
     const postedN = allReqs.filter(r => r.response).length;
     const unclaimedN = allReqs.length - pendingN - postedN;
     const groups = { unclaimed: [], pending: [], posted: [] };
