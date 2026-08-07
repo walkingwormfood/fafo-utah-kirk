@@ -1919,7 +1919,8 @@ const FOIA = {
           records: "I request, for September 10–11, 2025: any deployment, staging, or utilization record for a Department of Public Safety mobile command post, mobile communications vehicle, or similar specialized vehicle at or near the Utah Valley University campus — including the staging location and the requesting or authorizing official. I am requesting the deployment/staging record only, not the vehicle's technical specifications or communications content. Please also retain this correspondence and all records related to the processing of this request. If the department deployed no such vehicle, I request written confirmation of that fact, including a description of the search conducted.",
           parties: "Tyler James Robinson (defendant); Charlie Kirk (victim). The record's subject is the department's own vehicle deployment for the September 10, 2025 incident response.",
           formAnswers: [
-            { label: "Date of occurrence", value: "09/10/2025" }
+            { label: "Date of occurrence", value: "09/10/2025" },
+            { label: "Time of occurrence", value: "12:23 p.m. shot; the vehicle in question is documented on the adjacent site from the morning of September 10 (pre-incident scene photography), arrival and departure unknown — deployment records for September 10–11 requested" }
           ],
           ask_no_records: true,
           filed: "NOT FILED — DRAFTED Aug 7, 2026, ready to file via the DPS GovQA Records Center. A no-records answer narrows the truck to the contractor or another agency; a responsive record names who staged what where."
@@ -1950,7 +1951,8 @@ const FOIA = {
           records: "I request, concerning the September 10, 2025 Utah Valley University homicide investigation: (1) the shooting-reconstruction, trajectory, or shot-origin analysis report(s) prepared in the investigation — including any bullet-path documentation (rod, laser, or photogrammetric), the stated origin or origin range, and the identity of the preparing examiner or unit; (2) any acoustic, audio, or gunshot-sound analysis performed on event recordings, including any report of such analysis and any referral of recordings to an outside laboratory for that purpose, with the transmittal record; and (3) if no trajectory reconstruction or acoustic analysis exists in the file, written confirmation of that fact for each, including a description of the search conducted. Each item names a discrete, routinely generated forensic record; I am not requesting the investigative file. Please also retain this correspondence and all records related to the processing of this request, including the records described above.",
           parties: "Tyler James Robinson (defendant); Charlie Kirk (victim); preparing examiner or unit, name unknown — identification is part of the request.",
           formAnswers: [
-            { label: "Date of occurrence", value: "09/10/2025" }
+            { label: "Date of occurrence", value: "09/10/2025" },
+            { label: "Time of occurrence", value: "12:23 p.m. — the time of the shot; the reconstruction and any audio analysis were performed afterward and are dated by their own reports" }
           ],
           ask_no_records: true,
           filed: "NOT FILED — DRAFTED Aug 7, 2026, ready to file via the DPS GovQA Records Center. Either the reconstruction exists and can be graded against the recordings, or the 142-yard narrative was never tested against its own audio."
