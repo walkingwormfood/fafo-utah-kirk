@@ -464,7 +464,8 @@ const FOIA = {
             { label: "Date of occurrence", value: "09/10/2025" },
             { label: "Time of occurrence", value: "approximately 12:20–1:00 p.m. (transport from campus to hospital); processing and release thereafter" }
           ],
-          ask_no_records: true
+          ask_no_records: true,
+          filed: "PENDING — FILED Aug 7, 2026 via the DPS GovQA Records Center as P014522-080726; acknowledged 2:20 p.m. CT with the request text quoted back (intake log for the transport-SUV items, processing-or-release record, alteration/sale/preservation records, interior photograph log)."
         },
         {
           agencyId: "ome",
@@ -475,7 +476,8 @@ const FOIA = {
             { label: "Date range of records", value: "09/10/2025 to present" }
           ],
           records: "I request, concerning the Office of the Medical Examiner case arising from the September 10, 2025 death at Utah Valley University: the personal-effects or clothing inventory documenting what clothing or clothing remnants accompanied the decedent or were subsequently received, and the transmittal or release records for any clothing item transferred to a law-enforcement agency or laboratory. I am NOT requesting the autopsy report, photographs, or any medical findings — administrative inventory and transfer records only. (This complements the evidence-transmittal request already drafted to this office concerning bullet fragments; this request concerns clothing and personal effects specifically.) Please also retain this correspondence and all records related to the processing of this request.",
-          ask_no_records: true
+          ask_no_records: true,
+          filed: "PENDING — FILED Aug 7, 2026, 2:24 p.m. CT via the Open Records Portal (ut.accessgov.com; title \"Personal effects inventory, Sept 2025\"); submission-confirmation PDF banked in foia-mail. Same office answered the Aug 4 me-chain filing via Virtru-encrypted email within two days — expect the same lane here."
         },
         {
           agencyId: "fbi",
@@ -517,7 +519,7 @@ const FOIA = {
           ],
           records: "I request: (1) the resignation letter, any separation agreement, and personnel action forms documenting the departure of Dr. Deidra Amoroso, Chief Medical Examiner (tenure beginning July 1, 2024); (2) the personnel action forms documenting the 2024 promotion of Dr. Andrew Guardo to Deputy Chief Medical Examiner and the personnel action forms and separation records documenting his subsequent departure from the Office of the Medical Examiner (Dr. Guardo’s appointment as Dutchess County, New York Medical Examiner was announced on or about March 11, 2026); (3) the written request or authorization from a county attorney, district attorney, or the Attorney General for the autopsy of the decedent in the September 10, 2025 Utah Valley University shooting — if no such written request exists, I request written confirmation of that fact; (4) the body custody and transport log for that decedent from Timpanogos Regional Hospital to the Office of the Medical Examiner facility, September 10, 2025; and (5) the burial-transit or disposition permit issued for that decedent, including the disposition stated on the permit and the receiving jurisdiction. Each item names a discrete, catalogued document; this is not a broad search. I am not requesting the autopsy report itself or any medical-examiner case file material restricted by statute. If no responsive record exists for any numbered item, I request written confirmation of that fact for that item, including a description of the search conducted.",
           ask_no_records: true,
-          filed: "NOT FILED — DRAFTED Aug 2, 2026, ready to file via openrecords.utah.gov (entity: Department of Health and Human Services). Every item is administrative or personnel paper — deliberately outside the § 26B-8-217 restriction on ME case records."
+          filed: "PENDING — FILED Aug 7, 2026, 2:34 p.m. CT via the Open Records Portal (ut.accessgov.com; title \"ME separations + autopsy authorization\"); submission-confirmation PDF banked in foia-mail. Every item is administrative or personnel paper — deliberately outside the § 26B-8-217 restriction on ME case records."
         }
       ]
     },
@@ -769,7 +771,8 @@ const FOIA = {
           summary: "DoD — any public-affairs/social-media activity re Erika Kirk",
           subject: "FOIA Request: Department of Defense public-affairs or social-media records concerning Erika Kirk",
           records: "I request a copy of any public-affairs guidance, social-media activity log, or messaging directive concerning Erika Kirk issued by or within the Department of Defense, from September 1, 2025 to the date this request is processed. To keep this request narrow and minimize search burden, I am not seeking general email correspondence.",
-          ask_no_records: true
+          ask_no_records: true,
+          filed: "PENDING — FILED Aug 7, 2026 via the PAL portal (pal.whs.mil, OSD-JS FOIA Office / Request Type FOIA); acknowledged same day as Case Number 26-F-2918, status 'Received' at 12:44 p.m. CT. Note: PAL's account-recovery flow finally worked this morning (recovery link delivered 12:13 p.m.) — the Jul 26 broken-registration complaint on file with the Requester Service Center is effectively resolved. 20-business-day federal clock → due ~Sep 4."
         }
       ]
     },
@@ -1854,7 +1857,7 @@ const FOIA = {
           subject: "GRAMA Request: threat-assessment, deployment, and incident records — officers assisting at Utah Valley University, September 10, 2025",
           records: "I request, concerning Utah State University Police Department officers Alan Robertson and Christopher Haycock: (1) the threat assessment, site survey, or event-security planning record prepared in advance of the Turning Point USA event scheduled at Utah State University for on or about September 20, 2025; (2) the assignment, deployment, or travel record documenting either officer's presence at or near Utah Valley University on September 10, 2025 in connection with that advance work; (3) any incident report, supplemental report, or after-action statement filed by either officer concerning assistance rendered at the Utah Valley University shooting scene on September 10, 2025, including any record of contact or coordination with UVU police personnel that day; and (4) the records classified public under Utah Code § 63G-2-301(2)(b) for each officer — name, job title, and dates of employment. Each item names a discrete, routinely generated record; this is not a broad search, and I am not requesting any other agency's investigation file. Please also retain this correspondence and all records related to the processing of this request, including the records described above. If no responsive record exists for any numbered item, I request written confirmation of that fact for that item, including a description of the search conducted.",
           ask_no_records: true,
-          filed: "PENDING — FILED Aug 7, 2026, 1:55 p.m. CT by email to grama@usu.edu (USU Records Manager). 10-business-day clock → due ~Aug 21. Owens' own sourcing says the presence obligated police reports — either they exist at USU, or their documented absence is the finding."
+          filed: "REDIRECTED — RE-FILE VIA THE FORM. Emailed Aug 7, 2026, 1:55 p.m. CT to grama@usu.edu; the USU Records Manager replied the same afternoon (3:02 p.m.): 'Please direct public records requests to https://www.usu.edu/legal/grama/' — the office won't take the email as a filing. The full request text is quoted in their own reply (a nice receipt), but the clock doesn't start until the form goes in: re-file the same text via the usu.edu/legal/grama form. Owens' own sourcing says the presence obligated police reports — either they exist at USU, or their documented absence is the finding."
         }
       ]
     },
@@ -1923,7 +1926,7 @@ const FOIA = {
             { label: "Time of occurrence", value: "12:23 p.m. shot; the vehicle in question is documented on the adjacent site from the morning of September 10 (pre-incident scene photography), arrival and departure unknown — deployment records for September 10–11 requested" }
           ],
           ask_no_records: true,
-          filed: "NOT FILED — DRAFTED Aug 7, 2026, ready to file via the DPS GovQA Records Center. A no-records answer narrows the truck to the contractor or another agency; a responsive record names who staged what where."
+          filed: "PENDING — FILED Aug 7, 2026 via the DPS GovQA Records Center as P014528-080726 (acknowledged 2:49 p.m. CT, text quoted back). NOTE: P014529-080726 (2:53 p.m.) is an accidental identical re-submission — expect a duplicate closure pointing back to P014528; no action needed on it. A no-records answer narrows the truck to the contractor or another agency; a responsive record names who staged what where."
         }
       ]
     },
@@ -1955,7 +1958,7 @@ const FOIA = {
             { label: "Time of occurrence", value: "12:23 p.m. — the time of the shot; the reconstruction and any audio analysis were performed afterward and are dated by their own reports" }
           ],
           ask_no_records: true,
-          filed: "NOT FILED — DRAFTED Aug 7, 2026, ready to file via the DPS GovQA Records Center. Either the reconstruction exists and can be graded against the recordings, or the 142-yard narrative was never tested against its own audio."
+          filed: "PENDING — FILED Aug 7, 2026 via the DPS GovQA Records Center as P014531-080726 (acknowledged 2:57 p.m. CT, text quoted back). Either the reconstruction exists and can be graded against the recordings, or the 142-yard narrative was never tested against its own audio."
         },
         {
           agencyId: "fbi",
@@ -1963,7 +1966,7 @@ const FOIA = {
           subject: "FOIA Request: forensic audio and trajectory analysis records, September 10, 2025 Utah Valley University investigation",
           records: "In connection with the FBI's investigation of the September 10, 2025 shooting at Utah Valley University, I request: (1) any forensic audio, gunshot-acoustic, or signal-analysis examination records concerning recordings of the shot — including the laboratory report, the submitting agency, and the evidence transmittal record; and (2) any trajectory, shot-origin, or shooting-reconstruction analysis prepared by or for the FBI in that investigation, including the report and its transmittal to any state agency. Each item names a discrete laboratory or examination record; this is not a broad search for investigative files, and I am not requesting the recordings' evidentiary content. If no responsive record exists for either item, please confirm that in writing for that item, including a description of the search conducted. Please also retain this correspondence and all records related to the processing of this request.",
           ask_no_records: true,
-          filed: "NOT FILED — DRAFTED Aug 7, 2026 — file via eFOIPA (existing account), one subject per submission. Expect Exemption 7(A); a written refusal to confirm whether the shot's audio was ever analyzed is itself citable."
+          filed: "PENDING — FILED Aug 7, 2026 via eFOIPA; 'eFOIA Request Received' confirmation 2:56 p.m. CT, FOIPA number to follow. $25 fee cap entered with the § 552(a)(4)(A)(iii) waiver. Expect Exemption 7(A); a written refusal to confirm whether the shot's audio was ever analyzed is itself citable."
         }
       ]
     }
