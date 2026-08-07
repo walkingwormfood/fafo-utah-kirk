@@ -260,6 +260,51 @@ const FOIA = {
 
   investigations: [
     {
+      id: "n1098l-ares-overflight",
+      challenge: "An Army spy-plane fleet flew low-approach \"rehearsals\" across the West all week — and made one over Provo at the shooting hour.",
+      short: "AXL10 over Provo",
+      categories: ["Timeline contradictions", "Kirk assassination & coverup"],
+      entities: ["dod", "leidos"],
+      investigator: "Andy Lou (Substack, Apr 7 2026) · read on air by John Cullen",
+      investigatorLinks: [
+        { label: "Cullen — Bedtime Stories, Aug 2026: the Substack read in full", url: "https://youtu.be/FPbXuDzxMNY" },
+        { label: "Joe Kent + Cullen — the N1098L discussion", url: "https://youtu.be/riIZFzLBYSc" }
+      ],
+      status: "reported",
+      finding: "The Substack's core claims, sourced to ADS-B Exchange flight data: N1098L is a Bombardier Global 6500 (s/n 60098, call sign AXL10), part of the U.S. Army's ARES airborne-reconnaissance/electronic-warfare program operated by Leidos, flying with the HADES training fleet based at Biggs Army Airfield (Fort Bliss, El Paso) — near-daily western-U.S. training missions under AXL call signs. In the days before September 10 it flew a series of low-altitude passes at western airports (Amarillo 268 ft AGL; a Fort Bliss–Boise run via a ~430 ft AGL low pass around 8:30 a.m.; Casper, Wyoming at 226 ft AGL — read by the author as dress rehearsals), then made a low approach over Provo at the shooting hour — the one airport in the series with an active public ATC feed, used \"only on the operational day.\" That afternoon three ARES aircraft converged at Fort Bliss (N9PS/AXL90 in from Midland; N1098L at 2:34 p.m. from Casper; N21000L/AXL21 already on the ground) alongside a SAM-call-sign VIP transport that had flown Fort Huachuca–Fort Bliss and departed for Washington at 5:13 p.m. The flight tracks are open-source-checkable; the rehearsal/demonstration reading and any connection to the shooting are the author's inferences, and the piece carries its own epistemic-status disclaimer. Joe Kent, ex-Army and on the record with Cullen, treats the aircraft's presence as established and unexplained.",
+      implication: "Every load-bearing claim terminates in a record nobody has requested. FAA's daily facility log for Provo tower fixes whether a low approach happened and when; radar/automation data fixes the track; the Army's flight schedule for a contractor-operated training fleet is administrative paper, not an intelligence product; and ATC voice retention is short — whether anything from September 10 was ever placed under hold is itself a record. Either the paper shows a training fleet doing training, or it shows something that needs explaining. Both outcomes are findings.",
+      sources: [
+        { label: "Andy Lou, \"The Solution to the Charlie Kirk Assassination...\" (Substack, Apr 7 2026), as read in full on Bedtime Stories (transcript banked in the library)", url: "https://youtu.be/FPbXuDzxMNY" },
+        { label: "ADS-B Exchange — the cited open-source flight data (checkable independently)", url: "https://www.adsbexchange.com/" }
+      ],
+      requests: [
+        {
+          agencyId: "faa",
+          summary: "FAA — Provo tower daily facility log, radar track data, retained ATC records + any preservation hold, and the N1098L registry file",
+          subject: "FOIA Request: Provo (PVU) ATCT facility records and radar data, September 10, 2025; aircraft registry file N1098L",
+          records: "Under the Freedom of Information Act, I request: (1) the daily record of facility operation (FAA Form 7230-4 or equivalent) for the Provo, Utah (PVU) airport traffic control tower for September 10, 2025; (2) any retained air traffic control voice recordings and any radar/automation track data covering the Provo Class D airspace for September 10, 2025, 11:30 a.m.–1:30 p.m. Mountain Time — including data reflecting any low approach or go-around by a transient turbojet aircraft in that window; (3) any litigation-hold, preservation, or retention-extension record concerning September 10, 2025 Provo air traffic records; and (4) the complete aircraft registry file for registration N1098L, including registration, airworthiness, and recorded ownership documents. If voice recordings from that date no longer exist, I request written confirmation of that fact and the record documenting their disposition. Please also retain this correspondence and all records related to the processing of this request, including the records described above.",
+          ask_no_records: true,
+          filed: "NOT FILED — DRAFTED Aug 7, 2026, ready to file via faa.gov/foia (name the Air Traffic and Aircraft Registry service centers so routing splits correctly). Standard ATC voice retention (~45 days) means item (3) — the hold record — is the live question for the recordings; the 7230-4 facility log and the registry file are routine retained records. The registry file can also be ordered without FOIA from aircraft.faa.gov/e.gov/nd."
+        },
+        {
+          agencyId: "provocity",
+          summary: "City of Provo — airport operations records for Sept 10 (the city owns the field)",
+          subject: "GRAMA Request: Provo Municipal Airport operations records, September 10, 2025",
+          records: "I request, for Provo Municipal Airport for September 10, 2025: (1) the airfield operations log, daily operations report, or airport manager's log; (2) any record of a low approach, go-around, overflight complaint, or unusual operation noted that day; (3) transient or itinerant aircraft records, landing or fuel records, and any FBO-reported activity records held by the city for that day; and (4) any correspondence between airport or city staff and any federal agency concerning September 10, 2025 airport operations. Please also retain this correspondence and all records related to the processing of this request. If no responsive record exists for any numbered item, I request written confirmation of that fact for that item, including a description of the search conducted.",
+          ask_no_records: true,
+          filed: "NOT FILED — DRAFTED Aug 7, 2026, ready to file to recorder@provo.org (City Recorder, 801-852-6524 — the non-police GRAMA lane; verified Aug 7). Small, dated, single-facility ask."
+        },
+        {
+          agencyId: "army",
+          summary: "Army — ARES flight schedules for the three tails, Sept 5–12, and the Leidos operating contract",
+          subject: "FOIA Request: flight schedules and operating contract, ARES/HADES contractor-operated aircraft, September 2025",
+          records: "Under the Freedom of Information Act, I request: (1) the flight schedules, training schedules, or mission logs for the contractor-operated ARES aircraft bearing civil registrations N1098L, N9PS, and N21000L for September 5–12, 2025, including departure/destination airfields — I am not requesting sensor products, collection records, or intelligence information; (2) the contract or task order (number and statement of work) under which Leidos operates the ARES/HADES training fleet based at Biggs Army Airfield, Fort Bliss; and (3) any record of a September 10, 2025 flight by any of those aircraft to, from, or over Provo or Orem, Utah. If no responsive record exists for any numbered item, I request written confirmation of that fact for that item, including a description of the search conducted. Please also retain this correspondence and all records related to the processing of this request.",
+          ask_no_records: true,
+          filed: "NOT FILED — DRAFTED Aug 7, 2026, ready to file via FOIA.gov (Department of the Army; RMDA routes to the holding command — expect referral hops). The schedule-and-contract framing keeps the ask administrative: where the planes flew is not an intelligence product, and the Leidos contract is FAR-routine paper."
+        }
+      ]
+    },
+    {
       id: "k9-no-results",
       challenge: "Tracking dogs were run for whoever jumped from the roof and found nothing.",
       short: "K9s: no results",
@@ -301,7 +346,7 @@ const FOIA = {
           ],
           refined: true,
           ask_no_records: true,
-          filed: "ON APPEAL + ROUND-TWO REFILE — narrowed K9 deployment/utilization request (handler logs, certification/discipline, tasking, outcome) emailed Aug 2, 2026 and re-sent Aug 4, 2026 (10:56 and 11:31 a.m.) to records@orem.gov. Original round: DENIED — twice in one day — and ON APPEAL. Jul 21, 2026, 11:43 a.m.: Orem issued its formal written denial — the Utah County Attorney's Office 'has requested that these records be classified as Protected under Utah Code § 63G-2-305(10)'; 'the City is compelled to classify... As such, your request is herein formally denied.' A formal cure was sent at 12:45 p.m. the same day; Orem re-denied at 1:50 p.m. — 65 minutes later — on a denial form listing the record as 'K9 inquiry' and the ground as 'Active Case,' citing no subsection of § 305(10) and making no interference finding. GRAMA appeal filed with City Manager (CAO) Brenn Bybee the same evening under § 63G-2-401; determination due ~Aug 5, 2026 (Pioneer Day-adjusted). All further questions were pointed at the Utah State Bureau of Investigation."
+          filed: "DENIED — ROUND TWO, Aug 6, 2026 — and the round-one APPEAL determination is now OVERDUE. Orem's Aug 6, 2:06 p.m. formal denial of the narrowed Aug 4 re-file repeats the compelled-classification theory verbatim: the UCAO 'as the prosecuting agency, has requested that these records be classified as Protected under Utah Code § 63G-2-305(10)... the City is compelled... your request is herein formally denied,' with all inquiries redirected to SBI (the blanket-hold pattern — see the UCAO card). The duplicate Aug 4 copy was separately denied at 2:10 p.m. as 'duplicate request' + 'open investigation.' History: narrowed K9 request (handler logs, certification/discipline, tasking, outcome) emailed Aug 2 and re-sent Aug 4 (9:56 and 10:31 a.m. MT — both quoted back in Orem's denials). Original round: DENIED twice in one day Jul 21 ('K9 inquiry' / 'Active Case,' no § 305(10) subsection cited, no interference finding); GRAMA appeal filed with City Manager (CAO) Brenn Bybee that evening under § 63G-2-401 — determination was due ~Aug 5, 2026 (Pioneer Day-adjusted) and has not arrived; the § 63G-2-401(5) clock matters because a CAO's failure to respond is itself an appealable denial, and the Aug 6 round-two denial now rides the same record."
         },
         {
           agencyId: "pgpd",
@@ -386,7 +431,7 @@ const FOIA = {
           ],
           records: "I request, concerning the Office of the Medical Examiner case arising from the September 10, 2025 death at Utah Valley University: (1) the evidence transmittal or release forms documenting transfers of physical evidence (including bullet or projectile fragments, fingerprint records, and photographic media) to any law-enforcement agency; and (2) the log identifying the agencies or officials who provided investigative information incorporated into the case file's administrative cover documentation. I am NOT requesting the autopsy report, photographs, or any medical findings — administrative transfer records only.",
           ask_no_records: true,
-          filed: "PENDING — FILED Aug 4, 2026, 1:28 p.m. via the Open Records Portal (ut.accessgov.com form; title \"Evidence chain-of-custody, Sept 2025\"); submission-confirmation PDF banked in foia-mail. NOTE: the portal recorded the mailing address state as Utah instead of Texas (dropdown default) — correct it if the portal allows, or note it in any follow-up. 10-business-day clock from receipt."
+          filed: "PENDING — RESPONSE WAITING BEHIND ENCRYPTION: Aug 6, 2026, the OME replied from omerecordsrequest.noreply@utah.gov via Virtru encrypted email — the content requires a browser unlock (verify-identity link in the message) and has not been read yet; unlock it to learn the determination. Originally: FILED Aug 4, 2026, 1:28 p.m. via the Open Records Portal (ut.accessgov.com form; title \"Evidence chain-of-custody, Sept 2025\"); submission-confirmation PDF banked in foia-mail. NOTE: the portal recorded the mailing address state as Utah instead of Texas (dropdown default) — correct it if the portal allows, or note it in any follow-up."
         }
       ]
     },
@@ -964,7 +1009,7 @@ const FOIA = {
           subject: "GRAMA Request: dispatch and incident records concerning a hospital lockdown, September 10, 2025",
           records: "I request the dispatch/CAD and any incident report records held by the Orem Police Department concerning the lockdown of, or law-enforcement response to, Timpanogos Regional Hospital (and any other Orem-area hospital) on September 10, 2025 in connection with reports of an individual searching for Charlie Kirk — including the reason for the lockdown, the agency that requested it, and any record identifying the individual whose conduct prompted it. If no responsive records exist, I request written confirmation of that fact.",
           ask_no_records: true,
-          filed: "PENDING — FILED Aug 4, 2026, 2:30 p.m. by email to records@orem.gov — dispatch and incident records concerning the hospital lockdown, September 10, 2025. Same office that stonewalled the K9 ask — but a lockdown incident record is administrative dispatch paper. 10-business-day clock."
+          filed: "DENIED Aug 6, 2026, 2:14 p.m. — the identical UCAO compelled-classification letter used on the K9 round-two denial the same afternoon: records 'classified as Protected under Utah Code § 63G-2-305(10)' at the prosecuting agency's request, 'the City is compelled,' inquiries redirected to SBI. A dispatch log for a hospital lockdown is administrative paper classified category-wide with no record-by-record determination — this denial joins the UCAO blanket-hold card's pattern and is appealable to CAO Brenn Bybee within 30 days (~Sep 5). Originally: FILED Aug 4, 2026, 2:30 p.m. (1:30 p.m. MT) by email to records@orem.gov."
         }
       ]
     },
@@ -1548,6 +1593,22 @@ const FOIA = {
           records: "I request, concerning the September 10, 2025 Utah Valley University homicide investigation (State v. Robinson, Utah Fourth District No. 251403576): the investigative report, FD-302, or interview summary documenting the interview of the homeowners whose Nest doorbell camera captured a vehicle parked on their street overnight September 10\u201311, 2025 \u2014 the report whose contents, including the recorded descriptions of the vehicle's driver and occupants, were confirmed by a testifying officer at the July 2026 preliminary hearing. Witness personal identifiers may be redacted; the substance of the recorded descriptions is the request. To keep this request narrow, I am not seeking general case-file correspondence.",
           ask_no_records: true,
           filed: "PENDING \u2014 filed Jul 16, 2026 via the FBI's eFOIPA portal (efoia.fbi.gov); intake confirmation received same day, FOIPA request number to follow ('correspondence will be forthcoming'). Filing quirk to watch: the as-filed text carried Utah GRAMA citations (fee waiver under Utah Code \u00a7 63G-2-203(4)(a), Utah response deadlines) rather than 5 U.S.C. \u00a7 552 \u2014 the FBI will process it as FOIA regardless, but expect the fee-waiver justification to be read against the federal standard; the $25 cap stands either way. If the waiver is denied on that basis, the cure is a corrected justification citing \u00a7 552(a)(4)(A)(iii), not a re-file."
+        },
+        {
+          agencyId: "dps",
+          summary: "DPS \u2014 the same homeowner-interview report, state lane (the testifying officer's own agency)",
+          subject: "GRAMA Request: interview report concerning doorbell-camera footage of a vehicle, September 10\u201311, 2025",
+          records: "I request the investigative report, or interview summary, documenting the interview of the homeowners whose Nest doorbell camera captured a vehicle associated with the Utah Valley University homicide investigation parked on their street overnight September 10\u201311, 2025 \u2014 the report whose contents (including the description of the vehicle's driver and occupants) were confirmed by a testifying officer during the preliminary hearing in State v. Robinson. Witness personal identifiers may be redacted; the substance of the recorded descriptions is the request.",
+          ask_no_records: true,
+          filed: "PENDING \u2014 FILED Aug 7, 2026 via the DPS GovQA Records Center as P014498-080726; acknowledged same day with the request text quoted back. The state-lane twin of the eFOIPA ask \u2014 whichever agency authored the report, one of the two requests lands on it."
+        },
+        {
+          agencyId: "dps",
+          summary: "DPS \u2014 the Nest video's acquisition record and native-file technical metadata",
+          subject: "GRAMA Request: acquisition records and technical metadata for doorbell-camera video, September 10\u201311, 2025",
+          records: "Concerning the residential Nest doorbell video of a vehicle parked overnight September 10\u201311, 2025, portions of which were played at the July 2026 preliminary hearing in State v. Robinson: I request (1) records sufficient to show the acquisition of the video from the homeowners or from the camera vendor's cloud service \u2014 the date acquired, the file count, and the acquiring officer or agency; and (2) the technical metadata of the files as acquired (native resolution, duration, and timestamps). I am requesting acquisition and metadata records, not the video's evidentiary content.",
+          ask_no_records: true,
+          filed: "PENDING \u2014 FILED Aug 7, 2026 via the DPS GovQA Records Center as P014497-080726; acknowledged same day with the request text quoted back. The metadata ask dates the acquisition against the courtroom version \u2014 the same native-vs-exhibit discipline the cut-footage card runs on campus video."
         }
       ]
     },
@@ -1862,51 +1923,6 @@ const FOIA = {
           ],
           ask_no_records: true,
           filed: "NOT FILED — DRAFTED Aug 7, 2026, ready to file via the DPS GovQA Records Center. A no-records answer narrows the truck to the contractor or another agency; a responsive record names who staged what where."
-        }
-      ]
-    },
-    {
-      id: "n1098l-ares-overflight",
-      challenge: "An Army spy-plane fleet flew low-approach \"rehearsals\" across the West all week — and made one over Provo at the shooting hour.",
-      short: "AXL10 over Provo",
-      categories: ["Timeline contradictions", "Kirk assassination & coverup"],
-      entities: ["dod", "leidos"],
-      investigator: "Andy Lou (Substack, Apr 7 2026) · read on air by John Cullen",
-      investigatorLinks: [
-        { label: "Cullen — Bedtime Stories, Aug 2026: the Substack read in full", url: "https://youtu.be/FPbXuDzxMNY" },
-        { label: "Joe Kent + Cullen — the N1098L discussion", url: "https://youtu.be/riIZFzLBYSc" }
-      ],
-      status: "reported",
-      finding: "The Substack's core claims, sourced to ADS-B Exchange flight data: N1098L is a Bombardier Global 6500 (s/n 60098, call sign AXL10), part of the U.S. Army's ARES airborne-reconnaissance/electronic-warfare program operated by Leidos, flying with the HADES training fleet based at Biggs Army Airfield (Fort Bliss, El Paso) — near-daily western-U.S. training missions under AXL call signs. In the days before September 10 it flew a series of low-altitude passes at western airports (Amarillo 268 ft AGL; a Fort Bliss–Boise run via a ~430 ft AGL low pass around 8:30 a.m.; Casper, Wyoming at 226 ft AGL — read by the author as dress rehearsals), then made a low approach over Provo at the shooting hour — the one airport in the series with an active public ATC feed, used \"only on the operational day.\" That afternoon three ARES aircraft converged at Fort Bliss (N9PS/AXL90 in from Midland; N1098L at 2:34 p.m. from Casper; N21000L/AXL21 already on the ground) alongside a SAM-call-sign VIP transport that had flown Fort Huachuca–Fort Bliss and departed for Washington at 5:13 p.m. The flight tracks are open-source-checkable; the rehearsal/demonstration reading and any connection to the shooting are the author's inferences, and the piece carries its own epistemic-status disclaimer. Joe Kent, ex-Army and on the record with Cullen, treats the aircraft's presence as established and unexplained.",
-      implication: "Every load-bearing claim terminates in a record nobody has requested. FAA's daily facility log for Provo tower fixes whether a low approach happened and when; radar/automation data fixes the track; the Army's flight schedule for a contractor-operated training fleet is administrative paper, not an intelligence product; and ATC voice retention is short — whether anything from September 10 was ever placed under hold is itself a record. Either the paper shows a training fleet doing training, or it shows something that needs explaining. Both outcomes are findings.",
-      sources: [
-        { label: "Andy Lou, \"The Solution to the Charlie Kirk Assassination...\" (Substack, Apr 7 2026), as read in full on Bedtime Stories (transcript banked in the library)", url: "https://youtu.be/FPbXuDzxMNY" },
-        { label: "ADS-B Exchange — the cited open-source flight data (checkable independently)", url: "https://www.adsbexchange.com/" }
-      ],
-      requests: [
-        {
-          agencyId: "faa",
-          summary: "FAA — Provo tower daily facility log, radar track data, retained ATC records + any preservation hold, and the N1098L registry file",
-          subject: "FOIA Request: Provo (PVU) ATCT facility records and radar data, September 10, 2025; aircraft registry file N1098L",
-          records: "Under the Freedom of Information Act, I request: (1) the daily record of facility operation (FAA Form 7230-4 or equivalent) for the Provo, Utah (PVU) airport traffic control tower for September 10, 2025; (2) any retained air traffic control voice recordings and any radar/automation track data covering the Provo Class D airspace for September 10, 2025, 11:30 a.m.–1:30 p.m. Mountain Time — including data reflecting any low approach or go-around by a transient turbojet aircraft in that window; (3) any litigation-hold, preservation, or retention-extension record concerning September 10, 2025 Provo air traffic records; and (4) the complete aircraft registry file for registration N1098L, including registration, airworthiness, and recorded ownership documents. If voice recordings from that date no longer exist, I request written confirmation of that fact and the record documenting their disposition. Please also retain this correspondence and all records related to the processing of this request, including the records described above.",
-          ask_no_records: true,
-          filed: "NOT FILED — DRAFTED Aug 7, 2026, ready to file via faa.gov/foia (name the Air Traffic and Aircraft Registry service centers so routing splits correctly). Standard ATC voice retention (~45 days) means item (3) — the hold record — is the live question for the recordings; the 7230-4 facility log and the registry file are routine retained records. The registry file can also be ordered without FOIA from aircraft.faa.gov/e.gov/nd."
-        },
-        {
-          agencyId: "provocity",
-          summary: "City of Provo — airport operations records for Sept 10 (the city owns the field)",
-          subject: "GRAMA Request: Provo Municipal Airport operations records, September 10, 2025",
-          records: "I request, for Provo Municipal Airport for September 10, 2025: (1) the airfield operations log, daily operations report, or airport manager's log; (2) any record of a low approach, go-around, overflight complaint, or unusual operation noted that day; (3) transient or itinerant aircraft records, landing or fuel records, and any FBO-reported activity records held by the city for that day; and (4) any correspondence between airport or city staff and any federal agency concerning September 10, 2025 airport operations. Please also retain this correspondence and all records related to the processing of this request. If no responsive record exists for any numbered item, I request written confirmation of that fact for that item, including a description of the search conducted.",
-          ask_no_records: true,
-          filed: "NOT FILED — DRAFTED Aug 7, 2026, ready to file to recorder@provo.org (City Recorder, 801-852-6524 — the non-police GRAMA lane; verified Aug 7). Small, dated, single-facility ask."
-        },
-        {
-          agencyId: "army",
-          summary: "Army — ARES flight schedules for the three tails, Sept 5–12, and the Leidos operating contract",
-          subject: "FOIA Request: flight schedules and operating contract, ARES/HADES contractor-operated aircraft, September 2025",
-          records: "Under the Freedom of Information Act, I request: (1) the flight schedules, training schedules, or mission logs for the contractor-operated ARES aircraft bearing civil registrations N1098L, N9PS, and N21000L for September 5–12, 2025, including departure/destination airfields — I am not requesting sensor products, collection records, or intelligence information; (2) the contract or task order (number and statement of work) under which Leidos operates the ARES/HADES training fleet based at Biggs Army Airfield, Fort Bliss; and (3) any record of a September 10, 2025 flight by any of those aircraft to, from, or over Provo or Orem, Utah. If no responsive record exists for any numbered item, I request written confirmation of that fact for that item, including a description of the search conducted. Please also retain this correspondence and all records related to the processing of this request.",
-          ask_no_records: true,
-          filed: "NOT FILED — DRAFTED Aug 7, 2026, ready to file via FOIA.gov (Department of the Army; RMDA routes to the holding command — expect referral hops). The schedule-and-contract framing keeps the ask administrative: where the planes flew is not an intelligence product, and the Leidos contract is FAR-routine paper."
         }
       ]
     },
