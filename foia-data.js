@@ -534,7 +534,7 @@ const FOIA = {
         { label: "Ep. 141", url: "https://www.youtube.com/watch?v=FT8kJN3n_cA" }
       ],
       status: "confirmed",
-      finding: "Washington County Sheriff Nate Brooksby resigned March 27, 2026 amid sexual-harassment and investigation-interference allegations, with a reported ~$100,000 severance — and the official turn-in timeline in the state's biggest case begins and ends with him. New (Coleman Ep 155, Aug 6): the interference allegation has a specific shape — a Washington County deputy was criminally charged with unlawfully accessing and disclosing criminal-investigation records, and which investigation was involved has never been stated.",
+      finding: "Washington County Sheriff Nate Brooksby resigned March 27, 2026 amid sexual-harassment and investigation-interference allegations, with a reported ~$100,000 severance — and the official turn-in timeline in the state's biggest case begins and ends with him. New (Coleman Ep 155, Aug 6): the interference allegation has a specific shape — a Washington County deputy was criminally charged with unlawfully accessing and disclosing criminal-investigation records, and which investigation was involved has never been stated. New (Aug 11): the signed agreement is in hand — exactly $100,000, irrevocable resignation, and a County covenant to 'refrain from any further investigation into the allegations' — while the same office answered the disposition request with 'no internal or independent investigation done.' Both can't be true in spirit: the county paid to stop something it says never started.",
       implication: "Public-employee separation agreements are generally public records under GRAMA once finalized. The severance agreement and the scope of the interference allegations bear directly on the credibility of the turn-in narrative he anchored. And the deputy's charging documents are public court records — no GRAMA needed, pull via Xchange — that either name the investigation the interference touched or conspicuously don't.",
       sources: [
         { label: "Utah reporting, late March 2026", url: "" },
@@ -547,7 +547,7 @@ const FOIA = {
           subject: "GRAMA Request: separation/severance agreement for former Sheriff Nate Brooksby",
           records: "I request the separation agreement, severance agreement, or settlement agreement between Washington County and former Sheriff Nate Brooksby executed on or about March 2026, including the monetary terms and any confidentiality or non-disparagement provisions. Finalized settlement and severance agreements of public employees are public records under GRAMA.",
           ask_no_records: true,
-          filed: "PENDING — FILED Aug 4, 2026, 2:29 p.m. by email to grama@washco.utah.gov — the separation/severance agreement for former Sheriff Nate Brooksby. 10-business-day clock."
+          filed: "RECEIVED Aug 11, 2026 — Washington County delivered the signed agreement itself (Angela Werner, county attorney's office; PDF banked in foia-mail/results). Confirmed terms: irrevocable resignation effective March 27, 2026; exactly $100,000 paid within 14 days; and a ¶2 covenant that the County 'will also refrain from any further investigation into the allegations' — with recital B acknowledging the County 'has received allegations of misconduct.' No confidentiality or non-disparagement clause, and ¶6 expressly concedes separation records are GRAMA-reachable. He keeps the county-provided cell phone (¶5)."
         },
         {
           agencyId: "washco",
@@ -555,7 +555,7 @@ const FOIA = {
           subject: "GRAMA Request: disposition of internal investigation concerning the former sheriff",
           records: "I request the record of final disposition or outcome of any internal or independent investigation of former Sheriff Nate Brooksby that concluded, was closed, or was pending at his March 2026 resignation — including the categories of allegations examined (as characterized in the disposition record) and the finding, if any. I am not requesting witness statements or the investigative file itself, only the disposition record.",
           ask_no_records: true,
-          filed: "PENDING — FILED Aug 4, 2026, 2:29 p.m. by email to grama@washco.utah.gov — the disposition/outcome record of the internal investigation. 10-business-day clock."
+          filed: "NO RECORDS Aug 11, 2026 — Werner (county attorney's office, letter banked in foia-mail/results): 'there was no internal or independent investigation done in this incident, therefore there are no records to provide.' That answer collides with the separation agreement the same office released the same day: recital B says the County 'has received allegations of misconduct,' and ¶2 pays $100,000 partly in exchange for the County refraining 'from any further investigation into the allegations' — a paid-for promise not to investigate an investigation the county now says never existed. Werner's letter also mentions 'I have a statement from Washington County' that was not attached — follow-up ask flagged."
         }
       ]
     },
@@ -772,7 +772,7 @@ const FOIA = {
           subject: "FOIA Request: Department of Defense public-affairs or social-media records concerning Erika Kirk",
           records: "I request a copy of any public-affairs guidance, social-media activity log, or messaging directive concerning Erika Kirk issued by or within the Department of Defense, from September 1, 2025 to the date this request is processed. To keep this request narrow and minimize search burden, I am not seeking general email correspondence.",
           ask_no_records: true,
-          filed: "PENDING — FILED Aug 7, 2026 via the PAL portal (pal.whs.mil, OSD-JS FOIA Office / Request Type FOIA); acknowledged same day as Case Number 26-F-2918, status 'Received' at 12:44 p.m. CT. Note: PAL's account-recovery flow finally worked this morning (recovery link delivered 12:13 p.m.) — the Jul 26 broken-registration complaint on file with the Requester Service Center is effectively resolved. 20-business-day federal clock → due ~Sep 4."
+          filed: "PENDING — FILED Aug 7, 2026 via the PAL portal (pal.whs.mil, OSD-JS FOIA Office); Case 26-F-2918. INTERIM RESPONSE Aug 11 (letter + request copy banked in foia-mail/results): 'unusual circumstances' invoked to break the 20-day clock, EXPEDITE DENIED on didn't-demonstrate-urgency boilerplate, and the request parked in the complex-processing queue behind ~3,706 open requests — no ETA given. Action officer Maria Letizia (maria.m.letizia.ctr@mail.mil, 571-372-0461); appeal window 90 days from Aug 11 via osd.mc-alex.odam.mbx.foia-appeals@mail.mil. (PAL registration saga resolved Aug 7.)"
         }
       ]
     },
