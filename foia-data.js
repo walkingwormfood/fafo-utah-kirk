@@ -209,8 +209,8 @@ const FOIA = {
       portal: "https://openrecords.utah.gov/",
       submitNote: "File via the state Open Records portal (entity: Utah Valley Dispatch Special Service District). If the district is not listed on the portal, email its administrative office with the letter attached and ask for the records officer's direct contact — the email trail is the record." },
     { id: "af89aw", name: "U.S. Air Force — 89th Airlift Wing (Joint Base Andrews)", email: null, fed: true,
-      portal: "https://www.foia.af.mil/",
-      submitNote: "Air Force eFOIA — address to the 89th Airlift Wing FOIA Office, Joint Base Andrews, MD, or file via FOIA.gov. Avoid any Login.gov-gated path — the email confirmation trail is the record." },
+      portal: "https://efoia.cce.af.mil/app/Home.aspx",
+      submitNote: "ROUTE AUDITED Aug 12, 2026 — foia.af.mil no longer resolves; the Department of the Air Force intake is the centralized eFOIA Public Access Link at efoia.cce.af.mil (same PAL software family as the OSD portal — expect the same registration quirks). In the portal, route to the Air Mobility Command / Joint Base Andrews (89 AW) Requester Service Center component. FOIA.gov remains the fallback path. Avoid any Login.gov-gated path — the email confirmation trail is the record." },
     { id: "ncis", name: "Naval Criminal Investigative Service", email: "ncis_foia@ncis.navy.mil", fed: true,
       submitNote: "Email is the record: ncis_foia@ncis.navy.mil, Attn: FOIA (Code 00LJF), 27130 Telegraph Road, Quantico, VA 22134; 571-305-9092." }
   ],
