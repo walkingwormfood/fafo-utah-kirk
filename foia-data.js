@@ -284,7 +284,7 @@ const FOIA = {
           subject: "FOIA Request: Provo (PVU) ATCT facility records and radar data, September 10, 2025; aircraft registry file N1098L",
           records: "Under the Freedom of Information Act, I request: (1) the daily record of facility operation (FAA Form 7230-4 or equivalent) for the Provo, Utah (PVU) airport traffic control tower for September 10, 2025; (2) any retained air traffic control voice recordings and any radar/automation track data covering the Provo Class D airspace for September 10, 2025, 11:30 a.m.–1:30 p.m. Mountain Time — including data reflecting any low approach or go-around by a transient turbojet aircraft in that window; (3) any litigation-hold, preservation, or retention-extension record concerning September 10, 2025 Provo air traffic records; and (4) the complete aircraft registry file for registration N1098L, including registration, airworthiness, and recorded ownership documents. If voice recordings from that date no longer exist, I request written confirmation of that fact and the record documenting their disposition. Please also retain this correspondence and all records related to the processing of this request, including the records described above.",
           ask_no_records: true,
-          filed: "NOT FILED — DRAFTED Aug 7, 2026, ready to file via faa.gov/foia (name the Air Traffic and Aircraft Registry service centers so routing splits correctly). Standard ATC voice retention (~45 days) means item (3) — the hold record — is the live question for the recordings; the 7230-4 facility log and the registry file are routine retained records. The registry file can also be ordered without FOIA from aircraft.faa.gov/e.gov/nd."
+          filed: "PENDING — FILED Aug 12, 2026, 1:46 p.m. CT via the FAA DOT web form (category: Air Traffic Records; Service Area: Western). Confirmation email received 08/12 with the full four-item text echoed — 7230-4 facility log, ATC voice + radar/track data for the 11:30–1:30 window, any preservation/litigation-hold record, and the N1098L registry file — plus the preservation ask. Item (4) may draw a referral to the Aircraft Registration Branch (also orderable without FOIA from aircraft.faa.gov). FAA case number to follow; standard ATC voice retention (~45 days) makes item (3), the hold record, the live question for the recordings."
         },
         {
           agencyId: "provocity",
@@ -300,7 +300,7 @@ const FOIA = {
           subject: "FOIA Request: flight schedules and operating contract, ARES/HADES contractor-operated aircraft, September 2025",
           records: "Under the Freedom of Information Act, I request: (1) the flight schedules, training schedules, or mission logs for the contractor-operated ARES aircraft bearing civil registrations N1098L, N9PS, and N21000L for September 5–12, 2025, including departure/destination airfields — I am not requesting sensor products, collection records, or intelligence information; (2) the contract or task order (number and statement of work) under which Leidos operates the ARES/HADES training fleet based at Biggs Army Airfield, Fort Bliss; and (3) any record of a September 10, 2025 flight by any of those aircraft to, from, or over Provo or Orem, Utah. If no responsive record exists for any numbered item, I request written confirmation of that fact for that item, including a description of the search conducted. Please also retain this correspondence and all records related to the processing of this request.",
           ask_no_records: true,
-          filed: "NOT FILED — DRAFTED Aug 7, 2026, ready to file via FOIA.gov (Department of the Army; RMDA routes to the holding command — expect referral hops). The schedule-and-contract framing keeps the ask administrative: where the planes flew is not an intelligence product, and the Leidos contract is FAR-routine paper."
+          filed: "PENDING — FILED Aug 12, 2026 via FOIA.gov, Submission ID 3097076, routed to the Department of the Army (RMDA, Fort Belvoir); Army FOIA auto-reply received same day. ID document attached at submission. FOIA Public Liaison: Joyce M. Luton, (520) 673-3981, usarmy.belvoir.hqda-esa.mbx.rmda-foia-public-liaison@army.mil. Confirmation PDF banked in foia-mail as 'Request 3097076'. Expect referral hops to the holding command — the schedule-and-contract framing keeps the ask administrative; 20-business-day clock nominal → ~Sep 10."
         }
       ]
     },
@@ -695,14 +695,16 @@ const FOIA = {
           summary: "SLC Airports — the GA landing report + ramp vehicle-access records for the morning arrival",
           subject: "GRAMA Request: general-aviation arrival and ramp vehicle-access records, morning of September 10, 2025",
           records: "I request, for Salt Lake City International Airport on September 10, 2025, between 6:00 a.m. and 12:00 noon: (1) the general-aviation / itinerant landing report or landing-fee record for that window — the routine operational record identifying arriving aircraft and arrival times; and (2) any AOA gate log, vehicle-escort record, or ramp vehicle-access record documenting ground vehicles admitted to a fixed-base-operator ramp to meet an arriving general-aviation aircraft during that window. I am requesting routine airfield operations records for a six-hour window on a single morning; I am not seeking security-system technical details, and vehicle records unrelated to general-aviation arrivals may be redacted.",
-          ask_no_records: true
+          ask_no_records: true,
+          filed: "PENDING — FILED Aug 12, 2026, ~1:46 p.m. CT via the JustFOIA portal (saltlakecityut.justfoia.com, City Records Request form, Department: Airports; Type of Requester: Individual; fee waiver requested). Confirmed as Request C-2026-1002, security key on file in foia-mail (confirmation PDF renamed 'Request C-2026-1002'). 10-business-day clock → due ~Aug 26."
         },
         {
           agencyId: "uvu",
           summary: "UVU — event parking credentials and lot assignments issued for the TPUSA event",
           subject: "GRAMA Request: event parking credentials and lot assignments, September 10, 2025 event",
           records: "I request, concerning the September 10, 2025 Turning Point USA event at Utah Valley University: the parking passes, vehicle placards, or parking-credential records issued for the event, and the lot-assignment or reserved-parking coordination records identifying which vehicles (by organization, not by attendee) were authorized to park where. I am not requesting attendee lists or any student records. (This complements, and does not duplicate, the event-agreement and staff-roster request already on file as UVU #26-221.)",
-          ask_no_records: true
+          ask_no_records: true,
+          filed: "PENDING — FILED Aug 12, 2026 via NextRequest as UVU #26-286; formal acknowledgment same day with the full request text quoted back. 10-business-day clock → due ~Aug 26."
         }
       ]
     },
