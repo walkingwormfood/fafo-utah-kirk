@@ -379,20 +379,20 @@ const FOIA = {
       ],
       requests: [
         {
+          agencyId: "dfcm",
+          summary: "OPEN NEXT — DFCM — courtyard work orders, authorizations, and contractor invoices (UVU’s own referral)",
+          subject: "GRAMA Request: work orders and authorizations for UVU courtyard surface work, September–October 2025",
+          records: "Utah Valley University, in response to a prior request, referred records concerning courtyard surface work to your division. I request, for the period September 10 through October 31, 2025: (1) work orders for paving, resurfacing, concrete work, or other surface alteration of the courtyard area at Utah Valley University adjacent to the Losee Center; (2) the authorization or approval records for that work, including the requesting office and stated justification; and (3) contractor invoices or purchase orders for that work. If no responsive records exist, I request written confirmation of that fact, including a description of the search conducted.",
+          ask_no_records: true,
+          filed: "NOT FILED — DRAFTED Aug 2, 2026, ready to file via openrecords.utah.gov (entity: Division of Facilities Construction and Management, Dept. of Government Operations). UVU itself referred the work-order question here."
+        },
+        {
           agencyId: "uvu",
           summary: "UVU — the work orders and authorizations for the tent removal and paving",
           subject: "GRAMA Request: facilities records for courtyard work following September 10, 2025",
           records: "I request, for the period September 10 – October 15, 2025: (1) all work orders, purchase orders, and contractor invoices concerning removal of the medical tent and any resurfacing, paving, concreting, or landscaping of the courtyard area adjacent to the Sorensen Center / Hall of Flags at Utah Valley University; and (2) the written authorization or approval for that work, including the requesting office and any record of coordination with, or clearance from, any law-enforcement agency before the work proceeded.",
           ask_no_records: true,
           filed: "PENDING — filed via NextRequest as UVU request #26-212, received Jul 13, 2026; acknowledged Jul 15 with the full request text quoted back. 10-business-day clock, stretched by the Jul 24 Pioneer Day closure — response due ~Jul 27–28. NOTE: UVU #26-217 (Jul 15) is an accidental identical re-file — expect a § 63G-2-201(7) duplicate closure; no action needed on it. NOTE 2: Judicial Watch's parallel request 25-326 (SRC appeal 2026-004, supplemental production Mar 12, 2026, published Jul 10) already produced the cleanup texts, both sworn declarations, and the $6,090.52 emergency-payment file — the #26-212 response can now be graded against that production; anything UVU withholds here that JW already holds is a scoreable inconsistency."
-        },
-        {
-          agencyId: "dfcm",
-          summary: "DFCM — courtyard work orders, authorizations, and contractor invoices (UVU’s own referral)",
-          subject: "GRAMA Request: work orders and authorizations for UVU courtyard surface work, September–October 2025",
-          records: "Utah Valley University, in response to a prior request, referred records concerning courtyard surface work to your division. I request, for the period September 10 through October 31, 2025: (1) work orders for paving, resurfacing, concrete work, or other surface alteration of the courtyard area at Utah Valley University adjacent to the Losee Center; (2) the authorization or approval records for that work, including the requesting office and stated justification; and (3) contractor invoices or purchase orders for that work. If no responsive records exist, I request written confirmation of that fact, including a description of the search conducted.",
-          ask_no_records: true,
-          filed: "NOT FILED — DRAFTED Aug 2, 2026, ready to file via openrecords.utah.gov (entity: Division of Facilities Construction and Management, Dept. of Government Operations). UVU itself referred the work-order question here."
         },
         {
           agencyId: "gov",
